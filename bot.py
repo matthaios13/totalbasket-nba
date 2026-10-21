@@ -43,6 +43,8 @@ MODEL = os.environ.get("CLAUDE_MODEL", "opus")
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
 NBA_CATEGORY = 6
 NBA_TAG = 153
+TAG_2ND_TOP = 113               # the run's most important article
+TAG_3RD_TOP = 114               # every other article
 SKIP_SEASON_TYPES = {1, 4}       # preseason, all-star
 RECAP_WAIT_HOURS = 3             # wait this long for the AP recap (it carries the quotes)
 NEWS_MAX_AGE_HOURS = 30
@@ -202,24 +204,42 @@ STYLE = """Είσαι συντάκτης του ελληνικού site μπάσ
 - Μορφή κειμένου: 4-6 παράγραφοι, HTML μόνο με <p class="wp-block-paragraph">, <strong> (λίγο, για τα πιο σημαντικά) και <blockquote class="wp-block-quote"><p>...</p></blockquote> αν θες για μία δήλωση. Τίποτα άλλο.
 - Τίτλος: σύντομος, πιασάρικος, ελληνικός, χωρίς τελεία, χωρίς emoji. Μπορεί να έχει δήλωση σε «» ή θαυμαστικό όπως ο ελληνικός αθλητικός τύπος.
 - Μην αναφέρεις ESPN, AP ή άλλο μέσο ως πηγή του κειμένου.
+- Τίτλος και κείμενο ΜΟΝΟ με ελληνικούς χαρακτήρες στα ονόματα (ποτέ μισό ελληνικά μισό λατινικά, π.χ. «Εμπίντ» και όχι «Εμπίid»).
+- importance: 1-10 πόσο σημαντικό/ελκυστικό είναι για Έλληνα αναγνώστη (σούπερ σταρ, Έλληνες παίκτες, μεγάλες μεταγραφές = υψηλά).
 
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
-{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"]}"""
+{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "importance": 5}"""
 
 GAME_TASK = """Γράψε το άρθρο για τον αγώνα. Στην αρχή το τελικό σκορ και ο πρωταγωνιστής, μετά η εξέλιξη (περίοδοι, κρίσιμο σημείο),
 οι κορυφαίοι και των δύο ομάδων με αριθμούς, οι δηλώσεις αν υπάρχουν στο recap, και τα ρεκόρ των ομάδων. Το publish είναι πάντα true."""
 
 NEWS_TASK = """Αξιολόγησε την είδηση. Βάλε publish=false (με reason) αν είναι: fantasy/στοιχηματική ανάλυση, λίστα/ranking/γνώμη αρθρογράφου,
 βίντεο χωρίς ουσία, θέμα εκτός NBA, ή κάτι πολύ ασήμαντο. Βάλε publish=true για δηλώσεις προπονητών/παικτών, τραυματισμούς, μεταγραφές/ανταλλαγές/
-συμβόλαια/απολύσεις, ρεκόρ, τιμωρίες και κάθε είδηση με ειδησεογραφική αξία, και γράψε το άρθρο."""
+συμβόλαια/απολύσεις, ρεκόρ, τιμωρίες και κάθε είδηση με ειδησεογραφική αξία, και γράψε το άρθρο.
+ΣΗΜΑΝΤΙΚΟ: στο "already_on_site" είναι οι τίτλοι που υπάρχουν ήδη στο site. Βάλε publish=false αν η είδηση καλύπτει το ίδιο θέμα
+(π.χ. είναι ουσιαστικά αποτέλεσμα/περίληψη αγώνα που ήδη υπάρχει, ή roundup αποτελεσμάτων). Δηλώσεις μετά από αγώνα με δικό τους θέμα επιτρέπονται."""
 
 
 class AuthError(Exception):
     """Claude or WordPress rejected our key: stop the run, don't burn the item's attempts."""
 
 
+MIXED_SCRIPT = re.compile(r"[\u0370-\u03ff\u1f00-\u1fff][A-Za-z]|[A-Za-z][\u0370-\u03ff\u1f00-\u1fff]")
+
+
 def ask_claude(task, facts):
+    for attempt in range(2):
+        art = _ask_claude(task, facts, retry_note=attempt > 0)
+        if not art.get("publish") or not MIXED_SCRIPT.search(art["title"] + art.get("excerpt", "")):
+            return art
+        log("  mixed Greek/Latin title, rewriting:", art["title"])
+    raise RuntimeError("title keeps mixing Greek and Latin letters")
+
+
+def _ask_claude(task, facts, retry_note=False):
     prompt = f"{STYLE}\n\n{task}\n\nΔΕΔΟΜΕΝΑ (JSON):\n{json.dumps(facts, ensure_ascii=False, indent=1)}"
+    if retry_note:
+        prompt += "\n\nΠΡΟΣΟΧΗ: η προηγούμενη απάντηση είχε λέξη με ανακατεμένα ελληνικά και λατινικά γράμματα. Γράψ' τα όλα σωστά."
     r = subprocess.run(
         ["claude", "-p", "--output-format", "json", "--model", MODEL, "--max-turns", "2"],
         input=prompt, capture_output=True, text=True, timeout=600)
@@ -289,7 +309,7 @@ def publish(art, image_path, slug_hint):
             "Content-Type": "image/jpeg",
             "Content-Disposition": f'attachment; filename="nba-{slug_hint}.jpg"'})
     wp("POST", f"media/{media['id']}", {"alt_text": art["title"]})
-    tags = find_tags(art.get("people", []) + art.get("_teams", []))
+    tags = find_tags(art.get("people", []) + art.get("_teams", [])) + [TAG_3RD_TOP]
     return wp("POST", "posts", {
         "title": art["title"], "content": art["content"], "excerpt": art.get("excerpt", ""),
         "status": WP_STATUS, "categories": [NBA_CATEGORY], "tags": tags,
@@ -298,10 +318,43 @@ def publish(art, image_path, slug_hint):
 
 # ---------------------------------------------------------------- main
 
+def recent_site_titles():
+    try:
+        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?categories={NBA_CATEGORY}&per_page=40&_fields=title")
+        return [html.unescape(p["title"]["rendered"]) for p in res]
+    except Exception as ex:
+        log("could not read site titles:", ex)
+        return []
+
+
+def promote_top(published):
+    """The most important article of this run goes to 2ndTOP, the rest stay 3rdTOP."""
+    if DRY_RUN or not published:
+        return
+    best = max(published, key=lambda p: p["importance"])
+    tags = [t for t in best["tags"] if t != TAG_3RD_TOP] + [TAG_2ND_TOP]
+    wp("POST", f"posts/{best['id']}", {"tags": tags})
+    log("2ndTOP:", best["title"])
+
+
 def run():
     state = load_state()
+    try:
+        _run(state)
+    finally:
+        save_state(state)       # also on errors, so published items are never posted twice
+
+
+def _run(state):
     posted = 0
+    published = []
     stamp = now().isoformat()
+    site_titles = recent_site_titles()
+
+    def record(res, art):
+        published.append({"id": res["id"], "tags": res.get("tags", []), "title": art["title"],
+                          "importance": int(art.get("importance") or 0)})
+        site_titles.insert(0, art["title"])
 
     def budget():
         return posted < MAX_POSTS
@@ -330,6 +383,7 @@ def run():
                                   "colour": colours(home["espn_id"])[0]})
             res = publish(art, img, f"game-{e['id']}")
             g.update(done=True, post=res["id"])
+            record(res, art)
             posted += 1
             log("  ->", res.get("link"))
         except AuthError:
@@ -354,6 +408,7 @@ def run():
             n["attempts"] += 1
             log("judging news:", item["headline"])
             facts, team_id = news_facts(item)
+            facts["already_on_site"] = site_titles[:40]
             art = ask_claude(NEWS_TASK, facts)
             if not art.get("publish"):
                 n["done"] = "skipped: " + art.get("reason", "")[:120]
@@ -364,6 +419,7 @@ def run():
                                  colours(team_id)[0] if team_id else "1d1d1d")
             res = publish(art, img, f"news-{nid}")
             n.update(done=True, post=res["id"])
+            record(res, art)
             posted += 1
             log("  ->", res.get("link"))
         except AuthError:
@@ -372,7 +428,7 @@ def run():
         except Exception as ex:  # keep going with the other items
             log("  ERROR", item["headline"], ex)
 
-    save_state(state)
+    promote_top(published)
     log(f"done, {posted} article(s)")
 
 
