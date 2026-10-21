@@ -114,3 +114,25 @@ def news_card(path, title, colour="1d1d1d", logo=None):
     _footer(d, "NBA  •  ΕΙΔΗΣΕΙΣ")
     img.save(path, "JPEG", quality=88)
     return path
+
+
+def photo_card(path, photo):
+    """Person photo, uncropped, over a blurred and darkened copy of itself (works for portrait shots)."""
+    from PIL import ImageFilter, ImageEnhance
+    bg = photo.copy()
+    scale = max(W / bg.width, H / bg.height)
+    bg = bg.resize((int(bg.width * scale) + 1, int(bg.height * scale) + 1), Image.LANCZOS)
+    bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
+    bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(28))).enhance(0.55)
+    fg = photo.copy()
+    fg.thumbnail((W, H), Image.LANCZOS)
+    if fg.height < H and fg.width < W:          # small originals: grow to full height
+        s = H / fg.height
+        fg = fg.resize((int(fg.width * s), H), Image.LANCZOS)
+        if fg.width > W:
+            fg = fg.crop(((fg.width - W) // 2, 0, (fg.width - W) // 2 + W, H))
+    bg.paste(fg, ((W - fg.width) // 2, (H - fg.height) // 2))
+    d = ImageDraw.Draw(bg)
+    d.rectangle([0, H - 6, W, H], fill=ORANGE)
+    bg.save(path, "JPEG", quality=88)
+    return path

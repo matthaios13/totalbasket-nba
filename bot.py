@@ -29,6 +29,7 @@ import urllib.parse
 import urllib.request
 
 import card
+import photos
 from teams import TEAMS, colours, greek, logo_url
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -205,10 +206,11 @@ STYLE = """Είσαι συντάκτης του ελληνικού site μπάσ
 - Τίτλος: σύντομος, πιασάρικος, ελληνικός, χωρίς τελεία, χωρίς emoji. Μπορεί να έχει δήλωση σε «» ή θαυμαστικό όπως ο ελληνικός αθλητικός τύπος.
 - Μην αναφέρεις ESPN, AP ή άλλο μέσο ως πηγή του κειμένου.
 - Τίτλος και κείμενο ΜΟΝΟ με ελληνικούς χαρακτήρες στα ονόματα (ποτέ μισό ελληνικά μισό λατινικά, π.χ. «Εμπίντ» και όχι «Εμπίid»).
+- photo_person: αν το άρθρο αφορά κυρίως ΕΝΑ πρόσωπο (παίκτη/προπονητή/στέλεχος), το πλήρες όνομά του στα ΑΓΓΛΙΚΑ (π.χ. "Joel Embiid"), αλλιώς "".
 - importance: 1-10 πόσο σημαντικό/ελκυστικό είναι για Έλληνα αναγνώστη (σούπερ σταρ, Έλληνες παίκτες, μεγάλες μεταγραφές = υψηλά).
 
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
-{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "importance": 5}"""
+{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "importance": 5}"""
 
 GAME_TASK = """Γράψε το άρθρο για τον αγώνα. Στην αρχή το τελικό σκορ και ο πρωταγωνιστής, μετά η εξέλιξη (περίοδοι, κρίσιμο σημείο),
 οι κορυφαίοι και των δύο ομάδων με αριθμούς, οι δηλώσεις αν υπάρχουν στο recap, και τα ρεκόρ των ομάδων. Το publish είναι πάντα true."""
@@ -308,7 +310,7 @@ def publish(art, image_path, slug_hint):
         media = wp("POST", "media", raw=f.read(), headers={
             "Content-Type": "image/jpeg",
             "Content-Disposition": f'attachment; filename="nba-{slug_hint}.jpg"'})
-    wp("POST", f"media/{media['id']}", {"alt_text": art["title"]})
+    wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
     tags = find_tags(art.get("people", []) + art.get("_teams", [])) + [TAG_3RD_TOP]
     return wp("POST", "posts", {
         "title": art["title"], "content": art["content"], "excerpt": art.get("excerpt", ""),
@@ -317,6 +319,26 @@ def publish(art, image_path, slug_hint):
 
 
 # ---------------------------------------------------------------- main
+
+def person_image(art):
+    """Free-licence photo of the article's main person; adds the required credit line to the text."""
+    name = (art.get("photo_person") or "").strip()
+    if not name:
+        return None
+    try:
+        found = photos.find(name)
+    except Exception as ex:
+        log("  photo lookup failed:", name, ex)
+        return None
+    if not found:
+        log("  no free photo for", name)
+        return None
+    img, credit = found
+    credit = re.sub(r"\s+", " ", credit)[:200]
+    art["content"] += f'\n\n<p class="wp-block-paragraph"><em>Φωτογραφία: {html.escape(credit)}</em></p>'
+    art["_caption"] = credit
+    return card.photo_card(tempfile.mktemp(suffix=".jpg"), img)
+
 
 def recent_site_titles():
     try:
@@ -415,8 +437,9 @@ def _run(state):
                 log("  skipped:", art.get("reason"))
                 continue
             art["_teams"] = facts["teams_gr"]
-            img = card.news_card(tempfile.mktemp(suffix=".jpg"), art["title"],
-                                 colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id))
+            img = person_image(art) or card.news_card(
+                tempfile.mktemp(suffix=".jpg"), art["title"],
+                colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id))
             res = publish(art, img, f"news-{nid}")
             n.update(done=True, post=res["id"])
             record(res, art)
