@@ -46,6 +46,7 @@ WP_STATUS = os.environ.get("WP_STATUS", "publish")
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
 MODEL = os.environ.get("CLAUDE_MODEL", "opus")
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
+ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
 NBA_CATEGORY = 6
 NBA_TAG = 153
 TAG_2ND_TOP = 113               # the run's most important article
@@ -474,7 +475,7 @@ def _run(state):
         return posted < MAX_POSTS
 
     # 1. games
-    for e in finished_games():
+    for e in (finished_games() if not ONLY or "nba" in ONLY else []):
         g = state["games"].setdefault(e["id"], {"seen": stamp, "attempts": 0})
         if g.get("done") or g["attempts"] >= MAX_ATTEMPTS or not budget():
             continue
@@ -510,7 +511,7 @@ def _run(state):
             log("  ERROR", e["name"], ex)
 
     # 2. news
-    for item in news_items():
+    for item in (news_items() if not ONLY or "nba" in ONLY else []):
         nid = str(item["id"])
         if nid in state["news"]:
             n = state["news"][nid]
@@ -549,6 +550,8 @@ def _run(state):
     # 3. other feeds: RealGM (NBA) and the Italian / Spanish / French leagues
     for feed in sources.FEEDS:
         league = feed["league"]
+        if ONLY and league not in ONLY:
+            continue
         try:
             feed_items = list(sources.items(feed))
         except Exception as ex:

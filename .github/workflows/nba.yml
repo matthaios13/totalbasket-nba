@@ -11,6 +11,9 @@ on:
       max_posts:
         description: "max articles this run"
         default: "10"
+      only_leagues:
+        description: "test runs only: e.g. lba,acb,lnb (empty = all)"
+        default: ""
 
 concurrency:
   group: nba-bot
@@ -37,6 +40,7 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           WP_STATUS: ${{ inputs.status || 'publish' }}
           MAX_POSTS: ${{ inputs.max_posts || '10' }}
+          ONLY_LEAGUES: ${{ inputs.only_leagues || '' }}
         run: python bot.py
       - name: Save state
         if: always()
