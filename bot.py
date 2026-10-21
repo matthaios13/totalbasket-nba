@@ -214,11 +214,17 @@ NEWS_TASK = """Αξιολόγησε την είδηση. Βάλε publish=false 
 συμβόλαια/απολύσεις, ρεκόρ, τιμωρίες και κάθε είδηση με ειδησεογραφική αξία, και γράψε το άρθρο."""
 
 
+class AuthError(Exception):
+    """Claude or WordPress rejected our key: stop the run, don't burn the item's attempts."""
+
+
 def ask_claude(task, facts):
     prompt = f"{STYLE}\n\n{task}\n\nΔΕΔΟΜΕΝΑ (JSON):\n{json.dumps(facts, ensure_ascii=False, indent=1)}"
     r = subprocess.run(
         ["claude", "-p", "--output-format", "json", "--model", MODEL, "--max-turns", "2"],
         input=prompt, capture_output=True, text=True, timeout=600)
+    if '"api_error_status":401' in r.stdout or "Failed to authenticate" in r.stdout:
+        raise AuthError("Claude token rejected - set CLAUDE_CODE_OAUTH_TOKEN again")
     if r.returncode != 0:
         raise RuntimeError(f"claude failed: {r.stderr[-800:] or r.stdout[-800:]}")
     text = json.loads(r.stdout).get("result", "")
@@ -245,6 +251,8 @@ def wp(method, path, data=None, headers=None, raw=None):
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
+        if e.code == 401:
+            raise AuthError(f"WordPress rejected WP_USER / WP_APP_PASSWORD ({method} {path})")
         raise RuntimeError(f"WordPress {method} {path}: {e.code} {e.read()[:400]!r}")
 
 
@@ -324,6 +332,9 @@ def run():
             g.update(done=True, post=res["id"])
             posted += 1
             log("  ->", res.get("link"))
+        except AuthError:
+            g["attempts"] -= 1
+            raise
         except Exception as ex:  # keep going with the other items
             log("  ERROR", e["name"], ex)
 
@@ -355,7 +366,10 @@ def run():
             n.update(done=True, post=res["id"])
             posted += 1
             log("  ->", res.get("link"))
-        except Exception as ex:
+        except AuthError:
+            n["attempts"] -= 1
+            raise
+        except Exception as ex:  # keep going with the other items
             log("  ERROR", item["headline"], ex)
 
     save_state(state)
@@ -365,4 +379,7 @@ def run():
 if __name__ == "__main__":
     if not DRY_RUN and not (os.environ.get("WP_USER") and os.environ.get("WP_APP_PASSWORD")):
         sys.exit("WP_USER / WP_APP_PASSWORD missing")
-    run()
+    try:
+        run()
+    except AuthError as ex:
+        sys.exit(f"STOPPED: {ex}")
