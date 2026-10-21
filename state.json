@@ -1,4 +1,5 @@
 {
+ "badges": {},
  "games": {
   "401909088": {
    "attempts": 1,
@@ -229,6 +230,737 @@
    "attempts": 1,
    "done": "skipped: Πρόκειται για πρόγραμμα τηλεοπτικών μεταδόσεων της εκπομπής 'Inside the NBA' σε αμερικανικά κανάλια (ESPN/ABC). Δεν έχει",
    "seen": "2026-10-21T16:45:53.256617+00:00"
+  },
+  "encestando:0b8f03e16e3989d2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:137d2b03ce23bbf3": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:2e4ddc9e23d2dae1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:2f099a7b77c7a7dc": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:303c26e05a17de53": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:3268fd574a2b5e70": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:37d1732ada8b659a": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:98c15f77bbf132bc": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:9ca58987be5a60eb": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:a33d12a5071aae7d": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:b68cd1a2b14355e5": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:c0ed18310e942f8d": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:f7d057669a771ed7": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:0589ab943dfe58f6": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:0891c71f42b1c813": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:17cd7913ef65b3d0": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:1efecf65b0d49964": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:1f26bba26b74dfaf": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:25f7f9f6fd0960b4": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:2b7b1163b0f1f33e": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:3693f35113877cb8": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:392d6bda18d1cc40": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:3d08c441a54e65d2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:484735f11ce012b2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:4efd0ac393c550e7": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:4f6e4c767f6e196d": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:52dbc25c79d02501": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:54f628ce2ac40c58": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:5a8c4a374711a93f": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:6043b6c8b462b8ec": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:6441a872499df6f2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:6a1d632d3bf37086": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:6f18b72d7c3c7c5c": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:6f1feb4915cafaab": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:72a82aa3599b3186": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:75daf208ce1ea382": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:764637406dd573c3": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:76a50226ae7588fe": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:786aff52441d158b": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:7cdbc2311f81c9a7": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:7f118f1afede373c": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:7f7f914cbac4cc76": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:8864e881c577cf6d": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:8a64fea715360380": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:8ed2ee722c4bc9f1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:995205784e345c9d": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:b75b7a25551440c8": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:b9c63d5b2591b31e": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:ba5bee1ebbebbdab": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:c886086f60f343d4": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:c8a68089443a3bdb": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:c94a94c4edd34740": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:cbf252baecf64feb": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:d526748905f076ed": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:d9256e3398f1aa40": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:dbab01ca0494b1fe": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:dc54d4867efb1938": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:e730fae51be0ffd3": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:e82c8d47cfee932f": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:fb49c3f7801f9dd2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:fe2c0b73c8ce9405": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:fe433a1fa325c7bf": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:0116b5b25a9bb784": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:02714e0a87e43dce": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:06ae7a1a0ac0f9b8": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:07f570e90d5d7cf3": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:0df042e7a6323105": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:1185593e2a440e26": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:13135a0dbfcb927b": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:1595a7662c85f4af": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:1cf0f4a2ce592848": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:1f1b0f6a3d4ac5ef": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:225ce89346063df4": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:22a53cde3796178d": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:2983a330ade89fa2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:299a02efa5dfaf60": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:2d0b6d8a1db2e455": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:2d4f66e9b64a98d1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:3bf060375858f3fb": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:41e83fb91c9f05f6": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:49286cf82e10a197": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:492ca0c0f57443dc": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:58a96f011f8a5030": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:5931885675d78cdf": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:6579266358c7b88f": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:6b0f2e819522c850": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:6c186d98b0907362": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:74aec44e3d36ae51": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:74f3a9089fa6244b": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:771bcab703406e30": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:78f847ac82e0b794": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:7d478b9933cce386": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:82621d079d6c9ff1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:853fc3f113e1f2ce": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:8872ec90f8bc7614": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:8b5648097427b8e1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:96c56c3e22cc630f": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:a73a9f54bbc6373a": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:a996c6d06a7561c5": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:aeda32b99300a8bf": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:b196d2d8d19ceb41": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:b5639f8c909becb8": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:b629a96cab48d803": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:bc9a85b9c714237e": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:c274d333431e8e58": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:c48fac915abf6061": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:cc425e52c80966ad": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:d347b496d90feff0": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:d498af1eb1c083df": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:df4104478cd816aa": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:ee58ae02953d1c77": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:fad05601482344e5": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:0a34fbef9aeb94fb": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:2db68523bcca98e8": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:4562118e98d3ca2c": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:4f3a08e96e9a633c": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:5386124b2db306fc": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:5b023c990eb6a9c8": {
+   "attempts": 1,
+   "done": true,
+   "post": 65306,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:703dec289eb94737": {
+   "attempts": 1,
+   "done": true,
+   "post": 65308,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:76527090dc256865": {
+   "attempts": 1,
+   "done": true,
+   "post": 65310,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:78f96ccd20c89949": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:8027d94b70b40c3b": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:84b9be1768d53694": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:88656b9c9dbf0d6d": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:8a44015be0acbf96": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:8a96498927127e71": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:90574f8ce68688df": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:9512c9c6c90303e9": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:ae5c92dd5c69fb04": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:bb91aaa8b7530c75": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:bf5d38a3a6c216e0": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:c0388e41d29b0fa4": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:c18cce478320b96f": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:cc241431f6f32219": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:cc27e91d54a0043c": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:cfcce9789be6b9f2": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:d098c371f0eddf4c": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:d33346351b5b7b84": {
+   "attempts": 1,
+   "done": true,
+   "post": 65304,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:d4effbdd1ccc8d6b": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:d5f457d84f733d26": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:e942212b459b90e5": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:f21dc1ab445d4e0b": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:fdd2e6b3fc155ede": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:2720d60dfa9b7c8c": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:32a4599c5e93a92d": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:462c033b0c81ee59": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:6e432ddd2a5f2b6d": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:6eb6ca417d66a41e": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:7a5a56c38c8b04a3": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:a18a2c876df42d10": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:c9876115142dd0f0": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:ebb1b1a3cf6b2335": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:f75c4d7fb1e08248": {
+   "attempts": 0,
+   "seen": "2026-10-21T17:54:27.398658+00:00"
   }
  }
 }
