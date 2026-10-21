@@ -27,16 +27,28 @@ def _clean(s):
     return html.unescape(re.sub(r"<[^>]+>", "", s or "")).strip()
 
 
+def _page(name):
+    """The person's own Wikipedia page: exact title first ("LeBron James", not "Bronny James"),
+    then "<name> (basketball)", then a search whose result title must contain the full name."""
+    for title in (name, f"{name} (basketball)"):
+        pages = _get({"action": "query", "titles": title, "redirects": 1,
+                      "prop": "pageimages|categories", "piprop": "name", "clcategories":
+                      "Category:Living people", "cllimit": 5}).get("query", {}).get("pages", {})
+        page = next(iter(pages.values()), {})
+        if page.get("pageimage") and page.get("categories"):     # living person with a picture
+            return page
+    pages = _get({"action": "query", "generator": "search", "gsrsearch": f'"{name}" NBA basketball',
+                  "gsrlimit": 3, "prop": "pageimages", "piprop": "name"}).get("query", {}).get("pages", {})
+    for page in sorted(pages.values(), key=lambda p: p.get("index", 0)):
+        if name.lower() in page["title"].lower() and page.get("pageimage"):
+            return page
+    return None
+
+
 def find(name):
     """-> (PIL image, credit text) or None."""
-    pages = _get({"action": "query", "generator": "search", "gsrsearch": f"{name} NBA basketball",
-                  "gsrlimit": 1, "prop": "pageimages", "piprop": "name"}).get("query", {}).get("pages", {})
-    page = next(iter(pages.values()), None)
-    if not page or not page.get("pageimage"):
-        return None
-    # the search must have landed on this person's page, not on a team or another player
-    surname = name.split()[-1].lower()
-    if surname not in page["title"].lower():
+    page = _page(name)
+    if not page:
         return None
     info = _get({"action": "query", "titles": "File:" + page["pageimage"], "prop": "imageinfo",
                  "iiprop": "url|extmetadata", "iiurlwidth": 1600})

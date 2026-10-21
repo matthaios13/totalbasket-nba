@@ -63,10 +63,26 @@ def now():
     return dt.datetime.now(dt.timezone.utc)
 
 
+def retry(fn, tries=4):
+    """GitHub's runners sometimes can't reach a host for a moment ("Network is unreachable")."""
+    for i in range(tries):
+        try:
+            return fn()
+        except urllib.error.HTTPError:
+            raise
+        except (urllib.error.URLError, OSError, TimeoutError):
+            if i == tries - 1:
+                raise
+            time.sleep(5 * (i + 1))
+
+
 def get_json(url):
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r)
+
+    def go():
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r)
+    return retry(go)
 
 
 def strip_html(s):
@@ -270,9 +286,11 @@ def wp(method, path, data=None, headers=None, raw=None):
         body = json.dumps(data).encode()
         h["Content-Type"] = "application/json"
     req = urllib.request.Request(f"{WP_URL}/wp-json/wp/v2/{path}", data=body, headers=h, method=method)
-    try:
+    def go():
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.load(r)
+    try:
+        return retry(go)
     except urllib.error.HTTPError as e:
         if e.code == 401:
             raise AuthError(f"WordPress rejected WP_USER / WP_APP_PASSWORD ({method} {path})")
@@ -336,6 +354,7 @@ def person_image(art):
         return None
     img, credit = found
     credit = re.sub(r"\s+", " ", credit)[:200]
+    art["content"] = re.sub(r'\s*<p class="wp-block-paragraph"><em>Φωτογραφία:.*?</em></p>', "", art["content"])
     art["content"] += f'\n\n<p class="wp-block-paragraph"><em>Φωτογραφία: {html.escape(credit)}</em></p>'
     art["_caption"] = credit
     return card.photo_card(tempfile.mktemp(suffix=".jpg"), img)
