@@ -134,36 +134,53 @@ def _title_card(path, title, colour):
     return path
 
 
-def _face_centre(photo):
-    """(x, y) of the largest face, or None. Uses OpenCV when available."""
+def _face(photo):
+    """(x, y, w, h) of the largest face, or None. Needs opencv-python-headless < 5 (5.x dropped cascades)."""
     try:
         import cv2
         import numpy as np
         gray = cv2.cvtColor(np.array(photo), cv2.COLOR_RGB2GRAY)
         det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-        faces = det.detectMultiScale(gray, 1.1, 6, minSize=(max(40, photo.width // 20),) * 2)
+        faces = det.detectMultiScale(gray, 1.1, 5, minSize=(max(40, photo.width // 20),) * 2)
     except Exception:            # OpenCV missing or broken: fall back to the plain crop
         return None
     if len(faces) == 0:
         return None
-    x, y, w, h = max(faces, key=lambda f: f[2] * f[3])
-    return x + w / 2, y + h / 2
+    return tuple(int(v) for v in max(faces, key=lambda f: f[2] * f[3]))
 
 
 def photo_card(path, photo):
-    """Person photo filling the whole 16:9 frame; the crop keeps the face in the upper third."""
-    scale = max(W / photo.width, H / photo.height)
-    img = photo.resize((round(photo.width * scale), round(photo.height * scale)), Image.LANCZOS)
-    face = _face_centre(photo)
+    """Person photo filling the 16:9 frame with the whole head visible.
+
+    The face's box is made to take at most ~38% of the frame height, with room above the hair, so
+    sites that show a wider strip of the image (small cards) don't cut the head. When the portrait is
+    too tight for that, the photo is scaled down and the thin side margins are filled with a blurred,
+    darkened copy of the same photo."""
+    from PIL import ImageEnhance, ImageFilter
+    face = _face(photo)
+    cover = max(W / photo.width, H / photo.height)
+    scale = cover
     if face:
-        fx, fy = face[0] * scale, face[1] * scale
-        left, top = fx - W / 2, fy - H * 0.38
+        scale = min(cover, H * 0.42 / face[3])
+    elif photo.height > photo.width:        # portrait, face not found: show its upper 60%, whole head
+        scale = min(cover, H / (photo.height * 0.6))
+    img = photo.resize((max(1, round(photo.width * scale)), max(1, round(photo.height * scale))), Image.LANCZOS)
+    if face:
+        fx, fy, fh = (face[0] + face[2] / 2) * scale, face[1] * scale, face[3] * scale
+        left, top = fx - W / 2, fy - fh * 0.75 - H * 0.12          # face sits a bit above the middle
     else:                                   # no face found: portraits keep the top, landscapes the centre
-        left, top = (img.width - W) / 2, (img.height - H) * 0.06
-    left = int(min(max(left, 0), img.width - W))
-    top = int(min(max(top, 0), img.height - H))
-    img = img.crop((left, top, left + W, top + H))
-    img.save(path, "JPEG", quality=90)
+        left, top = (img.width - W) / 2, (img.height - H) * 0.06 if photo.width >= photo.height else 0
+    left = int(min(max(left, 0), max(img.width - W, 0)))
+    top = int(min(max(top, 0), max(img.height - H, 0)))
+    fg = img.crop((left, top, min(left + W, img.width), min(top + H, img.height)))
+    if fg.size == (W, H):
+        out = fg
+    else:
+        bg = photo.resize((round(photo.width * cover) + 1, round(photo.height * cover) + 1), Image.LANCZOS)
+        bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
+        out = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(30))).enhance(0.5)
+        out.paste(fg, ((W - fg.width) // 2, (H - fg.height) // 2))
+    out.save(path, "JPEG", quality=90)
     return path
 
 

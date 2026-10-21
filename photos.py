@@ -7,6 +7,7 @@ import html
 import io
 import json
 import re
+import unicodedata
 import urllib.parse
 import urllib.request
 
@@ -45,19 +46,48 @@ def _page(name):
     return None
 
 
+def _plain(s):
+    return "".join(c for c in unicodedata.normalize("NFD", s.lower()) if not unicodedata.combining(c))
+
+
+def _year(meta, title):
+    m = re.search(r"(19|20)\d\d", _clean(meta.get("DateTimeOriginal", {}).get("value")) + " " + title)
+    return int(m.group(0)) if m else 0
+
+
 def find(name):
-    """-> (PIL image, credit text) or None."""
+    """-> (PIL image, credit text) or None.
+
+    Prefers the infobox portrait; when that one isn't free, falls back to the newest free JPEG on the
+    page that shows only this person (surname in the file name, no "X and Y" / "vs" shots)."""
     page = _page(name)
     if not page:
         return None
-    info = _get({"action": "query", "titles": "File:" + page["pageimage"], "prop": "imageinfo",
-                 "iiprop": "url|extmetadata", "iiurlwidth": 1600})
-    ii = (next(iter(info["query"]["pages"].values())).get("imageinfo") or [{}])[0]
-    meta = ii.get("extmetadata", {})
-    licence = _clean(meta.get("LicenseShortName", {}).get("value"))
-    if not FREE.match(licence) or not ii.get("thumburl"):
+    surname = _plain(name.split()[-1])
+    files = _get({"action": "query", "pageids": page["pageid"], "prop": "images", "imlimit": 50})
+    titles = ["File:" + page["pageimage"]] + [
+        i["title"] for p in files["query"]["pages"].values() for i in p.get("images", [])
+        if i["title"].lower().endswith((".jpg", ".jpeg")) and surname in _plain(i["title"])
+        and not re.search(r"(?i)\b(and|vs\.?|with|&)\b", i["title"])]
+    titles = list(dict.fromkeys(titles))[:20]
+    info = _get({"action": "query", "titles": "|".join(titles), "prop": "imageinfo",
+                 "iiprop": "url|size|extmetadata", "iiurlwidth": 1600})
+    best = None
+    for p in info["query"]["pages"].values():
+        ii = (p.get("imageinfo") or [{}])[0]
+        meta = ii.get("extmetadata", {})
+        licence = _clean(meta.get("LicenseShortName", {}).get("value"))
+        if not FREE.match(licence) or not ii.get("thumburl") or ii.get("width", 0) < 700:
+            continue
+        # the infobox portrait is surely this person; other photos on the page are often wide game
+        # scenes where the player is small or among others, so they are only a fallback
+        infobox = p["title"].replace(" ", "_") == "File:" + page["pageimage"]
+        score = (infobox, _year(meta, p["title"]), ii["width"] * ii["height"])
+        if not best or score > best[0]:
+            artist = _clean(meta.get("Artist", {}).get("value")) or "Wikimedia Commons"
+            best = (score, ii["thumburl"], f"{artist} / {licence} / Wikimedia Commons")
+    if not best:
         return None
-    artist = _clean(meta.get("Artist", {}).get("value")) or "Wikimedia Commons"
-    with urllib.request.urlopen(urllib.request.Request(ii["thumburl"], headers=UA), timeout=30) as r:
+    with urllib.request.urlopen(urllib.request.Request(best[1], headers=UA), timeout=30) as r:
         img = Image.open(io.BytesIO(r.read())).convert("RGB")
-    return img, f"{artist} / {licence} / Wikimedia Commons"
+    return img, best[2]
