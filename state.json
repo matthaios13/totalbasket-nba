@@ -1,5 +1,8 @@
 {
- "badges": {},
+ "badges": {
+  "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
+  "lba|napoli basketball": ""
+ },
  "games": {
   "401909088": {
    "attempts": 1,
@@ -927,11 +930,15 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:32a4599c5e93a92d": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65317,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:462c033b0c81ee59": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65313,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:6e432ddd2a5f2b6d": {
@@ -939,7 +946,9 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:6eb6ca417d66a41e": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65315,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:7a5a56c38c8b04a3": {
@@ -959,7 +968,9 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:f75c4d7fb1e08248": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65319,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   }
  }
