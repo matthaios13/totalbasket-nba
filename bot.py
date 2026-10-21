@@ -49,7 +49,8 @@ MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
 NBA_CATEGORY = 6
 NBA_TAG = 153
 TAG_2ND_TOP = 113               # the run's most important article
-TAG_3RD_TOP = 114               # every other article
+TAG_3RD_TOP = 114               # every other NBA article; European news only when important
+EUROPE_TOP_IMPORTANCE = 7       # European league news gets 3rdTOP from this importance up
 SKIP_SEASON_TYPES = {1, 4}       # preseason, all-star
 RECAP_WAIT_HOURS = 3             # wait this long for the AP recap (it carries the quotes)
 NEWS_MAX_AGE_HOURS = 30
@@ -344,10 +345,13 @@ def publish(art, image_path, slug_hint, league="nba"):
             "Content-Disposition": f'attachment; filename="{slug_hint}.jpg"'})
     wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
     lg = LEAGUES[league]
-    tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"]) + [TAG_3RD_TOP]
+    tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"])
+    if league == "nba" or int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
+        tags.append(TAG_3RD_TOP)
+    categories = [lg["category"]] if league == "nba" else [sources.EUROPE_CATEGORY, lg["category"]]
     return wp("POST", "posts", {
         "title": art["title"], "content": art["content"], "excerpt": art.get("excerpt", ""),
-        "status": WP_STATUS, "categories": [lg["category"]], "tags": tags,
+        "status": WP_STATUS, "categories": categories, "tags": tags,
         "featured_media": media["id"]})
 
 
@@ -461,8 +465,9 @@ def _run(state):
     sources._badges.update(state.setdefault("badges", {}))
 
     def record(res, art, league="nba"):
-        published.append({"id": res["id"], "tags": res.get("tags", []), "title": art["title"],
-                          "importance": int(art.get("importance") or 0)})
+        if league == "nba":                # 2ndTOP is picked among NBA articles only
+            published.append({"id": res["id"], "tags": res.get("tags", []), "title": art["title"],
+                              "importance": int(art.get("importance") or 0)})
         site[league].insert(0, {"title": art["title"], "date": now()})
 
     def budget():

@@ -12,6 +12,8 @@ import xml.etree.ElementTree as ET
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"}
 
+EUROPE_CATEGORY = 5    # "Πρωταθλήματα": the homepage "Rest of Europe" block, with a tab per league subcategory
+
 # site category / base tag / card label / TheSportsDB league name / how Claude should see the league
 LEAGUES = {
     "nba": {"category": 6, "tag": 153, "label": "NBA", "sportsdb": None,
