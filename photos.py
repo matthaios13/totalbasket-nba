@@ -37,7 +37,7 @@ def _page(name):
         page = next(iter(pages.values()), {})
         if page.get("pageimage") and page.get("categories"):     # living person with a picture
             return page
-    pages = _get({"action": "query", "generator": "search", "gsrsearch": f'"{name}" NBA basketball',
+    pages = _get({"action": "query", "generator": "search", "gsrsearch": f'"{name}" basketball',
                   "gsrlimit": 3, "prop": "pageimages", "piprop": "name"}).get("query", {}).get("pages", {})
     for page in sorted(pages.values(), key=lambda p: p.get("index", 0)):
         if name.lower() in page["title"].lower() and page.get("pageimage"):

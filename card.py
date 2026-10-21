@@ -162,3 +162,15 @@ def photo_card(path, photo):
     img = img.crop((left, top, left + W, top + H))
     img.save(path, "JPEG", quality=90)
     return path
+
+
+def league_card(path, label):
+    """Fallback when there is no person photo or club badge: the league's name on a clean white card."""
+    img = Image.new("RGB", (W, H), "white")
+    d = ImageDraw.Draw(img)
+    f = _fit(d, label, BLACK, W - 240, 150)
+    d.text((W / 2, H / 2 - 20), label, font=f, fill=(20, 20, 24), anchor="mm")
+    tw = d.textlength(label, font=f)
+    d.rectangle([W / 2 - tw / 2, H / 2 + 70, W / 2 + tw / 2, H / 2 + 82], fill=ORANGE)
+    img.save(path, "JPEG", quality=90)
+    return path

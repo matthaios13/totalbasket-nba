@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Totalbasket NBA bot.
+"""Totalbasket news bot.
 
 Every run:
   1. finds finished NBA games (ESPN) that we have not covered -> one article per game
-  2. finds new ESPN NBA news stories (quotes from coaches/players, injuries, moves)
-  3. has Claude write an original Greek article for each, draws a featured image,
-     and publishes it to totalbasket.gr (category NBA).
+  2. finds new NBA news (ESPN, RealGM) and news from the Italian, Spanish and French leagues
+     (see sources.FEEDS)
+  3. has Claude write an original Greek article for each, picks a featured image,
+     and publishes it to totalbasket.gr in the league's category.
 
 Env:
   WP_URL (default https://totalbasket.gr), WP_USER, WP_APP_PASSWORD
@@ -31,6 +32,8 @@ import urllib.request
 
 import card
 import photos
+import sources
+from sources import LEAGUES
 from teams import TEAMS, colours, greek, logo_url
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -100,7 +103,7 @@ def load_state():
         with open(STATE_FILE) as f:
             return json.load(f)
     except FileNotFoundError:
-        return {"games": {}, "news": {}}
+        return {"games": {}, "news": {}, "badges": {}}
 
 
 def save_state(state):
@@ -208,29 +211,39 @@ def news_facts(item):
 
 # ---------------------------------------------------------------- Claude
 
-STYLE = """Είσαι συντάκτης του ελληνικού site μπάσκετ totalbasket.gr και γράφεις για το NBA.
+STYLE = """Είσαι συντάκτης του ελληνικού site μπάσκετ totalbasket.gr και γράφεις για το NBA και τα ευρωπαϊκά πρωταθλήματα.
 
 Κανόνες:
-- Γράφεις ΠΡΩΤΟΤΥΠΟ άρθρο στα ελληνικά, με δικά σου λόγια. ΔΕΝ μεταφράζεις παράγραφο-παράγραφο το αγγλικό κείμενο.
+- Γράφεις ΠΡΩΤΟΤΥΠΟ άρθρο στα ελληνικά, με δικά σου λόγια. ΔΕΝ μεταφράζεις παράγραφο-παράγραφο το ξένο κείμενο (αγγλικό, ιταλικό, ισπανικό ή γαλλικό).
 - Χρησιμοποιείς ΜΟΝΟ γεγονότα, αριθμούς και δηλώσεις που υπάρχουν στα δεδομένα. Δεν εφευρίσκεις τίποτα.
 - Για στατιστικά παικτών, αν διαφέρει το recap από το box score, ισχύει το box score.
 - Δηλώσεις προπονητών/παικτών: μεταφράζεις στα ελληνικά, μέσα σε «εισαγωγικά», με σαφή απόδοση (ποιος το είπε). Διάλεξε τις 1-3 πιο ενδιαφέρουσες.
 - Ονόματα παικτών/προπονητών με ελληνικούς χαρακτήρες όπως τα γράφουν τα ελληνικά αθλητικά site (π.χ. Λεμπρόν Τζέιμς, Νίκολα Γιόκιτς, Βίκτορ Ουεμπανιάμα, Σάι Γκίλτζιους-Αλεξάντερ, Γιάννης Αντετοκούνμπο).
-- Ομάδες με το ελληνικό τους παρατσούκλι όπως δίνεται στα δεδομένα (Λέικερς, Σέλτικς, Νικς ...). Εναλλακτικά για ποικιλία η πόλη (π.χ. «το Λος Άντζελες», «η Βοστώνη»).
-- Αν συμμετέχει Έλληνας παίκτης (Αντετοκούνμπο, Πουλακίδας κ.ά.), τον αναδεικνύεις.
+- NBA ομάδες με το ελληνικό τους παρατσούκλι όπως δίνεται στα δεδομένα (Λέικερς, Σέλτικς, Νικς ...). Εναλλακτικά για ποικιλία η πόλη (π.χ. «το Λος Άντζελες», «η Βοστώνη»).
+- Ευρωπαϊκές ομάδες όπως τις γράφει ο ελληνικός αθλητικός τύπος (π.χ. Ρεάλ Μαδρίτης, Μπαρτσελόνα, Μπασκόνια, Βαλένθια, Μάλαγα, Βίρτους Μπολόνια, Αρμάνι Μιλάνο, Νάπολι, Μάξιμα Ρόμα, Παρί, Βιλερμπάν, Μονακό, Λε Μαν).
+- Αν συμμετέχει Έλληνας παίκτης ή προπονητής, τον αναδεικνύεις.
 - Ύφος ζωντανό, δημοσιογραφικό, όπως ένα ελληνικό αθλητικό site. Όροι όπως triple-double, double-double, rookie, clutch μένουν στα αγγλικά.
 - Μορφή κειμένου: 4-6 παράγραφοι, HTML μόνο με <p class="wp-block-paragraph">, <strong> (λίγο, για τα πιο σημαντικά) και <blockquote class="wp-block-quote"><p>...</p></blockquote> αν θες για μία δήλωση. Τίποτα άλλο.
 - Τίτλος: σύντομος, πιασάρικος, ελληνικός, χωρίς τελεία, χωρίς emoji. Μπορεί να έχει δήλωση σε «» ή θαυμαστικό όπως ο ελληνικός αθλητικός τύπος.
 - Μην αναφέρεις ESPN, AP ή άλλο μέσο ως πηγή του κειμένου.
+- Αν το κείμενο της πηγής είναι πολύ σύντομο, γράψε σύντομη είδηση (2-3 παράγραφοι) μόνο με όσα υπάρχουν· μην «φουσκώνεις».
 - Τίτλος και κείμενο ΜΟΝΟ με ελληνικούς χαρακτήρες στα ονόματα (ποτέ μισό ελληνικά μισό λατινικά, π.χ. «Εμπίντ» και όχι «Εμπίid»).
 - photo_person: αν το άρθρο αφορά κυρίως ΕΝΑ πρόσωπο (παίκτη/προπονητή/στέλεχος), το πλήρες όνομά του στα ΑΓΓΛΙΚΑ (π.χ. "Joel Embiid"), αλλιώς "".
+- main_team: η ομάδα που αφορά κυρίως το άρθρο, με το επίσημο λατινικό της όνομα (π.χ. "Real Madrid Baloncesto", "Olimpia Milano", "Paris Basketball"), αλλιώς "".
 - importance: 1-10 πόσο σημαντικό/ελκυστικό είναι για Έλληνα αναγνώστη (σούπερ σταρ, Έλληνες παίκτες, μεγάλες μεταγραφές = υψηλά).
 
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
-{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "importance": 5}"""
+{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "main_team": "", "importance": 5}"""
 
 GAME_TASK = """Γράψε το άρθρο για τον αγώνα. Στην αρχή το τελικό σκορ και ο πρωταγωνιστής, μετά η εξέλιξη (περίοδοι, κρίσιμο σημείο),
 οι κορυφαίοι και των δύο ομάδων με αριθμούς, οι δηλώσεις αν υπάρχουν στο recap, και τα ρεκόρ των ομάδων. Το publish είναι πάντα true."""
+
+LEAGUE_TASK = """Η είδηση αφορά το {about}. Αξιολόγησέ την. Βάλε publish=false (με reason) αν: δεν αφορά την πρώτη κατηγορία
+αυτού του πρωταθλήματος (π.χ. Serie A2, LEB Oro, Élite 2, γυναικείο, εφηβικό), αν είναι live/ενδιάμεσο σκορ, διαφήμιση, τηλεοπτικό πρόγραμμα,
+γνώμη/ανάλυση χωρίς είδηση, ή πολύ ασήμαντο. Βάλε publish=true για αποτελέσματα με ουσία, δηλώσεις, μεταγραφές, τραυματισμούς,
+απολύσεις/προσλήψεις προπονητών, τιμωρίες, οικονομικά θέματα συλλόγων και ειδήσεις για Έλληνες παίκτες/προπονητές.
+ΣΗΜΑΝΤΙΚΟ: στο "already_on_site" είναι οι τίτλοι που υπάρχουν ήδη στο site. Βάλε publish=false αν η είδηση καλύπτει το ίδιο θέμα
+(π.χ. το ίδιο αποτέλεσμα αγώνα, την ίδια μεταγραφή)."""
 
 NEWS_TASK = """Αξιολόγησε την είδηση. Βάλε publish=false (με reason) αν είναι: fantasy/στοιχηματική ανάλυση, λίστα/ranking/γνώμη αρθρογράφου,
 βίντεο χωρίς ουσία, θέμα εκτός NBA, ή κάτι πολύ ασήμαντο. Βάλε publish=true για δηλώσεις προπονητών/παικτών, τραυματισμούς, μεταγραφές/ανταλλαγές/
@@ -300,9 +313,9 @@ def wp(method, path, data=None, headers=None, raw=None):
 _tag_cache = {}
 
 
-def find_tags(names):
+def find_tags(names, base_tag=NBA_TAG):
     """Only reuse tags that already exist on the site (exact name match) — never create new ones."""
-    ids = [NBA_TAG]
+    ids = [base_tag]
     for n in names:
         n = (n or "").strip()
         if not n:
@@ -315,7 +328,7 @@ def find_tags(names):
     return ids
 
 
-def publish(art, image_path, slug_hint):
+def publish(art, image_path, slug_hint, league="nba"):
     if DRY_RUN:
         os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
         base = os.path.join(HERE, "out", slug_hint)
@@ -328,12 +341,13 @@ def publish(art, image_path, slug_hint):
     with open(image_path, "rb") as f:
         media = wp("POST", "media", raw=f.read(), headers={
             "Content-Type": "image/jpeg",
-            "Content-Disposition": f'attachment; filename="nba-{slug_hint}.jpg"'})
+            "Content-Disposition": f'attachment; filename="{slug_hint}.jpg"'})
     wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
-    tags = find_tags(art.get("people", []) + art.get("_teams", [])) + [TAG_3RD_TOP]
+    lg = LEAGUES[league]
+    tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"]) + [TAG_3RD_TOP]
     return wp("POST", "posts", {
         "title": art["title"], "content": art["content"], "excerpt": art.get("excerpt", ""),
-        "status": WP_STATUS, "categories": [NBA_CATEGORY], "tags": tags,
+        "status": WP_STATUS, "categories": [lg["category"]], "tags": tags,
         "featured_media": media["id"]})
 
 
@@ -360,10 +374,37 @@ def person_image(art):
     return card.photo_card(tempfile.mktemp(suffix=".jpg"), img)
 
 
-def recent_site_posts():
-    """Latest NBA posts on the site (ours and the editors'): [{title, date}] newest first."""
+_espn_teams = None
+
+
+def team_image(art, league):
+    """White wallpaper with the club's logo; the league's name when no logo is found."""
+    team = (art.get("main_team") or "").strip()
+    url = None
+    if league == "nba":
+        global _espn_teams
+        if _espn_teams is None:
+            try:
+                data = get_json(f"{ESPN}/teams")["sports"][0]["leagues"][0]["teams"]
+                _espn_teams = {_norm(n): t["team"]["id"] for t in data
+                               for n in (t["team"]["displayName"], t["team"]["name"], t["team"]["shortDisplayName"])}
+            except Exception:
+                _espn_teams = {}
+        tid = _espn_teams.get(_norm(team)) or next(
+            (i for n, i in _espn_teams.items() if team and (_norm(team) in n or n in _norm(team))), None)
+        url = logo_url(tid) if tid else None
+    else:
+        url = sources.badge(league, team)
+    path = tempfile.mktemp(suffix=".jpg")
+    if url:
+        return card.news_card(path, art["title"], logo=url)
+    return card.league_card(path, LEAGUES[league]["label"])
+
+
+def recent_site_posts(category=NBA_CATEGORY):
+    """Latest posts of a category on the site (ours and the editors'): [{title, date}] newest first."""
     try:
-        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?categories={NBA_CATEGORY}&per_page=60&_fields=title,date_gmt")
+        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?categories={category}&per_page=60&_fields=title,date_gmt")
         return [{"title": html.unescape(p["title"]["rendered"]),
                  "date": dt.datetime.fromisoformat(p["date_gmt"]).replace(tzinfo=dt.timezone.utc)} for p in res]
     except Exception as ex:
@@ -415,12 +456,14 @@ def _run(state):
     posted = 0
     published = []
     stamp = now().isoformat()
-    site_posts = recent_site_posts()
+    site = {lg: recent_site_posts(LEAGUES[lg]["category"]) for lg in LEAGUES}
+    site_posts = site["nba"]
+    sources._badges.update(state.setdefault("badges", {}))
 
-    def record(res, art):
+    def record(res, art, league="nba"):
         published.append({"id": res["id"], "tags": res.get("tags", []), "title": art["title"],
                           "importance": int(art.get("importance") or 0)})
-        site_posts.insert(0, {"title": art["title"], "date": now()})
+        site[league].insert(0, {"title": art["title"], "date": now()})
 
     def budget():
         return posted < MAX_POSTS
@@ -450,7 +493,7 @@ def _run(state):
                                   "colour": colours(away["espn_id"])[0], "logo": logo_url(away["espn_id"])},
                                  {"name": home["name_gr"], "score": home["score"], "winner": home["winner"],
                                   "colour": colours(home["espn_id"])[0], "logo": logo_url(home["espn_id"])})
-            res = publish(art, img, f"game-{e['id']}")
+            res = publish(art, img, f"nba-game-{e['id']}")
             g.update(done=True, post=res["id"])
             record(res, art)
             posted += 1
@@ -487,7 +530,7 @@ def _run(state):
             img = person_image(art) or card.news_card(
                 tempfile.mktemp(suffix=".jpg"), art["title"],
                 colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id))
-            res = publish(art, img, f"news-{nid}")
+            res = publish(art, img, f"nba-news-{nid}")
             n.update(done=True, post=res["id"])
             record(res, art)
             posted += 1
@@ -498,6 +541,55 @@ def _run(state):
         except Exception as ex:  # keep going with the other items
             log("  ERROR", item["headline"], ex)
 
+    # 3. other feeds: RealGM (NBA) and the Italian / Spanish / French leagues
+    for feed in sources.FEEDS:
+        league = feed["league"]
+        try:
+            feed_items = list(sources.items(feed))
+        except Exception as ex:
+            log("feed failed:", feed["key"], ex)
+            continue
+        judged = 0
+        for item in feed_items:
+            nid = item["id"]
+            if nid in state["news"]:
+                n = state["news"][nid]
+            else:
+                n = state["news"][nid] = {"seen": stamp, "attempts": 0}
+                if not item["published"] or now() - item["published"] > dt.timedelta(hours=NEWS_MAX_AGE_HOURS):
+                    n["done"] = "too-old"
+            if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget() or judged >= feed["max_judge"]:
+                continue
+            judged += 1
+            try:
+                n["attempts"] += 1
+                log(f"judging {feed['key']}:", item["title"])
+                facts = {
+                    "type": "news", "league": LEAGUES[league]["about"], "source_language": feed["lang"],
+                    "published_utc": item["published"].isoformat(), "headline": item["title"],
+                    "summary": item["summary"], "story": sources.full_story(feed, item),
+                    "source_categories": item["cats"],
+                    "already_on_site": [p["title"] for p in site[league][:40]],
+                }
+                task = NEWS_TASK if league == "nba" else LEAGUE_TASK.format(about=LEAGUES[league]["about"])
+                art = ask_claude(task, facts)
+                if not art.get("publish"):
+                    n["done"] = "skipped: " + art.get("reason", "")[:120]
+                    log("  skipped:", art.get("reason"))
+                    continue
+                img = person_image(art) or team_image(art, league)
+                res = publish(art, img, f"{league}-news-{nid.split(':')[1]}", league)
+                n.update(done=True, post=res["id"])
+                record(res, art, league)
+                posted += 1
+                log("  ->", res.get("link"))
+            except AuthError:
+                n["attempts"] -= 1
+                raise
+            except Exception as ex:  # keep going with the other items
+                log("  ERROR", item["title"], ex)
+
+    state["badges"] = dict(sources._badges)
     promote_top(published)
     log(f"done, {posted} article(s)")
 
