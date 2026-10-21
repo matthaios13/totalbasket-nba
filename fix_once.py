@@ -1,21 +1,11 @@
-"""One-off: publish the test drafts, move the duplicate Rizzetta interview to Trash. Delete after use."""
-import html
-
+"""One-off: trash the duplicate Rizzetta interview; fix the name spelling in the kept one. Delete after use."""
 import bot
 
-PUBLISH = [65304, 65306, 65308, 65310, 65313, 65317, 65319]
-TRASH = 65315
-for pid in PUBLISH + [TRASH]:
-    p = bot.wp("GET", f"posts/{pid}?context=edit&_fields=id,status,title,categories")
-    title = p["title"]["raw"]
-    if pid == TRASH:
-        if "Ριτζ" not in title:
-            print(pid, "NOT trashed, unexpected title:", title)
-            continue
-        bot.wp("DELETE", f"posts/{pid}")            # no force -> Trash
-        print(pid, "trash", title[:70])
-    elif p["status"] == "draft":
-        r = bot.wp("POST", f"posts/{pid}", {"status": "publish"})
-        print(pid, r["status"], p["categories"], html.unescape(title)[:70], r["link"])
-    else:
-        print(pid, "already", p["status"], title[:70])
+p = bot.wp("GET", "posts/65315?context=edit&_fields=id,title")
+assert "Ριτσέτα" in p["title"]["raw"], p["title"]["raw"]
+print(65315, bot.wp("DELETE", "posts/65315")["status"])        # no force -> Trash
+
+p = bot.wp("GET", "posts/65313?context=edit&_fields=id,title,content,excerpt")
+upd = {k: p[k]["raw"].replace("Ρινζέτα", "Ριτσέτα").replace("Ριτζέτα", "Ριτσέτα") for k in ("title", "content", "excerpt")}
+r = bot.wp("POST", "posts/65313", upd)
+print(65313, r["title"]["rendered"], upd["content"].count("Ριτσέτα"), "mentions")
