@@ -174,8 +174,11 @@ def rewrite(item, meta, site_titles):
 def image_jpeg(url):
     """The trifillakia photo as a JPEG file (never WebP: Instagram rejects it)."""
     img = Image.open(io.BytesIO(fetch(url))).convert("RGB")
-    if img.width > 1600:
-        img = img.resize((1600, round(img.height * 1600 / img.width)), Image.LANCZOS)
+    # μεγάλες: έως 1600px· μικρές (trifillakia δίνει συχνά ~770px): έως 1200px, ώστε να γεμίζουν το πλαίσιο
+    # του άρθρου και να βγαίνουν σωστά στο Facebook (θέλει πλάτος 1200px)
+    width = 1600 if img.width > 1600 else (1200 if img.width < 1200 else img.width)
+    if width != img.width:
+        img = img.resize((width, round(img.height * width / img.width)), Image.LANCZOS)
     path = tempfile.mktemp(suffix=".jpg")
     img.save(path, "JPEG", quality=88)
     return path
