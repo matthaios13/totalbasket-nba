@@ -8,6 +8,9 @@ on:
       status:
         description: "publish or draft"
         default: publish
+      max_posts:
+        description: "max articles this run"
+        default: "10"
 
 concurrency:
   group: nba-bot
@@ -33,6 +36,7 @@ jobs:
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           WP_STATUS: ${{ inputs.status || 'publish' }}
+          MAX_POSTS: ${{ inputs.max_posts || '10' }}
         run: python bot.py
       - name: Save state
         if: always()
