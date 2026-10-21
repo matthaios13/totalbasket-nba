@@ -24,6 +24,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -340,13 +341,37 @@ def person_image(art):
     return card.photo_card(tempfile.mktemp(suffix=".jpg"), img)
 
 
-def recent_site_titles():
+def recent_site_posts():
+    """Latest NBA posts on the site (ours and the editors'): [{title, date}] newest first."""
     try:
-        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?categories={NBA_CATEGORY}&per_page=40&_fields=title")
-        return [html.unescape(p["title"]["rendered"]) for p in res]
+        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?categories={NBA_CATEGORY}&per_page=60&_fields=title,date_gmt")
+        return [{"title": html.unescape(p["title"]["rendered"]),
+                 "date": dt.datetime.fromisoformat(p["date_gmt"]).replace(tzinfo=dt.timezone.utc)} for p in res]
     except Exception as ex:
-        log("could not read site titles:", ex)
+        log("could not read site posts:", ex)
         return []
+
+
+def _norm(s):
+    s = unicodedata.normalize("NFD", s.lower())
+    return "".join(c for c in s if not unicodedata.combining(c))
+
+
+def game_on_site(facts, posts):
+    """True if the site already has an article about this game's result (same score, or both
+    teams in a title published after tip-off)."""
+    start = dt.datetime.fromisoformat(facts["date_utc"].replace("Z", "+00:00"))
+    a, b = facts["teams"][0], facts["teams"][1]
+    score = re.compile(rf"\b({a['score']}\s*[-–—:]\s*{b['score']}|{b['score']}\s*[-–—:]\s*{a['score']})\b")
+    names = [_norm(a["name_gr"]), _norm(b["name_gr"])]
+    for p in posts:
+        if p["date"] < start:
+            continue                       # previews written before the game don't count
+        t = _norm(p["title"])
+        if score.search(t) or all(n in t for n in names):
+            log("  already on site:", p["title"])
+            return True
+    return False
 
 
 def promote_top(published):
@@ -371,12 +396,12 @@ def _run(state):
     posted = 0
     published = []
     stamp = now().isoformat()
-    site_titles = recent_site_titles()
+    site_posts = recent_site_posts()
 
     def record(res, art):
         published.append({"id": res["id"], "tags": res.get("tags", []), "title": art["title"],
                           "importance": int(art.get("importance") or 0)})
-        site_titles.insert(0, art["title"])
+        site_posts.insert(0, {"title": art["title"], "date": now()})
 
     def budget():
         return posted < MAX_POSTS
@@ -388,6 +413,9 @@ def _run(state):
             continue
         try:
             facts, has_recap = game_facts(e)
+            if game_on_site(facts, site_posts):
+                g["done"] = "already on site"
+                continue
             first = dt.datetime.fromisoformat(g["seen"])
             if not has_recap and now() - first < dt.timedelta(hours=RECAP_WAIT_HOURS):
                 log("waiting for recap:", e["name"])
@@ -430,7 +458,7 @@ def _run(state):
             n["attempts"] += 1
             log("judging news:", item["headline"])
             facts, team_id = news_facts(item)
-            facts["already_on_site"] = site_titles[:40]
+            facts["already_on_site"] = [p["title"] for p in site_posts[:40]]
             art = ask_claude(NEWS_TASK, facts)
             if not art.get("publish"):
                 n["done"] = "skipped: " + art.get("reason", "")[:120]
