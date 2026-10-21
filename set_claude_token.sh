@@ -10,26 +10,7 @@ trap 'rm -f "$LOG"' EXIT
 echo "Εγκρίνετε στον browser που θα ανοίξει (Authorize)..."
 script -q "$LOG" $CLAUDE setup-token; clear
 
-TOKEN=$(python3 - "$LOG" <<'EOF'
-import re, sys
-raw = open(sys.argv[1], "rb").read().decode("utf-8", "ignore")
-text = re.sub(r"\x1b\[[0-9;?]*[A-Za-z]|\x1b\][^\x07]*\x07|\r", "", raw)
-lines = text.split("\n")
-for i, line in enumerate(lines):
-    m = re.search(r"sk-ant-oat[A-Za-z0-9_-]+", line)
-    if not m:
-        continue
-    tok = m.group(0)
-    for nxt in lines[i + 1:]:
-        s = nxt.strip()
-        if re.fullmatch(r"[A-Za-z0-9_-]+", s):
-            tok += s
-        else:
-            break
-    print(tok)
-    break
-EOF
-)
+TOKEN=$(python3 "${0:A:h}/extract_token.py" "$LOG")
 
 if [[ -z "$TOKEN" ]]; then
   echo "✗ Δεν βρέθηκε token. Ξανατρέξτε το script."; exit 1
