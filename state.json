@@ -2,7 +2,8 @@
  "badges": {
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
   "lba|napoli basketball": "",
-  "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png"
+  "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
+  "lba|treviso basket": ""
  },
  "games": {
   "401909088": {
@@ -845,6 +846,12 @@
    "done": "skipped: Το site έχει ήδη το ίδιο θέμα: «Ο Λεμπρόν «σέντερ» στο ντεμπούτο του με τους Σίξερς και νίκη στη Νέα Υόρκη». Έχει επίσης",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "realgm:5a1cf2068369278b": {
+   "attempts": 1,
+   "done": true,
+   "post": 65380,
+   "seen": "2026-10-21T20:46:17.791008+00:00"
+  },
   "realgm:5b023c990eb6a9c8": {
    "attempts": 1,
    "done": true,
@@ -878,7 +885,8 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:88656b9c9dbf0d6d": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": "skipped: Το site έχει ήδη το ρεπορτάζ αυτού του αγώνα («Ντιτρόιτ Πίστονς – Μπόστον Σέλτικς 121-113: Αδιανόητο σερί 23-0 και ανατρ",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:8a44015be0acbf96": {
@@ -900,11 +908,14 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:ae5c92dd5c69fb04": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": "skipped: Το θέμα υπάρχει ήδη στο site με τον τίτλο «Χωρίς Κνούπελ και Κόμπι Γουάιτ στην πρεμιέρα οι Χόρνετς». Η μόνη νέα πληροφορ",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:bb91aaa8b7530c75": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65382,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:bf5d38a3a6c216e0": {
@@ -970,6 +981,12 @@
    "attempts": 1,
    "done": "skipped: Πολύ ασήμαντη είδηση για Έλληνα αναγνώστη: ο γενικός διευθυντής της Ντερτόνα Τζανμάρια Βατσίρκα εξηγεί γιατί οι εντός έδ",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:30e207dcc95e5f00": {
+   "attempts": 1,
+   "done": true,
+   "post": 65384,
+   "seen": "2026-10-21T20:46:17.791008+00:00"
   },
   "sportando:32a4599c5e93a92d": {
    "attempts": 1,
