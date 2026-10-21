@@ -29,7 +29,7 @@ import urllib.parse
 import urllib.request
 
 import card
-from teams import TEAMS, colours, greek
+from teams import TEAMS, colours, greek, logo_url
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(HERE, "state.json")
@@ -378,9 +378,9 @@ def _run(state):
             art["_teams"] = [away["name_gr"], home["name_gr"]]
             img = card.game_card(tempfile.mktemp(suffix=".jpg"),
                                  {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
-                                  "colour": colours(away["espn_id"])[0]},
+                                  "colour": colours(away["espn_id"])[0], "logo": logo_url(away["espn_id"])},
                                  {"name": home["name_gr"], "score": home["score"], "winner": home["winner"],
-                                  "colour": colours(home["espn_id"])[0]})
+                                  "colour": colours(home["espn_id"])[0], "logo": logo_url(home["espn_id"])})
             res = publish(art, img, f"game-{e['id']}")
             g.update(done=True, post=res["id"])
             record(res, art)
@@ -416,7 +416,7 @@ def _run(state):
                 continue
             art["_teams"] = facts["teams_gr"]
             img = card.news_card(tempfile.mktemp(suffix=".jpg"), art["title"],
-                                 colours(team_id)[0] if team_id else "1d1d1d")
+                                 colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id))
             res = publish(art, img, f"news-{nid}")
             n.update(done=True, post=res["id"])
             record(res, art)

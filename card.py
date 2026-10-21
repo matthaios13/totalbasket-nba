@@ -1,6 +1,8 @@
 """Featured images we draw ourselves (no third-party photos -> no copyright risk)."""
+import io
 import os
 import textwrap
+import urllib.request
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -34,6 +36,36 @@ def _fit(draw, text, path, max_w, start):
     return _font(path, size)
 
 
+_logos = {}
+
+
+def _logo(url, size):
+    """Team logo (transparent PNG) scaled to fit size x size, or None if it can't be fetched."""
+    if not url:
+        return None
+    if url not in _logos:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                _logos[url] = Image.open(io.BytesIO(r.read())).convert("RGBA")
+        except Exception:
+            _logos[url] = None
+    img = _logos[url]
+    if img is None:
+        return None
+    img = img.copy()
+    img.thumbnail((size, size), Image.LANCZOS)
+    return img
+
+
+def _badge(img, logo, cx, cy, r):
+    """White disc with the logo centred on it, so every logo reads on any background."""
+    d = ImageDraw.Draw(img)
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill="white")
+    if logo:
+        img.paste(logo, (int(cx - logo.width / 2), int(cy - logo.height / 2)), logo)
+
+
 def _footer(d, label):
     d.rectangle([0, H - 70, W, H], fill=(12, 12, 14))
     d.rectangle([0, H - 74, W, H - 70], fill=ORANGE)
@@ -42,7 +74,7 @@ def _footer(d, label):
 
 
 def game_card(path, away, home):
-    """away/home: dict(name, score, colour, winner)."""
+    """away/home: dict(name, score, colour, winner, logo)."""
     img = Image.new("RGB", (W, H))
     d = ImageDraw.Draw(img)
     ca, ch = _darken(_rgb(away["colour"])), _darken(_rgb(home["colour"]))
@@ -53,28 +85,32 @@ def game_card(path, away, home):
 
     for side, t in (("away", away), ("home", home)):
         cx = W * 0.25 if side == "away" else W * 0.75
-        name_f = _fit(d, t["name"], BLACK, 470, 76)
-        d.text((cx, 215), t["name"], font=name_f, fill="white", anchor="mm")
+        _badge(img, _logo(t.get("logo"), 170), cx, 145, 110)
+        name_f = _fit(d, t["name"], BLACK, 440, 50)
+        d.text((cx, 295), t["name"], font=name_f, fill="white", anchor="mm")
         colour = "white" if t["winner"] else (200, 200, 200)
-        d.text((cx, 380), str(t["score"]), font=_font(BLACK, 190), fill=colour, anchor="mm")
+        d.text((cx, 425), str(t["score"]), font=_font(BLACK, 150), fill=colour, anchor="mm")
         if t["winner"]:
-            d.rectangle([cx - 60, 495, cx + 60, 503], fill=ORANGE)
+            d.rectangle([cx - 55, 520, cx + 55, 528], fill=ORANGE)
     _footer(d, "NBA  •  ΤΕΛΙΚΟ")
     img.save(path, "JPEG", quality=88)
     return path
 
 
-def news_card(path, title, colour="1d1d1d"):
+def news_card(path, title, colour="1d1d1d", logo=None):
     img = Image.new("RGB", (W, H), _darken(_rgb(colour), 0.45))
     d = ImageDraw.Draw(img)
+    logo_img = _logo(logo, 250)
+    if logo_img:
+        _badge(img, logo_img, W - 270, 300, 165)
     d.rectangle([40, 60, 52, 340], fill=ORANGE)
     d.text((80, 90), "NBA", font=_font(BLACK, 64), fill=ORANGE, anchor="lm")
-    lines = textwrap.wrap(title, 30)[:4]
-    f = _font(BLACK, 58 if len(lines) <= 3 else 50)
+    lines = textwrap.wrap(title, 22 if logo_img else 30)[:5]
+    f = _font(BLACK, 58 if len(lines) <= 3 else 48)
     y = 175
     for line in lines:
         d.text((80, y), line, font=f, fill="white", anchor="lm")
-        y += 78
+        y += 72 if len(lines) > 3 else 78
     _footer(d, "NBA  •  ΕΙΔΗΣΕΙΣ")
     img.save(path, "JPEG", quality=88)
     return path

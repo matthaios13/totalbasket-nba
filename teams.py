@@ -41,3 +41,17 @@ def greek(team_id, fallback=""):
 def colours(team_id):
     t = TEAMS.get(str(team_id))
     return (t[2], t[3]) if t else ("1d1d1d", "f58426")
+
+
+# ESPN team id -> abbreviation used in ESPN's logo URLs
+ABBR = {
+    "1": "atl", "2": "bos", "17": "bkn", "30": "cha", "4": "chi", "5": "cle", "6": "dal", "7": "den",
+    "8": "det", "9": "gs", "10": "hou", "11": "ind", "12": "lac", "13": "lal", "29": "mem", "14": "mia",
+    "15": "mil", "16": "min", "3": "no", "18": "ny", "25": "okc", "19": "orl", "20": "phi", "21": "phx",
+    "22": "por", "23": "sac", "24": "sa", "28": "tor", "26": "utah", "27": "wsh",
+}
+
+
+def logo_url(team_id):
+    a = ABBR.get(str(team_id))
+    return f"https://a.espncdn.com/i/teamlogos/nba/500/{a}.png" if a else None
