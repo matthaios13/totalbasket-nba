@@ -103,10 +103,13 @@ def news_card(path, title=None, colour=None, logo=None):
     big = _logo(logo, 520)
     if not big:
         return _title_card(path, title or "", colour or "1d1d1d")
-    img = Image.new("RGB", (W, H), "white")
+    # light badges (e.g. white crests) disappear on white: use a near-black wallpaper for them
+    px = [p for p in big.getdata() if p[3] > 128]
+    light = px and sum(0.299 * r + 0.587 * g + 0.114 * b for r, g, b, _ in px) / len(px) > 200
+    img = Image.new("RGB", (W, H), (17, 17, 20) if light else "white")
     tile = _logo(logo, 90)
     faint = tile.copy()
-    faint.putalpha(faint.getchannel("A").point(lambda a: a * 0.07))
+    faint.putalpha(faint.getchannel("A").point(lambda a: a * (0.12 if light else 0.07)))
     for row, y in enumerate(range(-30, H, 130)):
         for x in range(-60 + (row % 2) * 90, W, 180):
             img.paste(faint, (x, y), faint)

@@ -126,7 +126,9 @@ def badge(league, team):
     key = f"{league}|{team.lower()}"
     if key in _badges:
         return _badges[key] or None
-    for name in (team, team + " Basket", team + " Baloncesto", team + " Basketball"):
+    base = re.sub(r"(?i)\b(basketball|basket|baloncesto|pallacanestro|club)\b", "", team).strip(" -")
+    names = list(dict.fromkeys([team, base, base + " Basket", base + " Baloncesto", base + " Basketball"]))
+    for name in names:
         try:
             url = "https://www.thesportsdb.com/api/v1/json/123/searchteams.php?t=" + urllib.parse.quote(name)
             teams = json.loads(_fetch(url, timeout=20)).get("teams") or []
