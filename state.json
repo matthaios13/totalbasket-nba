@@ -1,11 +1,13 @@
 {
  "badges": {
+  "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
   "lba|maxima roma": "https://r2.thesportsdb.com/images/media/team/badge/so67ci1786177012.png",
   "lba|napoli basketball": "",
   "lba|olimpia milano": "https://r2.thesportsdb.com/images/media/team/badge/aurbi61790186853.png",
   "lba|pallacanestro cantù": "https://r2.thesportsdb.com/images/media/team/badge/vy599w1784567424.png",
   "lba|pallacanestro reggiana": "https://r2.thesportsdb.com/images/media/team/badge/5oln4h1784568860.png",
+  "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": ""
  },
@@ -443,6 +445,12 @@
    "done": true,
    "post": 65561,
    "seen": "2026-10-22T20:43:57.059840+00:00"
+  },
+  "50252916": {
+   "attempts": 1,
+   "done": true,
+   "post": 65597,
+   "seen": "2026-10-22T23:41:33.606250+00:00"
   },
   "bebasket:65d87e7023dbf999": {
    "attempts": 0,
@@ -1046,6 +1054,11 @@
    "attempts": 0,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "realgm:209b32168c3c4180": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-22T23:41:33.606250+00:00"
+  },
   "realgm:2db68523bcca98e8": {
    "attempts": 1,
    "done": true,
@@ -1069,7 +1082,7 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:52eda9b9c21a4691": {
-   "attempts": 2,
+   "attempts": 3,
    "seen": "2026-10-22T21:43:23.623850+00:00"
   },
   "realgm:52ef54ff8b340f01": {
@@ -1253,6 +1266,11 @@
    "done": "too-old",
    "seen": "2026-10-21T23:42:47.814496+00:00"
   },
+  "realgm:e28ef7983e58ea6e": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-22T23:41:33.606250+00:00"
+  },
   "realgm:e8cc574a97de025a": {
    "attempts": 1,
    "done": "skipped: Το θέμα υπάρχει ήδη στο site με τον τίτλο «Ο rookie Λέντεμποργκ τα «έχωσε» στον Ντόντσιτς: «Έχασα κάθε σεβασμό για εκείν",
@@ -1344,7 +1362,9 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:6ed37c1e4fc142c7": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65601,
    "seen": "2026-10-22T22:42:13.117721+00:00"
   },
   "sportando:7a5a56c38c8b04a3": {
@@ -1372,7 +1392,9 @@
    "seen": "2026-10-22T09:48:07.105539+00:00"
   },
   "sportando:8dace249b646033a": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65603,
    "seen": "2026-10-22T22:42:13.117721+00:00"
   },
   "sportando:a18a2c876df42d10": {
@@ -1421,7 +1443,9 @@
    "seen": "2026-10-22T21:43:23.623850+00:00"
   },
   "sportando:dffe16b36cedea9a": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65599,
    "seen": "2026-10-22T21:43:23.623850+00:00"
   },
   "sportando:e72aeafb87f725a5": {
