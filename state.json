@@ -2,6 +2,7 @@
  "badges": {
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
   "lba|napoli basketball": "",
+  "lba|pallacanestro reggiana": "https://r2.thesportsdb.com/images/media/team/badge/5oln4h1784568860.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": ""
  },
@@ -1186,6 +1187,11 @@
    "post": 65317,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "sportando:370e9fffa3f9e416": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα υπάρχει ήδη στο site: «Ο πρώην παίκτης του Κολοσσού Μπάρμπιτς στη Βερόνα για να καλύψει το κενό του Μάσινμπεργκ»",
+   "seen": "2026-10-22T09:48:07.105539+00:00"
+  },
   "sportando:462c033b0c81ee59": {
    "attempts": 1,
    "done": true,
@@ -1209,16 +1215,35 @@
    "done": "skipped: Πρόκειται για γνώμη και ανάλυση του πρώην παίκτη Αλμπέρτο Τονούτ για την Καντού μετά την ήττα με 92-72 στην Τεργέστη, πο",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "sportando:81360137e13b3d30": {
+   "attempts": 1,
+   "seen": "2026-10-22T09:48:07.105539+00:00"
+  },
+  "sportando:8c6697c3e1c292d5": {
+   "attempts": 1,
+   "done": "skipped: Υπάρχει ήδη το άρθρο «Διάστρεμμα στον αστράγαλο για τον Μάρκο Σίμονοβιτς» για τον ίδιο τραυματισμό. Το μόνο νέο στοιχείο",
+   "seen": "2026-10-22T09:48:07.105539+00:00"
+  },
   "sportando:a18a2c876df42d10": {
    "attempts": 1,
    "done": true,
    "post": 65344,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "sportando:c670943caf6d9b77": {
+   "attempts": 1,
+   "done": true,
+   "post": 65502,
+   "seen": "2026-10-22T09:48:07.105539+00:00"
+  },
   "sportando:c9876115142dd0f0": {
    "attempts": 1,
    "done": "skipped: Πρόκειται για promo του podcast «Podcastelli» στο LBATV χωρίς ουσιαστικό περιεχόμενο. Τα δεδομένα δεν έχουν καμία δήλωση",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:e72aeafb87f725a5": {
+   "attempts": 0,
+   "seen": "2026-10-22T09:48:07.105539+00:00"
   },
   "sportando:ebb1b1a3cf6b2335": {
    "attempts": 1,
