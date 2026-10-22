@@ -75,7 +75,8 @@ def fetch(url):
 
 
 def feed_items():
-    root = ET.fromstring(fetch(FEED))
+    # «?nc=…» παρακάμπτει την cache του Drupal, που κρατά τη ροή έως 1 ώρα (ένα νέο άρθρο δεν φαινόταν, 22/10)
+    root = ET.fromstring(fetch(f"{FEED}?nc={int(now().timestamp())}"))
     for it in root.iter("item"):
         link = (it.findtext("link") or "").strip()
         desc = html.unescape(it.findtext("description") or "")
