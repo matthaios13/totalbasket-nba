@@ -10,6 +10,7 @@
   "lba|pallacanestro cantù": "https://r2.thesportsdb.com/images/media/team/badge/vy599w1784567424.png",
   "lba|pallacanestro reggiana": "https://r2.thesportsdb.com/images/media/team/badge/5oln4h1784568860.png",
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
+  "lba|roma": "https://www.thesportsdb.com/images/media/team/badge/dn89jw1792763170.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
   "lba|virtus bologna": "",
@@ -1215,6 +1216,12 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "marca-acb:6cb53726e64468d3": {
+   "attempts": 1,
+   "done": true,
+   "post": 65849,
+   "seen": "2026-10-24T22:40:35.589835+00:00"
+  },
   "marca-acb:7248ad8f61ee76b2": {
    "attempts": 1,
    "done": "skipped: Αγώνας της Liga U (εφηβικών/νέων ομάδων της Ρεάλ και της Μπαρτσελόνα), όχι της ACB. Εκτός θέματος του site: εφηβικό επίπ",
@@ -1386,6 +1393,11 @@
    "done": "skipped: Μικρή μετακίνηση δικαιωμάτων G League για παίκτη που έχει κοπεί (waived) από την Σακραμέντο. Δεν έχει ελληνική σύνδεση κ",
    "seen": "2026-10-23T21:43:36.996625+00:00"
   },
+  "realgm:180facc603897db6": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα του τραυματισμού του Φλαγκ στον ώμο ήδη καλύπτεται στο site (\"Τραυματισμός στον ώμο για τον Φλαγκ, «θα αξιολογηθ",
+   "seen": "2026-10-24T22:40:35.589835+00:00"
+  },
   "realgm:1bf1c9ed9ead2db5": {
    "attempts": 1,
    "done": true,
@@ -1451,6 +1463,11 @@
    "done": true,
    "post": 65404,
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:51515a221442c5ba": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα υπάρχει ήδη στους τίτλους: «Σοβαρός τραυματισμός στο γόνατο για τον Μίσι στη Γιούτα» καλύπτει τον ίδιο τραυματισ",
+   "seen": "2026-10-24T22:40:35.589835+00:00"
   },
   "realgm:52eda9b9c21a4691": {
    "attempts": 0,
@@ -1968,6 +1985,12 @@
    "done": "skipped: Υπάρχει ήδη στο site άρθρο με δηλώσεις του Γκάρισον Μάθιους («Πρέπει ακόμα να βρούμε την καλύτερη χημεία για όλους») από",
    "seen": "2026-10-22T13:54:44.558017+00:00"
   },
+  "sportando:5d40de7f8c004818": {
+   "attempts": 1,
+   "done": true,
+   "post": 65845,
+   "seen": "2026-10-24T22:40:35.589835+00:00"
+  },
   "sportando:627f466a5c20a362": {
    "attempts": 0,
    "seen": "2026-10-23T08:47:47.918952+00:00"
@@ -2138,6 +2161,12 @@
    "attempts": 1,
    "done": "skipped: Υπάρχει ήδη άρθρο για το ίδιο θέμα: «Ντέρμπι του Βένετο στο Ταλιέρτσιο: Βενέτσια και Τρεβίζο με το ίδιο ρεκόρ». Πρόκειτα",
    "seen": "2026-10-22T21:43:23.623850+00:00"
+  },
+  "sportando:dfd068d5636a468b": {
+   "attempts": 1,
+   "done": true,
+   "post": 65847,
+   "seen": "2026-10-24T22:40:35.589835+00:00"
   },
   "sportando:dffe16b36cedea9a": {
    "attempts": 1,
