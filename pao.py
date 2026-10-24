@@ -152,7 +152,7 @@ def rewrite(item, meta, site_titles):
     }
     prompt = f"{STYLE}\n\nΔΕΔΟΜΕΝΑ (JSON):\n{json.dumps(facts, ensure_ascii=False, indent=1)}"
     r = subprocess.run(
-        ["claude", "-p", "--output-format", "json", "--model", MODEL, "--max-turns", "2"],
+        bot.claude_cmd(MODEL),
         input=prompt, capture_output=True, text=True, timeout=600)
     if '"api_error_status":401' in r.stdout or "Failed to authenticate" in r.stdout:
         raise AuthError("Claude token rejected - set CLAUDE_CODE_OAUTH_TOKEN again")

@@ -48,6 +48,15 @@ DRY_RUN = os.environ.get("DRY_RUN") == "1"
 # used it up in two days (2026-10-23), so a cheap model screens news first and Sonnet writes
 MODEL = os.environ.get("CLAUDE_MODEL", "sonnet")
 TRIAGE_MODEL = os.environ.get("TRIAGE_MODEL", "haiku")
+# plain `claude -p` sends Claude Code's whole system prompt + tool list (~32k tokens) with every call;
+# these flags cut a call to ~1k tokens plus the prompt (measured 2026-10-24)
+LEAN = ["--max-turns", "1", "--tools", "", "--strict-mcp-config", "--setting-sources", "",
+        "--system-prompt", "Είσαι συντάκτης ελληνικού αθλητικού site. Απαντάς μόνο με ένα JSON αντικείμενο.",
+        "--effort", "low"]
+
+
+def claude_cmd(model):
+    return ["claude", "-p", "--output-format", "json", "--model", model, *LEAN]
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
 ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
 NBA_CATEGORY = 6
@@ -281,7 +290,7 @@ def ask_claude(task, facts):
 
 def _claude(prompt, model):
     r = subprocess.run(
-        ["claude", "-p", "--output-format", "json", "--model", model, "--max-turns", "2"],
+        claude_cmd(model),
         input=prompt, capture_output=True, text=True, timeout=600)
     if '"api_error_status":429' in r.stdout or "hit your" in r.stdout.lower():
         msg = re.search(r'"result":"([^"]*)"', r.stdout)
