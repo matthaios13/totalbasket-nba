@@ -12,7 +12,7 @@ Env:
   WP_URL (default https://totalbasket.gr), WP_USER, WP_APP_PASSWORD
   WP_STATUS   publish | draft          (default publish)
   DRY_RUN=1   write articles to ./out instead of WordPress
-  CLAUDE_MODEL (default opus), MAX_POSTS (default 10)
+  CLAUDE_MODEL (default sonnet) writes, TRIAGE_MODEL (default haiku) pre-screens news; MAX_POSTS (default 10)
   CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY  (used by the claude CLI)
 """
 import base64
@@ -44,7 +44,10 @@ ESPN_CONTENT = "https://content.core.api.espn.com/v1/sports/news/"
 WP_URL = os.environ.get("WP_URL", "https://totalbasket.gr").rstrip("/")
 WP_STATUS = os.environ.get("WP_STATUS", "publish")
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
-MODEL = os.environ.get("CLAUDE_MODEL", "opus")
+# the bot runs on the owner's Claude subscription and shares its weekly limit: Opus for every item
+# used it up in two days (2026-10-23), so a cheap model screens news first and Sonnet writes
+MODEL = os.environ.get("CLAUDE_MODEL", "sonnet")
+TRIAGE_MODEL = os.environ.get("TRIAGE_MODEL", "haiku")
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
 ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
 NBA_CATEGORY = 6
@@ -260,6 +263,10 @@ class AuthError(Exception):
     """Claude or WordPress rejected our key: stop the run, don't burn the item's attempts."""
 
 
+class QuotaError(AuthError):
+    """Claude usage limit reached: stop quietly, the next hourly run tries again."""
+
+
 MIXED_SCRIPT = re.compile(r"[\u0370-\u03ff\u1f00-\u1fff][A-Za-z]|[A-Za-z][\u0370-\u03ff\u1f00-\u1fff]")
 
 
@@ -272,13 +279,13 @@ def ask_claude(task, facts):
     raise RuntimeError("title keeps mixing Greek and Latin letters")
 
 
-def _ask_claude(task, facts, retry_note=False):
-    prompt = f"{STYLE}\n\n{task}\n\nΔΕΔΟΜΕΝΑ (JSON):\n{json.dumps(facts, ensure_ascii=False, indent=1)}"
-    if retry_note:
-        prompt += "\n\nΠΡΟΣΟΧΗ: η προηγούμενη απάντηση είχε λέξη με ανακατεμένα ελληνικά και λατινικά γράμματα. Γράψ' τα όλα σωστά."
+def _claude(prompt, model):
     r = subprocess.run(
-        ["claude", "-p", "--output-format", "json", "--model", MODEL, "--max-turns", "2"],
+        ["claude", "-p", "--output-format", "json", "--model", model, "--max-turns", "2"],
         input=prompt, capture_output=True, text=True, timeout=600)
+    if '"api_error_status":429' in r.stdout or "hit your" in r.stdout.lower():
+        msg = re.search(r'"result":"([^"]*)"', r.stdout)
+        raise QuotaError(f"Claude usage limit: {msg.group(1) if msg else 'rate limited'}")
     if '"api_error_status":401' in r.stdout or "Failed to authenticate" in r.stdout:
         raise AuthError("Claude token rejected - set CLAUDE_CODE_OAUTH_TOKEN again")
     if r.returncode != 0:
@@ -287,7 +294,32 @@ def _ask_claude(task, facts, retry_note=False):
     m = re.search(r"\{.*\}", text, re.S)
     if not m:
         raise RuntimeError(f"no JSON in answer: {text[:300]}")
-    art = json.loads(m.group(0))
+    return json.loads(m.group(0))
+
+
+TRIAGE = """Είσαι αρχισυντάκτης του ελληνικού site μπάσκετ totalbasket.gr. Θέμα της ενότητας: {about}.
+Αποφάσισε ΜΟΝΟ από τίτλο και περίληψη αν αξίζει άρθρο. ΟΧΙ για: fantasy/στοίχημα, λίστες/rankings, γνώμη χωρίς είδηση,
+live/ενδιάμεσα σκορ, τηλεοπτικό πρόγραμμα, κατώτερες κατηγορίες/γυναικείο/εφηβικό, πολύ ασήμαντα, ή θέμα που ήδη υπάρχει
+στους τίτλους "already_on_site" (ίδιο αποτέλεσμα, ίδια μεταγραφή, ίδια συνέντευξη). ΝΑΙ για δηλώσεις, τραυματισμούς,
+μεταγραφές/συμβόλαια/απολύσεις, ρεκόρ, τιμωρίες, ειδήσεις για Έλληνες.
+Απαντάς ΜΟΝΟ JSON: {{"publish": true/false, "reason": "σύντομα"}}
+
+ΔΕΔΟΜΕΝΑ:
+{data}"""
+
+
+def triage(about, headline, summary, on_site):
+    """Cheap first pass on headline + summary, so the expensive writer only sees likely articles."""
+    data = json.dumps({"headline": headline, "summary": (summary or "")[:700],
+                       "already_on_site": on_site[:40]}, ensure_ascii=False, indent=1)
+    return _claude(TRIAGE.format(about=about, data=data), TRIAGE_MODEL)
+
+
+def _ask_claude(task, facts, retry_note=False):
+    prompt = f"{STYLE}\n\n{task}\n\nΔΕΔΟΜΕΝΑ (JSON):\n{json.dumps(facts, ensure_ascii=False, indent=1)}"
+    if retry_note:
+        prompt += "\n\nΠΡΟΣΟΧΗ: η προηγούμενη απάντηση είχε λέξη με ανακατεμένα ελληνικά και λατινικά γράμματα. Γράψ' τα όλα σωστά."
+    art = _claude(prompt, MODEL)
     if art.get("publish") and not (art.get("title") and art.get("content")):
         raise RuntimeError("answer missing title/content")
     return art
@@ -519,14 +551,19 @@ def _run(state):
             n = state["news"][nid]
         else:
             n = state["news"][nid] = {"seen": stamp, "attempts": 0}
-            pub = dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00"))
-            if now() - pub > dt.timedelta(hours=NEWS_MAX_AGE_HOURS):
-                n["done"] = "too-old"
+        pub = dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00"))
+        if not n.get("done") and now() - pub > dt.timedelta(hours=NEWS_MAX_AGE_HOURS):
+            n["done"] = "too-old"
         if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget():
             continue
         try:
             n["attempts"] += 1
             log("judging news:", item["headline"])
+            pre = triage("NBA", item["headline"], item.get("description"), [p["title"] for p in site_posts])
+            if not pre.get("publish"):
+                n["done"] = "skipped: " + pre.get("reason", "")[:120]
+                log("  skipped (triage):", pre.get("reason"))
+                continue
             facts, team_id = news_facts(item)
             facts["already_on_site"] = [p["title"] for p in site_posts[:40]]
             art = ask_claude(NEWS_TASK, facts)
@@ -566,14 +603,21 @@ def _run(state):
                 n = state["news"][nid]
             else:
                 n = state["news"][nid] = {"seen": stamp, "attempts": 0}
-                if not item["published"] or now() - item["published"] > dt.timedelta(hours=NEWS_MAX_AGE_HOURS):
-                    n["done"] = "too-old"
+            if not n.get("done") and (not item["published"]
+                                      or now() - item["published"] > dt.timedelta(hours=NEWS_MAX_AGE_HOURS)):
+                n["done"] = "too-old"
             if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget() or judged >= feed["max_judge"]:
                 continue
             judged += 1
             try:
                 n["attempts"] += 1
                 log(f"judging {feed['key']}:", item["title"])
+                pre = triage(LEAGUES[league]["about"], item["title"], item["summary"] or item["story"][:700],
+                             [p["title"] for p in site[league]])
+                if not pre.get("publish"):
+                    n["done"] = "skipped: " + pre.get("reason", "")[:120]
+                    log("  skipped (triage):", pre.get("reason"))
+                    continue
                 facts = {
                     "type": "news", "league": LEAGUES[league]["about"], "source_language": feed["lang"],
                     "published_utc": item["published"].isoformat(), "headline": item["title"],
@@ -609,5 +653,7 @@ if __name__ == "__main__":
         sys.exit("WP_USER / WP_APP_PASSWORD missing")
     try:
         run()
+    except QuotaError as ex:
+        log(f"PAUSED until the limit resets: {ex}")     # not a failure: next hourly run retries
     except AuthError as ex:
         sys.exit(f"STOPPED: {ex}")
