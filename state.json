@@ -1,5 +1,6 @@
 {
  "badges": {
+  "lba|apu udine": "https://r2.thesportsdb.com/images/media/team/badge/o64a4v1713952899.png",
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
   "lba|dolomiti energia trentino": "https://r2.thesportsdb.com/images/media/team/badge/sp4qsm1677678255.png",
@@ -666,6 +667,11 @@
    "done": "too-old",
    "seen": "2026-10-23T10:43:47.460817+00:00"
   },
+  "bebasket:cfefcff9901029d4": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-24T13:41:26.996587+00:00"
+  },
   "bebasket:e0af744dc1c7fbb1": {
    "attempts": 0,
    "done": "too-old",
@@ -1305,6 +1311,10 @@
    "done": "too-old",
    "seen": "2026-10-22T23:41:33.606250+00:00"
   },
+  "realgm:255f9ad41a1ab9d9": {
+   "attempts": 0,
+   "seen": "2026-10-24T13:41:26.996587+00:00"
+  },
   "realgm:268fb63c07e56f7d": {
    "attempts": 1,
    "done": true,
@@ -1318,7 +1328,9 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:2e895e4769ea7b4b": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65807,
    "seen": "2026-10-23T15:49:29.559088+00:00"
   },
   "realgm:3146589498009f33": {
@@ -1363,7 +1375,8 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:5882d42017a16136": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": "skipped: Ανώνυμη εκτίμηση σκάουτ βασισμένη σε έναν αγώνα (6/23, 1 βολή), χωρίς νέα είδηση. Είναι ανάλυση και γνώμη, όχι δήλωση, τ",
    "seen": "2026-10-23T15:49:29.559088+00:00"
   },
   "realgm:5a1cf2068369278b": {
@@ -1371,6 +1384,10 @@
    "done": true,
    "post": 65380,
    "seen": "2026-10-21T20:46:17.791008+00:00"
+  },
+  "realgm:5ad26a1a8a0da1d9": {
+   "attempts": 0,
+   "seen": "2026-10-24T13:41:26.996587+00:00"
   },
   "realgm:5b023c990eb6a9c8": {
    "attempts": 1,
@@ -1388,6 +1405,11 @@
    "done": "too-old",
    "seen": "2026-10-23T00:59:52.201034+00:00"
   },
+  "realgm:6effb41499ab7644": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα καλύπτεται ήδη: ο τίτλος «Τατούμ για Μπράουν: «Δεν υπάρχει κανένα μένος, δεν είμαστε Σακ και Κόμπι»» είναι στους",
+   "seen": "2026-10-24T13:41:26.996587+00:00"
+  },
   "realgm:703dec289eb94737": {
    "attempts": 1,
    "done": true,
@@ -1397,6 +1419,10 @@
   "realgm:706dfdf2c800ad28": {
    "attempts": 0,
    "seen": "2026-10-23T22:42:25.001923+00:00"
+  },
+  "realgm:71e9d1b08a1339fb": {
+   "attempts": 0,
+   "seen": "2026-10-24T13:41:26.996587+00:00"
   },
   "realgm:76527090dc256865": {
    "attempts": 1,
@@ -1581,6 +1607,10 @@
    "done": "skipped: Πρόκειται για οδηγό τηλεοπτικής μετάδοσης και live streaming (κανάλια, ώρα έναρξης, πλατφόρμες) για τον αγώνα Γκρίζλις -",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "realgm:d1963e7309ac3c43": {
+   "attempts": 1,
+   "seen": "2026-10-24T13:41:26.996587+00:00"
+  },
   "realgm:d33346351b5b7b84": {
    "attempts": 1,
    "done": true,
@@ -1657,7 +1687,9 @@
    "seen": "2026-10-22T14:47:41.362018+00:00"
   },
   "sportando:0aceab91ca4c98a4": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65809,
    "seen": "2026-10-24T11:43:22.675256+00:00"
   },
   "sportando:0b64efa5ffef8360": {
@@ -1688,8 +1720,14 @@
    "seen": "2026-10-22T13:54:44.558017+00:00"
   },
   "sportando:24bb433cdc3bfbca": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": "skipped: Εικασία για την rotation της Ρώμης πριν από το ματς με την Ούντινε, χωρίς επίσημη είδηση. Το ματς έχει ήδη προεπισκόπηση",
    "seen": "2026-10-24T11:43:22.675256+00:00"
+  },
+  "sportando:25e77c062df74df5": {
+   "attempts": 1,
+   "done": "skipped: Τιμητική ένταξη πρώην παίκτη στο Hall of Fame της Virtus. Δεν είναι αγωνιστική εξέλιξη, μεταγραφή, τραυματισμός, ρεκόρ ή",
+   "seen": "2026-10-24T13:41:26.996587+00:00"
   },
   "sportando:25ef86aaea8fd00e": {
    "attempts": 1,
@@ -1701,6 +1739,11 @@
    "attempts": 1,
    "done": "skipped: Πολύ ασήμαντη είδηση για Έλληνα αναγνώστη: ο γενικός διευθυντής της Ντερτόνα Τζανμάρια Βατσίρκα εξηγεί γιατί οι εντός έδ",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:2a43533222b7bb05": {
+   "attempts": 1,
+   "done": "skipped: Γνώμη χωρίς είδηση: ο Μπονιτσόλι επαινεί τη διοίκηση, τους dirigenti και τον προπονητή της APU Udine, χωρίς μεταγραφή, τ",
+   "seen": "2026-10-24T13:41:26.996587+00:00"
   },
   "sportando:2b3ab014b0b503e2": {
    "attempts": 0,
