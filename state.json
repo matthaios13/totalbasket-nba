@@ -11,7 +11,8 @@
   "lba|pallacanestro reggiana": "https://r2.thesportsdb.com/images/media/team/badge/5oln4h1784568860.png",
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
-  "lba|treviso basket": ""
+  "lba|treviso basket": "",
+  "lba|virtus bologna": ""
  },
  "games": {
   "401909088": {
@@ -623,6 +624,11 @@
    "post": 65813,
    "seen": "2026-10-24T14:42:20.886452+00:00"
   },
+  "50266109": {
+   "attempts": 1,
+   "done": "skipped: Fantasy basketball και στοιχηματικές προτάσεις (streamers, bets), δεν είναι είδηση. Εκτός πολιτικής σύμφωνα με τον κανόν",
+   "seen": "2026-10-24T16:43:24.576660+00:00"
+  },
   "bebasket:3ab9df74cb82a3a2": {
    "attempts": 0,
    "done": "too-old",
@@ -672,6 +678,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-23T10:43:47.460817+00:00"
+  },
+  "bebasket:a210336421d5aac1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-24T16:43:24.576660+00:00"
   },
   "bebasket:cfefcff9901029d4": {
    "attempts": 0,
@@ -1770,6 +1781,12 @@
   "sportando:2b3ab014b0b503e2": {
    "attempts": 0,
    "seen": "2026-10-23T08:47:47.918952+00:00"
+  },
+  "sportando:2e0218082025f329": {
+   "attempts": 1,
+   "done": true,
+   "post": 65832,
+   "seen": "2026-10-24T16:43:24.576660+00:00"
   },
   "sportando:30e207dcc95e5f00": {
    "attempts": 1,
