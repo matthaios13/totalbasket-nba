@@ -12,7 +12,8 @@
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
-  "lba|virtus bologna": ""
+  "lba|virtus bologna": "",
+  "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png"
  },
  "games": {
   "401909088": {
@@ -792,6 +793,12 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "encestando:b0165c4fa307bada": {
+   "attempts": 1,
+   "done": true,
+   "post": 65841,
+   "seen": "2026-10-24T21:41:52.666166+00:00"
+  },
   "encestando:b68cd1a2b14355e5": {
    "attempts": 1,
    "done": "skipped: Το κείμενο είναι ανάλυση και αποτίμηση του πρώτου μήνα του Σέκουλιτς στην Μπαρτσελόνα, χωρίς δική του είδηση: δεν υπάρχε",
@@ -987,6 +994,12 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "lequipe:9f4a06ab80fad591": {
+   "attempts": 1,
+   "done": true,
+   "post": 65843,
+   "seen": "2026-10-24T21:41:52.666166+00:00"
+  },
   "lequipe:b75b7a25551440c8": {
    "attempts": 0,
    "done": "too-old",
@@ -1106,6 +1119,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:18bceb39aef90bfe": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα καλύπτεται ήδη: «Ο Νούνιες οδήγησε την Μπαρτσελόνα σε νίκη επί της Σαραγόσα με 99-81». Πρόκειται για το ίδιο παι",
+   "seen": "2026-10-24T21:41:52.666166+00:00"
   },
   "marca-acb:1cf0f4a2ce592848": {
    "attempts": 0,
@@ -1487,10 +1505,20 @@
    "post": 65817,
    "seen": "2026-10-24T14:42:20.886452+00:00"
   },
+  "realgm:6d1051106af441c0": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα (τραυμάτισμός του Μπανκέρο στον δεξί αστράγαλο) υπάρχει ήδη στο site με τον τίτλο «Ανησυχία στο Ορλάντο: Εκτός π",
+   "seen": "2026-10-24T21:41:52.666166+00:00"
+  },
   "realgm:6effb41499ab7644": {
    "attempts": 1,
    "done": "skipped: Το θέμα καλύπτεται ήδη: ο τίτλος «Τατούμ για Μπράουν: «Δεν υπάρχει κανένα μένος, δεν είμαστε Σακ και Κόμπι»» είναι στους",
    "seen": "2026-10-24T13:41:26.996587+00:00"
+  },
+  "realgm:6f3c0992f0d72628": {
+   "attempts": 1,
+   "done": "skipped: Γυναικείο πρωτάθλημα (WNBA), εκτός της ενότητας NBA.",
+   "seen": "2026-10-24T21:41:52.666166+00:00"
   },
   "realgm:703dec289eb94737": {
    "attempts": 1,
@@ -1608,6 +1636,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-23T03:45:29.247617+00:00"
+  },
+  "realgm:a4a23bd8f28e5bb6": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-24T21:41:52.666166+00:00"
   },
   "realgm:a4b43d5ae8ccff15": {
    "attempts": 1,
@@ -1757,6 +1790,11 @@
   "realgm:f21dc1ab445d4e0b": {
    "attempts": 0,
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:f3156f1cbaab2d28": {
+   "attempts": 1,
+   "done": "skipped: Το ίδιο θέμα καλύπτεται ήδη στο site με τον τίτλο «Στους Θάντερ με Two-Way συμβόλαιο ο Μάιακ Πίβι».",
+   "seen": "2026-10-24T21:41:52.666166+00:00"
   },
   "realgm:f5ab488cef193259": {
    "attempts": 0,
