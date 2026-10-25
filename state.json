@@ -7,6 +7,7 @@
   "lba|maxima roma": "https://r2.thesportsdb.com/images/media/team/badge/so67ci1786177012.png",
   "lba|napoli basketball": "",
   "lba|olimpia milano": "https://r2.thesportsdb.com/images/media/team/badge/aurbi61790186853.png",
+  "lba|openjobmetis varese": "",
   "lba|pallacanestro cantù": "https://r2.thesportsdb.com/images/media/team/badge/vy599w1784567424.png",
   "lba|pallacanestro reggiana": "https://r2.thesportsdb.com/images/media/team/badge/5oln4h1784568860.png",
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
@@ -715,6 +716,11 @@
    "attempts": 1,
    "done": "skipped: Το ίδιο αποτέλεσμα (ανατροπή από -23 των Νάγκετς με τον Γιόκιτς) υπάρχει ήδη στους τίτλους: «Ο Γιόκιτς και ο Μάρει έσβησ",
    "seen": "2026-10-25T05:42:20.347492+00:00"
+  },
+  "bebasket:188393859be7cea2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-25T10:42:37.987512+00:00"
   },
   "bebasket:2b745a1122ffc9a3": {
    "attempts": 0,
@@ -1501,6 +1507,11 @@
    "post": 65623,
    "seen": "2026-10-23T03:45:29.247617+00:00"
   },
+  "realgm:2a75cd93416d47a2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-25T10:42:37.987512+00:00"
+  },
   "realgm:2db68523bcca98e8": {
    "attempts": 1,
    "done": true,
@@ -1942,6 +1953,12 @@
    "post": 65540,
    "seen": "2026-10-22T14:47:41.362018+00:00"
   },
+  "sportando:06df44bc32f01066": {
+   "attempts": 1,
+   "done": true,
+   "post": 65902,
+   "seen": "2026-10-25T10:42:37.987512+00:00"
+  },
   "sportando:0aceab91ca4c98a4": {
    "attempts": 1,
    "done": true,
@@ -2082,6 +2099,12 @@
    "done": "skipped: Θέμα που καλύπτεται ήδη: το «Καντού: Έτοιμη για νέες κινήσεις, «καμία ανοχή» από τον Τζιοφρέ» έχει την ίδια ιστορία για ",
    "seen": "2026-10-24T08:44:49.125661+00:00"
   },
+  "sportando:57508f16c0000cdf": {
+   "attempts": 1,
+   "done": true,
+   "post": 65904,
+   "seen": "2026-10-25T10:42:37.987512+00:00"
+  },
   "sportando:58cfc3a45d4a29fd": {
    "attempts": 1,
    "done": "skipped: Το θέμα (διάστρεμμα στον αστράγαλο του Γουίλτζερ, Ρέγιερ Βενέτσια) υπάρχει ήδη στο site: «Διάστρεμμα στον αστράγαλο για ",
@@ -2213,6 +2236,10 @@
    "post": 65507,
    "seen": "2026-10-22T10:45:08.827341+00:00"
   },
+  "sportando:bd06c46d015e5dc8": {
+   "attempts": 0,
+   "seen": "2026-10-25T10:42:37.987512+00:00"
+  },
   "sportando:bd124c12b63eba24": {
    "attempts": 1,
    "done": "skipped: Υπάρχει ήδη στο site άρθρο για το ίδιο αγώνα (Τριέστε – Βερόνα: Η φόρμα της Βερόνας κόντρα στα τρίποντα της Τριέστε) και",
@@ -2318,11 +2345,21 @@
    "done": "skipped: Πρόκειται για γνώμη/ανάλυση του πρώην παίκτη Ρενάτο Βιλάλτα για το μπάσκετ του Βένετο, από συνέντευξή του σε άλλο μέσο, ",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "sportando:ed7bfc1fc5424aaa": {
+   "attempts": 1,
+   "done": "skipped: Πρόκειται για ανακοίνωση προγράμματος αγώνα με τηλεοπτική κάλυψη (τηλεοπτικό πρόγραμμα), χωρίς είδηση ή ειδήσεις για Έλλ",
+   "seen": "2026-10-25T10:42:37.987512+00:00"
+  },
   "sportando:f03f6c486d3624c0": {
    "attempts": 1,
    "done": true,
    "post": 65579,
    "seen": "2026-10-22T21:43:23.623850+00:00"
+  },
+  "sportando:f0ad2705374e56a1": {
+   "attempts": 1,
+   "done": "skipped: Είναι σχόλιο/ανάλυση της εφημερίδας Tuttosport για τη νίκη της Varese επί της Roma, χωρίς νέα είδηση, δήλωση ή μεταγραφή",
+   "seen": "2026-10-25T10:42:37.987512+00:00"
   },
   "sportando:f75c4d7fb1e08248": {
    "attempts": 1,
