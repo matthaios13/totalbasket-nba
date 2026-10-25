@@ -742,6 +742,11 @@
    "done": "too-old",
    "seen": "2026-10-25T10:42:37.987512+00:00"
   },
+  "bebasket:25b44ac9f36bb783": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-25T19:38:06.464070+00:00"
+  },
   "bebasket:2b745a1122ffc9a3": {
    "attempts": 0,
    "done": "too-old",
@@ -2105,6 +2110,10 @@
    "post": 65657,
    "seen": "2026-10-23T07:52:54.781294+00:00"
   },
+  "sportando:25f9faeb6b851c76": {
+   "attempts": 1,
+   "seen": "2026-10-25T19:38:06.464070+00:00"
+  },
   "sportando:2720d60dfa9b7c8c": {
    "attempts": 1,
    "done": "skipped: Πολύ ασήμαντη είδηση για Έλληνα αναγνώστη: ο γενικός διευθυντής της Ντερτόνα Τζανμάρια Βατσίρκα εξηγεί γιατί οι εντός έδ",
@@ -2199,6 +2208,12 @@
    "attempts": 0,
    "seen": "2026-10-23T14:50:58.277371+00:00"
   },
+  "sportando:4411dd44724d7daf": {
+   "attempts": 1,
+   "done": true,
+   "post": 65969,
+   "seen": "2026-10-25T19:38:06.464070+00:00"
+  },
   "sportando:462c033b0c81ee59": {
    "attempts": 1,
    "done": true,
@@ -2219,6 +2234,12 @@
   "sportando:534a15eef85ab6c1": {
    "attempts": 0,
    "seen": "2026-10-23T14:50:58.277371+00:00"
+  },
+  "sportando:53650cb3d6b045c5": {
+   "attempts": 1,
+   "done": true,
+   "post": 65967,
+   "seen": "2026-10-25T19:38:06.464070+00:00"
   },
   "sportando:541f750dfa02578d": {
    "attempts": 1,
