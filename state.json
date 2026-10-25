@@ -19,6 +19,7 @@
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
   "lba|virtus bologna": "",
+  "lnb|elan béarnais pau-lacq-orthez": "",
   "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png",
   "lnb|paris basketball": "https://r2.thesportsdb.com/images/media/team/badge/9q0d6x1726681476.png"
  },
@@ -774,6 +775,11 @@
    "done": "too-old",
    "seen": "2026-10-24T20:39:51.344197+00:00"
   },
+  "bebasket:4c180d83eb7e448c": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-25T21:42:00.537237+00:00"
+  },
   "bebasket:503ecd0ed6e611d1": {
    "attempts": 0,
    "done": "too-old",
@@ -1022,6 +1028,12 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:51ebd11ad6749deb": {
+   "attempts": 1,
+   "done": true,
+   "post": 65992,
+   "seen": "2026-10-25T21:42:00.537237+00:00"
   },
   "lequipe:52dbc25c79d02501": {
    "attempts": 0,
