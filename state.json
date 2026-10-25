@@ -6,6 +6,7 @@
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
   "lba|dolomiti energia trentino": "https://r2.thesportsdb.com/images/media/team/badge/sp4qsm1677678255.png",
+  "lba|dolomiti energia trento": "https://r2.thesportsdb.com/images/media/team/badge/sp4qsm1677678255.png",
   "lba|maxima roma": "https://r2.thesportsdb.com/images/media/team/badge/so67ci1786177012.png",
   "lba|napoli basketball": "",
   "lba|olimpia milano": "https://r2.thesportsdb.com/images/media/team/badge/aurbi61790186853.png",
@@ -17,7 +18,8 @@
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
   "lba|virtus bologna": "",
-  "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png"
+  "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png",
+  "lnb|paris basketball": "https://r2.thesportsdb.com/images/media/team/badge/9q0d6x1726681476.png"
  },
  "games": {
   "401909088": {
@@ -983,6 +985,12 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "lequipe:4a8fddfce48f965d": {
+   "attempts": 1,
+   "done": true,
+   "post": 65960,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
   "lequipe:4ab87197368dff06": {
    "attempts": 1,
    "done": "skipped: Ο τίτλος αναφέρεται σε σερί νικών της Dijon, που δεν είναι ομάδα της Betclic Élite. Χωρίς περίληψη δεν φαίνεται ούτε δήλ",
@@ -1284,6 +1292,12 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "marca-acb:4418480175db2a23": {
+   "attempts": 1,
+   "done": true,
+   "post": 65956,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
   "marca-acb:44f260be5bf57001": {
    "attempts": 1,
    "done": true,
@@ -1453,6 +1467,12 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:c7991650c17784da": {
+   "attempts": 1,
+   "done": true,
+   "post": 65958,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
   },
   "marca-acb:cc425e52c80966ad": {
    "attempts": 0,
@@ -1888,6 +1908,12 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "realgm:c60885ca9b6919f9": {
+   "attempts": 1,
+   "done": true,
+   "post": 65952,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
   "realgm:c6798a73d31a524a": {
    "attempts": 1,
    "done": true,
@@ -2040,6 +2066,11 @@
    "attempts": 0,
    "seen": "2026-10-23T12:54:18.676555+00:00"
   },
+  "sportando:175b68c97d5a0adf": {
+   "attempts": 1,
+   "done": "skipped: Πρόκειται για προεπισκόπηση αγώνα (Round 5) χωρίς νέα είδηση. Το ίδιο ντέρμπι Βένετο (Βενέτσια–Τρεβίζο) υπάρχει ήδη στον",
+   "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
   "sportando:193cb43238788224": {
    "attempts": 1,
    "done": "skipped: Το θέμα (ντέρμπι Βενέτσια–Τρεβίζο) καλύπτεται ήδη στους τίτλους του site με την «Ντέρμπι του Βένετο στο Ταλιέρτσιο: Βενέ",
@@ -2100,6 +2131,10 @@
    "post": 65384,
    "seen": "2026-10-21T20:46:17.791008+00:00"
   },
+  "sportando:3107e0b0ace4208c": {
+   "attempts": 0,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
   "sportando:313bf31bc96b10b4": {
    "attempts": 0,
    "seen": "2026-10-23T19:43:29.776992+00:00"
@@ -2144,6 +2179,11 @@
   "sportando:3a5f8c2487098eab": {
    "attempts": 0,
    "seen": "2026-10-23T08:47:47.918952+00:00"
+  },
+  "sportando:3d8cb6a29602462a": {
+   "attempts": 1,
+   "done": "skipped: Πρόκειται για απλή προεπισκόπηση αγωνιστικής (Round 5) χωρίς νέα είδηση. Το ματς Ρέτζιο Εμίλια – Καντού υπάρχει ήδη στου",
+   "seen": "2026-10-25T18:46:06.300991+00:00"
   },
   "sportando:404b5efe2eb0ca7b": {
    "attempts": 1,
@@ -2190,6 +2230,10 @@
    "done": true,
    "post": 65904,
    "seen": "2026-10-25T10:42:37.987512+00:00"
+  },
+  "sportando:57eea5523f1f110b": {
+   "attempts": 0,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
   },
   "sportando:58cfc3a45d4a29fd": {
    "attempts": 1,
@@ -2376,6 +2420,17 @@
    "attempts": 1,
    "done": "skipped: Απλή προεπισκόπηση αγώνα της 5ης αγωνιστικής χωρίς είδηση: η περίληψη δίνει μόνο ώρα, τηλεοπτική κάλυψη και σύντομο ιστο",
    "seen": "2026-10-24T15:42:46.482915+00:00"
+  },
+  "sportando:d077ec0cb2768082": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα καλύπτεται ήδη: η πρώτη νίκη του Σκαφάτι με 28 πόντους του Μουρ υπάρχει στους τίτλους του site, άρα η δήλωση του",
+   "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
+  "sportando:d3e9f0b54c481234": {
+   "attempts": 1,
+   "done": true,
+   "post": 65954,
+   "seen": "2026-10-25T18:46:06.300991+00:00"
   },
   "sportando:d471769fcab4534e": {
    "attempts": 1,
