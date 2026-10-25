@@ -1,6 +1,7 @@
 {
  "badges": {
   "acb|bilbao basket": "https://r2.thesportsdb.com/images/media/team/badge/v7bo1i1664476071.png",
+  "acb|la laguna tenerife": "",
   "lba|apu udine": "https://r2.thesportsdb.com/images/media/team/badge/o64a4v1713952899.png",
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
@@ -718,6 +719,12 @@
    "done": "skipped: Το ίδιο αποτέλεσμα (ανατροπή από -23 των Νάγκετς με τον Γιόκιτς) υπάρχει ήδη στους τίτλους: «Ο Γιόκιτς και ο Μάρει έσβησ",
    "seen": "2026-10-25T05:42:20.347492+00:00"
   },
+  "50277066": {
+   "attempts": 1,
+   "done": true,
+   "post": 65926,
+   "seen": "2026-10-25T15:43:20.959961+00:00"
+  },
   "bebasket:0eff5181798dae67": {
    "attempts": 0,
    "done": "too-old",
@@ -1268,6 +1275,12 @@
    "post": 65900,
    "seen": "2026-10-25T09:43:09.106442+00:00"
   },
+  "marca-acb:473798812eb741c1": {
+   "attempts": 1,
+   "done": true,
+   "post": 65930,
+   "seen": "2026-10-25T15:43:20.959961+00:00"
+  },
   "marca-acb:49286cf82e10a197": {
    "attempts": 0,
    "done": "too-old",
@@ -1279,7 +1292,9 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "marca-acb:4dc693b1edc24482": {
-   "attempts": 1,
+   "attempts": 2,
+   "done": true,
+   "post": 65932,
    "seen": "2026-10-25T14:41:59.414359+00:00"
   },
   "marca-acb:56476b7758c3dd83": {
@@ -1344,7 +1359,9 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "marca-acb:7b880c0a6ae737f0": {
-   "attempts": 1,
+   "attempts": 2,
+   "done": true,
+   "post": 65934,
    "seen": "2026-10-25T14:41:59.414359+00:00"
   },
   "marca-acb:7d478b9933cce386": {
@@ -1726,7 +1743,8 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "realgm:8d3475db1b1bd974": {
-   "attempts": 1,
+   "attempts": 2,
+   "done": "skipped: Το θέμα καλύπτεται ήδη: οι τίτλοι «Μπράουν για Τατούμ: «Δεν υπάρχει μένος…»» και «Τατούμ για Μπράουν: «Δεν υπάρχει κανέν",
    "seen": "2026-10-25T14:41:59.414359+00:00"
   },
   "realgm:901df307964ca7d6": {
@@ -1809,6 +1827,11 @@
    "attempts": 1,
    "done": "skipped: Το θέμα υπάρχει ήδη στο site με τον τίτλο «Χωρίς Κνούπελ και Κόμπι Γουάιτ στην πρεμιέρα οι Χόρνετς». Η μόνη νέα πληροφορ",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "realgm:b20f3c8130ebca33": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα (Ντούρεν εκτός δύο εβδομάδες με θλάση στον δεξί μηριαίο) υπάρχει ήδη στους τίτλους: «Εκτός δύο εβδομάδες ο Ντούρ",
+   "seen": "2026-10-25T15:43:20.959961+00:00"
   },
   "realgm:b27527b813706c90": {
    "attempts": 1,
@@ -2285,7 +2308,9 @@
    "seen": "2026-10-22T10:45:08.827341+00:00"
   },
   "sportando:bd06c46d015e5dc8": {
-   "attempts": 1,
+   "attempts": 2,
+   "done": true,
+   "post": 65928,
    "seen": "2026-10-25T10:42:37.987512+00:00"
   },
   "sportando:bd124c12b63eba24": {
