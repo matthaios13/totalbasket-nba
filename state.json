@@ -20,6 +20,7 @@
   "lba|tezenis verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
   "lba|virtus bologna": "",
+  "lba|virtus roma": "",
   "lnb|elan béarnais pau-lacq-orthez": "",
   "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png",
   "lnb|paris basketball": "https://r2.thesportsdb.com/images/media/team/badge/9q0d6x1726681476.png"
@@ -239,6 +240,10 @@
    "done": true,
    "post": 65892,
    "seen": "2026-10-25T04:43:58.138739+00:00"
+  },
+  "401909861": {
+   "attempts": 0,
+   "seen": "2026-10-25T23:37:28.194180+00:00"
   }
  },
  "news": {
@@ -912,6 +917,11 @@
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "encestando:3e9fff290abe2d9d": {
+   "attempts": 1,
+   "done": "skipped: Όλα τα αποτελέσματα του άρθρου (Ουνικάχα-Μπρεογκάν 103-90, Τζιρόνα-Γιουβεντούτ, Μπιλμπάο-Ανδόρα, Τενερίφη-Ομπραδοϊρό) υπ",
+   "seen": "2026-10-25T23:37:28.194180+00:00"
+  },
   "encestando:7c6fcdf373291738": {
    "attempts": 1,
    "done": true,
@@ -949,6 +959,11 @@
    "attempts": 1,
    "done": "skipped: Το κείμενο είναι ανάλυση και αποτίμηση του πρώτου μήνα του Σέκουλιτς στην Μπαρτσελόνα, χωρίς δική του είδηση: δεν υπάρχε",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:bb505a7745119f0b": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα καλύπτεται ήδη: ο τίτλος «Ο Σορτς έσπασε το ρεκόρ και η Βαλένθια την Μπασκόνια» αφορά το ίδιο παιχνίδι Βαλένθια–",
+   "seen": "2026-10-25T23:37:28.194180+00:00"
   },
   "encestando:c0ed18310e942f8d": {
    "attempts": 0,
@@ -2026,6 +2041,11 @@
    "post": 65342,
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
+  "realgm:d74ebfd78285e63f": {
+   "attempts": 1,
+   "done": "skipped: Πρόκειται για οδηγό τηλεοπτικής μετάδοσης και streaming (τηλεοπτικό πρόγραμμα) για αγώνα της ίδιας ημέρας, χωρίς είδηση ",
+   "seen": "2026-10-25T23:37:28.194180+00:00"
+  },
   "realgm:d9676d55fa842648": {
    "attempts": 1,
    "done": "skipped: Πρόκειται για podcast γνώμης και ανάλυσης αρθρογράφων (προβλέψεις για νίκες στη σεζόν, υποψήφιοι πρωταθλητές, «relegatio",
@@ -2100,7 +2120,9 @@
    "seen": "2026-10-25T10:42:37.987512+00:00"
   },
   "sportando:07b3295f9f18ceb8": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 66007,
    "seen": "2026-10-25T22:39:26.071368+00:00"
   },
   "sportando:0aceab91ca4c98a4": {
@@ -2344,7 +2366,9 @@
    "seen": "2026-10-23T08:47:47.918952+00:00"
   },
   "sportando:651da63babdf97f8": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 66005,
    "seen": "2026-10-25T22:39:26.071368+00:00"
   },
   "sportando:65490b0183b634ec": {
@@ -2414,6 +2438,11 @@
    "done": true,
    "post": 65792,
    "seen": "2026-10-23T20:46:04.258842+00:00"
+  },
+  "sportando:8a4224c1f5f6d5a4": {
+   "attempts": 1,
+   "done": "skipped: Είναι γενική περίληψη του Round 5 (όλα τα αποτελέσματα, βαθμολογία, πρόγραμμα), όχι συγκεκριμένη είδηση. Η λίστα ρεκόρ/α",
+   "seen": "2026-10-25T23:37:28.194180+00:00"
   },
   "sportando:8c1d502781208811": {
    "attempts": 1,
