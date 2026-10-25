@@ -17,6 +17,7 @@
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
   "lba|roma": "https://www.thesportsdb.com/images/media/team/badge/dn89jw1792763170.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
+  "lba|tezenis verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
   "lba|virtus bologna": "",
   "lnb|elan béarnais pau-lacq-orthez": "",
@@ -740,6 +741,12 @@
    "post": 65973,
    "seen": "2026-10-25T20:40:29.674620+00:00"
   },
+  "50281331": {
+   "attempts": 1,
+   "done": true,
+   "post": 65994,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
+  },
   "bebasket:0eff5181798dae67": {
    "attempts": 0,
    "done": "too-old",
@@ -926,6 +933,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:a557a544801f3cde": {
+   "attempts": 1,
+   "done": "skipped: Το αποτέλεσμα της Ρεάλ στη Λέιδα (122 πόντοι, 24 τρίποντα) έχει ήδη καλυφθεί στο site (\"Liga Endesa: Ιστορική Ρεάλ Μαδρί",
+   "seen": "2026-10-25T22:39:26.071368+00:00"
   },
   "encestando:b0165c4fa307bada": {
    "attempts": 1,
@@ -2087,6 +2099,10 @@
    "post": 65902,
    "seen": "2026-10-25T10:42:37.987512+00:00"
   },
+  "sportando:07b3295f9f18ceb8": {
+   "attempts": 0,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
+  },
   "sportando:0aceab91ca4c98a4": {
    "attempts": 1,
    "done": true,
@@ -2106,6 +2122,12 @@
   "sportando:0e2ff51660f4db66": {
    "attempts": 0,
    "seen": "2026-10-23T12:54:18.676555+00:00"
+  },
+  "sportando:151b826a473c93a6": {
+   "attempts": 1,
+   "done": true,
+   "post": 65998,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
   },
   "sportando:175b68c97d5a0adf": {
    "attempts": 1,
@@ -2321,6 +2343,10 @@
    "attempts": 0,
    "seen": "2026-10-23T08:47:47.918952+00:00"
   },
+  "sportando:651da63babdf97f8": {
+   "attempts": 0,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
+  },
   "sportando:65490b0183b634ec": {
    "attempts": 1,
    "done": "skipped: Η είδηση αφορά κυρίως την πιθανή εξαγορά της ποδοσφαιρικής Νάπολι από τον Ματ Ριτσέτα και τη διαφορά στην τιμή με τον Ντ",
@@ -2357,6 +2383,12 @@
    "attempts": 1,
    "done": "skipped: Προγυμναστική δήλωση του Σπίσου πριν από αγώνα που ήδη καλύπτεται από την προεπισκόπηση «Ντερτόνα – Νάπολι» στους τίτλου",
    "seen": "2026-10-24T17:40:29.537652+00:00"
+  },
+  "sportando:79aa2724f4160a76": {
+   "attempts": 1,
+   "done": true,
+   "post": 66000,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
   },
   "sportando:7a5a56c38c8b04a3": {
    "attempts": 1,
@@ -2510,10 +2542,22 @@
    "done": "skipped: Πρόκειται για απλή ανακοίνωση συνεδρίασης της Συνέλευσης της Lega Basket (ημερομηνία, ώρα, τόπος) χωρίς ημερήσια διάταξη",
    "seen": "2026-10-22T14:47:41.362018+00:00"
   },
+  "sportando:d8e0cb171ac342a7": {
+   "attempts": 1,
+   "done": true,
+   "post": 66002,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
+  },
   "sportando:daba69150c5307f7": {
    "attempts": 1,
    "done": "skipped: Υπάρχει ήδη άρθρο για το ίδιο θέμα: «Ντέρμπι του Βένετο στο Ταλιέρτσιο: Βενέτσια και Τρεβίζο με το ίδιο ρεκόρ». Πρόκειτα",
    "seen": "2026-10-22T21:43:23.623850+00:00"
+  },
+  "sportando:ddb7d016a89f386f": {
+   "attempts": 1,
+   "done": true,
+   "post": 65996,
+   "seen": "2026-10-25T22:39:26.071368+00:00"
   },
   "sportando:dfd068d5636a468b": {
    "attempts": 1,
