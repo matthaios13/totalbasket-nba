@@ -2,6 +2,7 @@
  "badges": {
   "acb|bilbao basket": "https://r2.thesportsdb.com/images/media/team/badge/v7bo1i1664476071.png",
   "acb|la laguna tenerife": "",
+  "acb|real madrid baloncesto": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
   "lba|apu udine": "https://r2.thesportsdb.com/images/media/team/badge/o64a4v1713952899.png",
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
@@ -732,6 +733,12 @@
    "post": 65926,
    "seen": "2026-10-25T15:43:20.959961+00:00"
   },
+  "50279725": {
+   "attempts": 1,
+   "done": true,
+   "post": 65973,
+   "seen": "2026-10-25T20:40:29.674620+00:00"
+  },
   "bebasket:0eff5181798dae67": {
    "attempts": 0,
    "done": "too-old",
@@ -846,6 +853,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-24T08:44:49.125661+00:00"
+  },
+  "bebasket:e9c5b86f515d13bf": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-25T20:40:29.674620+00:00"
   },
   "bebasket:ed93f5c7b1ab3264": {
    "attempts": 0,
@@ -1367,6 +1379,12 @@
    "post": 65849,
    "seen": "2026-10-24T22:40:35.589835+00:00"
   },
+  "marca-acb:71537183426b861c": {
+   "attempts": 1,
+   "done": true,
+   "post": 65981,
+   "seen": "2026-10-25T20:40:29.674620+00:00"
+  },
   "marca-acb:7248ad8f61ee76b2": {
    "attempts": 1,
    "done": "skipped: Αγώνας της Liga U (εφηβικών/νέων ομάδων της Ρεάλ και της Μπαρτσελόνα), όχι της ACB. Εκτός θέματος του site: εφηβικό επίπ",
@@ -1503,6 +1521,12 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:ed7ad51a6ff5a689": {
+   "attempts": 1,
+   "done": true,
+   "post": 65979,
+   "seen": "2026-10-25T20:40:29.674620+00:00"
   },
   "marca-acb:ee58ae02953d1c77": {
    "attempts": 0,
@@ -2141,7 +2165,9 @@
    "seen": "2026-10-21T20:46:17.791008+00:00"
   },
   "sportando:3107e0b0ace4208c": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65975,
    "seen": "2026-10-25T18:46:06.300991+00:00"
   },
   "sportando:313bf31bc96b10b4": {
@@ -2253,7 +2279,9 @@
    "seen": "2026-10-25T10:42:37.987512+00:00"
   },
   "sportando:57eea5523f1f110b": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 65977,
    "seen": "2026-10-25T18:46:06.300991+00:00"
   },
   "sportando:58cfc3a45d4a29fd": {
