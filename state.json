@@ -17,6 +17,7 @@
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
   "lba|roma": "https://www.thesportsdb.com/images/media/team/badge/dn89jw1792763170.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
+  "lba|scaligera verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|tezenis verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|treviso basket": "",
   "lba|virtus bologna": "",
@@ -2579,7 +2580,8 @@
    "seen": "2026-10-22T14:47:41.362018+00:00"
   },
   "sportando:0596a65fa6185b88": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": "skipped: Το θέμα καλύπτεται ήδη στο site από το άρθρο «Βιτούτσι: «Δεν μπορούμε να περιμένουμε» – Ζητά κι άλλες κινήσεις στην Καντ",
    "seen": "2026-10-27T10:49:23.597503+00:00"
   },
   "sportando:06df44bc32f01066": {
@@ -3019,8 +3021,15 @@
    "seen": "2026-10-22T22:42:13.117721+00:00"
   },
   "sportando:953aa0684b94089a": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": true,
+   "post": 66213,
    "seen": "2026-10-27T10:49:23.597503+00:00"
+  },
+  "sportando:95e1d8e9a5026adc": {
+   "attempts": 1,
+   "done": "skipped: Γενική συνέντευξη-γνώμη του Bargnani για το μπάσκετ στην Ευρώπη, χωρίς συγκεκριμένη είδηση ή γεγονός της LBA. Το θέμα εί",
+   "seen": "2026-10-27T12:57:45.321587+00:00"
   },
   "sportando:96b56fc7d0ea8f17": {
    "attempts": 1,
@@ -3044,7 +3053,8 @@
    "seen": "2026-10-21T17:54:27.398658+00:00"
   },
   "sportando:a2199bd5a653909b": {
-   "attempts": 0,
+   "attempts": 1,
+   "done": "skipped: Το ίδιο θέμα (τραυματισμός Σμιθ και μέλλον Έντουαρντς στη Ρέτζιο Εμίλια) υπάρχει ήδη στο site με τον τίτλο «Ρέτζιο Εμίλι",
    "seen": "2026-10-27T10:49:23.597503+00:00"
   },
   "sportando:ad1c92b0f8096366": {
