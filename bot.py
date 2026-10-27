@@ -36,6 +36,7 @@ import euro
 import library
 import photos
 import sources
+import standings
 from sources import LEAGUES
 from teams import TEAMS, colours, greek, logo_url
 
@@ -289,6 +290,33 @@ EURO_GAME_TASK = """Γράψε το άρθρο για τον αγώνα ({comp})
 ΜΗΝ γράψεις δηλώσεις. 3-5 παράγραφοι. Το publish είναι πάντα true.""" + STATS_NOTE
 
 
+STANDINGS_TASK = """Γράψε άρθρο για τη βαθμολογία της {comp} μετά τους αγώνες της βραδιάς ({round}η αγωνιστική· η αγωνιστική μπορεί
+να μην έχει ολοκληρωθεί, τότε γράψε «μετά τα πρώτα/τα χθεσινά παιχνίδια της Χης αγωνιστικής»). Τίτλος στο ύφος των ελληνικών site,
+π.χ. «Η βαθμολογία της EuroLeague μετά τη νίκη του Παναθηναϊκού επί της Αρμάνι» (αν έπαιξε ελληνική ομάδα, εκείνη πρώτα).
+2-3 σύντομες παράγραφοι: τα αποτελέσματα της βραδιάς, πού βρίσκονται οι ελληνικές ομάδες και ποιοι είναι στην κορυφή / στις
+θέσεις που προκρίνονται. Μόνο αριθμοί από τα δεδομένα. Ο πίνακας της βαθμολογίας προστίθεται ΑΥΤΟΜΑΤΑ στο τέλος· μην τον γράψεις.
+Τα ονόματα των ομάδων είναι ήδη στα ελληνικά στα δεδομένα: γράψε τα ακριβώς έτσι. Ομίλους με το γράμμα τους («Όμιλος Δ», «στον Δ' όμιλο»).
+ΜΗΝ αναφέρεις προπονητές ή παίκτες: δεν υπάρχουν στα δεδομένα. Το publish είναι πάντα true."""
+
+TEAM_NAMES = """Δώσε το ελληνικό όνομα κάθε ομάδας μπάσκετ όπως το γράφει ο ελληνικός αθλητικός τύπος (π.χ. "Panathinaikos AKTOR Athens":
+"Παναθηναϊκός", "Armani Olimpia Milan": "Αρμάνι Μιλάνο", "Real Madrid": "Ρεάλ Μαδρίτης", "Aris Thessaloniki": "Άρης",
+"Bahcesehir College Istanbul": "Μπαχτσεσεχίρ", "Maxima Roma": "Μάξιμα Ρόμα", "Roma Basketball": "Ρόμα"). Σύντομα, με σωστό τονισμό,
+δύο διαφορετικές ομάδες ΠΟΤΕ με το ίδιο όνομα, χωρίς χορηγικά ονόματα, μόνο ελληνικοί χαρακτήρες.
+Απαντάς ΜΟΝΟ JSON: {{"<όνομα>": "<ελληνικά>", ...}}
+
+ΟΜΑΔΕΣ:
+{names}"""
+
+
+def greek_team_names(names, cache):
+    """Greek club names, asked once per club and kept in state.json."""
+    missing = [n for n in dict.fromkeys(names) if n not in cache]
+    if missing:
+        got = _claude(TEAM_NAMES.format(names="\n".join(missing)), MODEL)
+        cache.update({n: got[n] for n in missing if isinstance(got.get(n), str) and not MIXED_SCRIPT.search(got[n])})
+    return {n: cache.get(n, n) for n in names}
+
+
 def stats_block(facts, art, team_name=lambda t: t["name_gr"]):
     """Quarter-by-quarter score and each team's points line, numbers straight from the data."""
     names = art.get("names_gr") or {}
@@ -427,7 +455,8 @@ def find_tags(names, base_tag=NBA_TAG):
 def publish(art, image_path, slug_hint, league="nba"):
     if DRY_RUN and art.get("_media_id"):
         log("  (dry run) would reuse library media", art["_media_id"])
-        return {"id": "dry-run", "link": "library"}
+        image_path = tempfile.mktemp(suffix=".jpg")
+        open(image_path, "w").close()
     if DRY_RUN:
         os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
         base = os.path.join(HERE, "out", slug_hint)
@@ -709,6 +738,67 @@ def _run(state):
             except Exception as ex:  # keep going with the other items
                 log("  ERROR", label, ex)
 
+    # 1c. standings after every EuroLeague / EuroCup game night (also mid-round), once the night's
+    # result articles are done; skipped if the site already has a standings article since the night's games.
+    for league in ("el", "ec"):
+        if (ONLY and league not in ONLY) or not budget():
+            continue
+        try:
+            todo = standings.nights(league)
+        except Exception as ex:
+            log("standings failed:", league, ex)
+            continue
+        for night in todo:
+            st = state.setdefault("standings", {}).setdefault(night["key"], {"seen": stamp, "attempts": 0})
+            if st.get("done") or st["attempts"] >= MAX_ATTEMPTS:
+                continue
+            gids = [f"{euro.season_code(euro.COMPS[league])}-{g['gameCode']}" for g in night["games"]]
+            if any(not state["games"].get(i, {}).get("done") and state["games"].get(i, {}).get("attempts", 0) < MAX_ATTEMPTS
+                   for i in gids):
+                log("standings wait for the result articles:", night["key"])
+                continue
+            if any("βαθμολογ" in _norm(p["title"]) and p["date"] > night["last"] for p in site[league] + site_all):
+                st["done"] = "already on site"
+                continue
+            try:
+                rows = standings.table(league, night)
+                if rows is None:
+                    log("standings not updated yet:", night["key"])
+                    continue
+                st["attempts"] += 1
+                log("writing standings:", night["key"])
+                teams_gr = greek_team_names([r["team"] for r in rows], state.setdefault("teams_gr", {}))
+                facts = standings.facts(league, night, rows, teams_gr)
+                facts["already_on_site"] = on_site(league)[:30]
+                art = ask_claude(STANDINGS_TASK.replace("{comp}", euro.NAMES[league]).replace("{round}", str(night["round"])), facts)
+                greek_team = GREEK_EL if league == "el" else GREEK_EC
+                art["content"] = re.sub(r"([\u0370-\u03ff\u1f00-\u1fff]) s\b", r"\1", art["content"])   # stray "s" seen in tests
+                art["content"] += standings.block(rows, teams_gr, lambda t: bool(greek_team.search(t)))
+                greek_latin = [t for g in night["games"] for t in (g["local"]["club"]["name"], g["road"]["club"]["name"])
+                               if greek_team.search(t)]
+                art["_teams"] = [teams_gr.get(t) or t for t in greek_latin]
+                # photo: an editor's photo of tonight's Greek game (else another game of the night), else a club photo
+                order = sorted(night["games"], key=lambda g: not greek_team.search(
+                    g["local"]["club"]["name"] + " " + g["road"]["club"]["name"]))
+                img = None
+                for g in order[:3]:
+                    names = [teams_gr.get(g[side]["club"]["name"]) or g[side]["club"]["name"] for side in ("local", "road")]
+                    img = library_image(art, names, standings._when(g))
+                    if img:
+                        break
+                img = (img or (club_photo(art, greek_latin[0], league) if greek_latin else None)
+                       or card.league_card(tempfile.mktemp(suffix=".jpg"), euro.NAMES[league]))
+                res = publish(art, img, f"{league}-news-standings-{night['day']}", league)
+                st.update(done=True, post=res["id"])
+                record(res, art, league)
+                posted += 1
+                log("  ->", res.get("link"))
+            except AuthError:
+                st["attempts"] -= 1
+                raise
+            except Exception as ex:  # keep going with the other items
+                log("  ERROR standings", night["key"], ex)
+
     # 2. news
     for item in (news_items() if (not ONLY or "nba" in ONLY) and not GAMES_ONLY else []):
         nid = str(item["id"])
@@ -825,6 +915,10 @@ def pending_euro_games():
             gid = f"{euro.season_code(euro.COMPS[league])}-{eg['gameCode']}"
             g = state["games"].get(gid, {})
             if not g.get("done") and g.get("attempts", 0) < MAX_ATTEMPTS:
+                n += 1
+        for night in standings.nights(league):
+            st = state.get("standings", {}).get(night["key"], {})
+            if not st.get("done") and st.get("attempts", 0) < MAX_ATTEMPTS:
                 n += 1
     return n
 
