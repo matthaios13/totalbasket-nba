@@ -2,7 +2,7 @@
 number is exact. The writer only supplies Greek spellings for team, coach and player names.
 
     Τα δεκάλεπτα: 26-22, 54-48, 70-75, 93-104
-    ΠΑΡΙ (Λεφέβρ): Χιφί 25 (3), Χέιζ-Ντέιβις 12 (2), ...
+    Παρί (Λεφέβρ): Χιφί 25 (3), Χέιζ-Ντέιβις 12 (2), ...
 """
 import html
 import unicodedata
@@ -31,7 +31,7 @@ def team_line(team, coach, players):
         if p.get("threes"):
             s += f" ({p['threes']})"
         parts.append(s)
-    head = _caps(team) + (f" ({coach})" if coach else "")
+    head = team + (f" ({coach})" if coach else "")        # normal case, like the rest of the site
     return f"<strong>{html.escape(head)}:</strong> {html.escape(', '.join(parts))}"
 
 
