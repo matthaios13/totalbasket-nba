@@ -348,6 +348,12 @@
    "post": 66284,
    "seen": "2026-10-27T18:23:20.935782+00:00"
   },
+  "E2026-73": {
+   "attempts": 1,
+   "done": true,
+   "post": 66337,
+   "seen": "2026-10-27T23:03:38.209475+00:00"
+  },
   "E2026-74": {
    "attempts": 1,
    "done": true,
@@ -1094,6 +1100,12 @@
    "post": 66298,
    "seen": "2026-10-27T20:46:37.359939+00:00"
   },
+  "50302115": {
+   "attempts": 1,
+   "done": true,
+   "post": 66340,
+   "seen": "2026-10-27T23:03:38.209475+00:00"
+  },
   "bebasket:01b691c084473c4b": {
    "attempts": 0,
    "done": "too-old",
@@ -1163,6 +1175,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-24T18:45:02.195749+00:00"
+  },
+  "bebasket:5b642a5c23619bcb": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-27T23:03:38.209475+00:00"
   },
   "bebasket:5e803f2d3b221447": {
    "attempts": 0,
@@ -1387,6 +1404,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "encestando:d40e07d5e5ac773c": {
+   "attempts": 1,
+   "done": "skipped: Το ίδιο αποτέλεσμα (Βαλένθια – Φενέρμπαχτσε 86-78) υπάρχει ήδη στο site με τίτλο «Βαλένθια – Φενέρμπαχτσε 86-78: Ο Σορτς",
+   "seen": "2026-10-27T23:03:38.209475+00:00"
   },
   "encestando:f7d057669a771ed7": {
    "attempts": 0,
@@ -2901,6 +2923,11 @@
    "done": "skipped: Προεπισκόπηση αγώνα με πρόγραμμα και τηλεοπτική κάλυψη, χωρίς νέα είδηση. Επιπλέον, η ίδια η πληροφορία καλύπτεται ήδη α",
    "seen": "2026-10-27T14:50:31.453078+00:00"
   },
+  "sportando-el:85dc26a5e9fb51b6": {
+   "attempts": 1,
+   "done": "skipped: Το αποτέλεσμα Μπάγερν – Μπαρτσελόνα 84-88 και η σχετική είδηση υπάρχουν ήδη στους τίτλους του site.",
+   "seen": "2026-10-27T23:03:38.209475+00:00"
+  },
   "sportando-el:94509d1d9a453bb5": {
    "attempts": 1,
    "done": "skipped: Πρόκειται για απλό πρόγραμμα αγώνων της 8ης αγωνιστικής (ανάλογο με τηλεοπτικό πρόγραμμα), όχι για είδηση. Δεν περιέχει ",
@@ -2910,6 +2937,11 @@
    "attempts": 1,
    "done": "skipped: Ειδήσεις για πρόγραμμα αγώνων και αλλαγή έδρας (PalaDozza, Fiera) είναι διοικητικό/λογιστικό θέμα, όχι είδηση για παίκτε",
    "seen": "2026-10-27T14:50:31.453078+00:00"
+  },
+  "sportando-el:aabcb4225207a357": {
+   "attempts": 1,
+   "done": "skipped: Το ίδιο αποτέλεσμα (Ερυθρός Αστέρας – Μακάμπι Τελ Αβίβ 100-78) υπάρχει ήδη στο site: «Ερυθρός Αστέρας – Μακάμπι Τελ Αβίβ",
+   "seen": "2026-10-27T23:03:38.209475+00:00"
   },
   "sportando-el:b808536c3140c422": {
    "attempts": 1,
@@ -3720,5 +3752,40 @@
    "attempts": 0,
    "seen": "2026-10-23T16:47:36.334369+00:00"
   }
+ },
+ "standings": {
+  "ec-2026-10-27": {
+   "attempts": 0,
+   "done": "already on site",
+   "seen": "2026-10-27T23:03:38.209475+00:00"
+  },
+  "el-2026-10-27": {
+   "attempts": 1,
+   "done": true,
+   "post": 66338,
+   "seen": "2026-10-27T23:03:38.209475+00:00"
+  }
+ },
+ "teams_gr": {
+  "Anadolu Efes Istanbul": "Εφές",
+  "Armani Olimpia Milan": "Αρμάνι Μιλάνο",
+  "Besiktas Istanbul": "Μπεσίκτας",
+  "Crvena Zvezda Meridianbet Belgrade": "Ερυθρός Αστέρας",
+  "Dubai Basketball": "Ντουμπάι",
+  "FC Barcelona": "Μπαρτσελόνα",
+  "FC Bayern Munich": "Μπάγερν Μονάχου",
+  "Fenerbahce Tarfin Istanbul": "Φενέρμπαχτσε",
+  "Hapoel IBI Tel Aviv": "Χάποελ Τελ Αβίβ",
+  "Kosner Baskonia Vitoria-Gasteiz": "Μπασκόνια",
+  "LDLC ASVEL Villeurbanne": "Βιλερμπάν",
+  "Maccabi Rapyd Tel Aviv": "Μακαμπί Τελ Αβίβ",
+  "Olympiacos Piraeus": "Ολυμπιακός",
+  "Panathinaikos AKTOR Athens": "Παναθηναϊκός",
+  "Paris Basketball": "Παρί",
+  "Partizan Mozzart Bet Belgrade": "Παρτιζάν",
+  "Real Madrid": "Ρεάλ Μαδρίτης",
+  "Valencia Basket": "Βαλένθια",
+  "Virtus Bologna": "Βίρτους Μπολόνια",
+  "Zalgiris Kaunas": "Ζαλγκίρις Κάουνας"
  }
 }
