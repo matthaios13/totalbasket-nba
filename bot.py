@@ -320,7 +320,7 @@ live/ενδιάμεσα σκορ, τηλεοπτικό πρόγραμμα, κα�
 def triage(about, headline, summary, on_site):
     """Cheap first pass on headline + summary, so the expensive writer only sees likely articles."""
     data = json.dumps({"headline": headline, "summary": (summary or "")[:700],
-                       "already_on_site": on_site[:40]}, ensure_ascii=False, indent=1)
+                       "already_on_site": on_site[:120]}, ensure_ascii=False, indent=1)
     return _claude(TRIAGE.format(about=about, data=data), TRIAGE_MODEL)
 
 
@@ -392,7 +392,7 @@ def publish(art, image_path, slug_hint, league="nba"):
     tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"])
     if league == "nba" or int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
         tags.append(TAG_3RD_TOP)
-    categories = [lg["category"]] if league == "nba" else [sources.EUROPE_CATEGORY, lg["category"]]
+    categories = lg["categories"]
     return wp("POST", "posts", {
         "title": art["title"], "content": art["content"], "excerpt": art.get("excerpt", ""),
         "status": WP_STATUS, "categories": categories, "tags": tags,
@@ -450,9 +450,10 @@ def team_image(art, league):
 
 
 def recent_site_posts(category=NBA_CATEGORY):
-    """Latest posts of a category on the site (ours and the editors'): [{title, date}] newest first."""
+    """Latest posts of a category (None = whole site), ours and the editors': [{title, date}] newest first."""
     try:
-        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?categories={category}&per_page=60&_fields=title,date_gmt")
+        cat = f"categories={category}&" if category else ""
+        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?{cat}per_page=60&_fields=title,date_gmt")
         return [{"title": html.unescape(p["title"]["rendered"]),
                  "date": dt.datetime.fromisoformat(p["date_gmt"]).replace(tzinfo=dt.timezone.utc)} for p in res]
     except Exception as ex:
@@ -505,6 +506,11 @@ def _run(state):
     published = []
     stamp = now().isoformat()
     site = {lg: recent_site_posts(LEAGUES[lg]["category"]) for lg in LEAGUES}
+    site_all = recent_site_posts(None)      # editors often file a story under another category
+
+    def on_site(league):
+        """Titles to check for duplicates: this league's latest posts plus the whole site's latest."""
+        return list(dict.fromkeys([p["title"] for p in site[league][:60]] + [p["title"] for p in site_all[:60]]))
     site_posts = site["nba"]
     sources._badges.update(state.setdefault("badges", {}))
 
@@ -513,6 +519,7 @@ def _run(state):
             published.append({"id": res["id"], "tags": res.get("tags", []), "title": art["title"],
                               "importance": int(art.get("importance") or 0)})
         site[league].insert(0, {"title": art["title"], "date": now()})
+        site_all.insert(0, {"title": art["title"], "date": now()})
 
     def budget():
         return posted < MAX_POSTS
@@ -622,7 +629,7 @@ def _run(state):
                 n["attempts"] += 1
                 log(f"judging {feed['key']}:", item["title"])
                 pre = triage(LEAGUES[league]["about"], item["title"], item["summary"] or item["story"][:700],
-                             [p["title"] for p in site[league]])
+                             on_site(league))
                 if not pre.get("publish"):
                     n["done"] = "skipped: " + pre.get("reason", "")[:120]
                     log("  skipped (triage):", pre.get("reason"))
@@ -632,7 +639,7 @@ def _run(state):
                     "published_utc": item["published"].isoformat(), "headline": item["title"],
                     "summary": item["summary"], "story": sources.full_story(feed, item),
                     "source_categories": item["cats"],
-                    "already_on_site": [p["title"] for p in site[league][:40]],
+                    "already_on_site": on_site(league),
                 }
                 task = NEWS_TASK if league == "nba" else LEAGUE_TASK.format(about=LEAGUES[league]["about"])
                 art = ask_claude(task, facts)

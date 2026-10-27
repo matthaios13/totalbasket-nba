@@ -1,11 +1,12 @@
-"""News sources beyond ESPN: RSS feeds for the NBA (RealGM) and the Italian, Spanish and French leagues,
-plus team badges for European clubs (TheSportsDB)."""
+"""News sources beyond ESPN: RSS feeds for the NBA (RealGM), the Italian, Spanish and French leagues and
+EuroLeague / EuroCup (Sportando), plus club badges (official EuroLeague API, else TheSportsDB)."""
 import email.utils
 import hashlib
 import html
 import json
 import re
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -14,16 +15,21 @@ UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit
 
 EUROPE_CATEGORY = 5    # "Πρωταθλήματα": the homepage "Rest of Europe" block, with a tab per league subcategory
 
-# site category / base tag / card label / TheSportsDB league name / how Claude should see the league
+# site category (dedupe list) / categories posted to / base tag / card label / badge source / how Claude
+# should see the league. "official": EuroLeague API competition code (club crests).
 LEAGUES = {
-    "nba": {"category": 6, "tag": 153, "label": "NBA", "sportsdb": None,
+    "nba": {"category": 6, "categories": [6], "tag": 153, "label": "NBA", "sportsdb": None,
             "about": "NBA"},
-    "lba": {"category": 131, "tag": 208, "label": "LBA", "sportsdb": "Italian Lega Basket",
-            "about": "ιταλικό πρωτάθλημα (Lega Basket Serie A / LBA)"},
-    "acb": {"category": 158, "tag": 159, "label": "LIGA ENDESA", "sportsdb": "Spanish Liga ACB",
-            "about": "ισπανικό πρωτάθλημα (Liga Endesa / ACB)"},
-    "lnb": {"category": 239, "tag": 332, "label": "BETCLIC ÉLITE", "sportsdb": "French LNB",
-            "about": "γαλλικό πρωτάθλημα (Betclic Élite)"},
+    "lba": {"category": 131, "categories": [EUROPE_CATEGORY, 131], "tag": 208, "label": "LBA",
+            "sportsdb": "Italian Lega Basket", "about": "ιταλικό πρωτάθλημα (Lega Basket Serie A / LBA)"},
+    "acb": {"category": 158, "categories": [EUROPE_CATEGORY, 158], "tag": 159, "label": "LIGA ENDESA",
+            "sportsdb": "Spanish Liga ACB", "about": "ισπανικό πρωτάθλημα (Liga Endesa / ACB)"},
+    "lnb": {"category": 239, "categories": [EUROPE_CATEGORY, 239], "tag": 332, "label": "BETCLIC ÉLITE",
+            "sportsdb": "French LNB", "about": "γαλλικό πρωτάθλημα (Betclic Élite)"},
+    "el": {"category": 2, "categories": [2], "tag": 105, "label": "EUROLEAGUE", "sportsdb": None,
+           "official": "E", "about": "EuroLeague"},
+    "ec": {"category": 12, "categories": [12], "tag": 1233, "label": "EUROCUP", "sportsdb": None,
+           "official": "U", "about": "EuroCup"},
 }
 
 # key -> feed. only_cats: keep items with an RSS category matching this regex.
@@ -42,6 +48,11 @@ FEEDS = [
     # L'Equipe blocks its article pages, so only the 2-3 sentence teaser is available
     {"key": "lequipe", "league": "lnb", "lang": "fr", "max_judge": 3,
      "url": "https://dwh.lequipe.fr/api/edito/rss?path=/Basket/Betclic-elite/"},
+    # euroleaguebasketball.net itself sits behind a bot checkpoint, so its news is not used
+    {"key": "sportando-el", "league": "el", "lang": "it", "max_judge": 4,
+     "url": "https://www.sportando.basketball/category/euroleague/feed/"},
+    {"key": "sportando-ec", "league": "ec", "lang": "it", "max_judge": 4,
+     "url": "https://www.sportando.basketball/category/eurocup/feed/"},
 ]
 
 NS = {"content": "http://purl.org/rss/1.0/modules/content/"}
@@ -117,8 +128,38 @@ def full_story(feed, item):
 _badges = {}          # "league|team" -> badge URL or "" (not found); persisted in state.json by bot.py
 
 
+_crests = {}
+
+
+def _words(s):
+    return set(re.findall(r"[a-z0-9]{3,}", unicodedata.normalize("NFKD", s.lower()).encode("ascii", "ignore").decode()))
+
+
+def official_crest(comp, team):
+    """Club crest from the EuroLeague API (comp "E" or "U"): best word overlap with the club's name."""
+    if comp not in _crests:
+        today = time.gmtime()
+        season = today.tm_year if today.tm_mon >= 7 else today.tm_year - 1
+        try:
+            url = f"https://api-live.euroleague.net/v2/competitions/{comp}/seasons/{comp}{season}/clubs"
+            data = json.loads(_fetch(url, timeout=20))
+            clubs = data.get("data", data) if isinstance(data, dict) else data
+            _crests[comp] = [(_words(c.get("name", "")), (c.get("images") or {}).get("crest")) for c in clubs]
+        except Exception:
+            return None
+    want = _words(team) - {"basket", "basketball", "club", "bc", "kk"}
+    scored = sorted(((len(want & w), url) for w, url in _crests[comp] if url), reverse=True)
+    if not scored or not scored[0][0]:
+        return None
+    if len(scored) > 1 and scored[1][0] == scored[0][0]:
+        return None        # ambiguous (e.g. "Bayern Monaco": Bayern Munich or AS Monaco?) -> no crest
+    return scored[0][1]
+
+
 def badge(league, team):
     """PNG badge URL of a club in that league, or None. Women's/youth sides are ignored."""
+    if LEAGUES[league].get("official"):
+        return official_crest(LEAGUES[league]["official"], team or "")
     lg = LEAGUES[league]["sportsdb"]
     team = (team or "").strip()
     if not lg or not team:
