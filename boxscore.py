@@ -5,6 +5,7 @@ number is exact. The writer only supplies Greek spellings for team, coach and pl
     ΠΑΡΙ (Λεφέβρ): Χιφί 25 (3), Χέιζ-Ντέιβις 12 (2), ...
 """
 import html
+import unicodedata
 
 
 def quarters_line(home_partials, away_partials):
@@ -17,6 +18,11 @@ def quarters_line(home_partials, away_partials):
     return ", ".join(out)
 
 
+def _caps(s):
+    """Greek capitals carry no accents: "Ολυμπιακός" -> "ΟΛΥΜΠΙΑΚΟΣ"."""
+    return "".join(c for c in unicodedata.normalize("NFD", s.upper()) if not unicodedata.combining(c))
+
+
 def team_line(team, coach, players):
     """players: [{"name": str, "pts": int, "threes": int}] in roster order (starters first)."""
     parts = []
@@ -25,7 +31,7 @@ def team_line(team, coach, players):
         if p.get("threes"):
             s += f" ({p['threes']})"
         parts.append(s)
-    head = team.upper() + (f" ({coach})" if coach else "")
+    head = _caps(team) + (f" ({coach})" if coach else "")
     return f"<strong>{html.escape(head)}:</strong> {html.escape(', '.join(parts))}"
 
 

@@ -91,3 +91,41 @@ def find(name):
     with urllib.request.urlopen(urllib.request.Request(best[1], headers=UA), timeout=30) as r:
         img = Image.open(io.BytesIO(r.read())).convert("RGB")
     return img, best[2]
+
+
+COMMONS = "https://commons.wikimedia.org/w/api.php"
+
+
+def team_photo(team, context="Euroleague", min_year=None):
+    """Newest free-licence Commons photo of a club (e.g. "Olympiacos BC Euroleague 20260106.jpg"):
+    the file name must contain the club's name, the photo must be from the last two seasons.
+    -> (PIL image, credit) or None."""
+    import time as _t
+    min_year = min_year or _t.gmtime().tm_year - 2
+    words = [w for w in re.findall(r"[a-z]{4,}", _plain(team)) if w not in ("basket", "basketball", "club")]
+    if not words:
+        return None
+    q = urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6,
+                                "gsrlimit": 20, "gsrsearch": f"{team} {context} filetype:bitmap",
+                                "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 1600})
+    with urllib.request.urlopen(urllib.request.Request(f"{COMMONS}?{q}", headers=UA), timeout=20) as r:
+        pages = json.load(r).get("query", {}).get("pages", {}).values()
+    best = None
+    for p in pages:
+        ii = (p.get("imageinfo") or [{}])[0]
+        meta = ii.get("extmetadata", {})
+        licence = _clean(meta.get("LicenseShortName", {}).get("value"))
+        year = _year(meta, p["title"])
+        if not FREE.match(licence) or ii.get("width", 0) < 1200 or year < min_year or not ii.get("thumburl"):
+            continue
+        if not any(w in _plain(p["title"]) for w in words):
+            continue
+        score = (year, p["title"])
+        if not best or score > best[0]:
+            artist = _clean(meta.get("Artist", {}).get("value")) or "Wikimedia Commons"
+            best = (score, ii["thumburl"], f"{artist} / {licence} / Wikimedia Commons")
+    if not best:
+        return None
+    with urllib.request.urlopen(urllib.request.Request(best[1], headers=UA), timeout=30) as r:
+        img = Image.open(io.BytesIO(r.read())).convert("RGB")
+    return img, best[2]

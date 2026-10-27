@@ -33,6 +33,7 @@ import urllib.request
 import boxscore
 import card
 import euro
+import library
 import photos
 import sources
 from sources import LEAGUES
@@ -424,6 +425,9 @@ def find_tags(names, base_tag=NBA_TAG):
 
 
 def publish(art, image_path, slug_hint, league="nba"):
+    if DRY_RUN and art.get("_media_id"):
+        log("  (dry run) would reuse library media", art["_media_id"])
+        return {"id": "dry-run", "link": "library"}
     if DRY_RUN:
         os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
         base = os.path.join(HERE, "out", slug_hint)
@@ -433,11 +437,14 @@ def publish(art, image_path, slug_hint, league="nba"):
                     f"<p>tags: {html.escape(', '.join(art.get('people', [])))}</p>")
         os.replace(image_path, base + ".jpg")
         return {"id": "dry-run", "link": base + ".html"}
-    with open(image_path, "rb") as f:
-        media = wp("POST", "media", raw=f.read(), headers={
-            "Content-Type": "image/jpeg",
-            "Content-Disposition": f'attachment; filename="{slug_hint}.jpg"'})
-    wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
+    if art.get("_media_id"):                    # an editor's photo already in the library
+        media = {"id": art["_media_id"]}
+    else:
+        with open(image_path, "rb") as f:
+            media = wp("POST", "media", raw=f.read(), headers={
+                "Content-Type": "image/jpeg",
+                "Content-Disposition": f'attachment; filename="{slug_hint}.jpg"'})
+        wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
     lg = LEAGUES[league]
     tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"])
     if league in ("el", "ec"):
@@ -466,12 +473,43 @@ def person_image(art):
     if not found:
         log("  no free photo for", name)
         return None
-    img, credit = found
+    return _with_credit(art, *found)
+
+
+def _with_credit(art, img, credit):
+    """Free-licence photo -> featured image, plus the credit line the licence requires."""
     credit = re.sub(r"\s+", " ", credit)[:200]
     art["content"] = re.sub(r'\s*<p class="wp-block-paragraph"><em>Φωτογραφία:.*?</em></p>', "", art["content"])
     art["content"] += f'\n\n<p class="wp-block-paragraph"><em>Φωτογραφία: {html.escape(credit)}</em></p>'
     art["_caption"] = credit
     return card.photo_card(tempfile.mktemp(suffix=".jpg"), img)
+
+
+def library_image(art, names, game_tipoff=None):
+    """An editor's photo from the site's media library (same game / same person). Returns the marker
+    "LIBRARY" and sets art["_media_id"] (publish() then reuses it), or None."""
+    try:
+        mid = library.game_photo(names, game_tipoff) if game_tipoff else library.news_photo(names)
+    except Exception as ex:
+        log("  library lookup failed:", ex)
+        mid = None
+    if mid:
+        art["_media_id"] = mid
+        log("  photo from the site's library:", mid)
+        return "LIBRARY"
+    return None
+
+
+def club_photo(art, team, league):
+    """Recent free-licence photo of a European club from Wikimedia Commons."""
+    if not team or league == "nba":
+        return None
+    try:
+        found = photos.team_photo(team, "EuroCup" if league == "ec" else "Euroleague" if league == "el" else "basketball")
+    except Exception as ex:
+        log("  club photo lookup failed:", team, ex)
+        return None
+    return _with_credit(art, *found) if found else None
 
 
 _espn_teams = None
@@ -640,7 +678,7 @@ def _run(state):
                     continue
                 g["attempts"] += 1
                 log(f"writing {league} game:", label)
-                art = ask_claude(EURO_GAME_TASK.format(comp=facts["competition"]), facts)
+                art = ask_claude(EURO_GAME_TASK.replace("{comp}", facts["competition"]), facts)
                 teams_gr = art.get("teams_gr") or {}
                 for t in facts["teams"]:
                     t["name_gr"] = teams_gr.get(t["name"]) or t["name"]
@@ -652,11 +690,14 @@ def _run(state):
                 art["_teams"] = [home["name_gr"], away["name_gr"]]
                 art["_result_teams"] = [home["name"], away["name"]]     # Latin API names, for the TOP rules
                 art["content"] += stats_block(facts, art)
-                img = card.game_card(tempfile.mktemp(suffix=".jpg"),
+                tipoff = dt.datetime.fromisoformat(facts["date_utc"].replace("Z", "+00:00"))
+                img = (library_image(art, [home["name_gr"], away["name_gr"]], tipoff)
+                       or club_photo(art, home["name"], league) or club_photo(art, away["name"], league)
+                       or card.game_card(tempfile.mktemp(suffix=".jpg"),
                                      {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
                                       "colour": card.crest_colour(away["crest"]), "logo": away["crest"]},
                                      {"name": home["name_gr"], "score": home["score"], "winner": home["winner"],
-                                      "colour": card.crest_colour(home["crest"]), "logo": home["crest"]})
+                                      "colour": card.crest_colour(home["crest"]), "logo": home["crest"]}))
                 res = publish(art, img, f"{league}-game-{gid}", league)
                 g.update(done=True, post=res["id"])
                 record(res, art, league)
@@ -696,7 +737,7 @@ def _run(state):
                 log("  skipped:", art.get("reason"))
                 continue
             art["_teams"] = facts["teams_gr"]
-            img = person_image(art) or card.news_card(
+            img = library_image(art, [p.split()[-1] for p in (art.get("people") or [])[:1]]) or person_image(art) or card.news_card(
                 tempfile.mktemp(suffix=".jpg"), art["title"],
                 colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id))
             res = publish(art, img, f"nba-news-{nid}")
@@ -757,7 +798,8 @@ def _run(state):
                     n["done"] = "skipped: " + art.get("reason", "")[:120]
                     log("  skipped:", art.get("reason"))
                     continue
-                img = person_image(art) or team_image(art, league)
+                img = (library_image(art, [p.split()[-1] for p in (art.get("people") or [])[:1]]) or person_image(art)
+                       or club_photo(art, art.get("main_team"), league) or team_image(art, league))
                 res = publish(art, img, f"{league}-news-{nid.split(':')[1]}", league)
                 n.update(done=True, post=res["id"])
                 record(res, art, league)
