@@ -1,10 +1,10 @@
 name: EuroLeague & EuroCup results
 
-# Game nights: check every 10 minutes so a result article goes up right after the final buzzer.
+# Game nights: check every 5 minutes so a result article goes up right after the final buzzer.
 # Tue-Fri, 17:00-23:59 UTC (19:00-02:00 Greek time in winter, 20:00-03:00 in summer).
 on:
   schedule:
-    - cron: "*/10 17-23 * * 2-5"
+    - cron: "*/5 17-23 * * 2-5"
   workflow_dispatch:
 
 concurrency:
