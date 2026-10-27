@@ -61,14 +61,28 @@ def claude_cmd(model):
     return ["claude", "-p", "--output-format", "json", "--model", model, *LEAN]
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
 ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
+GAMES_ONLY = os.environ.get("GAMES_ONLY") == "1"   # the 10-minute game-night job: results only, no news feeds
 NBA_CATEGORY = 6
 NBA_TAG = 153
 TAG_2ND_TOP = 113               # the run's most important article
 TAG_3RD_TOP = 114               # every other NBA article; European news only when important
 EUROPE_TOP_IMPORTANCE = 7       # European league news gets 3rdTOP from this importance up
+TAG_TOP = 112                   # main headline: EuroLeague results of Panathinaikos / Olympiacos
+GREEK_EL = re.compile(r"(?i)panathinaikos|olympiacos")
+GREEK_EC = re.compile(r"(?i)\baris\b|\bpaok\b")
+
+
+def euro_top_tag(league, teams=None):
+    """User's rules (2026-10-27): EuroLeague result of Panathinaikos/Olympiacos -> TOP (both get it, in the
+    order the games end); every other EuroLeague article -> 2ndTOP; EuroCup -> 3rdTOP, except Aris / PAOK
+    results -> 2ndTOP."""
+    names = " ".join(teams or [])
+    if league == "el":
+        return TAG_TOP if teams and GREEK_EL.search(names) else TAG_2ND_TOP
+    return TAG_2ND_TOP if teams and GREEK_EC.search(names) else TAG_3RD_TOP
 SKIP_SEASON_TYPES = {1, 4}       # preseason, all-star
 RECAP_WAIT_HOURS = 3             # wait this long for the AP recap (it carries the quotes)
-EURO_WAIT_HOURS = float(os.environ.get("EURO_WAIT_HOURS", "2"))   # give the editors time to post EuroLeague/EuroCup results first
+EURO_WAIT_HOURS = float(os.environ.get("EURO_WAIT_HOURS", "0"))   # user wants the result article right after the game
 NEWS_MAX_AGE_HOURS = 30
 MAX_ATTEMPTS = 3
 
@@ -426,7 +440,9 @@ def publish(art, image_path, slug_hint, league="nba"):
     wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
     lg = LEAGUES[league]
     tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"])
-    if league == "nba" or int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
+    if league in ("el", "ec"):
+        tags.append(euro_top_tag(league, art.get("_result_teams")))
+    elif league == "nba" or int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
         tags.append(TAG_3RD_TOP)
     categories = lg["categories"]
     return wp("POST", "posts", {
@@ -597,8 +613,8 @@ def _run(state):
         except Exception as ex:  # keep going with the other items
             log("  ERROR", e["name"], ex)
 
-    # 1b. EuroLeague / EuroCup games (official API). Editors cover many of these games themselves, so
-    # wait a while after the final buzzer and then check the site for the same result first.
+    # 1b. EuroLeague / EuroCup games (official API), published as soon as the game is final; skipped if an
+    # editor already posted the same result.
     for league in ("el", "ec"):
         if ONLY and league not in ONLY:
             continue
@@ -634,6 +650,7 @@ def _run(state):
                 home = next(t for t in facts["teams"] if t["home_away"] == "home")
                 away = next(t for t in facts["teams"] if t["home_away"] == "away")
                 art["_teams"] = [home["name_gr"], away["name_gr"]]
+                art["_result_teams"] = [home["name"], away["name"]]     # Latin API names, for the TOP rules
                 art["content"] += stats_block(facts, art)
                 img = card.game_card(tempfile.mktemp(suffix=".jpg"),
                                      {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
@@ -652,7 +669,7 @@ def _run(state):
                 log("  ERROR", label, ex)
 
     # 2. news
-    for item in (news_items() if not ONLY or "nba" in ONLY else []):
+    for item in (news_items() if (not ONLY or "nba" in ONLY) and not GAMES_ONLY else []):
         nid = str(item["id"])
         if nid in state["news"]:
             n = state["news"][nid]
@@ -694,7 +711,7 @@ def _run(state):
             log("  ERROR", item["headline"], ex)
 
     # 3. other feeds: RealGM (NBA) and the Italian / Spanish / French leagues
-    for feed in sources.FEEDS:
+    for feed in ([] if GAMES_ONLY else sources.FEEDS):
         league = feed["league"]
         if ONLY and league not in ONLY:
             continue
@@ -757,7 +774,23 @@ def _run(state):
     log(f"done, {posted} article(s)")
 
 
+def pending_euro_games():
+    """How many finished EuroLeague/EuroCup games have no article yet (the game-night job's quick check)."""
+    state = load_state()
+    n = 0
+    for league in ("el", "ec"):
+        for eg in euro.finished(league):
+            gid = f"{euro.season_code(euro.COMPS[league])}-{eg['gameCode']}"
+            g = state["games"].get(gid, {})
+            if not g.get("done") and g.get("attempts", 0) < MAX_ATTEMPTS:
+                n += 1
+    return n
+
+
 if __name__ == "__main__":
+    if sys.argv[1:] == ["--pending-euro"]:
+        print(pending_euro_games())
+        sys.exit(0)
     if not DRY_RUN and not (os.environ.get("WP_USER") and os.environ.get("WP_APP_PASSWORD")):
         sys.exit("WP_USER / WP_APP_PASSWORD missing")
     try:

@@ -1,0 +1,46 @@
+name: EuroLeague & EuroCup results
+
+# Game nights: check every 10 minutes so a result article goes up right after the final buzzer.
+# Tue-Fri, 17:00-23:59 UTC (19:00-02:00 Greek time in winter, 20:00-03:00 in summer).
+on:
+  schedule:
+    - cron: "*/10 17-23 * * 2-5"
+  workflow_dispatch:
+
+concurrency:
+  group: nba-bot            # same group as the hourly job: never two runs editing state.json at once
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Any finished game without an article?
+        id: check
+        run: echo "pending=$(python bot.py --pending-euro)" >> "$GITHUB_OUTPUT"
+      - if: steps.check.outputs.pending != '0'
+        run: pip install pillow "opencv-python-headless<5" && npm install -g @anthropic-ai/claude-code
+      - name: Write & publish
+        if: steps.check.outputs.pending != '0'
+        env:
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ONLY_LEAGUES: el,ec
+          GAMES_ONLY: "1"
+        run: python bot.py
+      - name: Save state
+        if: always() && steps.check.outputs.pending != '0'
+        run: |
+          git config user.name "nba-bot"
+          git config user.email "nba-bot@users.noreply.github.com"
+          git add state.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "state" && git pull --rebase && git push)
