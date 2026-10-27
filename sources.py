@@ -27,9 +27,11 @@ LEAGUES = {
     "lnb": {"category": 239, "categories": [EUROPE_CATEGORY, 239], "tag": 332, "label": "BETCLIC ÉLITE",
             "sportsdb": "French LNB", "about": "γαλλικό πρωτάθλημα (Betclic Élite)"},
     "el": {"category": 2, "categories": [2], "tag": 105, "label": "EUROLEAGUE", "sportsdb": None,
-           "official": "E", "about": "EuroLeague"},
+           "official": "E", "about": "EuroLeague",
+           "note": "Μετράει ΚΑΘΕ είδηση για ομάδες, παίκτες ή προπονητές που συμμετέχουν στη διοργάνωση, ακόμα κι αν αφορά το εγχώριο πρωτάθλημά τους ή δηλώσεις τους."},
     "ec": {"category": 12, "categories": [12], "tag": 1233, "label": "EUROCUP", "sportsdb": None,
-           "official": "U", "about": "EuroCup"},
+           "official": "U", "about": "EuroCup",
+           "note": "Μετράει ΚΑΘΕ είδηση για ομάδες, παίκτες ή προπονητές που συμμετέχουν στη διοργάνωση, ακόμα κι αν αφορά το εγχώριο πρωτάθλημά τους ή δηλώσεις τους."},
 }
 
 # key -> feed. only_cats: keep items with an RSS category matching this regex.

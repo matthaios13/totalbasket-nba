@@ -30,7 +30,9 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+import boxscore
 import card
+import euro
 import photos
 import sources
 from sources import LEAGUES
@@ -66,6 +68,7 @@ TAG_3RD_TOP = 114               # every other NBA article; European news only wh
 EUROPE_TOP_IMPORTANCE = 7       # European league news gets 3rdTOP from this importance up
 SKIP_SEASON_TYPES = {1, 4}       # preseason, all-star
 RECAP_WAIT_HOURS = 3             # wait this long for the AP recap (it carries the quotes)
+EURO_WAIT_HOURS = float(os.environ.get("EURO_WAIT_HOURS", "2"))   # give the editors time to post EuroLeague/EuroCup results first
 NEWS_MAX_AGE_HOURS = 30
 MAX_ATTEMPTS = 3
 
@@ -175,9 +178,15 @@ def game_facts(event):
             "quarters": [l.get("displayValue") for l in c.get("linescores", [])],
         })
     box = {}
+    lines = {}
     for bt in s.get("boxscore", {}).get("players", []):
         name = greek(bt["team"]["id"], bt["team"]["displayName"])
         box[name] = player_lines(bt)[:8]
+        lines[bt["team"]["id"]] = [{"name": p["player"], "pts": int(p.get("PTS") or 0),
+                                    "threes": int(str(p.get("3PT") or "0").split("-")[0] or 0)}
+                                   for p in player_lines(bt)]
+    for t in teams:
+        t["players"] = lines.get(t["espn_id"], [])
     team_stats = {}
     for bt in s.get("boxscore", {}).get("teams", []):
         team_stats[greek(bt["team"]["id"], bt["team"]["displayName"])] = {
@@ -250,8 +259,35 @@ STYLE = """Είσαι συντάκτης του ελληνικού site μπάσ
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
 {"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "main_team": "", "importance": 5}"""
 
+STATS_NOTE = """
+Τα δεκάλεπτα και οι γραμμές στατιστικών των ομάδων προστίθενται ΑΥΤΟΜΑΤΑ στο τέλος· μην τα γράψεις εσύ ως λίστα.
+Δώσε επιπλέον στο JSON:
+"names_gr": {"<όνομα όπως στα δεδομένα>": "<ελληνικό ΕΠΩΝΥΜΟ>"} για ΟΛΟΥΣ τους παίκτες που αγωνίστηκαν και τους προπονητές,
+"teams_gr": {"<όνομα ομάδας όπως στα δεδομένα>": "<ελληνικό όνομα ομάδας όπως το γράφει ο ελληνικός τύπος>"}."""
+
 GAME_TASK = """Γράψε το άρθρο για τον αγώνα. Στην αρχή το τελικό σκορ και ο πρωταγωνιστής, μετά η εξέλιξη (περίοδοι, κρίσιμο σημείο),
-οι κορυφαίοι και των δύο ομάδων με αριθμούς, οι δηλώσεις αν υπάρχουν στο recap, και τα ρεκόρ των ομάδων. Το publish είναι πάντα true."""
+οι κορυφαίοι και των δύο ομάδων με αριθμούς, οι δηλώσεις αν υπάρχουν στο recap, και τα ρεκόρ των ομάδων. Το publish είναι πάντα true.""" + STATS_NOTE
+
+EURO_GAME_TASK = """Γράψε το άρθρο για τον αγώνα ({comp}). Τίτλος στο ύφος των ελληνικών site, π.χ. «Γηπεδούχος – Φιλοξενούμενη 85-80: ...»
+(πρώτα η γηπεδούχος). Στην αρχή το τελικό σκορ και ο πρωταγωνιστής, μετά η εξέλιξη με βάση τα δεκάλεπτα (ποια ομάδα προηγήθηκε,
+πού κρίθηκε), οι κορυφαίοι και των δύο ομάδων με αριθμούς (πόντοι, ριμπάουντ, ασίστ, PIR). Δεν υπάρχουν δηλώσεις στα δεδομένα:
+ΜΗΝ γράψεις δηλώσεις. 3-5 παράγραφοι. Το publish είναι πάντα true.""" + STATS_NOTE
+
+
+def stats_block(facts, art, team_name=lambda t: t["name_gr"]):
+    """Quarter-by-quarter score and each team's points line, numbers straight from the data."""
+    names = art.get("names_gr") or {}
+    side = {}
+    for t in facts["teams"]:
+        side[t["home_away"]] = {
+            "team": team_name(t),
+            "coach": boxscore.greek(names, t["coach"]) if t.get("coach") else None,
+            "partials": t["quarters"],
+            "players": [{**p, "name": boxscore.greek(names, p["name"])} for p in t.get("players", [])],
+        }
+    if not side["home"]["players"] or not side["away"]["players"]:
+        return ""
+    return boxscore.block(side["home"], side["away"])
 
 LEAGUE_TASK = """Η είδηση αφορά το {about}. Αξιολόγησέ την. Βάλε publish=false (με reason) αν: δεν αφορά την πρώτη κατηγορία
 αυτού του πρωταθλήματος (π.χ. Serie A2, LEB Oro, Élite 2, γυναικείο, εφηβικό), αν είναι live/ενδιάμεσο σκορ, διαφήμιση, τηλεοπτικό πρόγραμμα,
@@ -306,7 +342,7 @@ def _claude(prompt, model):
     return json.loads(m.group(0))
 
 
-TRIAGE = """Είσαι αρχισυντάκτης του ελληνικού site μπάσκετ totalbasket.gr. Θέμα της ενότητας: {about}.
+TRIAGE = """Είσαι αρχισυντάκτης του ελληνικού site μπάσκετ totalbasket.gr. Θέμα της ενότητας: {about}. {note}
 Αποφάσισε ΜΟΝΟ από τίτλο και περίληψη αν αξίζει άρθρο. ΟΧΙ για: fantasy/στοίχημα, λίστες/rankings, γνώμη χωρίς είδηση,
 live/ενδιάμεσα σκορ, τηλεοπτικό πρόγραμμα, κατώτερες κατηγορίες/γυναικείο/εφηβικό, πολύ ασήμαντα, ή θέμα που ήδη υπάρχει
 στους τίτλους "already_on_site" (ίδιο αποτέλεσμα, ίδια μεταγραφή, ίδια συνέντευξη). ΝΑΙ για δηλώσεις, τραυματισμούς,
@@ -317,11 +353,11 @@ live/ενδιάμεσα σκορ, τηλεοπτικό πρόγραμμα, κα�
 {data}"""
 
 
-def triage(about, headline, summary, on_site):
+def triage(about, headline, summary, on_site, note=""):
     """Cheap first pass on headline + summary, so the expensive writer only sees likely articles."""
     data = json.dumps({"headline": headline, "summary": (summary or "")[:700],
                        "already_on_site": on_site[:120]}, ensure_ascii=False, indent=1)
-    return _claude(TRIAGE.format(about=about, data=data), TRIAGE_MODEL)
+    return _claude(TRIAGE.format(about=about, note=note, data=data), TRIAGE_MODEL)
 
 
 def _ask_claude(task, facts, retry_note=False):
@@ -544,6 +580,7 @@ def _run(state):
             away = next(t for t in facts["teams"] if t["home_away"] == "away")
             home = next(t for t in facts["teams"] if t["home_away"] == "home")
             art["_teams"] = [away["name_gr"], home["name_gr"]]
+            art["content"] += stats_block(facts, art)
             img = card.game_card(tempfile.mktemp(suffix=".jpg"),
                                  {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
                                   "colour": colours(away["espn_id"])[0], "logo": logo_url(away["espn_id"])},
@@ -559,6 +596,60 @@ def _run(state):
             raise
         except Exception as ex:  # keep going with the other items
             log("  ERROR", e["name"], ex)
+
+    # 1b. EuroLeague / EuroCup games (official API). Editors cover many of these games themselves, so
+    # wait a while after the final buzzer and then check the site for the same result first.
+    for league in ("el", "ec"):
+        if ONLY and league not in ONLY:
+            continue
+        try:
+            games = euro.finished(league)
+        except Exception as ex:
+            log("euro games failed:", league, ex)
+            continue
+        for eg in games:
+            gid = f"{euro.season_code(euro.COMPS[league])}-{eg['gameCode']}"
+            g = state["games"].setdefault(gid, {"seen": stamp, "attempts": 0})
+            if g.get("done") or g["attempts"] >= MAX_ATTEMPTS or not budget():
+                continue
+            if now() - dt.datetime.fromisoformat(g["seen"]) < dt.timedelta(hours=EURO_WAIT_HOURS):
+                continue
+            label = f"{eg['local']['club']['name']} - {eg['road']['club']['name']}"
+            try:
+                facts = euro.facts(league, eg)
+                for t in facts["teams"]:
+                    t["name_gr"] = t["name"]               # until the writer gives the Greek name
+                if game_on_site(facts, site[league] + site_all):
+                    g["done"] = "already on site"
+                    continue
+                g["attempts"] += 1
+                log(f"writing {league} game:", label)
+                art = ask_claude(EURO_GAME_TASK.format(comp=facts["competition"]), facts)
+                teams_gr = art.get("teams_gr") or {}
+                for t in facts["teams"]:
+                    t["name_gr"] = teams_gr.get(t["name"]) or t["name"]
+                if game_on_site(facts, site[league] + site_all):   # now also by Greek team names
+                    g["done"] = "already on site"
+                    continue
+                home = next(t for t in facts["teams"] if t["home_away"] == "home")
+                away = next(t for t in facts["teams"] if t["home_away"] == "away")
+                art["_teams"] = [home["name_gr"], away["name_gr"]]
+                art["content"] += stats_block(facts, art)
+                img = card.game_card(tempfile.mktemp(suffix=".jpg"),
+                                     {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
+                                      "colour": card.crest_colour(away["crest"]), "logo": away["crest"]},
+                                     {"name": home["name_gr"], "score": home["score"], "winner": home["winner"],
+                                      "colour": card.crest_colour(home["crest"]), "logo": home["crest"]})
+                res = publish(art, img, f"{league}-game-{gid}", league)
+                g.update(done=True, post=res["id"])
+                record(res, art, league)
+                posted += 1
+                log("  ->", res.get("link"))
+            except AuthError:
+                g["attempts"] -= 1
+                raise
+            except Exception as ex:  # keep going with the other items
+                log("  ERROR", label, ex)
 
     # 2. news
     for item in (news_items() if not ONLY or "nba" in ONLY else []):
@@ -629,7 +720,7 @@ def _run(state):
                 n["attempts"] += 1
                 log(f"judging {feed['key']}:", item["title"])
                 pre = triage(LEAGUES[league]["about"], item["title"], item["summary"] or item["story"][:700],
-                             on_site(league))
+                             on_site(league), LEAGUES[league].get("note", ""))
                 if not pre.get("publish"):
                     n["done"] = "skipped: " + pre.get("reason", "")[:120]
                     log("  skipped (triage):", pre.get("reason"))
@@ -642,6 +733,8 @@ def _run(state):
                     "already_on_site": on_site(league),
                 }
                 task = NEWS_TASK if league == "nba" else LEAGUE_TASK.format(about=LEAGUES[league]["about"])
+                if LEAGUES[league].get("note"):
+                    task += "\n" + LEAGUES[league]["note"]
                 art = ask_claude(task, facts)
                 if not art.get("publish"):
                     n["done"] = "skipped: " + art.get("reason", "")[:120]

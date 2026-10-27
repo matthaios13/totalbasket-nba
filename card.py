@@ -58,6 +58,18 @@ def _logo(url, size):
     return img
 
 
+def crest_colour(url):
+    """Hex of a crest's average opaque colour, for the game card's team side."""
+    logo = _logo(url, 120)
+    if not logo:
+        return "1d1d1d"
+    px = [p for p in logo.getdata() if p[3] > 200 and not (p[0] > 235 and p[1] > 235 and p[2] > 235)]
+    if not px:
+        return "1d1d1d"
+    r, g, b = (sum(p[i] for p in px) // len(px) for i in range(3))
+    return f"{r:02x}{g:02x}{b:02x}"
+
+
 def _badge(img, logo, cx, cy, r):
     """White disc with the logo centred on it, so every logo reads on any background."""
     d = ImageDraw.Draw(img)
