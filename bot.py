@@ -64,6 +64,7 @@ def claude_cmd(model):
 MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
 ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
 GAMES_ONLY = os.environ.get("GAMES_ONLY") == "1"   # the 10-minute game-night job: results only, no news feeds
+NBA_LOGO = "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png"   # last resort, never a text card
 NBA_CATEGORY = 6
 NBA_TAG = 153
 TAG_2ND_TOP = 113               # the run's most important article
@@ -269,11 +270,12 @@ STYLE = """Είσαι συντάκτης του ελληνικού site μπάσ
 - Αν ένα όνομα υπάρχει ήδη γραμμένο στους τίτλους του "already_on_site", χρησιμοποίησε ΑΚΡΙΒΩΣ την ίδια ελληνική γραφή.
 - Τίτλος και κείμενο ΜΟΝΟ με ελληνικούς χαρακτήρες στα ονόματα (ποτέ μισό ελληνικά μισό λατινικά, π.χ. «Εμπίντ» και όχι «Εμπίid»).
 - photo_person: αν το άρθρο αφορά κυρίως ΕΝΑ πρόσωπο (παίκτη/προπονητή/στέλεχος), το πλήρες όνομά του στα ΑΓΓΛΙΚΑ (π.χ. "Joel Embiid"), αλλιώς "".
+- photo_people: τα πλήρη ονόματα στα ΑΓΓΛΙΚΑ (όπως στη Wikipedia) των 1-3 πιο σημαντικών προσώπων του άρθρου, το σημαντικότερο πρώτο (για τη φωτογραφία).
 - main_team: η ομάδα που αφορά κυρίως το άρθρο, με το επίσημο λατινικό της όνομα (π.χ. "Real Madrid Baloncesto", "Olimpia Milano", "Paris Basketball"), αλλιώς "".
 - importance: 1-10 πόσο σημαντικό/ελκυστικό είναι για Έλληνα αναγνώστη (σούπερ σταρ, Έλληνες παίκτες, μεγάλες μεταγραφές = υψηλά).
 
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
-{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "main_team": "", "importance": 5}"""
+{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "photo_people": [], "main_team": "", "importance": 5}"""
 
 STATS_NOTE = """
 Τα δεκάλεπτα και οι γραμμές στατιστικών των ομάδων προστίθενται ΑΥΤΟΜΑΤΑ στο τέλος· μην τα γράψεις εσύ ως λίστα.
@@ -489,20 +491,34 @@ def publish(art, image_path, slug_hint, league="nba"):
 
 # ---------------------------------------------------------------- main
 
-def person_image(art):
-    """Free-licence photo of the article's main person; adds the required credit line to the text."""
-    name = (art.get("photo_person") or "").strip()
-    if not name:
-        return None
-    try:
-        found = photos.find(name)
-    except Exception as ex:
-        log("  photo lookup failed:", name, ex)
-        return None
-    if not found:
-        log("  no free photo for", name)
-        return None
-    return _with_credit(art, *found)
+def person_image(art, names=None):
+    """Free-licence photo of the article's people (main person first) where a face is visible; adds the
+    required credit line to the text. User (2026-10-28): always a photo with faces, never a text card."""
+    if names is None:
+        names = [art.get("photo_person")] + list(art.get("photo_people") or [])
+    best = None
+    for name in list(dict.fromkeys(n.strip() for n in names if isinstance(n, str) and n.strip()))[:4]:
+        try:
+            found = photos.find(name, accept=lambda img: 0.16 <= (card.face_share(img) or 0) <= 0.5)
+        except Exception as ex:
+            log("  photo lookup failed:", name, ex)
+            continue
+        share = card.face_share(found[0]) if found else None
+        if not found:
+            log("  no free photo for", name)
+        elif share is None or share < 0.16:
+            log("  free photo without a clear face:", name)
+        elif share <= 0.5:                  # widescreen crop keeps the whole head: take it
+            return _with_credit(art, *found)
+        elif not best or share < best[0]:
+            best = (share, found)
+    return _with_credit(art, *best[1]) if best else None
+
+
+def top_scorers(facts):
+    """Game's best scorers, winner's first: whose photo goes on the result article."""
+    teams = sorted(facts["teams"], key=lambda t: not t.get("winner"))
+    return [p["name"] for t in teams for p in sorted(t.get("players", []), key=lambda p: -p["pts"])[:2]]
 
 
 def _with_credit(art, img, credit):
@@ -537,6 +553,9 @@ def club_photo(art, team, league):
         found = photos.team_photo(team, "EuroCup" if league == "ec" else "Euroleague" if league == "el" else "basketball")
     except Exception as ex:
         log("  club photo lookup failed:", team, ex)
+        return None
+    if found and not card._face(found[0]):
+        log("  club photo without a visible face:", team)
         return None
     return _with_credit(art, *found) if found else None
 
@@ -786,6 +805,11 @@ def _run(state):
                     img = library_image(art, names, standings._when(g))
                     if img:
                         break
+                if not img:                 # the best scorers of tonight's main game
+                    try:
+                        img = person_image(art, top_scorers(euro.facts(league, order[0])))
+                    except Exception as ex:
+                        log("  top scorers lookup failed:", ex)
                 img = (img or (club_photo(art, greek_latin[0], league) if greek_latin else None)
                        or card.league_card(tempfile.mktemp(suffix=".jpg"), euro.NAMES[league]))
                 res = publish(art, img, f"{league}-news-standings-{night['day']}", league)
@@ -829,7 +853,7 @@ def _run(state):
             art["_teams"] = facts["teams_gr"]
             img = library_image(art, [p.split()[-1] for p in (art.get("people") or [])[:1]]) or person_image(art) or card.news_card(
                 tempfile.mktemp(suffix=".jpg"), art["title"],
-                colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id))
+                colours(team_id)[0] if team_id else "1d1d1d", logo_url(team_id) if team_id else NBA_LOGO)
             res = publish(art, img, f"nba-news-{nid}")
             n.update(done=True, post=res["id"])
             record(res, art)

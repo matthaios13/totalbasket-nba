@@ -161,38 +161,46 @@ def _face(photo):
     return tuple(int(v) for v in max(faces, key=lambda f: f[2] * f[3]))
 
 
-def photo_card(path, photo):
-    """Person photo filling the 16:9 frame with the whole head visible.
+def face_share(photo):
+    """How much of the 16:9 frame's height the face takes once the photo fills the whole width
+    (None without a face). Under ~0.5 the whole head fits comfortably."""
+    face = _face(photo)
+    if not face:
+        return None
+    return face[3] * max(W / photo.width, H / photo.height) / H
 
-    The face's box is made to take at most ~38% of the frame height, with room above the hair, so
-    sites that show a wider strip of the image (small cards) don't cut the head. When the portrait is
-    too tight for that, the photo is scaled down and the thin side margins are filled with a blurred,
-    darkened copy of the same photo."""
+
+def photo_card(path, photo):
+    """Person photo filling the whole 16:9 frame (user, 2026-10-28: widescreen, never a narrow photo
+    between blurred bars), cropped so the whole head stays visible: some room above the hair, face a bit
+    above the middle."""
     from PIL import ImageEnhance, ImageFilter
     face = _face(photo)
-    cover = max(W / photo.width, H / photo.height)
-    scale = cover
-    if face:
-        scale = min(cover, H * 0.42 / face[3])
-    elif photo.height > photo.width:        # portrait, face not found: show its upper 60%, whole head
-        scale = min(cover, H / (photo.height * 0.6))
-    img = photo.resize((max(1, round(photo.width * scale)), max(1, round(photo.height * scale))), Image.LANCZOS)
-    if face:
-        fx, fy, fh = (face[0] + face[2] / 2) * scale, face[1] * scale, face[3] * scale
-        left, top = fx - W / 2, fy - fh * 0.75 - H * 0.12          # face sits a bit above the middle
-    else:                                   # no face found: portraits keep the top, landscapes the centre
-        left, top = (img.width - W) / 2, (img.height - H) * 0.06 if photo.width >= photo.height else 0
-    left = int(min(max(left, 0), max(img.width - W, 0)))
-    top = int(min(max(top, 0), max(img.height - H, 0)))
-    fg = img.crop((left, top, min(left + W, img.width), min(top + H, img.height)))
-    if fg.size == (W, H):
-        out = fg
-    else:
-        bg = photo.resize((round(photo.width * cover) + 1, round(photo.height * cover) + 1), Image.LANCZOS)
+    scale = max(W / photo.width, H / photo.height)
+    if face and face[3] * scale > H * 0.75:
+        # a very tight portrait: filling the width would cut the face, so it stays a little narrower
+        # (face at 60% of the height) on a blurred, darkened copy of itself
+        small = min(scale, H * 0.6 / face[3])
+        fg = photo.resize((round(photo.width * small), round(photo.height * small)), Image.LANCZOS)
+        fy = face[1] * small
+        top = int(min(max(fy - face[3] * small * 0.3, 0), max(fg.height - H, 0)))
+        fg = fg.crop((0, top, fg.width, min(top + H, fg.height)))
+        bg = photo.resize((round(photo.width * scale) + 1, round(photo.height * scale) + 1), Image.LANCZOS)
         bg = bg.crop(((bg.width - W) // 2, (bg.height - H) // 2, (bg.width - W) // 2 + W, (bg.height - H) // 2 + H))
         out = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(30))).enhance(0.5)
         out.paste(fg, ((W - fg.width) // 2, (H - fg.height) // 2))
-    out.save(path, "JPEG", quality=90)
+        out.save(path, "JPEG", quality=90)
+        return path
+    img = photo.resize((max(W, round(photo.width * scale)), max(H, round(photo.height * scale))), Image.LANCZOS)
+    if face:
+        fx, fy, fh = (face[0] + face[2] / 2) * scale, face[1] * scale, face[3] * scale
+        left = fx - W / 2
+        top = min(fy - fh * 0.55, fy + fh * 0.5 - H * 0.42)     # hair above the box; face above the middle
+    else:                                   # no face found: portraits keep the top, landscapes the centre
+        left, top = (img.width - W) / 2, (img.height - H) * 0.06 if photo.width >= photo.height else 0
+    left = int(min(max(left, 0), img.width - W))
+    top = int(min(max(top, 0), img.height - H))
+    img.crop((left, top, left + W, top + H)).save(path, "JPEG", quality=90)
     return path
 
 
