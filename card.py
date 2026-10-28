@@ -85,18 +85,18 @@ def _footer(d, label):
     d.text((W - 40, H - 35), "totalbasket.gr", font=_font(BOLD, 28), fill="white", anchor="rm")
 
 
-def game_card(path, away, home):
-    """away/home: dict(name, score, colour, winner, logo)."""
+def game_card(path, away, home, label="NBA"):
+    """away/home: dict(name, score, colour, winner, logo). Home team on the left, like the article's
+    title «Γηπεδούχος – Φιλοξενούμενη» (user, 2026-10-28)."""
     img = Image.new("RGB", (W, H))
     d = ImageDraw.Draw(img)
-    ca, ch = _darken(_rgb(away["colour"])), _darken(_rgb(home["colour"]))
+    ch, ca = _darken(_rgb(home["colour"])), _darken(_rgb(away["colour"]))
     # diagonal split between the two team colours
-    d.polygon([(0, 0), (W * 0.58, 0), (W * 0.42, H), (0, H)], fill=ca)
-    d.polygon([(W * 0.58, 0), (W, 0), (W, H), (W * 0.42, H)], fill=ch)
+    d.polygon([(0, 0), (W * 0.58, 0), (W * 0.42, H), (0, H)], fill=ch)
+    d.polygon([(W * 0.58, 0), (W, 0), (W, H), (W * 0.42, H)], fill=ca)
     d.line([(W * 0.58, 0), (W * 0.42, H)], fill=ORANGE, width=8)
 
-    for side, t in (("away", away), ("home", home)):
-        cx = W * 0.25 if side == "away" else W * 0.75
+    for cx, t in ((W * 0.25, home), (W * 0.75, away)):
         _badge(img, _logo(t.get("logo"), 170), cx, 145, 110)
         name_f = _fit(d, t["name"], BLACK, 440, 50)
         d.text((cx, 295), t["name"], font=name_f, fill="white", anchor="mm")
@@ -104,7 +104,7 @@ def game_card(path, away, home):
         d.text((cx, 425), str(t["score"]), font=_font(BLACK, 150), fill=colour, anchor="mm")
         if t["winner"]:
             d.rectangle([cx - 55, 520, cx + 55, 528], fill=ORANGE)
-    _footer(d, "NBA  •  ΤΕΛΙΚΟ")
+    _footer(d, f"{label}  •  ΤΕΛΙΚΟ")
     img.save(path, "JPEG", quality=88)
     return path
 

@@ -745,7 +745,8 @@ def _run(state):
                                      {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
                                       "colour": card.crest_colour(away["crest"]), "logo": away["crest"]},
                                      {"name": home["name_gr"], "score": home["score"], "winner": home["winner"],
-                                      "colour": card.crest_colour(home["crest"]), "logo": home["crest"]}))
+                                      "colour": card.crest_colour(home["crest"]), "logo": home["crest"]},
+                                     euro.NAMES[league]))
                 res = publish(art, img, f"{league}-game-{gid}", league)
                 g.update(done=True, post=res["id"])
                 record(res, art, league)
