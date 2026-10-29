@@ -153,7 +153,9 @@ def _face(photo):
         import numpy as np
         gray = cv2.cvtColor(np.array(photo), cv2.COLOR_RGB2GRAY)
         det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-        faces = det.detectMultiScale(gray, 1.1, 5, minSize=(max(40, photo.width // 20),) * 2)
+        # Only a real, sizeable face counts (user 2026-10-29): small faces in the crowd behind a player used to
+        # pass the check and a photo of a torso without a head went on an article.
+        faces = det.detectMultiScale(gray, 1.1, 6, minSize=(max(60, photo.width // 16),) * 2)
     except Exception:            # OpenCV missing or broken: fall back to the plain crop
         return None
     if len(faces) == 0:

@@ -554,8 +554,9 @@ def club_photo(art, team, league):
     except Exception as ex:
         log("  club photo lookup failed:", team, ex)
         return None
-    if found and not card._face(found[0]):
-        log("  club photo without a visible face:", team)
+    share = card.face_share(found[0]) if found else None
+    if found and not (share and 0.16 <= share <= 0.6):
+        log("  club photo without a clear, visible face:", team)
         return None
     return _with_credit(art, *found) if found else None
 
@@ -739,8 +740,9 @@ def _run(state):
                 art["_result_teams"] = [home["name"], away["name"]]     # Latin API names, for the TOP rules
                 art["content"] += stats_block(facts, art)
                 tipoff = dt.datetime.fromisoformat(facts["date_utc"].replace("Z", "+00:00"))
+                # result: an editor's photo of this very game, else the crests + score card (user's choice;
+                # 2026-10-29 a Commons club photo of a torso without a head went on a result — no club photos here)
                 img = (library_image(art, [home["name_gr"], away["name_gr"]], tipoff)
-                       or club_photo(art, home["name"], league) or club_photo(art, away["name"], league)
                        or card.game_card(tempfile.mktemp(suffix=".jpg"),
                                      {"name": away["name_gr"], "score": away["score"], "winner": away["winner"],
                                       "colour": card.crest_colour(away["crest"]), "logo": away["crest"]},
