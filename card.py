@@ -146,17 +146,43 @@ def _title_card(path, title, colour):
     return path
 
 
+YUNET = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "face_detection_yunet_2023mar.onnx")
+
+
 def _face(photo):
-    """(x, y, w, h) of the largest face, or None. Needs opencv-python-headless < 5 (5.x dropped cascades)."""
+    """(x, y, w, h) of the largest real face, or None.
+
+    YuNet (OpenCV's neural face detector, model in models/) first: it ignores shoes, shirts and tiny faces in the
+    crowd that the old Haar cascade took for faces (2026-10-29: photos of a torso / of legs went on articles).
+    Only a confident (score >= 0.8), sizeable face (>= 8% of the height) counts. Haar is only the fallback
+    when YuNet is unavailable. Needs opencv-python-headless < 5."""
     try:
         import cv2
         import numpy as np
-        gray = cv2.cvtColor(np.array(photo), cv2.COLOR_RGB2GRAY)
+    except Exception:            # OpenCV missing: fall back to the plain crop
+        return None
+    arr = np.array(photo)
+    if os.path.exists(YUNET) and hasattr(cv2, "FaceDetectorYN"):
+        try:
+            bgr = cv2.cvtColor(arr, cv2.COLOR_RGB2BGR)
+            scale = min(1.0, 1280 / max(photo.size))       # big Commons originals: detect on a smaller copy
+            if scale < 1:
+                bgr = cv2.resize(bgr, (int(photo.width * scale), int(photo.height * scale)))
+            h, w = bgr.shape[:2]
+            det = cv2.FaceDetectorYN.create(YUNET, "", (w, h), 0.8, 0.3, 5000)
+            _, faces = det.detect(bgr)
+            faces = [] if faces is None else [f for f in faces if f[3] >= h * 0.08]
+            if not faces:
+                return None
+            f = max(faces, key=lambda f: f[2] * f[3])
+            return tuple(int(round(v / scale)) for v in f[:4])
+        except Exception:
+            pass
+    try:
+        gray = cv2.cvtColor(arr, cv2.COLOR_RGB2GRAY)
         det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-        # Only a real, sizeable face counts (user 2026-10-29): small faces in the crowd behind a player used to
-        # pass the check and a photo of a torso without a head went on an article.
         faces = det.detectMultiScale(gray, 1.1, 6, minSize=(max(60, photo.width // 16),) * 2)
-    except Exception:            # OpenCV missing or broken: fall back to the plain crop
+    except Exception:
         return None
     if len(faces) == 0:
         return None
