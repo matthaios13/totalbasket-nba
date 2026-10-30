@@ -16,6 +16,7 @@
   "lba|pallacanestro reggiana": "https://r2.thesportsdb.com/images/media/team/badge/5oln4h1784568860.png",
   "lba|pallacanestro trieste": "https://r2.thesportsdb.com/images/media/team/badge/f2d8e01722170707.png",
   "lba|roma": "https://www.thesportsdb.com/images/media/team/badge/dn89jw1792763170.png",
+  "lba|scafati basket": "https://r2.thesportsdb.com/images/media/team/badge/rj1swu1722730124.png",
   "lba|scaligera basket verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|scaligera verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
   "lba|tezenis verona": "https://r2.thesportsdb.com/images/media/team/badge/3ai8831786180052.png",
@@ -3961,6 +3962,11 @@
    "done": "skipped: Πολύ ασήμαντο περιστατικό: αφορά θεατή που απομακρύνθηκε από τον πάγκο και τον αντιπρόεδρο της Virtus, χωρίς παίκτη, προ",
    "seen": "2026-10-28T23:46:52.735514+00:00"
   },
+  "sportando-el:d0b3a14fd9867e5f": {
+   "attempts": 1,
+   "done": "skipped: Η ίδια είδηση (ανανέωση συμβολαίου του Μπολμάρο με την Αρμάνι Μιλάνο) υπάρχει ήδη στους τίτλους: «Αρμάνι Μιλάνο: Συμφωνί",
+   "seen": "2026-10-30T10:00:36.342764+00:00"
+  },
   "sportando-el:d2e149b22072fccc": {
    "attempts": 1,
    "done": "skipped: Άρθρο fantasy (EuroLeague Fantasy Challenge με λίστα cessions), που εξαιρείται από την ενότητα.",
@@ -4695,6 +4701,18 @@
    "attempts": 1,
    "done": "skipped: Το θέμα καλύπτεται ήδη: η πρώτη νίκη του Σκαφάτι με 28 πόντους του Μουρ υπάρχει στους τίτλους του site, άρα η δήλωση του",
    "seen": "2026-10-25T18:46:06.300991+00:00"
+  },
+  "sportando:d0b3a14fd9867e5f": {
+   "attempts": 1,
+   "done": true,
+   "post": 66798,
+   "seen": "2026-10-30T10:00:36.342764+00:00"
+  },
+  "sportando:d19e47b22687b0d9": {
+   "attempts": 1,
+   "done": true,
+   "post": 66796,
+   "seen": "2026-10-30T10:00:36.342764+00:00"
   },
   "sportando:d23948f8c822da74": {
    "attempts": 1,
