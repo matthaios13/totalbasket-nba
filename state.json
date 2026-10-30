@@ -24,6 +24,7 @@
   "lba|virtus bologna": "",
   "lba|virtus roma": "",
   "lnb|elan béarnais pau-lacq-orthez": "",
+  "lnb|nancy": "https://r2.thesportsdb.com/images/media/team/badge/6zbuwh1666897360.png",
   "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png",
   "lnb|paris basketball": "https://r2.thesportsdb.com/images/media/team/badge/9q0d6x1726681476.png"
  },
@@ -546,6 +547,12 @@
    "done": true,
    "post": 66874,
    "seen": "2026-10-30T20:39:55.063214+00:00"
+  },
+  "E2026-87": {
+   "attempts": 1,
+   "done": true,
+   "post": 66885,
+   "seen": "2026-10-30T21:49:01.131411+00:00"
   },
   "E2026-88": {
    "attempts": 1,
@@ -1645,6 +1652,11 @@
    "done": "too-old",
    "seen": "2026-10-24T20:39:51.344197+00:00"
   },
+  "bebasket:494ebd1cec5a09ec": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-30T21:49:01.131411+00:00"
+  },
   "bebasket:4c180d83eb7e448c": {
    "attempts": 0,
    "done": "too-old",
@@ -1714,6 +1726,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-25T17:40:22.987590+00:00"
+  },
+  "bebasket:7d6e7cc3defea2a2": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-30T21:49:01.131411+00:00"
   },
   "bebasket:81594203033c8303": {
    "attempts": 0,
@@ -2164,6 +2181,12 @@
    "done": true,
    "post": 65843,
    "seen": "2026-10-24T21:41:52.666166+00:00"
+  },
+  "lequipe:af1d6580add6b94d": {
+   "attempts": 1,
+   "done": true,
+   "post": 66887,
+   "seen": "2026-10-30T21:49:01.131411+00:00"
   },
   "lequipe:b75b7a25551440c8": {
    "attempts": 0,
@@ -3941,6 +3964,11 @@
    "post": 66848,
    "seen": "2026-10-30T15:04:46.272473+00:00"
   },
+  "sportando-el:56f2c11df839a5fe": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα της κατάστασης του Πίτερς για το ματς με τον Ολυμπιακό υπάρχει ήδη στους τίτλους (\"Σε εγρήγορση ο Πίτερς...\"). Η",
+   "seen": "2026-10-30T21:49:01.131411+00:00"
+  },
   "sportando-el:5955e5e6b7f3e857": {
    "attempts": 1,
    "done": true,
@@ -4046,6 +4074,12 @@
    "done": "skipped: Το ίδιο αποτέλεσμα (Χάποελ Τελ Αβίβ – Εφές 118-88, με 35 πόντους του Μπλέικνι) υπάρχει ήδη στο site: «Χάποελ Τελ Αβίβ – ",
    "seen": "2026-10-28T23:46:52.735514+00:00"
   },
+  "sportando-el:84e1e0850dc859b7": {
+   "attempts": 1,
+   "done": true,
+   "post": 66889,
+   "seen": "2026-10-30T21:49:01.131411+00:00"
+  },
   "sportando-el:859c2f805a313e13": {
    "attempts": 1,
    "done": "skipped: Προ-αγωνιστικές δηλώσεις για το Ερυθρός Αστέρας – Μπάγερν (Round 9). Στο already_on_site υπάρχει ήδη το άρθρο για το απο",
@@ -4119,6 +4153,11 @@
    "done": "skipped: Το αποτέλεσμα Μπεσίκτας–Ολυμπιακός 73-81 υπάρχει ήδη στο site (\"Μπεσίκτας – Ολυμπιακός 73-81: Ο Βεζένκοφ οδήγησε τους Ερ",
    "seen": "2026-10-28T19:56:28.041330+00:00"
   },
+  "sportando-el:9b4c83527169887c": {
+   "attempts": 1,
+   "done": "skipped: Ο τραυματισμός του Ζαν Μοντέρο με μακρά απουσία έχει ήδη καλυφθεί στον τίτλο «Σοκ στον Ολυμπιακό: Χειρουργήθηκε ο Ζαν Μο",
+   "seen": "2026-10-30T21:49:01.131411+00:00"
+  },
   "sportando-el:9ebbd8dc1e4b7506": {
    "attempts": 1,
    "done": true,
@@ -4167,6 +4206,11 @@
    "attempts": 1,
    "done": "skipped: Συγκεντρωτική αναδημοσίευση δηλώσεων της vigilia της 9ης αγωνιστικής. Οι περισσότερες δηλώσεις (Λάσο, Ομπράντοβιτς, Ιτού",
    "seen": "2026-10-30T17:55:36.689995+00:00"
+  },
+  "sportando-el:c25afb668ec010e0": {
+   "attempts": 1,
+   "done": "skipped: Πρόκειται για λίστα των 12 διαθέσιμων παικτών πριν από αγώνα, δηλαδή προεπισκόπηση χωρίς είδηση. Είναι το ίδιο είδος περ",
+   "seen": "2026-10-30T21:49:01.131411+00:00"
   },
   "sportando-el:c37f3e4fe024e531": {
    "attempts": 1,
