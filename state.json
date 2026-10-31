@@ -3,6 +3,7 @@
   "acb|bilbao basket": "https://r2.thesportsdb.com/images/media/team/badge/v7bo1i1664476071.png",
   "acb|la laguna tenerife": "",
   "acb|real madrid baloncesto": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
+  "acb|ucam murcia": "",
   "lba|apu udine": "https://r2.thesportsdb.com/images/media/team/badge/o64a4v1713952899.png",
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
@@ -513,6 +514,10 @@
    "done": true,
    "post": 66786,
    "seen": "2026-10-30T04:57:21.522155+00:00"
+  },
+  "401909896": {
+   "attempts": 0,
+   "seen": "2026-10-31T21:44:50.320373+00:00"
   },
   "E2026-71": {
    "attempts": 1,
@@ -1996,6 +2001,11 @@
    "done": "too-old",
    "seen": "2026-10-26T09:55:55.938516+00:00"
   },
+  "bebasket:d64bb2bd4cde181c": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-10-31T21:44:50.320373+00:00"
+  },
   "bebasket:dbb676e450211c39": {
    "attempts": 0,
    "done": "too-old",
@@ -2835,6 +2845,12 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "marca-acb:e1f68829f26b86bd": {
+   "attempts": 1,
+   "done": true,
+   "post": 66988,
+   "seen": "2026-10-31T21:44:50.320373+00:00"
   },
   "marca-acb:e68bf4dd29857077": {
    "attempts": 1,
@@ -3909,6 +3925,11 @@
    "post": 65786,
    "seen": "2026-10-23T22:42:25.001923+00:00"
   },
+  "realgm:f0e0f29c57576af4": {
+   "attempts": 1,
+   "done": "skipped: Πρόκειται για οδηγό τηλεοπτικής μετάδοσης και ροής (TV channels, live stream, ώρα έναρξης) για αγώνα που δεν έχει ακόμη ",
+   "seen": "2026-10-31T21:44:50.320373+00:00"
+  },
   "realgm:f0ebe75e004441f9": {
    "attempts": 1,
    "done": "skipped: Podcast επεισόδιο που συζητά ήδη καλυμμένα θέματα: το 44άρι του Κάρι, το ντεμπούτο του Ντιμπάντσα, τον τραυματισμό του Έ",
@@ -4101,6 +4122,12 @@
    "attempts": 1,
    "done": "skipped: Η δήλωση του Φιορέτι («δεν χρειάζονται ανατροπές») έχει ήδη καλυφθεί στο site με τον τίτλο «Φιορέτι: «Δεν χρειάζονται αν",
    "seen": "2026-10-30T10:55:38.267444+00:00"
+  },
+  "sportando-ec:a7adb7deb7f58893": {
+   "attempts": 1,
+   "done": true,
+   "post": 66990,
+   "seen": "2026-10-31T21:44:50.320373+00:00"
   },
   "sportando-ec:aaac04bd28bda53e": {
    "attempts": 1,
@@ -5174,6 +5201,11 @@
    "post": 66684,
    "seen": "2026-10-29T19:57:27.175390+00:00"
   },
+  "sportando:6dfc3c923d47c038": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα (MVP Οκτωβρίου της LBA ο Μάικ Τόμπεϊ) υπάρχει ήδη στους τίτλους του site.",
+   "seen": "2026-10-31T21:44:50.320373+00:00"
+  },
   "sportando:6e06204a9c6f6616": {
    "attempts": 1,
    "done": "skipped: Το θέμα της προεδρίας του Πίττις στην Τρεβίζο υπάρχει ήδη στον τίτλο «Πίττις για προεδρία στην Τρεβίζο: «Ξεκινάμε όλοι σ",
@@ -5243,6 +5275,11 @@
    "attempts": 1,
    "done": "skipped: Πρόκειται για γνώμη και ανάλυση του πρώην παίκτη Αλμπέρτο Τονούτ για την Καντού μετά την ήττα με 92-72 στην Τεργέστη, πο",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "sportando:7b288a9a00a735d3": {
+   "attempts": 1,
+   "done": "skipped: Ορόσημο 100 αγώνων για παίκτη χωρίς νέα είδηση ή ρεκόρ. Θεωρείται πολύ ασήμαντο για άρθρο, και δεν υπάρχει αντίστοιχο θέ",
+   "seen": "2026-10-31T21:44:50.320373+00:00"
   },
   "sportando:7b85ffdc0869e7ee": {
    "attempts": 1,
