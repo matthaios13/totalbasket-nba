@@ -6,6 +6,7 @@
   "lba|apu udine": "https://r2.thesportsdb.com/images/media/team/badge/o64a4v1713952899.png",
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
+  "lba|derthona basket": "https://www.thesportsdb.com/images/media/team/badge/wflsi81792763199.png",
   "lba|dolomiti energia trentino": "https://r2.thesportsdb.com/images/media/team/badge/sp4qsm1677678255.png",
   "lba|dolomiti energia trento": "https://r2.thesportsdb.com/images/media/team/badge/sp4qsm1677678255.png",
   "lba|maxima roma": "https://r2.thesportsdb.com/images/media/team/badge/so67ci1786177012.png",
@@ -4474,6 +4475,12 @@
    "done": "skipped: Δηλώσεις του Μουμπρού μετά το ματς Virtus Bologna – Μπεσίκτας, που καλύπτονται ήδη από το «Μουμπρού: «Δεν παίξαμε όπως θ",
    "seen": "2026-10-30T23:46:10.682924+00:00"
   },
+  "sportando-el:bf6583f5a6c1a250": {
+   "attempts": 1,
+   "done": true,
+   "post": 66968,
+   "seen": "2026-10-31T15:45:40.198639+00:00"
+  },
   "sportando-el:c25afb668ec010e0": {
    "attempts": 1,
    "done": "skipped: Πρόκειται για λίστα των 12 διαθέσιμων παικτών πριν από αγώνα, δηλαδή προεπισκόπηση χωρίς είδηση. Είναι το ίδιο είδος περ",
@@ -5188,6 +5195,12 @@
    "done": "skipped: Το θέμα της ανάληψης της προεδρίας της Τρεβίζο από τον Πίττις καλύπτεται ήδη στο site (Πίττις για προεδρία στην Τρεβίζο:",
    "seen": "2026-10-29T22:52:00.871247+00:00"
   },
+  "sportando:88936d02db554c22": {
+   "attempts": 1,
+   "done": true,
+   "post": 66966,
+   "seen": "2026-10-31T15:45:40.198639+00:00"
+  },
   "sportando:8a4224c1f5f6d5a4": {
    "attempts": 1,
    "done": "skipped: Είναι γενική περίληψη του Round 5 (όλα τα αποτελέσματα, βαθμολογία, πρόγραμμα), όχι συγκεκριμένη είδηση. Η λίστα ρεκόρ/α",
@@ -5338,6 +5351,12 @@
    "done": "skipped: Λίστα/ranking (Dream Team του μήνα) χωρίς είδηση. Τα βασικά βραβεία Οκτωβρίου (MVP, κορυφαίος έκτος, κορυφαίος αμυντικός",
    "seen": "2026-10-29T22:52:00.871247+00:00"
   },
+  "sportando:b0dd4b4d928f3735": {
+   "attempts": 1,
+   "done": true,
+   "post": 66962,
+   "seen": "2026-10-31T15:45:40.198639+00:00"
+  },
   "sportando:b17e4a199440c716": {
    "attempts": 1,
    "done": "skipped: Προεπισκόπηση του ίδιου αγώνα (Σκαφάτι – Τρέντο) υπάρχει ήδη στον site. Το άρθρο δεν έχει νέα είδηση, μόνο πρόγραμμα, ώρ",
@@ -5388,6 +5407,12 @@
    "attempts": 1,
    "done": "skipped: Εκδήλωση εφηβικού μπάσκετ (High School Cantournament) και ασήμαντο ρεπορτάζ παρουσίασης, εκτός της κύριας ύλης της LBA.",
    "seen": "2026-10-27T20:46:37.359939+00:00"
+  },
+  "sportando:c6691ceed4b39517": {
+   "attempts": 1,
+   "done": true,
+   "post": 66964,
+   "seen": "2026-10-31T15:45:40.198639+00:00"
   },
   "sportando:c670943caf6d9b77": {
    "attempts": 1,
