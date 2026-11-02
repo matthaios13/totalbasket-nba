@@ -68,7 +68,7 @@ NBA_LOGO = "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png"   # last reso
 NBA_CATEGORY = 6
 NBA_TAG = 153
 TAG_2ND_TOP = 113               # the run's most important article
-TAG_3RD_TOP = 114               # every other NBA article; European news only when important
+TAG_3RD_TOP = 114               # 2 NBA articles per run (promote_top); European news only when important
 EUROPE_TOP_IMPORTANCE = 7       # European league news gets 3rdTOP from this importance up
 TAG_TOP = 112                   # main headline: EuroLeague results of Panathinaikos / Olympiacos
 GREEK_EL = re.compile(r"(?i)panathinaikos|olympiacos")
@@ -480,7 +480,7 @@ def publish(art, image_path, slug_hint, league="nba"):
     tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"])
     if league in ("el", "ec"):
         tags.append(euro_top_tag(league, art.get("_result_teams")))
-    elif league == "nba" or int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
+    elif league != "nba" and int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
         tags.append(TAG_3RD_TOP)
     categories = lg["categories"]
     return wp("POST", "posts", {
@@ -622,14 +622,18 @@ def game_on_site(facts, posts):
     return False
 
 
+NBA_3RD_PER_RUN = 2    # user (2026-11-02): fewer NBA in «Περισσότερα Νέα», which now shows every category
+
+
 def promote_top(published):
-    """The most important article of this run goes to 2ndTOP, the rest stay 3rdTOP."""
+    """NBA articles of this run: the most important goes to 2ndTOP, the next NBA_3RD_PER_RUN to 3rdTOP,
+    the rest only to the NBA section."""
     if DRY_RUN or not published:
         return
-    best = max(published, key=lambda p: p["importance"])
-    tags = [t for t in best["tags"] if t != TAG_3RD_TOP] + [TAG_2ND_TOP]
-    wp("POST", f"posts/{best['id']}", {"tags": tags})
-    log("2ndTOP:", best["title"])
+    ranked = sorted(published, key=lambda p: p["importance"], reverse=True)
+    for i, p in enumerate(ranked[:1 + NBA_3RD_PER_RUN]):
+        wp("POST", f"posts/{p['id']}", {"tags": p["tags"] + [TAG_2ND_TOP if i == 0 else TAG_3RD_TOP]})
+        log("2ndTOP:" if i == 0 else "3rdTOP:", p["title"])
 
 
 def run():
