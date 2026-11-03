@@ -72,6 +72,10 @@
    "seen": "2026-11-03T13:18:24.754601+00:00",
    "skip": "old"
   },
+  "<CA+r1L8biBC6i+cnpxNDFgj3XjJFe3ScW4Ztd5Aibr-AxHPw76Q@mail.gmail.com>": {
+   "seen": "2026-11-03T18:47:33.272253+00:00",
+   "skip": "Το email περιέχει μόνο σύνδεσμο (https://danaoi.gr/...) χωρίς κείμενο δελτίου στο σώμα, σε συνημμένο ή στο linked_article. Δεν υπάρχει κείμενο προς δημοσίευση."
+  },
   "<CAN2Nxh0kadm7Fwfdusy9wYg=keixRQ8Q3e7DQNtVqwX8x49LBQ@mail.gmail.com>": {
    "posts": [
     67981
