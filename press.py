@@ -286,18 +286,24 @@ PROMPT = """Είσαι συντάκτης του ελληνικού site μπά�
   (π.χ. Real Madrid → Ρεάλ Μαδρίτης, Valencia Basket → Βαλένθια). Οι διοργανώσεις μένουν EuroLeague / EuroCup.
 - Αφαιρείς ΜΟΝΟ ό,τι δεν είναι μέρος του δελτίου: χαιρετισμούς («Καλησπέρα σας», «σας αποστέλλουμε…»,
   «παρακαλούμε για τη δημοσίευση», «ευχαριστούμε»), υπογραφές, τηλέφωνα, διευθύνσεις, emails, social links,
-  «Preview in browser», «unsubscribe», νομικές σημειώσεις, επικεφαλίδες τύπου «ΔΕΛΤΙΟ ΤΥΠΟΥ» / «PRESS RELEASE» / ημερομηνία.
+  «Preview in browser», «unsubscribe», νομικές σημειώσεις, επικεφαλίδες τύπου «ΔΕΛΤΙΟ ΤΥΠΟΥ» / «PRESS RELEASE» / ημερομηνία,
+  και το τυποποιημένο κείμενο παρουσίασης του αποστολέα στο τέλος (π.χ. «About Euroleague Basketball» / «Euroleague
+  Basketball (EB) is a global leader…»).
 - Το κείμενο του δελτίου μπορεί να είναι στο σώμα του email, στο συνημμένο έγγραφο ή στο άρθρο του συνδέσμου
   ("linked_article"): πάρε το από εκεί που είναι ολόκληρο. Αν ίδιο κείμενο υπάρχει σε δύο σημεία, το βάζεις μία φορά.
 - Αν το email έχει ΔΥΟ ή περισσότερα ξεχωριστά δελτία, βγάζεις ένα άρθρο για το καθένα.
 - title: ο τίτλος του ίδιου του δελτίου (ελληνικά, χωρίς «Δελτίο Τύπου», «EB Press Release:», τελεία ή emoji).
+  Κανονική ορθογραφία πεζών/κεφαλαίων (π.χ. «Τι Τζέι Σορτς», ποτέ «ΤΖέι»).
   Αν το δελτίο δεν έχει δικό του τίτλο, φτιάξε έναν σύντομο, ενημερωτικό από το περιεχόμενο (όχι το γενικό θέμα του email).
 - excerpt: 1-2 προτάσεις από το ίδιο το κείμενο (υπότιτλος).
 - paragraphs: οι παράγραφοι του κειμένου, με τη σειρά, απλό κείμενο (χωρίς HTML). Λίστες/αποτελέσματα/συνθέσεις
   μένουν σε δική τους παράγραφο η καθεμία.
 - competition: μόνο για EuroLeague Basketball: "euroleague", "eurocup" ή "nextgen" (Adidas Next Generation Tournament).
 - publish=false (με reason) ΜΟΝΟ αν το email δεν είναι δελτίο τύπου/ανακοίνωση (π.χ. διαφήμιση, newsletter χωρίς είδηση,
-  προσωπικό μήνυμα, άδειο email χωρίς κείμενο πουθενά).
+  προσωπικό μήνυμα, άδειο email χωρίς κείμενο πουθενά, ή email που είναι μόνο σύνδεσμος για κατέβασμα υλικού
+  — π.χ. «Download the game kits here» — χωρίς είδηση να γραφτεί).
+- publish=false επίσης αν η ΙΔΙΑ είδηση υπάρχει ήδη στους τίτλους "already_on_site" (άρθρα του totalbasket των τελευταίων
+  48 ωρών, π.χ. ο ίδιος MVP της ίδιας αγωνιστικής/μήνα, η ίδια μεταγραφή). Άλλη εξέλιξη του ίδιου θέματος δεν είναι διπλότυπο.
 
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
 {{"publish": true, "reason": "", "articles": [{{"title": "...", "excerpt": "...", "paragraphs": ["..."], "competition": ""}}]}}
@@ -396,7 +402,7 @@ def handle(uid, msg, site_titles):
         except Exception as ex:
             log("  can't read link", links[0], ex)
     facts = {"subject": subject, "body": body[:15000], "attachments": docs,
-             "linked_article": page["text"] if page else ""}
+             "linked_article": page["text"] if page else "", "already_on_site": site_titles[:80]}
     art = ask_claude(info["name"], facts)
     if not art.get("publish"):
         log("skipped by Claude:", subject, "-", art.get("reason"))
