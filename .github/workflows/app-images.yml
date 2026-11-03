@@ -1,0 +1,55 @@
+name: App images
+
+# Images for the apps when a new article's own photo has no known lawful source (see app_images.py).
+on:
+  # schedule:
+    # - cron: "47 * * * *"   # every hour, after the articles bot (enabled after the dry-run check)
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "1 = decide only, change nothing (images as artifact)"
+        default: "0"
+      hours:
+        description: "look at articles of the last N hours"
+        default: "36"
+
+concurrency:
+  group: app-images
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow "opencv-python-headless<5"
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: App images
+        env:
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          BALA_WP_USER: ${{ secrets.BALA_WP_USER }}
+          BALA_WP_APP_PASSWORD: ${{ secrets.BALA_WP_APP_PASSWORD }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          APP_IMG_DRY: ${{ inputs.dry || '0' }}
+          APP_IMG_HOURS: ${{ inputs.hours || '36' }}
+        run: python app_images.py
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.dry == '1' }}
+        with:
+          name: app-images
+          path: out/app-images
+      - name: Save state
+        if: ${{ always() && inputs.dry != '1' }}
+        run: |
+          git config user.name "nba-bot"
+          git config user.email "nba-bot@users.noreply.github.com"
+          git add app_images_state.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "app images state" && git pull --rebase && git push)
