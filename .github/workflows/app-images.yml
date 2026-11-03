@@ -2,8 +2,8 @@ name: App images
 
 # Images for the apps when a new article's own photo has no known lawful source (see app_images.py).
 on:
-  # schedule:
-    # - cron: "47 * * * *"   # every hour, after the articles bot (enabled after the dry-run check)
+  schedule:
+    - cron: "47 * * * *"   # every hour, after the articles bot
   workflow_dispatch:
     inputs:
       dry:
