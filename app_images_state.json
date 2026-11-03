@@ -232,6 +232,14 @@
    "at": "2026-11-03T22:25:55.988506+00:00",
    "pick": null
   },
+  "bala24:84640": {
+   "at": "2026-11-03T23:25:22.780082+00:00",
+   "pick": null
+  },
+  "bala24:84644": {
+   "at": "2026-11-03T23:25:26.968833+00:00",
+   "pick": "Manchester United FC"
+  },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
    "pick": null
@@ -342,6 +350,7 @@
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
+  "bala24:bala24-c-manchester-united-fc-v2.jpg": 84651,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
   "bala24:bala24-c-olympiacos-f-c-v2.jpg": 84455,
