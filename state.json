@@ -890,6 +890,12 @@
    "post": 68112,
    "seen": "2026-11-03T20:25:15.493149+00:00"
   },
+  "U2026-91": {
+   "attempts": 1,
+   "done": true,
+   "post": 68132,
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "U2026-92": {
    "attempts": 1,
    "done": true,
@@ -2093,6 +2099,11 @@
    "done": "too-old",
    "seen": "2026-10-24T19:37:50.990420+00:00"
   },
+  "bebasket:2d64e2a71965ee37": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "bebasket:2f516fc369945fa8": {
    "attempts": 0,
    "done": "too-old",
@@ -2717,6 +2728,12 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-21T17:54:27.398658+00:00"
+  },
+  "lequipe:66c7dbb497941bc6": {
+   "attempts": 1,
+   "done": true,
+   "post": 68136,
+   "seen": "2026-11-03T21:55:27.963808+00:00"
   },
   "lequipe:6a1d632d3bf37086": {
    "attempts": 0,
@@ -3839,6 +3856,12 @@
    "done": "skipped: Πρόκειται για προεπισκόπηση αγώνα με τηλεοπτικό πρόγραμμα, ώρα έναρξης και σύνδεσμους streaming, που εμπίπτει στην κατηγ",
    "seen": "2026-10-31T01:09:41.036795+00:00"
   },
+  "realgm:688a25e893694917": {
+   "attempts": 1,
+   "done": true,
+   "post": 68135,
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "realgm:68ea8f7d53ee7c4b": {
    "attempts": 1,
    "done": "skipped: Η είδηση αφορά δέσμευση εφήβου recruit (class of 2027) σε πανεπιστημιακή ομάδα (UNC), δηλαδή εκτός NBA και σε εφηβικό/κο",
@@ -4227,6 +4250,11 @@
    "done": true,
    "post": 66793,
    "seen": "2026-10-30T05:55:12.040293+00:00"
+  },
+  "realgm:abb6edf21dfb0384": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα (η εξαγορά του ελέγχου των Μάβερικς από τους Ντιμόν) υπάρχει ήδη στο site: «Οι Ντιμόν παίρνουν τον έλεγχο των Μά",
+   "seen": "2026-11-03T21:55:27.963808+00:00"
   },
   "realgm:ac1bc945adc62197": {
    "attempts": 1,
@@ -4706,6 +4734,12 @@
    "done": "skipped: Πρόκειται για προεπισκόπηση αγώνα με πρόγραμμα ώρας και τηλεοπτική κάλυψη, κάτι που δεν πληροί τα κριτήρια. Δεν υπάρχει ",
    "seen": "2026-10-28T17:00:12.551993+00:00"
   },
+  "sportando-ec:19e063c0e05039fd": {
+   "attempts": 1,
+   "done": true,
+   "post": 68138,
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "sportando-ec:1bfed60affe1d7b5": {
    "attempts": 1,
    "done": "skipped: Το θέμα (ήττα Ντερτόνα από Νάπολι, κρίση αποτελεσμάτων) έχει ήδη καλυφθεί στους τίτλους already_on_site: «Ντερτόνα: «Κάν",
@@ -4848,6 +4882,11 @@
    "post": 67254,
    "seen": "2026-11-02T12:02:07.357409+00:00"
   },
+  "sportando-ec:a6eb6c914cfc6a40": {
+   "attempts": 1,
+   "done": "skipped: Το αποτέλεσμα Νάπολι – Τρέντο 90-79 έχει ήδη καλυφθεί στο site (already_on_site), και η δήλωση του Repesa αφορά το ίδιο ",
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "sportando-ec:a7618a7b9ee02477": {
    "attempts": 1,
    "done": true,
@@ -4913,6 +4952,11 @@
    "done": "skipped: Είναι νεανικός αγώνας της Eccellenza (εφηβική/κατώτερη κατηγορία) χωρίς σχέση με τη διοργάνωση EuroCup.",
    "seen": "2026-10-28T17:00:12.551993+00:00"
   },
+  "sportando-ec:d666a366527c974b": {
+   "attempts": 1,
+   "done": "skipped: Το ίδιο αποτέλεσμα (Νάπολι – Τρέντο 90-79) υπάρχει ήδη στο site, και η δήλωση του Rossi αφορά το ίδιο ματς.",
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "sportando-ec:d72d29fa4e8a1cac": {
    "attempts": 1,
    "done": "skipped: Η δήλωση του Ρέπεσα αφορά πιθανότατα τη νίκη της Νάπολι στη Λιθουανία (85-94 με Νεπτούνας), που ήδη καλύπτεται στους τίτ",
@@ -4922,6 +4966,11 @@
    "attempts": 1,
    "done": "skipped: Υπάρχει ήδη άρθρο στο site με τις δηλώσεις του Βερονέζι (Βερονέζι: «Υπέροχο να βλέπεις το πάθος να επιστρέφει στη Ρώμη»)",
    "seen": "2026-10-27T14:50:31.453078+00:00"
+  },
+  "sportando-ec:da6dd0ebde7f5af4": {
+   "attempts": 1,
+   "done": "skipped: Η δήλωση του Magro αφορά το ματς ΠΑΟΚ–Ρόμα, που ήδη καλύπτεται (αποτέλεσμα 113-111 και προ-αγωνιστική δήλωση του Magro σ",
+   "seen": "2026-11-03T21:55:27.963808+00:00"
   },
   "sportando-ec:e08fe098752be15a": {
    "attempts": 1,
@@ -7164,6 +7213,12 @@
    "done": "already on site",
    "seen": "2026-10-28T22:50:43.705446+00:00"
   },
+  "ec-2026-11-03": {
+   "attempts": 1,
+   "done": true,
+   "post": 68133,
+   "seen": "2026-11-03T21:55:27.963808+00:00"
+  },
   "el-2026-10-27": {
    "attempts": 1,
    "done": true,
@@ -7191,24 +7246,56 @@
  },
  "teams_gr": {
   "Anadolu Efes Istanbul": "Εφές",
+  "Aris Thessaloniki": "Άρης",
   "Armani Olimpia Milan": "Αρμάνι Μιλάνο",
+  "BOSNA BH Telecom Sarajevo": "Μπόσνα",
+  "Baglietto Derthona Tortona": "Ντερτόνα",
+  "Bahcesehir College Istanbul": "Μπαχτσεσεχίρ",
+  "Balkan Botevgrad": "Μπαλκάν Μποτέβγκραντ",
   "Besiktas Istanbul": "Μπεσίκτας",
+  "Buducnost VOLI Podgorica": "Μπουντούτσνοστ",
+  "Cedevita Olimpija Ljubljana": "Ολίμπια Λιουμπλιάνα",
+  "Cosea JL Bourg-en-Bresse": "Μπουρκ αν Μπρες",
   "Crvena Zvezda Meridianbet Belgrade": "Ερυθρός Αστέρας",
+  "Dolomiti Energia Trento": "Τρέντο",
   "Dubai Basketball": "Ντουμπάι",
   "FC Barcelona": "Μπαρτσελόνα",
   "FC Bayern Munich": "Μπάγερν Μονάχου",
   "Fenerbahce Tarfin Istanbul": "Φενέρμπαχτσε",
   "Hapoel IBI Tel Aviv": "Χάποελ Τελ Αβίβ",
+  "Hapoel Midtown Jerusalem": "Απόελ Ιερουσαλήμ",
+  "Kids&Us Manresa": "Μανρέσα",
   "Kosner Baskonia Vitoria-Gasteiz": "Μπασκόνια",
   "LDLC ASVEL Villeurbanne": "Βιλερμπάν",
+  "La Laguna Tenerife": "Τενερίφη",
+  "Le Mans Sarthe Basket": "Λε Μαν",
+  "Lietkabelis Panevezys": "Λιετκαμπέλις",
+  "London Lions": "Λονδίνο Λαϊονς",
   "Maccabi Rapyd Tel Aviv": "Μακαμπί Τελ Αβίβ",
+  "Maxima Roma": "Μάξιμα Ρόμα",
+  "NINERS Chemnitz": "Νάινερς Κέμνιτς",
+  "Napoli Basketball": "Νάπολι",
+  "Neptunas Klaipeda": "Νεπτούνας",
   "Olympiacos Piraeus": "Ολυμπιακός",
+  "PAOK Thessaloniki": "ΠΑΟΚ",
   "Panathinaikos AKTOR Athens": "Παναθηναϊκός",
   "Paris Basketball": "Παρί",
   "Partizan Mozzart Bet Belgrade": "Παρτιζάν",
   "Real Madrid": "Ρεάλ Μαδρίτης",
+  "Recoletas Salud San Pablo Burgos": "Μπούργκος",
+  "Riga Zelli": "Ρίγα",
+  "Roma Basketball": "Ρόμα",
+  "Rostock Seawolves": "Ρόστοκ",
+  "Siauliai Basketball": "Σιαουλιάι",
+  "Skyliners Frankfurt": "Φρανκφούρτη",
+  "Slask Wroclaw": "Σλάσκ Βρότσλαβ",
+  "Tofas Bursa": "Τόφας",
+  "Turk Telekom Ankara": "Τουρκ Τελεκόμ",
+  "U-BT Cluj-Napoca": "Κλουζ",
+  "Umana Reyer Venice": "Ρέγιερ Βενετίας",
   "Valencia Basket": "Βαλένθια",
   "Virtus Bologna": "Βίρτους Μπολόνια",
-  "Zalgiris Kaunas": "Ζαλγκίρις Κάουνας"
+  "Zalgiris Kaunas": "Ζαλγκίρις Κάουνας",
+  "ratiopharm ulm": "Ουλμ"
  }
 }
