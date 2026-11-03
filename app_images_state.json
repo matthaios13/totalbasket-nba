@@ -172,6 +172,10 @@
    "at": "2026-11-03T18:29:40.579088+00:00",
    "pick": null
   },
+  "bala24:84540": {
+   "at": "2026-11-03T20:30:17.010775+00:00",
+   "pick": "Sporting CP"
+  },
   "bala24:84542": {
    "at": "2026-11-03T18:29:35.311530+00:00",
    "pick": "Real Madrid CF"
@@ -192,9 +196,17 @@
    "at": "2026-11-03T19:36:46.193229+00:00",
    "pick": "Panetolikos F.C."
   },
+  "bala24:84578": {
+   "at": "2026-11-03T20:30:05.991654+00:00",
+   "pick": "APOEL FC"
+  },
   "bala24:84582": {
    "at": "2026-11-03T19:36:31.858857+00:00",
    "pick": null
+  },
+  "bala24:84591": {
+   "at": "2026-11-03T20:29:58.721199+00:00",
+   "pick": "Galatasaray S.K."
   },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
@@ -259,16 +271,30 @@
   "totalbasket:68075": {
    "at": "2026-11-03T16:35:37.510889+00:00",
    "pick": "PAOK BC"
+  },
+  "totalbasket:68095": {
+   "at": "2026-11-03T20:29:52.125866+00:00",
+   "pick": null
+  },
+  "totalbasket:68105": {
+   "at": "2026-11-03T20:29:47.239203+00:00",
+   "pick": null
+  },
+  "totalbasket:68108": {
+   "at": "2026-11-03T20:29:40.023352+00:00",
+   "pick": "AEK B.C."
   }
  },
  "media": {
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
+  "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
   "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
+  "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
@@ -283,6 +309,7 @@
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
+  "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
   "totalbasket:totalbasket-c-paok-bc-v2.jpg": 68077,
