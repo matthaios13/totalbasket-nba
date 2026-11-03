@@ -28,6 +28,7 @@ from PIL import Image
 
 import bot
 import card
+import crestcard
 import photos
 from bot import AuthError, QuotaError, UA, log, now, retry, strip_html
 
@@ -162,22 +163,11 @@ def crest_url(team, site):
 
 
 def crest_card(team, site):
+    """Crest on the club's colours (user, 2026-11-03: never a bare crest on white)."""
     url = crest_url(team, site)
     if not url:
         return None
-    orig = card._logo
-
-    def big(u, size):
-        im = orig(u, size)
-        if im is not None and max(im.size) < size * 0.8:
-            k = size * 0.8 / max(im.size)
-            im = im.resize((round(im.width * k), round(im.height * k)), Image.LANCZOS)
-        return im
-    card._logo = big
-    try:
-        return card.news_card(tempfile.mktemp(suffix=".jpg"), logo=url)
-    finally:
-        card._logo = orig
+    return crestcard.crest_card(tempfile.mktemp(suffix=".jpg"), url, team)
 
 
 def slug(s):
@@ -240,7 +230,7 @@ def run_site(site, st):
         if not pick and d.get("team"):
             path = crest_card(d["team"], site)
             if path:
-                pick = (path, f"{site}-c-{slug(d['team'])}.jpg", d["team"], None)
+                pick = (path, f"{site}-c-{slug(d['team'])}-v2.jpg", d["team"], None)
         title = html.unescape(post["title"]["raw"])[:70]
         log(f"{site} {post['id']} {title} -> {d} -> {pick[2] if pick else 'site logo'}")
         st["done"][key] = {"at": now().isoformat(), "pick": pick[2] if pick else None}
