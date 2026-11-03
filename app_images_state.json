@@ -88,6 +88,26 @@
    "at": "2026-11-03T14:39:29.461631+00:00",
    "pick": "Arsenal F.C."
   },
+  "bala24:84460": {
+   "at": "2026-11-03T15:29:38.189310+00:00",
+   "pick": "Royal Union Saint-Gilloise"
+  },
+  "bala24:84461": {
+   "at": "2026-11-03T15:29:45.804765+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84466": {
+   "at": "2026-11-03T15:29:27.003186+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "bala24:84469": {
+   "at": "2026-11-03T15:29:22.692025+00:00",
+   "pick": null
+  },
+  "bala24:84473": {
+   "at": "2026-11-03T15:29:17.945838+00:00",
+   "pick": "AEK Athens F.C."
+  },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
    "pick": null
@@ -155,10 +175,12 @@
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
+  "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
   "bala24:bala24-c-olympiacos-f-c-v2.jpg": 84455,
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
+  "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
