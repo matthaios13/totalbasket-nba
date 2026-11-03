@@ -144,6 +144,26 @@
    "at": "2026-11-03T16:35:45.034633+00:00",
    "pick": "Panathinaikos F.C."
   },
+  "bala24:84513": {
+   "at": "2026-11-03T17:37:24.326484+00:00",
+   "pick": "Real Madrid CF"
+  },
+  "bala24:84519": {
+   "at": "2026-11-03T17:37:17.475771+00:00",
+   "pick": "Sporting CP"
+  },
+  "bala24:84522": {
+   "at": "2026-11-03T17:37:12.608212+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
+  "bala24:84528": {
+   "at": "2026-11-03T17:37:06.964037+00:00",
+   "pick": null
+  },
+  "bala24:84529": {
+   "at": "2026-11-03T17:37:02.323733+00:00",
+   "pick": "Olympiacos F.C."
+  },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
    "pick": null
@@ -227,6 +247,7 @@
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
+  "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
