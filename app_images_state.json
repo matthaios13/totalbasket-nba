@@ -104,9 +104,45 @@
    "at": "2026-11-03T15:29:22.692025+00:00",
    "pick": null
   },
+  "bala24:84472": {
+   "at": "2026-11-03T16:36:32.640440+00:00",
+   "pick": "Kalamata FC"
+  },
   "bala24:84473": {
    "at": "2026-11-03T15:29:17.945838+00:00",
    "pick": "AEK Athens F.C."
+  },
+  "bala24:84479": {
+   "at": "2026-11-03T16:36:27.611726+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:84481": {
+   "at": "2026-11-03T16:36:21.136235+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
+  "bala24:84484": {
+   "at": "2026-11-03T16:36:14.243414+00:00",
+   "pick": "Paris Saint-Germain F.C."
+  },
+  "bala24:84486": {
+   "at": "2026-11-03T16:36:09.844977+00:00",
+   "pick": null
+  },
+  "bala24:84488": {
+   "at": "2026-11-03T16:36:04.543155+00:00",
+   "pick": "Feyenoord"
+  },
+  "bala24:84490": {
+   "at": "2026-11-03T16:35:58.525953+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:84494": {
+   "at": "2026-11-03T16:35:52.822680+00:00",
+   "pick": "Stade Rennais FC"
+  },
+  "bala24:84501": {
+   "at": "2026-11-03T16:35:45.034633+00:00",
+   "pick": "Panathinaikos F.C."
   },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
@@ -167,23 +203,34 @@
   "totalbasket:68057": {
    "at": "2026-11-03T14:38:01.388851+00:00",
    "pick": "Aris B.C."
+  },
+  "totalbasket:68075": {
+   "at": "2026-11-03T16:35:37.510889+00:00",
+   "pick": "PAOK BC"
   }
  },
  "media": {
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
+  "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
+  "bala24:bala24-c-feyenoord-v2.jpg": 84506,
+  "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
   "bala24:bala24-c-olympiacos-f-c-v2.jpg": 84455,
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
+  "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
+  "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
+  "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
+  "totalbasket:totalbasket-c-paok-bc-v2.jpg": 68077,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070
