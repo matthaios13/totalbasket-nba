@@ -208,6 +208,10 @@
    "at": "2026-11-03T20:29:58.721199+00:00",
    "pick": "Galatasaray S.K."
   },
+  "bala24:84619": {
+   "at": "2026-11-03T22:25:45.501280+00:00",
+   "pick": "Atlético Madrid"
+  },
   "bala24:84620": {
    "at": "2026-11-03T21:26:52.420447+00:00",
    "pick": null
@@ -219,6 +223,14 @@
   "bala24:84627": {
    "at": "2026-11-03T21:26:37.190823+00:00",
    "pick": "Paris Saint-Germain FC"
+  },
+  "bala24:84628": {
+   "at": "2026-11-03T22:25:52.800871+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84632": {
+   "at": "2026-11-03T22:25:55.988506+00:00",
+   "pick": null
   },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
@@ -307,6 +319,14 @@
   "totalbasket:68121": {
    "at": "2026-11-03T21:26:17.739254+00:00",
    "pick": "PAOK B.C."
+  },
+  "totalbasket:68133": {
+   "at": "2026-11-03T22:25:38.101726+00:00",
+   "pick": "PAOK B.C."
+  },
+  "totalbasket:68136": {
+   "at": "2026-11-03T22:25:33.182191+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -315,6 +335,7 @@
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
   "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
+  "bala24:bala24-c-atletico-madrid-v2.jpg": 84645,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
