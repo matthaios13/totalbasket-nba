@@ -568,6 +568,14 @@
    "at": "2026-11-04T22:30:45.046510+00:00",
    "pick": "Como 1907"
   },
+  "bala24:84939": {
+   "at": "2026-11-04T23:27:41.325369+00:00",
+   "pick": null
+  },
+  "bala24:84951": {
+   "at": "2026-11-04T23:27:37.613268+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -812,8 +820,28 @@
    "at": "2026-11-04T20:35:51.820395+00:00",
    "pick": "Iraklis B.C."
   },
+  "totalbasket:68252": {
+   "at": "2026-11-04T23:27:32.257823+00:00",
+   "pick": "face"
+  },
   "totalbasket:68267": {
    "at": "2026-11-04T22:30:36.446076+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68280": {
+   "at": "2026-11-04T23:27:26.338327+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68283": {
+   "at": "2026-11-04T23:27:19.391539+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68286": {
+   "at": "2026-11-04T23:27:07.017894+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68289": {
+   "at": "2026-11-04T23:26:56.803818+00:00",
    "pick": "face"
   }
  },
@@ -893,10 +921,13 @@
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070,
   "totalbasket:totalbasket-p-lukas-lekavicius.jpg": 68248,
   "totalbasket:totalbasket-p-mario-hezonja.jpg": 68204,
+  "totalbasket:totalbasket-p-mathias-lessort.jpg": 68295,
+  "totalbasket:totalbasket-p-matt-morgan-basketball.jpg": 68293,
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
   "totalbasket:totalbasket-p-sarunas-jasikevicius.jpg": 68210,
   "totalbasket:totalbasket-p-vasilije-micic.jpg": 68207,
+  "totalbasket:totalbasket-p-vassilis-spanoulis.jpg": 68294,
   "totalbasket:totalbasket-p-victor-wembanyama.jpg": 68195,
   "totalbasket:totalbasket-p-zeljko-obradovic.jpg": 68220
  }
