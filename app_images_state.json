@@ -564,6 +564,10 @@
    "at": "2026-11-04T21:33:36.252315+00:00",
    "pick": "AEK Athens F.C."
   },
+  "bala24:84933": {
+   "at": "2026-11-04T22:30:45.046510+00:00",
+   "pick": "Como 1907"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -807,6 +811,10 @@
   "totalbasket:68245": {
    "at": "2026-11-04T20:35:51.820395+00:00",
    "pick": "Iraklis B.C."
+  },
+  "totalbasket:68267": {
+   "at": "2026-11-04T22:30:36.446076+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -880,6 +888,7 @@
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-ibon-navarro.jpg": 68203,
   "totalbasket:totalbasket-p-jabari-parker.jpg": 68200,
+  "totalbasket:totalbasket-p-kendrick-nunn.jpg": 68275,
   "totalbasket:totalbasket-p-killian-hayes.jpg": 68213,
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070,
   "totalbasket:totalbasket-p-lukas-lekavicius.jpg": 68248,
