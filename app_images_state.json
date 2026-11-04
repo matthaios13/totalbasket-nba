@@ -524,6 +524,30 @@
    "at": "2026-11-04T19:44:27.218542+00:00",
    "pick": "face"
   },
+  "bala24:84886": {
+   "at": "2026-11-04T20:36:28.485518+00:00",
+   "pick": "face"
+  },
+  "bala24:84889": {
+   "at": "2026-11-04T20:36:22.718252+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84895": {
+   "at": "2026-11-04T20:36:12.501106+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84896": {
+   "at": "2026-11-04T20:36:17.092897+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84911": {
+   "at": "2026-11-04T20:36:00.909538+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84912": {
+   "at": "2026-11-04T20:36:06.312764+00:00",
+   "pick": "AEK Athens F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -763,6 +787,10 @@
   "totalbasket:68242": {
    "at": "2026-11-04T19:43:36.809013+00:00",
    "pick": "face"
+  },
+  "totalbasket:68245": {
+   "at": "2026-11-04T20:35:51.820395+00:00",
+   "pick": "Iraklis B.C."
   }
  },
  "media": {
@@ -810,10 +838,12 @@
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
+  "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
   "totalbasket:totalbasket-c-fc-bayern-munich-basketball-v2.jpg": 68208,
+  "totalbasket:totalbasket-c-iraklis-b-c-v2.jpg": 68259,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
   "totalbasket:totalbasket-c-pallacanestro-treviso-v2.jpg": 68211,
   "totalbasket:totalbasket-c-panellinios-b-c-v2.jpg": 68201,
