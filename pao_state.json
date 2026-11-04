@@ -1,14 +1,5 @@
 {
  "items": {
-  "https://www.trifillakia.gr/mpasket/article/24436/mpongka-tha-antidrasoyme-to-telekom-center-ginetai-to-spiti-moy": {
-   "post": 65287,
-   "seen": "2026-10-21T16:32:35.397720+00:00",
-   "title": "Μπόνγκα: «Σίγουρα θα αντιδράσουμε – Νιώθω το Telekom Center σαν σπίτι μου»"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24437/sti-dikaiosyni-prosfeygei-o-panathinaikos-gia-tis-diaitisies": {
-   "seen": "2026-10-21T16:31:58.809432+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24441/mpongka-sigoyra-tha-antidrasoyme-niotho-to-telekom-center-san-spiti-moy": {
    "seen": "2026-10-21T19:13:37.128693+00:00",
    "skip": "duplicate"
@@ -207,6 +198,10 @@
   },
   "https://www.trifillakia.gr/mpasket/article/24679/kae-panathinaikos-skliri-anakoinosi-kata-toy-olympiakoy-me-aihmes-gia-tin-ked": {
    "seen": "2026-11-03T21:41:31.749938+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/24693/real-panathinaikos-pente-apontes-gia-toys-merengkes-epistrefei-o-sloykas": {
+   "seen": "2026-11-04T17:25:53.767110+00:00",
    "skip": "duplicate"
   }
  }
