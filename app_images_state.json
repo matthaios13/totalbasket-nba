@@ -288,6 +288,10 @@
    "at": "2026-11-04T12:34:55.936846+00:00",
    "pick": "Panathinaikos FC"
   },
+  "bala24:84705": {
+   "at": "2026-11-04T15:39:20.995848+00:00",
+   "pick": "AEK Athens F.C."
+  },
   "bala24:84714": {
    "at": "2026-11-04T13:54:54.910842+00:00",
    "pick": "Panathinaikos F.C."
@@ -315,6 +319,50 @@
   "bala24:84739": {
    "at": "2026-11-04T13:54:15.879038+00:00",
    "pick": "Olympiacos F.C."
+  },
+  "bala24:84741": {
+   "at": "2026-11-04T15:39:31.768831+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:84745": {
+   "at": "2026-11-04T15:39:25.602505+00:00",
+   "pick": "Paris Saint-Germain F.C."
+  },
+  "bala24:84752": {
+   "at": "2026-11-04T15:39:07.941639+00:00",
+   "pick": "Asteras Tripolis FC"
+  },
+  "bala24:84753": {
+   "at": "2026-11-04T15:39:15.916115+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:84759": {
+   "at": "2026-11-04T15:39:02.110037+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:84763": {
+   "at": "2026-11-04T15:38:54.387618+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:84766": {
+   "at": "2026-11-04T15:38:36.314926+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:84767": {
+   "at": "2026-11-04T15:38:49.461851+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:84768": {
+   "at": "2026-11-04T15:38:30.085962+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84771": {
+   "at": "2026-11-04T15:38:43.756634+00:00",
+   "pick": "FC Barcelona"
+  },
+  "bala24:84778": {
+   "at": "2026-11-04T15:38:21.862368+00:00",
+   "pick": "PAOK FC"
   },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
@@ -423,14 +471,20 @@
   "totalbasket:68165": {
    "at": "2026-11-04T13:54:07.816960+00:00",
    "pick": null
+  },
+  "totalbasket:68166": {
+   "at": "2026-11-04T15:38:02.635888+00:00",
+   "pick": "Cedi Osman"
   }
  },
  "media": {
   "bala24:bala24-c-1-fc-nurnberg-v2.jpg": 84634,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
+  "bala24:bala24-c-aris-thessaloniki-f-c-v2.jpg": 84781,
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
   "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
+  "bala24:bala24-c-asteras-tripolis-fc-v2.jpg": 84782,
   "bala24:bala24-c-atletico-madrid-v2.jpg": 84645,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
@@ -448,6 +502,7 @@
   "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
   "bala24:bala24-c-panetolikos-f-c-v2.jpg": 84586,
   "bala24:bala24-c-pannaxiakos-f-c-v2.jpg": 84742,
+  "bala24:bala24-c-paok-fc-v2.jpg": 84780,
   "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
   "bala24:bala24-c-paris-saint-germain-fc-v2.jpg": 84633,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
@@ -462,6 +517,7 @@
   "totalbasket:totalbasket-c-paok-b-c-v2.jpg": 68129,
   "totalbasket:totalbasket-c-paok-bc-v2.jpg": 68077,
   "totalbasket:totalbasket-p-andrea-trinchieri.jpg": 68130,
+  "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070
