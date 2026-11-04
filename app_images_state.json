@@ -480,6 +480,30 @@
    "at": "2026-11-04T17:40:26.731329+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:84842": {
+   "at": "2026-11-04T18:38:03.955917+00:00",
+   "pick": "face"
+  },
+  "bala24:84845": {
+   "at": "2026-11-04T18:37:57.261369+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:84848": {
+   "at": "2026-11-04T18:37:49.594195+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:84850": {
+   "at": "2026-11-04T18:37:45.407477+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:84854": {
+   "at": "2026-11-04T18:37:35.634558+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84856": {
+   "at": "2026-11-04T18:37:40.334445+00:00",
+   "pick": "Olympiacos F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -699,6 +723,10 @@
   "totalbasket:68166": {
    "at": "2026-11-04T15:38:02.635888+00:00",
    "pick": "Cedi Osman"
+  },
+  "totalbasket:68219": {
+   "at": "2026-11-04T18:37:26.228496+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -744,6 +772,7 @@
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
+  "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
@@ -773,6 +802,7 @@
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
   "totalbasket:totalbasket-p-sarunas-jasikevicius.jpg": 68210,
   "totalbasket:totalbasket-p-vasilije-micic.jpg": 68207,
-  "totalbasket:totalbasket-p-victor-wembanyama.jpg": 68195
+  "totalbasket:totalbasket-p-victor-wembanyama.jpg": 68195,
+  "totalbasket:totalbasket-p-zeljko-obradovic.jpg": 68220
  }
 }
