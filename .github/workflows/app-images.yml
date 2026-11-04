@@ -12,6 +12,12 @@ on:
       hours:
         description: "look at articles of the last N hours"
         default: "36"
+      redo:
+        description: "1 = look again for faces where only a logo / crest card shows"
+        default: "0"
+      max:
+        description: "articles per site at most"
+        default: "25"
 
 concurrency:
   group: app-images
@@ -40,6 +46,8 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           APP_IMG_DRY: ${{ inputs.dry || '0' }}
           APP_IMG_HOURS: ${{ inputs.hours || '36' }}
+          APP_IMG_REDO: ${{ inputs.redo || '0' }}
+          APP_IMG_MAX: ${{ inputs.max || '25' }}
         run: python app_images.py
       - uses: actions/upload-artifact@v4
         if: ${{ inputs.dry == '1' }}

@@ -37,6 +37,8 @@ STATE_FILE = os.path.join(HERE, "app_images_state.json")
 DRY = os.environ.get("APP_IMG_DRY") == "1"
 MAX_PER_SITE = int(os.environ.get("APP_IMG_MAX", "25"))
 HOURS = int(os.environ.get("APP_IMG_HOURS", "36"))
+# APP_IMG_REDO=1: look again at articles that show only a logo / crest card, for a face (user, 2026-11-04)
+REDO = os.environ.get("APP_IMG_REDO") == "1"
 CRESTS = json.load(open(os.path.join(HERE, "crests.json")))
 
 SITES = {
@@ -74,11 +76,13 @@ def wp(site, method, path, data=None, headers=None, raw=None):
 
 ASK = """Διαβάζεις ελληνικό αθλητικό άρθρο ({sport}) και διαλέγεις φωτογραφία για την εφαρμογή.
 Απαντάς ΜΟΝΟ JSON: {{"person": ..., "team": ..., "announcement": true/false}}
-- "person": ο ΕΝΑΣ πραγματικός άνθρωπος (παίκτης, προπονητής, πρόεδρος) για τον οποίο είναι ΚΥΡΙΩΣ το άρθρο, γραμμένος
+- "person": ο ΕΝΑΣ πραγματικός άνθρωπος (παίκτης, προπονητής, πρόεδρος) που πρωταγωνιστεί στο άρθρο, γραμμένος
   ακριβώς όπως ο τίτλος του άρθρου του στην αγγλική Wikipedia (π.χ. "Georgios Bartzokas", "Iñaki Peña",
-  "Marko Nikolić (football manager)"). Πρόσεξε τους συνονόματους: ο σέντερ της Αρμάνι Ντέβιν Μπούκερ ΔΕΝ είναι ο Devin
-  Booker του NBA -> "Devin Booker (basketball, born 1991)". null αν το άρθρο είναι για ομάδα, αγώνα, πολλά πρόσωπα
-  εξίσου, ή αν δεν είσαι σίγουρος ποιος ακριβώς είναι.
+  "Marko Nikolić (football manager)"). Αν το άρθρο είναι για ένα πρόσωπο, αυτό. Αν είναι για ομάδα ή αγώνα, το πρόσωπο
+  που είναι στον τίτλο ή πρωταγωνιστεί στο κείμενο: ο προπονητής που κάνει τις δηλώσεις, ο παίκτης που ξεχώρισε ή
+  που αφορά η είδηση (τραυματισμός, μεταγραφή, κλήση). Πρόσεξε τους συνονόματους: ο σέντερ της Αρμάνι Ντέβιν Μπούκερ
+  ΔΕΝ είναι ο Devin Booker του NBA -> "Devin Booker (basketball, born 1991)". Ποτέ κάποιον που απλώς αναφέρεται
+  (π.χ. σε σύγκριση). null αν δεν υπάρχει τέτοιο πρόσωπο ή αν δεν είσαι σίγουρος ποιος ακριβώς είναι.
 - "team": η κύρια ομάδα του άρθρου στα αγγλικά (π.χ. "Olympiacos B.C.", "PAOK FC", "Real Madrid CF") ή null.
 - "announcement": true αν είναι επίσημη ανακοίνωση ομάδας (ΠΑΕ/ΚΑΕ, μεταγραφή, ανανέωση, εισιτήρια, δελτίο τύπου).
 
@@ -108,8 +112,27 @@ def _football_page(name):
 SPORT_WORDS = {"basketball": re.compile(r"basketball", re.I), "football": re.compile(r"football|soccer", re.I)}
 
 
+def clear_face(img):
+    """The photo, or a crop of its upper part, where the face is clear and fits a 16:9 card (full-body shots
+    have a face too small to see: Patty Mills, 2026-11-04). None if there is no such crop."""
+    w, h = img.size
+    for box in ((0, 0, w, h), (0, 0, w, int(h * 0.6)), (int(w * 0.15), 0, int(w * 0.85), int(h * 0.45)),
+                (int(w * 0.25), 0, int(w * 0.75), int(h * 0.32))):
+        crop = img.crop(box)
+        if crop.width < 600:
+            break
+        share = card.face_share(crop)
+        if share is None or share > 0.6:
+            continue
+        if share >= 0.22:                 # the face reads well on a phone (smaller ones look like a crowd shot)
+            return crop
+    return None
+
+
 def strict_photo(name, site):
-    """Only the portrait of the person's own English Wikipedia page, of the right sport, with a clear face."""
+    """A photo of the person, of the right sport, with a clear face: the portrait of his/her own English Wikipedia
+    page first, else a photo on that page or on Commons whose file name has the full name and only this person
+    (photos.find). The page must exist and be of the right sport, so a namesake never gets in."""
     page = (_football_page if site == "bala24" else photos._page)(name) or \
         (photos._page if site == "bala24" else _football_page)(name)
     if not page or not page.get("pageimage"):
@@ -122,19 +145,25 @@ def strict_photo(name, site):
              " ".join(c["title"] for c in p.get("categories", [])))
     if not SPORT_WORDS[SITES[site]["sport"]].search(about) and not re.search(r"coach|manager|president|executive", about, re.I):
         return None
+    # the app only needs the right, clear face (user, 2026-11-04: more faces): up to 10 years old, from 600px
+    photos.MAX_AGE, photos.MIN_WIDTH = 10, 600
     info = photos._get({"action": "query", "titles": "File:" + page["pageimage"], "prop": "imageinfo",
                         "iiprop": "url|size|extmetadata", "iiurlwidth": 1600})
-    pages = list(info["query"]["pages"].values())
-    cands = photos._candidates(pages, lambda t: True)
-    if not cands:
+    cands = photos._candidates(list(info["query"]["pages"].values()), lambda t: True)
+    if cands:
+        _, url, credit = cands[0]
+        with urllib.request.urlopen(urllib.request.Request(url, headers=photos.UA), timeout=40) as r:
+            img = clear_face(Image.open(io.BytesIO(r.read())).convert("RGB"))
+        if img:
+            return img, credit
+    # more photos of the same person (user, 2026-11-04: more faces, fewer logos); not for namesakes
+    # ("Devin Booker (basketball, born 1991)"): files named after them may show the other one
+    if "(" in (page.get("title") or ""):
         return None
-    _, url, credit = cands[0]
-    with urllib.request.urlopen(urllib.request.Request(url, headers=photos.UA), timeout=40) as r:
-        img = Image.open(io.BytesIO(r.read())).convert("RGB")
-    share = card.face_share(img)
-    if share is None or not 0.14 <= share <= 0.6:          # a real, clearly visible face that fits the frame
-        return None
-    return img, credit
+    found = photos.find(re.sub(r"\s*\(.*?\)$", "", page.get("title") or name), accept=lambda im: clear_face(im) is not None)
+    if found and clear_face(found[0]):
+        return clear_face(found[0]), found[1]
+    return None
 
 
 def _norm(s):
@@ -229,12 +258,23 @@ def run_site(site, st):
         log(f"{site}: no application password, skipped")
         return
     after = (now() - dt.timedelta(hours=HOURS)).strftime("%Y-%m-%dT%H:%M:%S")
-    posts = wp(site, "GET", f"posts?per_page=50&after={after}&context=edit&_fields=id,title,content,featured_media,bala_app_safe")
+    posts = []
+    for page in range(1, (5 if REDO else 1) + 1):
+        batch = wp(site, "GET", f"posts?per_page=50&page={page}&after={after}&context=edit"
+                                "&_fields=id,title,content,featured_media,bala_app_safe")
+        posts += batch
+        if len(batch) < 50:
+            break
     n = 0
     for post in posts:
         key = f"{site}:{post['id']}"
         safe = post.get("bala_app_safe") or {}
-        if key in st["done"] or safe.get("featured") or safe.get("app_img"):
+        # a plain logo / crest card (site photo or ours) is only a stand-in: a clear face of the right person wins
+        has_face = (safe.get("featured") and not safe.get("featured_card")) or (safe.get("app_img") and not safe.get("app_img_card"))
+        only_card = not has_face and (safe.get("featured") or safe.get("app_img"))
+        if has_face or (only_card and "featured_card" not in safe):      # (old plugin: no card info)
+            continue
+        if key in st["done"] and not (REDO and only_card and st["done"][key].get("pick") != "face"):
             continue
         if s["own_uploaders"] and mark_own_images(site, post):
             st["done"][key] = {"at": now().isoformat(), "pick": "own images"}
@@ -249,13 +289,17 @@ def run_site(site, st):
             if ph:
                 path = card.photo_card(tempfile.mktemp(suffix=".jpg"), ph[0])
                 pick = (path, f"{site}-p-{slug(d['person'])}.jpg", d["person"], ph[1])
+        if not pick and only_card:           # it already has a card: a second card adds nothing
+            log(f"{site} {post['id']} -> {d} -> no face, keeps its card")
+            st["done"][key] = {"at": now().isoformat(), "pick": None}
+            continue
         if not pick and d.get("team"):
             path = crest_card(d["team"], site)
             if path:
                 pick = (path, f"{site}-c-{slug(d['team'])}-v2.jpg", d["team"], None)
         title = html.unescape(post["title"]["raw"])[:70]
         log(f"{site} {post['id']} {title} -> {d} -> {pick[2] if pick else 'site logo'}")
-        st["done"][key] = {"at": now().isoformat(), "pick": pick[2] if pick else None}
+        st["done"][key] = {"at": now().isoformat(), "pick": ("face" if "-p-" in pick[1] else pick[2]) if pick else None}
         if not pick:
             continue
         if DRY:
