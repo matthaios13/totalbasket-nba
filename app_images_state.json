@@ -288,6 +288,34 @@
    "at": "2026-11-04T12:34:55.936846+00:00",
    "pick": "Panathinaikos FC"
   },
+  "bala24:84714": {
+   "at": "2026-11-04T13:54:54.910842+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:84719": {
+   "at": "2026-11-04T13:54:49.020414+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:84722": {
+   "at": "2026-11-04T13:54:39.912321+00:00",
+   "pick": "Pannaxiakos F.C."
+  },
+  "bala24:84727": {
+   "at": "2026-11-04T13:54:33.447618+00:00",
+   "pick": null
+  },
+  "bala24:84730": {
+   "at": "2026-11-04T13:54:29.097043+00:00",
+   "pick": "Real Madrid CF"
+  },
+  "bala24:84733": {
+   "at": "2026-11-04T13:54:23.323951+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:84739": {
+   "at": "2026-11-04T13:54:15.879038+00:00",
+   "pick": "Olympiacos F.C."
+  },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
    "pick": null
@@ -391,6 +419,10 @@
   "totalbasket:68155": {
    "at": "2026-11-04T12:34:39.776419+00:00",
    "pick": null
+  },
+  "totalbasket:68165": {
+   "at": "2026-11-04T13:54:07.816960+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -415,6 +447,7 @@
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
   "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
   "bala24:bala24-c-panetolikos-f-c-v2.jpg": 84586,
+  "bala24:bala24-c-pannaxiakos-f-c-v2.jpg": 84742,
   "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
   "bala24:bala24-c-paris-saint-germain-fc-v2.jpg": 84633,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
