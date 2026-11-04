@@ -336,6 +336,10 @@
    "at": "2026-11-04T15:39:15.916115+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:84758": {
+   "at": "2026-11-04T16:38:58.178148+00:00",
+   "pick": "Liverpool F.C."
+  },
   "bala24:84759": {
    "at": "2026-11-04T15:39:02.110037+00:00",
    "pick": "Aris Thessaloniki F.C."
@@ -363,6 +367,22 @@
   "bala24:84778": {
    "at": "2026-11-04T15:38:21.862368+00:00",
    "pick": "PAOK FC"
+  },
+  "bala24:84786": {
+   "at": "2026-11-04T16:38:53.857672+00:00",
+   "pick": null
+  },
+  "bala24:84788": {
+   "at": "2026-11-04T16:38:48.204169+00:00",
+   "pick": "Stade Rennais F.C."
+  },
+  "bala24:84792": {
+   "at": "2026-11-04T16:38:40.916455+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:84802": {
+   "at": "2026-11-04T16:38:36.255627+00:00",
+   "pick": "Olympiacos F.C."
   },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
@@ -489,11 +509,13 @@
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
+  "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
+  "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
   "bala24:bala24-c-manchester-united-fc-v2.jpg": 84651,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
@@ -510,6 +532,7 @@
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
+  "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
