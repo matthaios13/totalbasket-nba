@@ -248,6 +248,10 @@
    "at": "2026-11-04T08:02:55.250253+00:00",
    "pick": "AEK Athens F.C."
   },
+  "bala24:84672": {
+   "at": "2026-11-04T12:34:49.961067+00:00",
+   "pick": "AEK Athens F.C."
+  },
   "bala24:84677": {
    "at": "2026-11-04T10:53:04.154035+00:00",
    "pick": "Real Madrid CF"
@@ -264,9 +268,25 @@
    "at": "2026-11-04T10:52:45.246863+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:84686": {
+   "at": "2026-11-04T12:35:01.689999+00:00",
+   "pick": "AEK Athens F.C."
+  },
   "bala24:84690": {
    "at": "2026-11-04T10:52:38.730214+00:00",
    "pick": "AEK Athens F.C."
+  },
+  "bala24:84696": {
+   "at": "2026-11-04T12:35:17.159858+00:00",
+   "pick": "Fenerbahçe S.K."
+  },
+  "bala24:84698": {
+   "at": "2026-11-04T12:35:06.860624+00:00",
+   "pick": "Borussia Dortmund"
+  },
+  "bala24:84702": {
+   "at": "2026-11-04T12:34:55.936846+00:00",
+   "pick": "Panathinaikos FC"
   },
   "totalbasket:67432": {
    "at": "2026-11-03T14:39:22.591331+00:00",
@@ -363,6 +383,14 @@
   "totalbasket:68136": {
    "at": "2026-11-03T22:25:33.182191+00:00",
    "pick": null
+  },
+  "totalbasket:68153": {
+   "at": "2026-11-04T12:34:44.074044+00:00",
+   "pick": "AEK B.C."
+  },
+  "totalbasket:68155": {
+   "at": "2026-11-04T12:34:39.776419+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -373,6 +401,7 @@
   "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
   "bala24:bala24-c-atletico-madrid-v2.jpg": 84645,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
+  "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
