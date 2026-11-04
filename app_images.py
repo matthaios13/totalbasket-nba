@@ -40,8 +40,12 @@ HOURS = int(os.environ.get("APP_IMG_HOURS", "36"))
 CRESTS = json.load(open(os.path.join(HERE, "crests.json")))
 
 SITES = {
-    "totalbasket": {"url": "https://totalbasket.gr", "user": "WP_USER", "pw": "WP_APP_PASSWORD", "sport": "basketball"},
-    "bala24": {"url": "https://bala24.gr", "user": "BALA_WP_USER", "pw": "BALA_WP_APP_PASSWORD", "sport": "football"},
+    # own_uploaders: users who make their own images (Marinos Lavdas, user 15: AI graphics for his blog,
+    # user 2026-11-04) -> what they upload to their posts is marked «Πηγή: own» and shown in the apps
+    "totalbasket": {"url": "https://totalbasket.gr", "user": "WP_USER", "pw": "WP_APP_PASSWORD", "sport": "basketball",
+                    "own_uploaders": {15}},
+    "bala24": {"url": "https://bala24.gr", "user": "BALA_WP_USER", "pw": "BALA_WP_APP_PASSWORD", "sport": "football",
+               "own_uploaders": set()},
 }
 
 
@@ -204,18 +208,36 @@ def upload(site, path, name, subject, credit, st):
     return m["id"]
 
 
+def mark_own_images(site, post):
+    """Featured + inline images that an own_uploaders user uploaded -> «Πηγή: own». True if the featured one was."""
+    ids = [post.get("featured_media")] + [int(i) for i in re.findall(r"wp-image-(\d+)", post["content"]["raw"] or "")]
+    ids = [i for i in dict.fromkeys(ids) if i]
+    if not ids:
+        return False
+    media = wp(site, "GET", f"media?include={','.join(map(str, ids))}&per_page=100&context=edit&_fields=id,author,meta")
+    own = [m["id"] for m in media if m.get("author") in SITES[site]["own_uploaders"]]
+    for mid in own:
+        log(f"{site} {post['id']}: own image {mid}")
+        if not DRY:
+            wp(site, "POST", f"media/{mid}", {"meta": {"_bala_src": "own"}})
+    return post.get("featured_media") in own
+
+
 def run_site(site, st):
     s = SITES[site]
     if not (os.environ.get(s["user"]) and os.environ.get(s["pw"])):
         log(f"{site}: no application password, skipped")
         return
     after = (now() - dt.timedelta(hours=HOURS)).strftime("%Y-%m-%dT%H:%M:%S")
-    posts = wp(site, "GET", f"posts?per_page=50&after={after}&context=edit&_fields=id,title,content,bala_app_safe")
+    posts = wp(site, "GET", f"posts?per_page=50&after={after}&context=edit&_fields=id,title,content,featured_media,bala_app_safe")
     n = 0
     for post in posts:
         key = f"{site}:{post['id']}"
         safe = post.get("bala_app_safe") or {}
         if key in st["done"] or safe.get("featured") or safe.get("app_img"):
+            continue
+        if s["own_uploaders"] and mark_own_images(site, post):
+            st["done"][key] = {"at": now().isoformat(), "pick": "own images"}
             continue
         if n >= MAX_PER_SITE:
             break
