@@ -504,6 +504,26 @@
    "at": "2026-11-04T18:37:40.334445+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:84861": {
+   "at": "2026-11-04T19:44:49.983324+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:84865": {
+   "at": "2026-11-04T19:44:17.510445+00:00",
+   "pick": "face"
+  },
+  "bala24:84866": {
+   "at": "2026-11-04T19:44:41.307009+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:84869": {
+   "at": "2026-11-04T19:44:35.157345+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:84878": {
+   "at": "2026-11-04T19:44:27.218542+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -727,6 +747,22 @@
   "totalbasket:68219": {
    "at": "2026-11-04T18:37:26.228496+00:00",
    "pick": "face"
+  },
+  "totalbasket:68225": {
+   "at": "2026-11-04T19:44:07.511035+00:00",
+   "pick": "Aris B.C."
+  },
+  "totalbasket:68228": {
+   "at": "2026-11-04T19:43:58.087030+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68239": {
+   "at": "2026-11-04T19:43:47.076866+00:00",
+   "pick": "Promitheas Patras B.C."
+  },
+  "totalbasket:68242": {
+   "at": "2026-11-04T19:43:36.809013+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -772,6 +808,7 @@
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
+  "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
@@ -792,11 +829,13 @@
   "totalbasket:totalbasket-p-andrea-trinchieri.jpg": 68130,
   "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
+  "totalbasket:totalbasket-p-dragan-sakota.jpg": 68249,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-ibon-navarro.jpg": 68203,
   "totalbasket:totalbasket-p-jabari-parker.jpg": 68200,
   "totalbasket:totalbasket-p-killian-hayes.jpg": 68213,
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070,
+  "totalbasket:totalbasket-p-lukas-lekavicius.jpg": 68248,
   "totalbasket:totalbasket-p-mario-hezonja.jpg": 68204,
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
