@@ -495,7 +495,9 @@ def person_image(art, names=None):
     """Free-licence photo of the article's people (main person first) where a face is visible; adds the
     required credit line to the text. User (2026-10-28): always a photo with faces, never a text card."""
     if names is None:
-        names = [art.get("photo_person")] + list(art.get("photo_people") or [])
+        # an article about ONE person shows only that person (user, 2026-11-04: Patty Mills' interview got
+        # Jokić, who is only mentioned in it); the other people are for articles about no one in particular
+        names = [art["photo_person"]] if (art.get("photo_person") or "").strip() else list(art.get("photo_people") or [])
     best = None
     for name in list(dict.fromkeys(n.strip() for n in names if isinstance(n, str) and n.strip()))[:4]:
         try:
