@@ -608,6 +608,22 @@
    "at": "2026-11-05T08:04:33.337323+00:00",
    "pick": "Como 1907"
   },
+  "bala24:84988": {
+   "at": "2026-11-05T09:43:50.457012+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:84991": {
+   "at": "2026-11-05T09:43:44.375783+00:00",
+   "pick": "face"
+  },
+  "bala24:84995": {
+   "at": "2026-11-05T09:43:38.282639+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:85006": {
+   "at": "2026-11-05T09:43:31.752810+00:00",
+   "pick": "Como 1907"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -883,6 +899,38 @@
   "totalbasket:68368": {
    "at": "2026-11-05T08:04:23.523144+00:00",
    "pick": null
+  },
+  "totalbasket:68372": {
+   "at": "2026-11-05T09:43:25.827727+00:00",
+   "pick": null
+  },
+  "totalbasket:68374": {
+   "at": "2026-11-05T09:43:18.226355+00:00",
+   "pick": "Panathinaikos BC"
+  },
+  "totalbasket:68377": {
+   "at": "2026-11-05T09:43:10.951617+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:68382": {
+   "at": "2026-11-05T09:43:05.943673+00:00",
+   "pick": null
+  },
+  "totalbasket:68385": {
+   "at": "2026-11-05T09:42:59.348124+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68388": {
+   "at": "2026-11-05T09:42:51.674395+00:00",
+   "pick": null
+  },
+  "totalbasket:68392": {
+   "at": "2026-11-05T09:42:45.774656+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68401": {
+   "at": "2026-11-05T09:42:38.782995+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -930,6 +978,7 @@
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
+  "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
@@ -939,7 +988,9 @@
   "totalbasket:totalbasket-c-fc-bayern-munich-basketball-v2.jpg": 68208,
   "totalbasket:totalbasket-c-iraklis-b-c-v2.jpg": 68259,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
+  "totalbasket:totalbasket-c-olympiacos-b-c-v2.jpg": 68411,
   "totalbasket:totalbasket-c-pallacanestro-treviso-v2.jpg": 68211,
+  "totalbasket:totalbasket-c-panathinaikos-bc-v2.jpg": 68412,
   "totalbasket:totalbasket-c-panellinios-b-c-v2.jpg": 68201,
   "totalbasket:totalbasket-c-panionios-b-c-v2.jpg": 68197,
   "totalbasket:totalbasket-c-paok-b-c-v2.jpg": 68129,
@@ -955,8 +1006,10 @@
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
   "totalbasket:totalbasket-p-dragan-sakota.jpg": 68249,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
+  "totalbasket:totalbasket-p-giannis-antetokounmpo.jpg": 68408,
   "totalbasket:totalbasket-p-ibon-navarro.jpg": 68203,
   "totalbasket:totalbasket-p-jabari-parker.jpg": 68200,
+  "totalbasket:totalbasket-p-jae-crowder.jpg": 68410,
   "totalbasket:totalbasket-p-kendrick-nunn.jpg": 68275,
   "totalbasket:totalbasket-p-killian-hayes.jpg": 68213,
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070,
@@ -964,6 +1017,7 @@
   "totalbasket:totalbasket-p-mario-hezonja.jpg": 68204,
   "totalbasket:totalbasket-p-mathias-lessort.jpg": 68295,
   "totalbasket:totalbasket-p-matt-morgan-basketball.jpg": 68293,
+  "totalbasket:totalbasket-p-patty-mills.jpg": 68409,
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
   "totalbasket:totalbasket-p-sarunas-jasikevicius.jpg": 68210,
