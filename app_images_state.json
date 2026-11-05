@@ -892,6 +892,26 @@
    "at": "2026-11-05T22:30:17.094969+00:00",
    "pick": "face"
   },
+  "bala24:85312": {
+   "at": "2026-11-05T23:28:32.370988+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:85325": {
+   "at": "2026-11-05T23:28:24.123896+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:85328": {
+   "at": "2026-11-05T23:28:18.126967+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:85331": {
+   "at": "2026-11-05T23:28:13.451319+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:85334": {
+   "at": "2026-11-05T23:28:08.941500+00:00",
+   "pick": "Panathinaikos F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1243,6 +1263,14 @@
   "totalbasket:68493": {
    "at": "2026-11-05T22:29:49.670343+00:00",
    "pick": "Fenerbahçe S.K."
+  },
+  "totalbasket:68502": {
+   "at": "2026-11-05T23:28:00.752307+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68505": {
+   "at": "2026-11-05T23:27:54.720507+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -1338,6 +1366,7 @@
   "totalbasket:totalbasket-p-andrea-trinchieri.jpg": 68130,
   "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
+  "totalbasket:totalbasket-p-devin-booker-basketball-born-1991.jpg": 68506,
   "totalbasket:totalbasket-p-dragan-sakota.jpg": 68249,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-giannis-antetokounmpo.jpg": 68408,
@@ -1358,6 +1387,7 @@
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
   "totalbasket:totalbasket-p-sarunas-jasikevicius.jpg": 68210,
+  "totalbasket:totalbasket-p-tyler-dorsey.jpg": 68508,
   "totalbasket:totalbasket-p-vasilije-micic.jpg": 68207,
   "totalbasket:totalbasket-p-vassilis-spanoulis.jpg": 68294,
   "totalbasket:totalbasket-p-victor-wembanyama.jpg": 68195,
