@@ -708,6 +708,22 @@
    "at": "2026-11-05T15:42:15.674050+00:00",
    "pick": "Panathinaikos FC"
   },
+  "bala24:85119": {
+   "at": "2026-11-05T16:50:30.404211+00:00",
+   "pick": "VfB Stuttgart"
+  },
+  "bala24:85128": {
+   "at": "2026-11-05T16:50:19.343296+00:00",
+   "pick": "face"
+  },
+  "bala24:85132": {
+   "at": "2026-11-05T16:50:09.066717+00:00",
+   "pick": "PFC CSKA Sofia"
+  },
+  "bala24:85138": {
+   "at": "2026-11-05T16:50:02.897360+00:00",
+   "pick": "Olympiacos F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1059,6 +1075,7 @@
   "bala24:bala24-c-paok-fc-v2.jpg": 84780,
   "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
   "bala24:bala24-c-paris-saint-germain-fc-v2.jpg": 84633,
+  "bala24:bala24-c-pfc-cska-sofia-v2.jpg": 85143,
   "bala24:bala24-c-rc-deportivo-de-la-coruna-v2.jpg": 84830,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
@@ -1068,6 +1085,7 @@
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
+  "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
@@ -1077,6 +1095,7 @@
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
+  "bala24:bala24-p-vinicius-junior.jpg": 85144,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
