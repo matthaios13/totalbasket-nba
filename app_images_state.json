@@ -640,9 +640,17 @@
    "at": "2026-11-05T10:45:43.583076+00:00",
    "pick": null
   },
+  "bala24:85034": {
+   "at": "2026-11-05T15:42:54.604155+00:00",
+   "pick": "Real Sociedad"
+  },
   "bala24:85037": {
    "at": "2026-11-05T11:41:16.205071+00:00",
    "pick": "face"
+  },
+  "bala24:85039": {
+   "at": "2026-11-05T15:42:40.531779+00:00",
+   "pick": "AC Milan"
   },
   "bala24:85047": {
    "at": "2026-11-05T11:41:09.692826+00:00",
@@ -668,9 +676,37 @@
    "at": "2026-11-05T14:00:25.701446+00:00",
    "pick": "face"
   },
+  "bala24:85079": {
+   "at": "2026-11-05T15:42:48.782020+00:00",
+   "pick": "face"
+  },
   "bala24:85080": {
    "at": "2026-11-05T14:00:07.439983+00:00",
    "pick": "AEK Athens F.C."
+  },
+  "bala24:85084": {
+   "at": "2026-11-05T15:43:09.774054+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:85090": {
+   "at": "2026-11-05T15:43:00.417703+00:00",
+   "pick": "Manchester City FC"
+  },
+  "bala24:85098": {
+   "at": "2026-11-05T15:42:36.485824+00:00",
+   "pick": null
+  },
+  "bala24:85100": {
+   "at": "2026-11-05T15:42:31.530845+00:00",
+   "pick": "Real Sociedad"
+  },
+  "bala24:85102": {
+   "at": "2026-11-05T15:42:23.721617+00:00",
+   "pick": "AC Milan"
+  },
+  "bala24:85104": {
+   "at": "2026-11-05T15:42:15.674050+00:00",
+   "pick": "Panathinaikos FC"
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -979,10 +1015,15 @@
   "totalbasket:68401": {
    "at": "2026-11-05T09:42:38.782995+00:00",
    "pick": "face"
+  },
+  "totalbasket:68418": {
+   "at": "2026-11-05T15:42:08.899847+00:00",
+   "pick": "face"
   }
  },
  "media": {
   "bala24:bala24-c-1-fc-nurnberg-v2.jpg": 84634,
+  "bala24:bala24-c-ac-milan-v2.jpg": 85122,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
   "bala24:bala24-c-aris-thessaloniki-f-c-v2.jpg": 84781,
@@ -1005,6 +1046,7 @@
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
   "bala24:bala24-c-leeds-united-f-c-v2.jpg": 84829,
   "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
+  "bala24:bala24-c-manchester-city-fc-v2.jpg": 85126,
   "bala24:bala24-c-manchester-united-fc-v2.jpg": 84651,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-ofi-v2.jpg": 84987,
@@ -1033,6 +1075,7 @@
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
+  "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
