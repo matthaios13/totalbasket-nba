@@ -652,6 +652,10 @@
    "at": "2026-11-05T15:42:40.531779+00:00",
    "pick": "AC Milan"
   },
+  "bala24:85046": {
+   "at": "2026-11-05T18:30:57.650568+00:00",
+   "pick": "AZ Alkmaar"
+  },
   "bala24:85047": {
    "at": "2026-11-05T11:41:09.692826+00:00",
    "pick": "Como 1907"
@@ -720,9 +724,53 @@
    "at": "2026-11-05T16:50:09.066717+00:00",
    "pick": "PFC CSKA Sofia"
   },
+  "bala24:85135": {
+   "at": "2026-11-05T18:31:11.429993+00:00",
+   "pick": "AEK Athens F.C."
+  },
   "bala24:85138": {
    "at": "2026-11-05T16:50:02.897360+00:00",
    "pick": "Olympiacos F.C."
+  },
+  "bala24:85141": {
+   "at": "2026-11-05T18:31:35.196037+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:85147": {
+   "at": "2026-11-05T18:31:31.805315+00:00",
+   "pick": "CD Tenerife"
+  },
+  "bala24:85150": {
+   "at": "2026-11-05T18:31:26.438024+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:85153": {
+   "at": "2026-11-05T18:31:19.892062+00:00",
+   "pick": "face"
+  },
+  "bala24:85160": {
+   "at": "2026-11-05T18:31:16.035710+00:00",
+   "pick": null
+  },
+  "bala24:85165": {
+   "at": "2026-11-05T18:31:04.029311+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:85167": {
+   "at": "2026-11-05T18:30:53.318525+00:00",
+   "pick": null
+  },
+  "bala24:85174": {
+   "at": "2026-11-05T18:30:48.365679+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:85181": {
+   "at": "2026-11-05T18:30:40.678919+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:85187": {
+   "at": "2026-11-05T18:30:44.426794+00:00",
+   "pick": "PFC CSKA Sofia"
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -1035,6 +1083,10 @@
   "totalbasket:68418": {
    "at": "2026-11-05T15:42:08.899847+00:00",
    "pick": "face"
+  },
+  "totalbasket:68432": {
+   "at": "2026-11-05T18:30:32.527801+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -1049,6 +1101,7 @@
   "bala24:bala24-c-atalanta-b-c-v2.jpg": 84831,
   "bala24:bala24-c-atletico-madrid-v2.jpg": 84645,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
+  "bala24:bala24-c-az-alkmaar-v2.jpg": 85196,
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
@@ -1088,6 +1141,7 @@
   "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
+  "bala24:bala24-p-didier-deschamps.jpg": 85197,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
@@ -1131,6 +1185,7 @@
   "totalbasket:totalbasket-p-mario-hezonja.jpg": 68204,
   "totalbasket:totalbasket-p-mathias-lessort.jpg": 68295,
   "totalbasket:totalbasket-p-matt-morgan-basketball.jpg": 68293,
+  "totalbasket:totalbasket-p-nikola-jokic.jpg": 68437,
   "totalbasket:totalbasket-p-patty-mills.jpg": 68409,
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
