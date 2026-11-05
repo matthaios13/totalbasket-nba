@@ -588,6 +588,26 @@
    "at": "2026-11-05T01:54:43.901540+00:00",
    "pick": "AEK Athens F.C."
   },
+  "bala24:84970": {
+   "at": "2026-11-05T08:04:58.742817+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:84974": {
+   "at": "2026-11-05T08:04:48.649838+00:00",
+   "pick": "OFI"
+  },
+  "bala24:84979": {
+   "at": "2026-11-05T08:04:42.882708+00:00",
+   "pick": null
+  },
+  "bala24:84982": {
+   "at": "2026-11-05T08:04:38.110342+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:84985": {
+   "at": "2026-11-05T08:04:33.337323+00:00",
+   "pick": "Como 1907"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -855,6 +875,14 @@
   "totalbasket:68289": {
    "at": "2026-11-04T23:26:56.803818+00:00",
    "pick": "face"
+  },
+  "totalbasket:68365": {
+   "at": "2026-11-05T08:04:26.864445+00:00",
+   "pick": null
+  },
+  "totalbasket:68368": {
+   "at": "2026-11-05T08:04:23.523144+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -882,6 +910,7 @@
   "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
   "bala24:bala24-c-manchester-united-fc-v2.jpg": 84651,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
+  "bala24:bala24-c-ofi-v2.jpg": 84987,
   "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
   "bala24:bala24-c-olympiacos-f-c-v2.jpg": 84455,
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
