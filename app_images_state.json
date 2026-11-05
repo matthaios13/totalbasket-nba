@@ -648,6 +648,10 @@
    "at": "2026-11-05T11:41:09.692826+00:00",
    "pick": "Como 1907"
   },
+  "bala24:85056": {
+   "at": "2026-11-05T14:00:16.043309+00:00",
+   "pick": "Hamburger SV"
+  },
   "bala24:85063": {
    "at": "2026-11-05T12:43:22.577963+00:00",
    "pick": "face"
@@ -655,6 +659,18 @@
   "bala24:85068": {
    "at": "2026-11-05T12:43:15.797640+00:00",
    "pick": null
+  },
+  "bala24:85070": {
+   "at": "2026-11-05T14:00:36.189795+00:00",
+   "pick": "face"
+  },
+  "bala24:85076": {
+   "at": "2026-11-05T14:00:25.701446+00:00",
+   "pick": "face"
+  },
+  "bala24:85080": {
+   "at": "2026-11-05T14:00:07.439983+00:00",
+   "pick": "AEK Athens F.C."
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -984,6 +1000,7 @@
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
+  "bala24:bala24-c-hamburger-sv-v2.jpg": 85086,
   "bala24:bala24-c-juventus-fc-v2.jpg": 84835,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
   "bala24:bala24-c-leeds-united-f-c-v2.jpg": 84829,
@@ -1009,11 +1026,13 @@
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
+  "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
+  "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
