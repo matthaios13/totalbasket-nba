@@ -1,9 +1,5 @@
 {
  "items": {
-  "https://www.trifillakia.gr/mpasket/article/24446/etoimos-na-epistrepsei-stis-nikes-o-panathinaikos-kontra-sti-mpaskonia": {
-   "seen": "2026-10-22T07:43:57.628325+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24451/o-ti-ekplixi-mazi-me-ta-lefta-vrethikan-kai-3-faneles-toy-olympiakoy": {
    "post": 65512,
    "seen": "2026-10-22T11:42:51.899618+00:00",
@@ -226,6 +222,10 @@
   },
   "https://www.trifillakia.gr/mpasket/article/24700/nan-fysika-kai-eimai-koyrasmenos-xekinisame-me-stoho-na-eimaste-mia-omada-poy": {
    "seen": "2026-11-05T00:12:23.236403+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/24702/ta-highlights-apo-to-megalo-diplo-toy-panathinaikoy-sti-madriti-vid": {
+   "seen": "2026-11-05T08:36:29.338951+00:00",
    "skip": "duplicate"
   }
  }
