@@ -1104,6 +1104,22 @@
    "at": "2026-11-06T16:32:40.622452+00:00",
    "pick": "face"
   },
+  "bala24:85555": {
+   "at": "2026-11-06T17:34:41.191850+00:00",
+   "pick": "Sevilla FC"
+  },
+  "bala24:85556": {
+   "at": "2026-11-06T17:35:03.146676+00:00",
+   "pick": "face"
+  },
+  "bala24:85559": {
+   "at": "2026-11-06T17:34:54.835168+00:00",
+   "pick": "Panetolikos F.C."
+  },
+  "bala24:85565": {
+   "at": "2026-11-06T17:34:34.285438+00:00",
+   "pick": "Olympiacos F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1491,6 +1507,10 @@
   "totalbasket:68590": {
    "at": "2026-11-06T16:32:33.858230+00:00",
    "pick": "Olympiacos B.C."
+  },
+  "totalbasket:68594": {
+   "at": "2026-11-06T17:34:20.693931+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -1542,6 +1562,7 @@
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
+  "bala24:bala24-c-sevilla-fc-v2.jpg": 85581,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
@@ -1594,6 +1615,7 @@
   "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
   "totalbasket:totalbasket-p-devin-booker-basketball-born-1991.jpg": 68506,
+  "totalbasket:totalbasket-p-doc-rivers.jpg": 68602,
   "totalbasket:totalbasket-p-dogus-ozdemiroglu.jpg": 68550,
   "totalbasket:totalbasket-p-dragan-sakota.jpg": 68249,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
