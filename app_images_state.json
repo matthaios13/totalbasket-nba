@@ -996,6 +996,38 @@
    "at": "2026-11-06T10:47:26.646344+00:00",
    "pick": "face"
   },
+  "bala24:85416": {
+   "at": "2026-11-06T12:41:09.808605+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
+  "bala24:85419": {
+   "at": "2026-11-06T12:41:03.635219+00:00",
+   "pick": null
+  },
+  "bala24:85424": {
+   "at": "2026-11-06T12:40:59.250632+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:85430": {
+   "at": "2026-11-06T12:40:53.814778+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:85433": {
+   "at": "2026-11-06T12:40:43.910279+00:00",
+   "pick": "face"
+  },
+  "bala24:85434": {
+   "at": "2026-11-06T12:40:36.284539+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:85441": {
+   "at": "2026-11-06T12:40:25.055997+00:00",
+   "pick": null
+  },
+  "bala24:85443": {
+   "at": "2026-11-06T12:40:30.262269+00:00",
+   "pick": "Panathinaikos FC"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1359,6 +1391,10 @@
   "totalbasket:68510": {
    "at": "2026-11-06T00:25:45.153952+00:00",
    "pick": "face"
+  },
+  "totalbasket:68548": {
+   "at": "2026-11-06T12:40:18.870275+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -1429,6 +1465,7 @@
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
+  "bala24:bala24-p-xavi.jpg": 85457,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-aris-thessaloniki-b-c-v2.jpg": 68451,
@@ -1455,6 +1492,7 @@
   "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
   "totalbasket:totalbasket-p-devin-booker-basketball-born-1991.jpg": 68506,
+  "totalbasket:totalbasket-p-dogus-ozdemiroglu.jpg": 68550,
   "totalbasket:totalbasket-p-dragan-sakota.jpg": 68249,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-giannis-antetokounmpo.jpg": 68408,
