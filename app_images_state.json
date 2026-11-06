@@ -1088,6 +1088,22 @@
    "at": "2026-11-06T15:30:16.335625+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:85535": {
+   "at": "2026-11-06T16:33:02.930072+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:85541": {
+   "at": "2026-11-06T16:32:57.069094+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:85545": {
+   "at": "2026-11-06T16:32:49.297857+00:00",
+   "pick": "face"
+  },
+  "bala24:85548": {
+   "at": "2026-11-06T16:32:40.622452+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1471,6 +1487,10 @@
   "totalbasket:68570": {
    "at": "2026-11-06T15:30:07.616664+00:00",
    "pick": null
+  },
+  "totalbasket:68590": {
+   "at": "2026-11-06T16:32:33.858230+00:00",
+   "pick": "Olympiacos B.C."
   }
  },
  "media": {
@@ -1540,8 +1560,10 @@
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jorge-jesus.jpg": 85491,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
+  "bala24:bala24-p-lionel-messi.jpg": 85553,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
+  "bala24:bala24-p-ruben-amorim.jpg": 85552,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
   "bala24:bala24-p-xavi.jpg": 85457,
