@@ -1128,6 +1128,26 @@
    "at": "2026-11-06T18:32:44.036202+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:85592": {
+   "at": "2026-11-06T19:39:05.446742+00:00",
+   "pick": "FC Bayern Munich"
+  },
+  "bala24:85597": {
+   "at": "2026-11-06T19:38:56.690975+00:00",
+   "pick": "face"
+  },
+  "bala24:85601": {
+   "at": "2026-11-06T19:38:43.162012+00:00",
+   "pick": "face"
+  },
+  "bala24:85604": {
+   "at": "2026-11-06T19:38:49.324860+00:00",
+   "pick": "face"
+  },
+  "bala24:85611": {
+   "at": "2026-11-06T19:38:36.675010+00:00",
+   "pick": "OFI Crete F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1519,6 +1539,10 @@
   "totalbasket:68594": {
    "at": "2026-11-06T17:34:20.693931+00:00",
    "pick": "face"
+  },
+  "totalbasket:68603": {
+   "at": "2026-11-06T19:38:28.400069+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -1540,6 +1564,7 @@
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
+  "bala24:bala24-c-fc-bayern-munich-v2.jpg": 85619,
   "bala24:bala24-c-fc-porto-v2.jpg": 84828,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
@@ -1580,6 +1605,7 @@
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
+  "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
   "bala24:bala24-p-barnabas-varga.jpg": 85534,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
@@ -1594,7 +1620,9 @@
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
+  "bala24:bala24-p-simon-banza.jpg": 85618,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
+  "bala24:bala24-p-victor-osimhen.jpg": 85616,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
   "bala24:bala24-p-xavi.jpg": 85457,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
