@@ -1148,6 +1148,22 @@
    "at": "2026-11-06T19:38:36.675010+00:00",
    "pick": "OFI Crete F.C."
   },
+  "bala24:85620": {
+   "at": "2026-11-06T20:31:23.025408+00:00",
+   "pick": "face"
+  },
+  "bala24:85622": {
+   "at": "2026-11-06T20:31:03.348676+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:85623": {
+   "at": "2026-11-06T20:31:12.897985+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:85626": {
+   "at": "2026-11-06T20:30:48.905098+00:00",
+   "pick": "Santos FC"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1596,6 +1612,7 @@
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
+  "bala24:bala24-c-santos-fc-v2.jpg": 85632,
   "bala24:bala24-c-sevilla-fc-v2.jpg": 85581,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
@@ -1625,6 +1642,7 @@
   "bala24:bala24-p-victor-osimhen.jpg": 85616,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
   "bala24:bala24-p-xavi.jpg": 85457,
+  "bala24:bala24-p-zinedine-zidane.jpg": 85633,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-aris-thessaloniki-b-c-v2.jpg": 68451,
