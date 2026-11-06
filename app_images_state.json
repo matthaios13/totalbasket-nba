@@ -1028,6 +1028,10 @@
    "at": "2026-11-06T12:40:30.262269+00:00",
    "pick": "Panathinaikos FC"
   },
+  "bala24:85453": {
+   "at": "2026-11-06T15:30:38.338315+00:00",
+   "pick": "OFI Crete F.C."
+  },
   "bala24:85454": {
    "at": "2026-11-06T13:57:05.612219+00:00",
    "pick": null
@@ -1059,6 +1063,30 @@
   "bala24:85482": {
    "at": "2026-11-06T13:56:19.240473+00:00",
    "pick": null
+  },
+  "bala24:85489": {
+   "at": "2026-11-06T15:30:51.470022+00:00",
+   "pick": "face"
+  },
+  "bala24:85497": {
+   "at": "2026-11-06T15:30:46.787632+00:00",
+   "pick": null
+  },
+  "bala24:85510": {
+   "at": "2026-11-06T15:30:31.942281+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:85515": {
+   "at": "2026-11-06T15:30:26.601421+00:00",
+   "pick": null
+  },
+  "bala24:85523": {
+   "at": "2026-11-06T15:30:22.017760+00:00",
+   "pick": "face"
+  },
+  "bala24:85526": {
+   "at": "2026-11-06T15:30:16.335625+00:00",
+   "pick": "Olympiacos F.C."
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -1439,6 +1467,10 @@
   "totalbasket:68565": {
    "at": "2026-11-06T13:55:48.899592+00:00",
    "pick": null
+  },
+  "totalbasket:68570": {
+   "at": "2026-11-06T15:30:07.616664+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -1498,6 +1530,7 @@
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
+  "bala24:bala24-p-barnabas-varga.jpg": 85534,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
   "bala24:bala24-p-david-moyes.jpg": 85493,
