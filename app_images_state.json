@@ -1028,6 +1028,38 @@
    "at": "2026-11-06T12:40:30.262269+00:00",
    "pick": "Panathinaikos FC"
   },
+  "bala24:85454": {
+   "at": "2026-11-06T13:57:05.612219+00:00",
+   "pick": null
+  },
+  "bala24:85458": {
+   "at": "2026-11-06T13:57:17.751125+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:85459": {
+   "at": "2026-11-06T13:57:12.547861+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:85467": {
+   "at": "2026-11-06T13:56:36.854997+00:00",
+   "pick": "face"
+  },
+  "bala24:85470": {
+   "at": "2026-11-06T13:56:55.649543+00:00",
+   "pick": "face"
+  },
+  "bala24:85472": {
+   "at": "2026-11-06T13:56:45.008221+00:00",
+   "pick": "Hamburger SV"
+  },
+  "bala24:85479": {
+   "at": "2026-11-06T13:56:27.068266+00:00",
+   "pick": "face"
+  },
+  "bala24:85482": {
+   "at": "2026-11-06T13:56:19.240473+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1395,6 +1427,18 @@
   "totalbasket:68548": {
    "at": "2026-11-06T12:40:18.870275+00:00",
    "pick": "face"
+  },
+  "totalbasket:68553": {
+   "at": "2026-11-06T13:56:12.333897+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:68555": {
+   "at": "2026-11-06T13:55:59.104001+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68565": {
+   "at": "2026-11-06T13:55:48.899592+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -1456,10 +1500,12 @@
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
+  "bala24:bala24-p-david-moyes.jpg": 85493,
   "bala24:bala24-p-didier-deschamps.jpg": 85197,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
+  "bala24:bala24-p-jorge-jesus.jpg": 85491,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
@@ -1489,6 +1535,7 @@
   "totalbasket:totalbasket-c-utah-jazz-v2.jpg": 68196,
   "totalbasket:totalbasket-c-vikos-ioannina-v2.jpg": 68199,
   "totalbasket:totalbasket-p-andrea-trinchieri.jpg": 68130,
+  "totalbasket:totalbasket-p-carlik-jones.jpg": 68567,
   "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
   "totalbasket:totalbasket-p-demar-derozan.jpg": 68073,
   "totalbasket:totalbasket-p-devin-booker-basketball-born-1991.jpg": 68506,
