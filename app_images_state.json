@@ -1304,9 +1304,29 @@
    "at": "2026-11-07T14:27:47.293255+00:00",
    "pick": "face"
   },
+  "bala24:85752": {
+   "at": "2026-11-07T15:22:04.695521+00:00",
+   "pick": "Panathinaikos FC"
+  },
   "bala24:85754": {
    "at": "2026-11-07T14:27:39.322428+00:00",
    "pick": "Panathinaikos FC"
+  },
+  "bala24:85758": {
+   "at": "2026-11-07T15:21:57.090591+00:00",
+   "pick": "Leeds United A.F.C."
+  },
+  "bala24:85762": {
+   "at": "2026-11-07T15:21:33.619635+00:00",
+   "pick": "AEL F.C."
+  },
+  "bala24:85766": {
+   "at": "2026-11-07T15:21:40.381486+00:00",
+   "pick": "face"
+  },
+  "bala24:85768": {
+   "at": "2026-11-07T15:21:49.725805+00:00",
+   "pick": "PAOK FC"
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -1783,6 +1803,10 @@
   "totalbasket:68726": {
    "at": "2026-11-07T11:20:09.124495+00:00",
    "pick": null
+  },
+  "totalbasket:68744": {
+   "at": "2026-11-07T15:21:26.946914+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -1790,6 +1814,7 @@
   "bala24:bala24-c-ac-milan-v2.jpg": 85122,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
   "bala24:bala24-c-aek-larnaca-fc-v2.jpg": 85660,
+  "bala24:bala24-c-ael-f-c-v2.jpg": 85777,
   "bala24:bala24-c-afc-ajax-v2.jpg": 85319,
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
   "bala24:bala24-c-aris-fc-v2.jpg": 85729,
@@ -1817,6 +1842,7 @@
   "bala24:bala24-c-juventus-fc-v2.jpg": 84835,
   "bala24:bala24-c-kalamata-f-c-v2.jpg": 85736,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
+  "bala24:bala24-c-leeds-united-a-f-c-v2.jpg": 85779,
   "bala24:bala24-c-leeds-united-f-c-v2.jpg": 84829,
   "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
   "bala24:bala24-c-manchester-city-fc-v2.jpg": 85126,
@@ -1873,6 +1899,7 @@
   "bala24:bala24-p-oliver-glasner.jpg": 85727,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
+  "bala24:bala24-p-razvan-marin.jpg": 85778,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
   "bala24:bala24-p-simon-banza.jpg": 85618,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
