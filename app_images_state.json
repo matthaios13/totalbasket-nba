@@ -1184,6 +1184,106 @@
    "at": "2026-11-06T22:27:12.780782+00:00",
    "pick": null
   },
+  "bala24:85662": {
+   "at": "2026-11-07T11:23:26.530876+00:00",
+   "pick": "Panserraikos F.C."
+  },
+  "bala24:85665": {
+   "at": "2026-11-07T11:23:21.051555+00:00",
+   "pick": "Volos N.F.C."
+  },
+  "bala24:85667": {
+   "at": "2026-11-07T11:23:16.372799+00:00",
+   "pick": null
+  },
+  "bala24:85669": {
+   "at": "2026-11-07T11:23:11.954093+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:85671": {
+   "at": "2026-11-07T11:23:07.437256+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:85673": {
+   "at": "2026-11-07T11:23:02.550074+00:00",
+   "pick": "face"
+  },
+  "bala24:85676": {
+   "at": "2026-11-07T11:22:58.286013+00:00",
+   "pick": null
+  },
+  "bala24:85679": {
+   "at": "2026-11-07T11:22:55.254564+00:00",
+   "pick": "Real Madrid CF"
+  },
+  "bala24:85682": {
+   "at": "2026-11-07T11:22:48.820924+00:00",
+   "pick": "Kalamata F.C."
+  },
+  "bala24:85685": {
+   "at": "2026-11-07T11:22:44.670434+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:85687": {
+   "at": "2026-11-07T11:22:38.727623+00:00",
+   "pick": "C.F. Monterrey"
+  },
+  "bala24:85691": {
+   "at": "2026-11-07T11:22:34.157326+00:00",
+   "pick": "face"
+  },
+  "bala24:85693": {
+   "at": "2026-11-07T11:22:26.499291+00:00",
+   "pick": "face"
+  },
+  "bala24:85695": {
+   "at": "2026-11-07T11:22:22.416866+00:00",
+   "pick": null
+  },
+  "bala24:85697": {
+   "at": "2026-11-07T11:22:16.053649+00:00",
+   "pick": "Aris FC"
+  },
+  "bala24:85699": {
+   "at": "2026-11-07T11:22:07.673907+00:00",
+   "pick": "face"
+  },
+  "bala24:85701": {
+   "at": "2026-11-07T11:22:02.608456+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:85704": {
+   "at": "2026-11-07T11:21:56.086194+00:00",
+   "pick": "face"
+  },
+  "bala24:85707": {
+   "at": "2026-11-07T11:21:52.502745+00:00",
+   "pick": "Real Madrid CF"
+  },
+  "bala24:85711": {
+   "at": "2026-11-07T11:21:47.290609+00:00",
+   "pick": "Sevilla FC"
+  },
+  "bala24:85714": {
+   "at": "2026-11-07T11:21:43.273629+00:00",
+   "pick": "face"
+  },
+  "bala24:85717": {
+   "at": "2026-11-07T11:21:39.730616+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:85720": {
+   "at": "2026-11-07T11:21:34.254633+00:00",
+   "pick": "Arsenal F.C."
+  },
+  "bala24:85722": {
+   "at": "2026-11-07T11:21:28.818169+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:85724": {
+   "at": "2026-11-07T11:21:24.774794+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1619,6 +1719,46 @@
   "totalbasket:68655": {
    "at": "2026-11-06T23:23:18.815428+00:00",
    "pick": null
+  },
+  "totalbasket:68701": {
+   "at": "2026-11-07T11:21:17.622906+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "totalbasket:68704": {
+   "at": "2026-11-07T11:21:10.875732+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:68707": {
+   "at": "2026-11-07T11:21:05.509107+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68710": {
+   "at": "2026-11-07T11:20:58.958501+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68713": {
+   "at": "2026-11-07T11:20:51.283514+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68716": {
+   "at": "2026-11-07T11:20:44.857994+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68718": {
+   "at": "2026-11-07T11:20:21.876938+00:00",
+   "pick": "face"
+  },
+  "totalbasket:68720": {
+   "at": "2026-11-07T11:20:16.758454+00:00",
+   "pick": "Panionios B.C."
+  },
+  "totalbasket:68723": {
+   "at": "2026-11-07T11:20:11.950135+00:00",
+   "pick": null
+  },
+  "totalbasket:68726": {
+   "at": "2026-11-07T11:20:09.124495+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -1628,6 +1768,7 @@
   "bala24:bala24-c-aek-larnaca-fc-v2.jpg": 85660,
   "bala24:bala24-c-afc-ajax-v2.jpg": 85319,
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
+  "bala24:bala24-c-aris-fc-v2.jpg": 85729,
   "bala24:bala24-c-aris-thessaloniki-f-c-v2.jpg": 84781,
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
   "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
@@ -1639,6 +1780,7 @@
   "bala24:bala24-c-az-alkmaar-v2.jpg": 85196,
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
   "bala24:bala24-c-brighton-hove-albion-f-c-v2.jpg": 85661,
+  "bala24:bala24-c-c-f-monterrey-v2.jpg": 85734,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
@@ -1649,6 +1791,7 @@
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-hamburger-sv-v2.jpg": 85086,
   "bala24:bala24-c-juventus-fc-v2.jpg": 84835,
+  "bala24:bala24-c-kalamata-f-c-v2.jpg": 85736,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
   "bala24:bala24-c-leeds-united-f-c-v2.jpg": 84829,
   "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
@@ -1663,6 +1806,7 @@
   "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
   "bala24:bala24-c-panetolikos-f-c-v2.jpg": 84586,
   "bala24:bala24-c-pannaxiakos-f-c-v2.jpg": 84742,
+  "bala24:bala24-c-panserraikos-f-c-v2.jpg": 85738,
   "bala24:bala24-c-panserraikos-fc-v2.jpg": 85221,
   "bala24:bala24-c-paok-fc-v2.jpg": 84780,
   "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
@@ -1681,15 +1825,18 @@
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
+  "bala24:bala24-c-volos-n-f-c-v2.jpg": 85737,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
   "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
   "bala24:bala24-p-barnabas-varga.jpg": 85534,
+  "bala24:bala24-p-bernardo-silva.jpg": 85728,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
   "bala24:bala24-p-david-moyes.jpg": 85493,
   "bala24:bala24-p-didier-deschamps.jpg": 85197,
+  "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
@@ -1697,6 +1844,7 @@
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-lamine-yamal.jpg": 85643,
   "bala24:bala24-p-lionel-messi.jpg": 85553,
+  "bala24:bala24-p-oliver-glasner.jpg": 85727,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
@@ -1718,6 +1866,7 @@
   "totalbasket:totalbasket-c-olympiacos-b-c-v2.jpg": 68411,
   "totalbasket:totalbasket-c-pallacanestro-treviso-v2.jpg": 68211,
   "totalbasket:totalbasket-c-panathinaikos-bc-v2.jpg": 68412,
+  "totalbasket:totalbasket-c-panathinaikos-f-c-v2.jpg": 68733,
   "totalbasket:totalbasket-c-panellinios-b-c-v2.jpg": 68201,
   "totalbasket:totalbasket-c-panionios-b-c-v2.jpg": 68197,
   "totalbasket:totalbasket-c-paok-b-c-v2.jpg": 68129,
@@ -1728,6 +1877,7 @@
   "totalbasket:totalbasket-c-saski-baskonia-v2.jpg": 68214,
   "totalbasket:totalbasket-c-utah-jazz-v2.jpg": 68196,
   "totalbasket:totalbasket-c-vikos-ioannina-v2.jpg": 68199,
+  "totalbasket:totalbasket-p-alexandros-samodurov.jpg": 68732,
   "totalbasket:totalbasket-p-andrea-trinchieri.jpg": 68130,
   "totalbasket:totalbasket-p-carlik-jones.jpg": 68567,
   "totalbasket:totalbasket-p-cedi-osman.jpg": 68175,
@@ -1743,12 +1893,15 @@
   "totalbasket:totalbasket-p-ibon-navarro.jpg": 68203,
   "totalbasket:totalbasket-p-jabari-parker.jpg": 68200,
   "totalbasket:totalbasket-p-jae-crowder.jpg": 68410,
+  "totalbasket:totalbasket-p-jason-kidd.jpg": 68729,
   "totalbasket:totalbasket-p-john-konchar.jpg": 68652,
   "totalbasket:totalbasket-p-kendrick-nunn.jpg": 68275,
   "totalbasket:totalbasket-p-kenneth-faried.jpg": 68496,
   "totalbasket:totalbasket-p-killian-hayes.jpg": 68213,
   "totalbasket:totalbasket-p-lamar-stevens.jpg": 68653,
   "totalbasket:totalbasket-p-lonnie-walker-iv.jpg": 68070,
+  "totalbasket:totalbasket-p-luca-banchi.jpg": 68730,
+  "totalbasket:totalbasket-p-luka-doncic.jpg": 68731,
   "totalbasket:totalbasket-p-lukas-lekavicius.jpg": 68248,
   "totalbasket:totalbasket-p-mario-hezonja.jpg": 68204,
   "totalbasket:totalbasket-p-mathias-lessort.jpg": 68295,
