@@ -1392,6 +1392,30 @@
    "at": "2026-11-07T19:27:12.862206+00:00",
    "pick": "Cardiff City F.C."
   },
+  "bala24:85871": {
+   "at": "2026-11-07T20:19:40.445582+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:85872": {
+   "at": "2026-11-07T20:19:30.308443+00:00",
+   "pick": "Nottingham Forest F.C."
+  },
+  "bala24:85879": {
+   "at": "2026-11-07T20:19:20.002371+00:00",
+   "pick": "Bologna FC 1909"
+  },
+  "bala24:85880": {
+   "at": "2026-11-07T20:19:13.162484+00:00",
+   "pick": "VfB Stuttgart"
+  },
+  "bala24:85885": {
+   "at": "2026-11-07T20:19:06.017370+00:00",
+   "pick": "Paris Saint-Germain F.C."
+  },
+  "bala24:85888": {
+   "at": "2026-11-07T20:18:55.715105+00:00",
+   "pick": "CA Osasuna"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1912,9 +1936,11 @@
   "bala24:bala24-c-atletico-madrid-v2.jpg": 84645,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-az-alkmaar-v2.jpg": 85196,
+  "bala24:bala24-c-bologna-fc-1909-v2.jpg": 85896,
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
   "bala24:bala24-c-brighton-hove-albion-f-c-v2.jpg": 85661,
   "bala24:bala24-c-c-f-monterrey-v2.jpg": 85734,
+  "bala24:bala24-c-ca-osasuna-v2.jpg": 85895,
   "bala24:bala24-c-cagliari-calcio-v2.jpg": 85803,
   "bala24:bala24-c-cardiff-city-f-c-v2.jpg": 85873,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
@@ -1936,6 +1962,7 @@
   "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
   "bala24:bala24-c-manchester-city-fc-v2.jpg": 85126,
   "bala24:bala24-c-manchester-united-fc-v2.jpg": 84651,
+  "bala24:bala24-c-nottingham-forest-f-c-v2.jpg": 85897,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-ofi-crete-fc-v2.jpg": 85596,
   "bala24:bala24-c-ofi-v2.jpg": 84987,
