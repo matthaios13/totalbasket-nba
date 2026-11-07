@@ -13,6 +13,7 @@
   "lba|maxima roma": "https://r2.thesportsdb.com/images/media/team/badge/so67ci1786177012.png",
   "lba|napoli basket": "https://r2.thesportsdb.com/images/media/team/badge/4dkgx11784568429.png",
   "lba|napoli basketball": "",
+  "lba|nutribullet treviso basket": "",
   "lba|olimpia milano": "https://r2.thesportsdb.com/images/media/team/badge/aurbi61790186853.png",
   "lba|openjobmetis varese": "",
   "lba|pallacanestro cantù": "https://r2.thesportsdb.com/images/media/team/badge/vy599w1784567424.png",
@@ -1079,11 +1080,6 @@
    "done": "skipped: Γενικό ρεπορτάζ της πρώτης εβδομάδας με λίστες «best and worst» και ανάλυση από insiders, χωρίς συγκεκριμένη είδηση. Τα ",
    "seen": "2026-10-27T11:47:33.047645+00:00"
   },
-  "50266109": {
-   "attempts": 1,
-   "done": "skipped: Fantasy basketball και στοιχηματικές προτάσεις (streamers, bets), δεν είναι είδηση. Εκτός πολιτικής σύμφωνα με τον κανόν",
-   "seen": "2026-10-24T16:43:24.576660+00:00"
-  },
   "50266620": {
    "attempts": 1,
    "done": "skipped: Ο τραυματισμός του Μπανκέρο στον αστράγαλο έχει ήδη καλυφθεί στο site («Ανησυχία στο Ορλάντο: Εκτός παιχνιδιού με πρόβλη",
@@ -1854,6 +1850,11 @@
    "done": "skipped: Το θέμα είναι fantasy basketball (λίστα με τέσσερις παίκτες), που εμπίπτει στις εξαιρέσεις της ενότητας. Δεν πρόκειται γ",
    "seen": "2026-11-07T14:51:13.172129+00:00"
   },
+  "50392774": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα είναι fantasy streamers και στοιχηματικές προτάσεις (fantasy/στοίχημα), κατηγορία που δεν καλύπτει η ενότητα NBA",
+   "seen": "2026-11-07T16:50:18.654889+00:00"
+  },
   "50398268": {
    "attempts": 1,
    "done": true,
@@ -2173,11 +2174,6 @@
    "done": "too-old",
    "seen": "2026-10-26T17:48:26.701638+00:00"
   },
-  "bebasket:a210336421d5aac1": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-10-24T16:43:24.576660+00:00"
-  },
   "bebasket:aa95902bf600ce7f": {
    "attempts": 0,
    "done": "too-old",
@@ -2227,6 +2223,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-31T21:44:50.320373+00:00"
+  },
+  "bebasket:da5fca0ddb872655": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-07T16:50:18.654889+00:00"
   },
   "bebasket:db482c30126421e0": {
    "attempts": 0,
@@ -3103,7 +3104,9 @@
    "seen": "2026-10-26T02:47:24.592654+00:00"
   },
   "realgm:3dfc173ec5bd72c3": {
-   "attempts": 2,
+   "attempts": 3,
+   "done": true,
+   "post": 68773,
    "seen": "2026-11-07T14:51:13.172129+00:00"
   },
   "realgm:3fd35f233a8a3e7c": {
@@ -4046,6 +4049,12 @@
    "done": "too-old",
    "seen": "2026-10-27T14:50:31.453078+00:00"
   },
+  "sportando-ec:28ef240b9a2421a3": {
+   "attempts": 1,
+   "done": true,
+   "post": 68780,
+   "seen": "2026-11-07T16:50:18.654889+00:00"
+  },
   "sportando-ec:2e134daf3990c405": {
    "attempts": 1,
    "done": "skipped: Η συνέντευξη του Αλίμπεγκοβιτς («Μεγάλωσα εκεί με όλη μου την οικογένεια, θα είναι συγκινητικό») υπάρχει ήδη στο site με",
@@ -4725,6 +4734,11 @@
    "post": 68587,
    "seen": "2026-11-06T15:58:30.344930+00:00"
   },
+  "sportando-el:5e8b256115505b03": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα της μεταγραφής του Πιέρια Χένρι στη Μακάμπι υπάρχει ήδη στο site (\"Η Μακάμπι Τελ Αβίβ διαπραγματεύεται με τον Πι",
+   "seen": "2026-11-07T16:50:18.654889+00:00"
+  },
   "sportando-el:5fce6b95f5d615aa": {
    "attempts": 1,
    "done": "skipped: Το θέμα (το γόνατο του Μπαλντάσο της Βίρτους είναι εντάξει) έχει ήδη καλυφθεί στους τίτλους: «Ανάσα για τη Βίρτους Μπολό",
@@ -5227,6 +5241,11 @@
    "done": "skipped: Είναι power ranking (λίστα/κατάταξη), όχι είδηση. Επιπλέον, το θέμα της βαθμολόγησης καλύπτεται ήδη από τα άρθρα για τη ",
    "seen": "2026-11-04T15:00:14.995715+00:00"
   },
+  "sportando-el:d511825c4570a1e6": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα (Μπάνκι, Αρμάνι Μιλάνο και πάγκος της Εθνικής Ιταλίας) έχει ήδη καλυφθεί στους τίτλους already_on_site, οπότε η ",
+   "seen": "2026-11-07T16:50:18.654889+00:00"
+  },
   "sportando-el:d70080fad0e997df": {
    "attempts": 1,
    "done": true,
@@ -5596,12 +5615,6 @@
    "attempts": 1,
    "done": "skipped: Λίστα/ranking (dream team της αγωνιστικής) χωρίς κάποια συγκεκριμένη είδηση, και η ύλη της 5ης αγωνιστικής (MVP, στατιστ",
    "seen": "2026-10-27T20:46:37.359939+00:00"
-  },
-  "sportando:2e0218082025f329": {
-   "attempts": 1,
-   "done": true,
-   "post": 65832,
-   "seen": "2026-10-24T16:43:24.576660+00:00"
   },
   "sportando:2e134daf3990c405": {
    "attempts": 1,
@@ -6347,6 +6360,10 @@
    "post": 66804,
    "seen": "2026-10-30T10:55:38.267444+00:00"
   },
+  "sportando:9f480e1551541f20": {
+   "attempts": 0,
+   "seen": "2026-11-07T16:50:18.654889+00:00"
+  },
   "sportando:9f6d33ccd2f30895": {
    "attempts": 1,
    "done": true,
@@ -6459,6 +6476,12 @@
    "done": true,
    "post": 67346,
    "seen": "2026-11-02T23:46:38.686784+00:00"
+  },
+  "sportando:adc7fa34ed8b6505": {
+   "attempts": 1,
+   "done": true,
+   "post": 68779,
+   "seen": "2026-11-07T16:50:18.654889+00:00"
   },
   "sportando:adda8cc6e5584638": {
    "attempts": 1,
@@ -6694,6 +6717,11 @@
    "attempts": 1,
    "done": "skipped: Αφορά εφηβικό αγώνα Eccellenza (κατώτερη κατηγορία και όχι LBA), άρα εκτός θέματος της ενότητας.",
    "seen": "2026-10-28T15:03:34.003359+00:00"
+  },
+  "sportando:d511825c4570a1e6": {
+   "attempts": 1,
+   "done": "skipped: Η είδηση για τη συμφωνία του Μπάνκι με την Εθνική Ιταλίας καλύπτεται ήδη από τα άρθρα «Ο Λούκα Μπάνκι αναλαμβάνει την Αρ",
+   "seen": "2026-11-07T16:50:18.654889+00:00"
   },
   "sportando:d516aa26f023d305": {
    "attempts": 1,
@@ -6946,6 +6974,12 @@
    "done": "skipped: Πρόκειται για προωθητική/κοινοτική εκδήλωση χορηγού (Serravalle Outlet) χωρίς ουσιαστική είδηση: δεν περιέχει δηλώσεις γ",
    "seen": "2026-10-30T22:49:09.239872+00:00"
   },
+  "sportando:f477edc678cdc787": {
+   "attempts": 1,
+   "done": true,
+   "post": 68775,
+   "seen": "2026-11-07T16:50:18.654889+00:00"
+  },
   "sportando:f60efb60b042b38a": {
    "attempts": 1,
    "done": true,
@@ -6980,6 +7014,10 @@
    "done": true,
    "post": 68560,
    "seen": "2026-11-06T13:18:07.505823+00:00"
+  },
+  "sportando:fc7a53aaf2d60864": {
+   "attempts": 1,
+   "seen": "2026-11-07T16:50:18.654889+00:00"
   },
   "sportando:fcd316a90a7be6f8": {
    "attempts": 1,
