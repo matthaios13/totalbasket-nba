@@ -1328,6 +1328,26 @@
    "at": "2026-11-07T15:21:49.725805+00:00",
    "pick": "PAOK FC"
   },
+  "bala24:85774": {
+   "at": "2026-11-07T16:22:38.320116+00:00",
+   "pick": "Torino FC"
+  },
+  "bala24:85776": {
+   "at": "2026-11-07T16:22:32.957620+00:00",
+   "pick": "PFC CSKA Sofia"
+  },
+  "bala24:85790": {
+   "at": "2026-11-07T16:22:27.593483+00:00",
+   "pick": "OFI Crete FC"
+  },
+  "bala24:85791": {
+   "at": "2026-11-07T16:22:12.666499+00:00",
+   "pick": "SSC Napoli"
+  },
+  "bala24:85793": {
+   "at": "2026-11-07T16:22:19.936443+00:00",
+   "pick": "Cagliari Calcio"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -1830,6 +1850,7 @@
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
   "bala24:bala24-c-brighton-hove-albion-f-c-v2.jpg": 85661,
   "bala24:bala24-c-c-f-monterrey-v2.jpg": 85734,
+  "bala24:bala24-c-cagliari-calcio-v2.jpg": 85803,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
@@ -1871,8 +1892,10 @@
   "bala24:bala24-c-santos-fc-v2.jpg": 85632,
   "bala24:bala24-c-sevilla-fc-v2.jpg": 85581,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
+  "bala24:bala24-c-ssc-napoli-v2.jpg": 85802,
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
+  "bala24:bala24-c-torino-fc-v2.jpg": 85804,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
   "bala24:bala24-c-volos-n-f-c-v2.jpg": 85737,
