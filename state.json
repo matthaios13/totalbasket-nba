@@ -29,6 +29,7 @@
   "lba|virtus roma": "",
   "lnb|boulazac basket dordogne": "https://r2.thesportsdb.com/images/media/team/badge/68tu9p1570976593.png",
   "lnb|elan béarnais pau-lacq-orthez": "",
+  "lnb|jda dijon": "https://r2.thesportsdb.com/images/media/team/badge/06b1fd1666897191.png",
   "lnb|le mans sarthe basket": "https://r2.thesportsdb.com/images/media/team/badge/iouj5l1757607112.png",
   "lnb|nancy": "https://r2.thesportsdb.com/images/media/team/badge/6zbuwh1666897360.png",
   "lnb|nanterre 92": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png",
@@ -1994,11 +1995,6 @@
    "done": "too-old",
    "seen": "2026-10-26T08:56:03.266470+00:00"
   },
-  "bebasket:48b0e51d50266a2e": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-10-24T20:39:51.344197+00:00"
-  },
   "bebasket:494ebd1cec5a09ec": {
    "attempts": 0,
    "done": "too-old",
@@ -2008,6 +2004,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-25T21:42:00.537237+00:00"
+  },
+  "bebasket:50b337a6803a965b": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-07T20:48:31.223858+00:00"
   },
   "bebasket:52e90dec5406940b": {
    "attempts": 0,
@@ -2419,6 +2420,12 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-11-04T19:09:51.879524+00:00"
+  },
+  "lequipe:3ece37c6ee48274f": {
+   "attempts": 1,
+   "done": true,
+   "post": 68793,
+   "seen": "2026-11-07T20:48:31.223858+00:00"
   },
   "lequipe:4008f32345a325bb": {
    "attempts": 1,
