@@ -1708,6 +1708,26 @@
    "at": "2026-11-08T21:20:09.902520+00:00",
    "pick": "Panathinaikos F.C."
   },
+  "bala24:86155": {
+   "at": "2026-11-08T22:21:00.424116+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:86158": {
+   "at": "2026-11-08T22:20:55.575253+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:86161": {
+   "at": "2026-11-08T22:20:46.332706+00:00",
+   "pick": "face"
+  },
+  "bala24:86163": {
+   "at": "2026-11-08T22:20:41.889819+00:00",
+   "pick": null
+  },
+  "bala24:86166": {
+   "at": "2026-11-08T22:20:35.744299+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2367,6 +2387,7 @@
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
+  "bala24:bala24-p-fermin-lopez.jpg": 86171,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jamal-musiala.jpg": 86099,
