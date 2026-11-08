@@ -1644,6 +1644,42 @@
    "at": "2026-11-08T18:19:19.677098+00:00",
    "pick": "face"
   },
+  "bala24:86095": {
+   "at": "2026-11-08T19:27:28.471360+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:86097": {
+   "at": "2026-11-08T19:27:17.881751+00:00",
+   "pick": null
+  },
+  "bala24:86098": {
+   "at": "2026-11-08T19:27:22.847718+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86104": {
+   "at": "2026-11-08T19:27:14.414321+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:86107": {
+   "at": "2026-11-08T19:27:00.970073+00:00",
+   "pick": "Real Sociedad de Fútbol"
+  },
+  "bala24:86108": {
+   "at": "2026-11-08T19:27:09.396492+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86115": {
+   "at": "2026-11-08T19:26:54.275348+00:00",
+   "pick": "Levadiakos F.C."
+  },
+  "bala24:86116": {
+   "at": "2026-11-08T19:26:49.597252+00:00",
+   "pick": null
+  },
+  "bala24:86122": {
+   "at": "2026-11-08T19:26:43.168248+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2187,6 +2223,10 @@
   "totalbasket:68885": {
    "at": "2026-11-08T18:19:12.267086+00:00",
    "pick": "Olympiacos B.C."
+  },
+  "totalbasket:68908": {
+   "at": "2026-11-08T19:26:35.390764+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2262,6 +2302,7 @@
   "bala24:bala24-c-r-s-c-anderlecht-v2.jpg": 85223,
   "bala24:bala24-c-rc-deportivo-de-la-coruna-v2.jpg": 84830,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
+  "bala24:bala24-c-real-sociedad-de-futbol-v2.jpg": 86127,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
