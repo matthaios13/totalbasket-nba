@@ -1680,6 +1680,18 @@
    "at": "2026-11-08T19:26:43.168248+00:00",
    "pick": null
   },
+  "bala24:86128": {
+   "at": "2026-11-08T20:19:41.137244+00:00",
+   "pick": "Villarreal CF"
+  },
+  "bala24:86132": {
+   "at": "2026-11-08T20:19:33.721240+00:00",
+   "pick": "Manchester United F.C."
+  },
+  "bala24:86134": {
+   "at": "2026-11-08T20:19:26.492008+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2227,6 +2239,10 @@
   "totalbasket:68908": {
    "at": "2026-11-08T19:26:35.390764+00:00",
    "pick": null
+  },
+  "totalbasket:68920": {
+   "at": "2026-11-08T20:19:20.120323+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2316,6 +2332,7 @@
   "bala24:bala24-c-torino-fc-v2.jpg": 85804,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
+  "bala24:bala24-c-villarreal-cf-v2.jpg": 86139,
   "bala24:bala24-c-volos-n-f-c-v2.jpg": 85737,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
