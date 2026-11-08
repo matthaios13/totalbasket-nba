@@ -1500,6 +1500,18 @@
    "at": "2026-11-08T10:26:28.013741+00:00",
    "pick": null
   },
+  "bala24:85955": {
+   "at": "2026-11-08T11:21:38.257308+00:00",
+   "pick": "Cardiff City F.C."
+  },
+  "bala24:85958": {
+   "at": "2026-11-08T11:21:29.592406+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:85961": {
+   "at": "2026-11-08T11:21:22.575422+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2023,6 +2035,10 @@
   "totalbasket:68853": {
    "at": "2026-11-08T10:25:45.684412+00:00",
    "pick": "face"
+  },
+  "totalbasket:68857": {
+   "at": "2026-11-08T11:21:12.683264+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2115,6 +2131,7 @@
   "bala24:bala24-p-david-moyes.jpg": 85493,
   "bala24:bala24-p-david-silva-footballer-born-1986.jpg": 85757,
   "bala24:bala24-p-didier-deschamps.jpg": 85197,
+  "bala24:bala24-p-dimitar-berbatov.jpg": 85966,
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-harry-kane.jpg": 85013,
