@@ -2725,12 +2725,6 @@
    "post": 65956,
    "seen": "2026-10-25T18:46:06.300991+00:00"
   },
-  "marca-acb:44f260be5bf57001": {
-   "attempts": 1,
-   "done": true,
-   "post": 65900,
-   "seen": "2026-10-25T09:43:09.106442+00:00"
-  },
   "marca-acb:473798812eb741c1": {
    "attempts": 1,
    "done": true,
@@ -3851,11 +3845,6 @@
    "done": true,
    "post": 66251,
    "seen": "2026-10-27T15:55:53.289340+00:00"
-  },
-  "realgm:e65be4ddafd385fd": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-10-25T09:43:09.106442+00:00"
   },
   "realgm:e73663a1757949ca": {
    "attempts": 1,
