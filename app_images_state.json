@@ -1692,6 +1692,22 @@
    "at": "2026-11-08T20:19:26.492008+00:00",
    "pick": null
   },
+  "bala24:86140": {
+   "at": "2026-11-08T21:20:23.430341+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:86144": {
+   "at": "2026-11-08T21:20:16.424893+00:00",
+   "pick": "TSG Hoffenheim"
+  },
+  "bala24:86148": {
+   "at": "2026-11-08T21:20:04.269333+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:86149": {
+   "at": "2026-11-08T21:20:09.902520+00:00",
+   "pick": "Panathinaikos F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2330,6 +2346,7 @@
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-torino-fc-v2.jpg": 85804,
+  "bala24:bala24-c-tsg-hoffenheim-v2.jpg": 86154,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
   "bala24:bala24-c-villarreal-cf-v2.jpg": 86139,
