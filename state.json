@@ -1903,11 +1903,6 @@
    "done": "too-old",
    "seen": "2026-10-31T11:45:59.997589+00:00"
   },
-  "bebasket:0eff5181798dae67": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-10-25T13:42:19.729899+00:00"
-  },
   "bebasket:10d88030d376ad3e": {
    "attempts": 0,
    "done": "too-old",
@@ -2067,6 +2062,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-10-25T17:40:22.987590+00:00"
+  },
+  "bebasket:7876110edf96e338": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-08T13:57:18.936000+00:00"
   },
   "bebasket:79f705d8beac44e4": {
    "attempts": 0,
@@ -2333,6 +2333,12 @@
    "attempts": 1,
    "done": "skipped: Η πρώτη νίκη της Μπασκόνια με Περάσοβιτς υπάρχει ήδη στο site (\"Πρεμιέρα νίκης για Περάσοβιτς\"). Το υπόλοιπο είναι σύνοψ",
    "seen": "2026-11-01T20:47:38.878454+00:00"
+  },
+  "encestando:a32f00db8ae16b67": {
+   "attempts": 1,
+   "done": true,
+   "post": 68880,
+   "seen": "2026-11-08T13:57:18.936000+00:00"
   },
   "encestando:a3a6807f07ef616e": {
    "attempts": 1,
