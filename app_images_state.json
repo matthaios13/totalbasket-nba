@@ -1512,6 +1512,18 @@
    "at": "2026-11-08T11:21:22.575422+00:00",
    "pick": "face"
   },
+  "bala24:85965": {
+   "at": "2026-11-08T12:23:13.373789+00:00",
+   "pick": "Olympiacos F.C. B"
+  },
+  "bala24:85969": {
+   "at": "2026-11-08T12:23:02.462095+00:00",
+   "pick": "face"
+  },
+  "bala24:85972": {
+   "at": "2026-11-08T12:22:55.574767+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2039,6 +2051,10 @@
   "totalbasket:68857": {
    "at": "2026-11-08T11:21:12.683264+00:00",
    "pick": "face"
+  },
+  "totalbasket:68869": {
+   "at": "2026-11-08T12:22:47.796379+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2093,6 +2109,7 @@
   "bala24:bala24-c-ofi-crete-fc-v2.jpg": 85596,
   "bala24:bala24-c-ofi-v2.jpg": 84987,
   "bala24:bala24-c-olympiacos-b-c-v2.jpg": 84476,
+  "bala24:bala24-c-olympiacos-f-c-b-v2.jpg": 85976,
   "bala24:bala24-c-olympiacos-f-c-v2.jpg": 84455,
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
   "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
@@ -2133,6 +2150,7 @@
   "bala24:bala24-p-didier-deschamps.jpg": 85197,
   "bala24:bala24-p-dimitar-berbatov.jpg": 85966,
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
+  "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
@@ -2146,6 +2164,7 @@
   "bala24:bala24-p-mauro-icardi.jpg": 85830,
   "bala24:bala24-p-michael-olise.jpg": 85862,
   "bala24:bala24-p-oliver-glasner.jpg": 85727,
+  "bala24:bala24-p-panagiotis-retsos.jpg": 85975,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-razvan-marin.jpg": 85778,
