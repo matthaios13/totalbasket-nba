@@ -1536,6 +1536,30 @@
    "at": "2026-11-08T13:36:16.997718+00:00",
    "pick": "Brighton & Hove Albion F.C."
   },
+  "bala24:85985": {
+   "at": "2026-11-08T14:26:47.783405+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:85988": {
+   "at": "2026-11-08T14:26:40.004815+00:00",
+   "pick": "face"
+  },
+  "bala24:85994": {
+   "at": "2026-11-08T14:26:33.268181+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:85997": {
+   "at": "2026-11-08T14:26:25.869785+00:00",
+   "pick": "SC Heerenveen"
+  },
+  "bala24:86003": {
+   "at": "2026-11-08T14:26:20.781138+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86008": {
+   "at": "2026-11-08T14:26:16.173386+00:00",
+   "pick": "Panathinaikos FC"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2064,6 +2088,10 @@
    "at": "2026-11-08T11:21:12.683264+00:00",
    "pick": "face"
   },
+  "totalbasket:68862": {
+   "at": "2026-11-08T14:26:07.151595+00:00",
+   "pick": "Panathinaikos B.C."
+  },
   "totalbasket:68869": {
    "at": "2026-11-08T12:22:47.796379+00:00",
    "pick": "face"
@@ -2141,6 +2169,7 @@
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
   "bala24:bala24-c-santos-fc-v2.jpg": 85632,
+  "bala24:bala24-c-sc-heerenveen-v2.jpg": 86011,
   "bala24:bala24-c-sevilla-fc-v2.jpg": 85581,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
   "bala24:bala24-c-ssc-napoli-v2.jpg": 85802,
@@ -2156,6 +2185,7 @@
   "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
   "bala24:bala24-p-barnabas-varga.jpg": 85534,
   "bala24:bala24-p-bernardo-silva.jpg": 85728,
+  "bala24:bala24-p-christos-mandas.jpg": 86012,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
   "bala24:bala24-p-david-moyes.jpg": 85493,
@@ -2199,6 +2229,7 @@
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
   "totalbasket:totalbasket-c-olympiacos-b-c-v2.jpg": 68411,
   "totalbasket:totalbasket-c-pallacanestro-treviso-v2.jpg": 68211,
+  "totalbasket:totalbasket-c-panathinaikos-b-c-v2.jpg": 68882,
   "totalbasket:totalbasket-c-panathinaikos-bc-v2.jpg": 68412,
   "totalbasket:totalbasket-c-panathinaikos-f-c-v2.jpg": 68733,
   "totalbasket:totalbasket-c-panellinios-b-c-v2.jpg": 68201,
