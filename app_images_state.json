@@ -1584,6 +1584,34 @@
    "at": "2026-11-08T15:20:13.109664+00:00",
    "pick": "FK Bodø/Glimt"
   },
+  "bala24:86035": {
+   "at": "2026-11-08T17:20:32.579118+00:00",
+   "pick": "Liverpool F.C."
+  },
+  "bala24:86039": {
+   "at": "2026-11-08T17:20:22.299545+00:00",
+   "pick": "Lille OSC"
+  },
+  "bala24:86045": {
+   "at": "2026-11-08T17:20:15.207738+00:00",
+   "pick": "CD Tenerife"
+  },
+  "bala24:86050": {
+   "at": "2026-11-08T17:20:03.655709+00:00",
+   "pick": "Como 1907"
+  },
+  "bala24:86053": {
+   "at": "2026-11-08T17:19:56.333372+00:00",
+   "pick": "Panionios G.S.S."
+  },
+  "bala24:86056": {
+   "at": "2026-11-08T17:19:42.340692+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
+  "bala24:86058": {
+   "at": "2026-11-08T17:19:48.781739+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2119,6 +2147,10 @@
   "totalbasket:68869": {
    "at": "2026-11-08T12:22:47.796379+00:00",
    "pick": "face"
+  },
+  "totalbasket:68884": {
+   "at": "2026-11-08T17:19:32.284487+00:00",
+   "pick": "own images"
   }
  },
  "media": {
@@ -2167,6 +2199,7 @@
   "bala24:bala24-c-leeds-united-a-f-c-v2.jpg": 85779,
   "bala24:bala24-c-leeds-united-f-c-v2.jpg": 84829,
   "bala24:bala24-c-levadiakos-f-c-v2.jpg": 86034,
+  "bala24:bala24-c-lille-osc-v2.jpg": 86067,
   "bala24:bala24-c-liverpool-f-c-v2.jpg": 84809,
   "bala24:bala24-c-manchester-city-fc-v2.jpg": 85126,
   "bala24:bala24-c-manchester-united-f-c-v2.jpg": 85941,
@@ -2182,6 +2215,7 @@
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
   "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
   "bala24:bala24-c-panetolikos-f-c-v2.jpg": 84586,
+  "bala24:bala24-c-panionios-g-s-s-v2.jpg": 86066,
   "bala24:bala24-c-pannaxiakos-f-c-v2.jpg": 84742,
   "bala24:bala24-c-panserraikos-f-c-v2.jpg": 85738,
   "bala24:bala24-c-panserraikos-fc-v2.jpg": 85221,
