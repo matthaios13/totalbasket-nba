@@ -1812,6 +1812,38 @@
    "at": "2026-11-09T10:38:13.322353+00:00",
    "pick": null
   },
+  "bala24:86255": {
+   "at": "2026-11-09T11:40:02.469642+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
+  "bala24:86257": {
+   "at": "2026-11-09T11:40:13.022359+00:00",
+   "pick": "face"
+  },
+  "bala24:86263": {
+   "at": "2026-11-09T11:39:55.837424+00:00",
+   "pick": null
+  },
+  "bala24:86267": {
+   "at": "2026-11-09T11:39:42.957795+00:00",
+   "pick": "Kalamata F.C."
+  },
+  "bala24:86269": {
+   "at": "2026-11-09T11:39:49.470772+00:00",
+   "pick": "Minnesota United FC"
+  },
+  "bala24:86273": {
+   "at": "2026-11-09T11:39:27.964637+00:00",
+   "pick": null
+  },
+  "bala24:86275": {
+   "at": "2026-11-09T11:39:34.087267+00:00",
+   "pick": "face"
+  },
+  "bala24:86279": {
+   "at": "2026-11-09T11:39:22.608002+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2426,6 +2458,7 @@
   "bala24:bala24-c-manchester-united-f-c-v2.jpg": 85941,
   "bala24:bala24-c-manchester-united-fc-v2.jpg": 84651,
   "bala24:bala24-c-marko-f-c-v2.jpg": 86032,
+  "bala24:bala24-c-minnesota-united-fc-v2.jpg": 86284,
   "bala24:bala24-c-nottingham-forest-f-c-v2.jpg": 85897,
   "bala24:bala24-c-ofi-crete-f-c-v2.jpg": 84458,
   "bala24:bala24-c-ofi-crete-fc-v2.jpg": 85596,
@@ -2501,6 +2534,7 @@
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-rafael-leao.jpg": 86259,
+  "bala24:bala24-p-raul.jpg": 86286,
   "bala24:bala24-p-razvan-marin.jpg": 85778,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
   "bala24:bala24-p-simon-banza.jpg": 85618,
@@ -2508,6 +2542,7 @@
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-victor-osimhen.jpg": 85616,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
+  "bala24:bala24-p-vozinha.jpg": 86283,
   "bala24:bala24-p-xavi.jpg": 85457,
   "bala24:bala24-p-zinedine-zidane.jpg": 85633,
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
