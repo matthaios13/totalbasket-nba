@@ -1988,9 +1988,21 @@
    "at": "2026-11-09T18:37:21.656128+00:00",
    "pick": "AEK Athens F.C."
   },
+  "bala24:86413": {
+   "at": "2026-11-09T19:44:01.124178+00:00",
+   "pick": "face"
+  },
   "bala24:86415": {
    "at": "2026-11-09T18:37:14.590993+00:00",
    "pick": "PAOK FC"
+  },
+  "bala24:86423": {
+   "at": "2026-11-09T19:43:56.663840+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:86430": {
+   "at": "2026-11-09T19:43:50.432207+00:00",
+   "pick": "face"
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -2704,6 +2716,7 @@
   "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
   "bala24:bala24-p-barnabas-varga.jpg": 85534,
   "bala24:bala24-p-bernardo-silva.jpg": 85728,
+  "bala24:bala24-p-carlos-vicens.jpg": 86434,
   "bala24:bala24-p-cesc-fabregas.jpg": 86233,
   "bala24:bala24-p-christos-mandas.jpg": 86012,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
