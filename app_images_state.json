@@ -1752,6 +1752,42 @@
    "at": "2026-11-09T08:06:40.791294+00:00",
    "pick": "Panathinaikos FC"
   },
+  "bala24:86199": {
+   "at": "2026-11-09T09:44:24.561527+00:00",
+   "pick": "OFI Crete F.C."
+  },
+  "bala24:86202": {
+   "at": "2026-11-09T09:44:11.827909+00:00",
+   "pick": "APOEL FC"
+  },
+  "bala24:86204": {
+   "at": "2026-11-09T09:44:17.020659+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86207": {
+   "at": "2026-11-09T09:44:06.354881+00:00",
+   "pick": null
+  },
+  "bala24:86211": {
+   "at": "2026-11-09T09:43:58.906183+00:00",
+   "pick": "Manchester United F.C."
+  },
+  "bala24:86213": {
+   "at": "2026-11-09T09:43:48.853724+00:00",
+   "pick": "face"
+  },
+  "bala24:86219": {
+   "at": "2026-11-09T09:43:24.969172+00:00",
+   "pick": "PFC CSKA Sofia"
+  },
+  "bala24:86220": {
+   "at": "2026-11-09T09:43:38.203112+00:00",
+   "pick": "face"
+  },
+  "bala24:86224": {
+   "at": "2026-11-09T09:43:31.680665+00:00",
+   "pick": "Fenerbahçe S.K."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2411,6 +2447,7 @@
   "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
   "bala24:bala24-p-barnabas-varga.jpg": 85534,
   "bala24:bala24-p-bernardo-silva.jpg": 85728,
+  "bala24:bala24-p-cesc-fabregas.jpg": 86233,
   "bala24:bala24-p-christos-mandas.jpg": 86012,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
@@ -2441,6 +2478,7 @@
   "bala24:bala24-p-razvan-marin.jpg": 85778,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
   "bala24:bala24-p-simon-banza.jpg": 85618,
+  "bala24:bala24-p-vangelis-pavlidis.jpg": 86234,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-victor-osimhen.jpg": 85616,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
