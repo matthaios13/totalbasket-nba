@@ -1982,11 +1982,6 @@
    "done": "too-old",
    "seen": "2026-11-04T10:15:12.992910+00:00"
   },
-  "bebasket:48afd45853b1f5a0": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-10-26T08:56:03.266470+00:00"
-  },
   "bebasket:494ebd1cec5a09ec": {
    "attempts": 0,
    "done": "too-old",
@@ -2256,11 +2251,6 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-11-06T17:55:31.341358+00:00"
-  },
-  "bebasket:e90e1a08bc637038": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-10-26T08:56:03.266470+00:00"
   },
   "bebasket:ebf558ab9a14cb7b": {
    "attempts": 0,
@@ -5554,12 +5544,6 @@
    "post": 68218,
    "seen": "2026-11-04T15:00:14.995715+00:00"
   },
-  "sportando:2702f476f8c630ad": {
-   "attempts": 2,
-   "done": true,
-   "post": 66085,
-   "seen": "2026-10-26T08:56:03.266470+00:00"
-  },
   "sportando:282f58685491c4e9": {
    "attempts": 1,
    "done": true,
@@ -6887,12 +6871,6 @@
    "attempts": 1,
    "done": "skipped: Πρόκειται για προεπισκόπηση αγώνα με τηλεοπτικό πρόγραμμα (\"dove vederla in tv\", ώρα και κανάλι LBATV), που εμπίπτει στο",
    "seen": "2026-10-30T17:55:36.689995+00:00"
-  },
-  "sportando:f2526466a1f87b68": {
-   "attempts": 2,
-   "done": true,
-   "post": 66087,
-   "seen": "2026-10-26T08:56:03.266470+00:00"
   },
   "sportando:f2904c4ebc41b9c7": {
    "attempts": 1,
