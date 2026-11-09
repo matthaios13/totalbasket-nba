@@ -2164,6 +2164,11 @@
    "done": "too-old",
    "seen": "2026-10-29T11:54:18.991624+00:00"
   },
+  "bebasket:b3df443cfd3482dc": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-09T15:06:35.364708+00:00"
+  },
   "bebasket:bd242e2bd1d41645": {
    "attempts": 0,
    "done": "too-old",
@@ -2374,6 +2379,11 @@
    "attempts": 1,
    "done": "skipped: Το δελτίο δεν περιέχει κείμενο (το summary και το story είναι κενά), μόνο τον τίτλο με μια δήλωση του Τζερέμαια Χιλ για ",
    "seen": "2026-11-01T22:45:54.666387+00:00"
+  },
+  "lequipe:1a652111f041a248": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-09T15:06:35.364708+00:00"
   },
   "lequipe:1efecf65b0d49964": {
    "attempts": 0,
