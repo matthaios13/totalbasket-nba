@@ -1928,6 +1928,10 @@
    "at": "2026-11-09T16:49:39.084833+00:00",
    "pick": "face"
   },
+  "bala24:86368": {
+   "at": "2026-11-09T18:38:04.941685+00:00",
+   "pick": "face"
+  },
   "bala24:86371": {
    "at": "2026-11-09T16:49:30.007216+00:00",
    "pick": null
@@ -1935,6 +1939,58 @@
   "bala24:86374": {
    "at": "2026-11-09T16:49:25.321611+00:00",
    "pick": "Olympiacos F.C."
+  },
+  "bala24:86376": {
+   "at": "2026-11-09T18:40:32.421449+00:00",
+   "pick": null
+  },
+  "bala24:86380": {
+   "at": "2026-11-09T18:40:26.114357+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86383": {
+   "at": "2026-11-09T18:39:19.543505+00:00",
+   "pick": "PAOK FC B"
+  },
+  "bala24:86386": {
+   "at": "2026-11-09T18:39:11.032087+00:00",
+   "pick": "face"
+  },
+  "bala24:86389": {
+   "at": "2026-11-09T18:38:47.580063+00:00",
+   "pick": "face"
+  },
+  "bala24:86393": {
+   "at": "2026-11-09T18:38:39.308705+00:00",
+   "pick": "C.F. Monterrey"
+  },
+  "bala24:86395": {
+   "at": "2026-11-09T18:37:49.019026+00:00",
+   "pick": "face"
+  },
+  "bala24:86396": {
+   "at": "2026-11-09T18:37:58.419418+00:00",
+   "pick": null
+  },
+  "bala24:86399": {
+   "at": "2026-11-09T18:37:33.819201+00:00",
+   "pick": "face"
+  },
+  "bala24:86401": {
+   "at": "2026-11-09T18:37:43.581679+00:00",
+   "pick": null
+  },
+  "bala24:86404": {
+   "at": "2026-11-09T18:37:27.055393+00:00",
+   "pick": null
+  },
+  "bala24:86411": {
+   "at": "2026-11-09T18:37:21.656128+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86415": {
+   "at": "2026-11-09T18:37:14.590993+00:00",
+   "pick": "PAOK FC"
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -2511,6 +2567,34 @@
   "totalbasket:69015": {
    "at": "2026-11-09T16:49:13.291361+00:00",
    "pick": "Doxa Lefkada B.C."
+  },
+  "totalbasket:69018": {
+   "at": "2026-11-09T18:37:02.097737+00:00",
+   "pick": null
+  },
+  "totalbasket:69020": {
+   "at": "2026-11-09T18:36:24.063899+00:00",
+   "pick": "Atlanta Hawks"
+  },
+  "totalbasket:69022": {
+   "at": "2026-11-09T18:36:03.576931+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69026": {
+   "at": "2026-11-09T18:35:45.707011+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69027": {
+   "at": "2026-11-09T18:35:27.928594+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69034": {
+   "at": "2026-11-09T18:35:02.492255+00:00",
+   "pick": null
+  },
+  "totalbasket:69040": {
+   "at": "2026-11-09T18:34:55.735711+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2587,6 +2671,7 @@
   "bala24:bala24-c-pannaxiakos-f-c-v2.jpg": 84742,
   "bala24:bala24-c-panserraikos-f-c-v2.jpg": 85738,
   "bala24:bala24-c-panserraikos-fc-v2.jpg": 85221,
+  "bala24:bala24-c-paok-fc-b-v2.jpg": 86421,
   "bala24:bala24-c-paok-fc-v2.jpg": 84780,
   "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
   "bala24:bala24-c-paris-saint-germain-fc-v2.jpg": 84633,
@@ -2641,14 +2726,17 @@
   "bala24:bala24-p-jorge-jesus.jpg": 85491,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-jude-bellingham.jpg": 85947,
+  "bala24:bala24-p-kevin-de-bruyne.jpg": 86418,
   "bala24:bala24-p-kylian-mbappe.jpg": 85922,
   "bala24:bala24-p-lamine-yamal.jpg": 85643,
   "bala24:bala24-p-levi-garcia.jpg": 85749,
   "bala24:bala24-p-lionel-messi.jpg": 85553,
+  "bala24:bala24-p-marko-arnautovic.jpg": 86419,
   "bala24:bala24-p-mauro-icardi.jpg": 85830,
   "bala24:bala24-p-michael-olise.jpg": 85862,
   "bala24:bala24-p-oliver-glasner.jpg": 85727,
   "bala24:bala24-p-panagiotis-retsos.jpg": 85975,
+  "bala24:bala24-p-pau-cubarsi.jpg": 86420,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
   "bala24:bala24-p-rafael-leao.jpg": 86259,
@@ -2666,6 +2754,7 @@
   "totalbasket:totalbasket-c-aek-b-c-v2.jpg": 68113,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-aris-thessaloniki-b-c-v2.jpg": 68451,
+  "totalbasket:totalbasket-c-atlanta-hawks-v2.jpg": 69044,
   "totalbasket:totalbasket-c-denver-nuggets-v2.jpg": 68946,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
   "totalbasket:totalbasket-c-fc-bayern-munich-basketball-v2.jpg": 68208,
