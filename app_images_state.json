@@ -1892,6 +1892,34 @@
    "at": "2026-11-09T14:00:05.519613+00:00",
    "pick": "Olympiacos F.C."
   },
+  "bala24:86329": {
+   "at": "2026-11-09T15:43:15.831826+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:86332": {
+   "at": "2026-11-09T15:43:07.413030+00:00",
+   "pick": "Aberdeen F.C."
+  },
+  "bala24:86334": {
+   "at": "2026-11-09T15:42:59.810664+00:00",
+   "pick": "face"
+  },
+  "bala24:86336": {
+   "at": "2026-11-09T15:42:53.906085+00:00",
+   "pick": "PSV Eindhoven"
+  },
+  "bala24:86349": {
+   "at": "2026-11-09T15:42:45.988328+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86353": {
+   "at": "2026-11-09T15:42:42.326897+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86356": {
+   "at": "2026-11-09T15:42:35.629630+00:00",
+   "pick": "Red Star Belgrade"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2463,6 +2491,7 @@
  },
  "media": {
   "bala24:bala24-c-1-fc-nurnberg-v2.jpg": 84634,
+  "bala24:bala24-c-aberdeen-f-c-v2.jpg": 86366,
   "bala24:bala24-c-ac-milan-v2.jpg": 85122,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
   "bala24:bala24-c-aek-fc-v2.jpg": 86179,
@@ -2537,11 +2566,13 @@
   "bala24:bala24-c-paris-saint-germain-f-c-v2.jpg": 84508,
   "bala24:bala24-c-paris-saint-germain-fc-v2.jpg": 84633,
   "bala24:bala24-c-pfc-cska-sofia-v2.jpg": 85143,
+  "bala24:bala24-c-psv-eindhoven-v2.jpg": 86364,
   "bala24:bala24-c-r-s-c-anderlecht-v2.jpg": 85223,
   "bala24:bala24-c-rc-deportivo-de-la-coruna-v2.jpg": 84830,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
   "bala24:bala24-c-real-sociedad-de-futbol-v2.jpg": 86127,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
+  "bala24:bala24-c-red-star-belgrade-v2.jpg": 86363,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
   "bala24:bala24-c-santos-fc-v2.jpg": 85632,
@@ -2577,6 +2608,7 @@
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-fermin-lopez.jpg": 86171,
   "bala24:bala24-p-giannis-konstantelias.jpg": 86258,
+  "bala24:bala24-p-gigi-becali.jpg": 86365,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jamal-musiala.jpg": 86099,
