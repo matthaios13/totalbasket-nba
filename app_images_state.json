@@ -1920,6 +1920,22 @@
    "at": "2026-11-09T15:42:35.629630+00:00",
    "pick": "Red Star Belgrade"
   },
+  "bala24:86358": {
+   "at": "2026-11-09T16:49:47.505355+00:00",
+   "pick": "FC Rapid București"
+  },
+  "bala24:86360": {
+   "at": "2026-11-09T16:49:39.084833+00:00",
+   "pick": "face"
+  },
+  "bala24:86371": {
+   "at": "2026-11-09T16:49:30.007216+00:00",
+   "pick": null
+  },
+  "bala24:86374": {
+   "at": "2026-11-09T16:49:25.321611+00:00",
+   "pick": "Olympiacos F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2487,6 +2503,14 @@
   "totalbasket:69002": {
    "at": "2026-11-09T13:59:55.174661+00:00",
    "pick": "face"
+  },
+  "totalbasket:69009": {
+   "at": "2026-11-09T16:49:19.814301+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69015": {
+   "at": "2026-11-09T16:49:13.291361+00:00",
+   "pick": "Doxa Lefkada B.C."
   }
  },
  "media": {
@@ -2525,6 +2549,7 @@
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
   "bala24:bala24-c-fc-bayern-munich-v2.jpg": 85619,
   "bala24:bala24-c-fc-porto-v2.jpg": 84828,
+  "bala24:bala24-c-fc-rapid-bucuresti-v2.jpg": 86378,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-fk-bod-glimt-v2.jpg": 86033,
@@ -2602,6 +2627,7 @@
   "bala24:bala24-p-david-silva-footballer-born-1986.jpg": 85757,
   "bala24:bala24-p-didier-deschamps.jpg": 85197,
   "bala24:bala24-p-dimitar-berbatov.jpg": 85966,
+  "bala24:bala24-p-dusan-tadic.jpg": 86377,
   "bala24:bala24-p-dusan-vlahovic.jpg": 86305,
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-erling-haaland.jpg": 85974,
