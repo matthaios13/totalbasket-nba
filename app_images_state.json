@@ -2016,6 +2016,18 @@
    "at": "2026-11-09T20:37:54.570961+00:00",
    "pick": "US Sassuolo Calcio"
   },
+  "bala24:86442": {
+   "at": "2026-11-09T21:37:10.126449+00:00",
+   "pick": "APOEL FC"
+  },
+  "bala24:86448": {
+   "at": "2026-11-09T21:37:04.920313+00:00",
+   "pick": "Paris Saint-Germain F.C."
+  },
+  "bala24:86450": {
+   "at": "2026-11-09T21:36:55.337163+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2619,6 +2631,22 @@
   "totalbasket:69040": {
    "at": "2026-11-09T18:34:55.735711+00:00",
    "pick": null
+  },
+  "totalbasket:69059": {
+   "at": "2026-11-09T21:36:42.645998+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69062": {
+   "at": "2026-11-09T21:36:30.528650+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69065": {
+   "at": "2026-11-09T21:36:14.713892+00:00",
+   "pick": "Dubai Basketball"
+  },
+  "totalbasket:69074": {
+   "at": "2026-11-09T21:36:02.631014+00:00",
+   "pick": "Maccabi Tel Aviv B.C."
   }
  },
  "media": {
@@ -2756,6 +2784,7 @@
   "bala24:bala24-p-lamine-yamal.jpg": 85643,
   "bala24:bala24-p-levi-garcia.jpg": 85749,
   "bala24:bala24-p-lionel-messi.jpg": 85553,
+  "bala24:bala24-p-manuel-neuer.jpg": 86453,
   "bala24:bala24-p-marko-arnautovic.jpg": 86419,
   "bala24:bala24-p-mauro-icardi.jpg": 85830,
   "bala24:bala24-p-michael-olise.jpg": 85862,
@@ -2783,11 +2812,13 @@
   "totalbasket:totalbasket-c-atlanta-hawks-v2.jpg": 69044,
   "totalbasket:totalbasket-c-denver-nuggets-v2.jpg": 68946,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
+  "totalbasket:totalbasket-c-dubai-basketball-v2.jpg": 69079,
   "totalbasket:totalbasket-c-fc-bayern-munich-basketball-v2.jpg": 68208,
   "totalbasket:totalbasket-c-fenerbahce-s-k-v2.jpg": 68494,
   "totalbasket:totalbasket-c-hapoel-tel-aviv-b-c-v2.jpg": 68487,
   "totalbasket:totalbasket-c-iraklis-b-c-v2.jpg": 68259,
   "totalbasket:totalbasket-c-los-angeles-lakers-v2.jpg": 68074,
+  "totalbasket:totalbasket-c-maccabi-tel-aviv-b-c-v2.jpg": 69078,
   "totalbasket:totalbasket-c-olympiacos-b-c-v2.jpg": 68411,
   "totalbasket:totalbasket-c-pallacanestro-treviso-v2.jpg": 68211,
   "totalbasket:totalbasket-c-panathinaikos-b-c-v2.jpg": 68882,
@@ -2819,6 +2850,7 @@
   "totalbasket:totalbasket-p-ibon-navarro.jpg": 68203,
   "totalbasket:totalbasket-p-jabari-parker.jpg": 68200,
   "totalbasket:totalbasket-p-jae-crowder.jpg": 68410,
+  "totalbasket:totalbasket-p-jared-butler.jpg": 69080,
   "totalbasket:totalbasket-p-jason-kidd.jpg": 68729,
   "totalbasket:totalbasket-p-jaylen-brown.jpg": 68955,
   "totalbasket:totalbasket-p-john-konchar.jpg": 68652,
@@ -2839,6 +2871,7 @@
   "totalbasket:totalbasket-p-onuralp-bitim.jpg": 68856,
   "totalbasket:totalbasket-p-patty-mills.jpg": 68409,
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
+  "totalbasket:totalbasket-p-raiquan-gray.jpg": 69081,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
   "totalbasket:totalbasket-p-sarunas-jasikevicius.jpg": 68210,
   "totalbasket:totalbasket-p-tornike-shengelia.jpg": 68654,
