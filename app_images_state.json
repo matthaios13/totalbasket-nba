@@ -1788,6 +1788,30 @@
    "at": "2026-11-09T09:43:31.680665+00:00",
    "pick": "Fenerbahçe S.K."
   },
+  "bala24:86229": {
+   "at": "2026-11-09T10:38:36.467238+00:00",
+   "pick": null
+  },
+  "bala24:86231": {
+   "at": "2026-11-09T10:38:42.567455+00:00",
+   "pick": "face"
+  },
+  "bala24:86237": {
+   "at": "2026-11-09T10:38:28.605312+00:00",
+   "pick": "face"
+  },
+  "bala24:86238": {
+   "at": "2026-11-09T10:38:24.925416+00:00",
+   "pick": "face"
+  },
+  "bala24:86246": {
+   "at": "2026-11-09T10:38:18.602963+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:86252": {
+   "at": "2026-11-09T10:38:13.322353+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2459,6 +2483,7 @@
   "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-fermin-lopez.jpg": 86171,
+  "bala24:bala24-p-giannis-konstantelias.jpg": 86258,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jamal-musiala.jpg": 86099,
@@ -2475,6 +2500,7 @@
   "bala24:bala24-p-panagiotis-retsos.jpg": 85975,
   "bala24:bala24-p-piero-hincapie.jpg": 85087,
   "bala24:bala24-p-rafael-benitez.jpg": 85125,
+  "bala24:bala24-p-rafael-leao.jpg": 86259,
   "bala24:bala24-p-razvan-marin.jpg": 85778,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
   "bala24:bala24-p-simon-banza.jpg": 85618,
