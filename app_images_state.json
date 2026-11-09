@@ -1732,6 +1732,10 @@
    "at": "2026-11-08T23:19:28.973363+00:00",
    "pick": "Olympique de Marseille"
   },
+  "bala24:86176": {
+   "at": "2026-11-09T01:54:22.653797+00:00",
+   "pick": "AEK FC"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2287,12 +2291,17 @@
   "totalbasket:68939": {
    "at": "2026-11-09T00:20:16.075956+00:00",
    "pick": "Denver Nuggets"
+  },
+  "totalbasket:68949": {
+   "at": "2026-11-09T01:54:13.059654+00:00",
+   "pick": "face"
   }
  },
  "media": {
   "bala24:bala24-c-1-fc-nurnberg-v2.jpg": 84634,
   "bala24:bala24-c-ac-milan-v2.jpg": 85122,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
+  "bala24:bala24-c-aek-fc-v2.jpg": 86179,
   "bala24:bala24-c-aek-larnaca-fc-v2.jpg": 85660,
   "bala24:bala24-c-ael-f-c-v2.jpg": 85777,
   "bala24:bala24-c-afc-ajax-v2.jpg": 85319,
@@ -2463,6 +2472,7 @@
   "totalbasket:totalbasket-p-jabari-parker.jpg": 68200,
   "totalbasket:totalbasket-p-jae-crowder.jpg": 68410,
   "totalbasket:totalbasket-p-jason-kidd.jpg": 68729,
+  "totalbasket:totalbasket-p-jaylen-brown.jpg": 68955,
   "totalbasket:totalbasket-p-john-konchar.jpg": 68652,
   "totalbasket:totalbasket-p-kendrick-nunn.jpg": 68275,
   "totalbasket:totalbasket-p-kenneth-faried.jpg": 68496,
