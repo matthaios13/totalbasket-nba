@@ -1844,6 +1844,30 @@
    "at": "2026-11-09T11:39:22.608002+00:00",
    "pick": null
   },
+  "bala24:86282": {
+   "at": "2026-11-09T12:43:45.297843+00:00",
+   "pick": "face"
+  },
+  "bala24:86287": {
+   "at": "2026-11-09T12:43:50.852915+00:00",
+   "pick": "Iliupoli F.C."
+  },
+  "bala24:86294": {
+   "at": "2026-11-09T12:43:35.826294+00:00",
+   "pick": "Anagennisi Karditsa FC"
+  },
+  "bala24:86296": {
+   "at": "2026-11-09T12:43:41.350552+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:86300": {
+   "at": "2026-11-09T12:43:32.055683+00:00",
+   "pick": null
+  },
+  "bala24:86302": {
+   "at": "2026-11-09T12:43:25.056390+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2413,6 +2437,7 @@
   "bala24:bala24-c-aek-larnaca-fc-v2.jpg": 85660,
   "bala24:bala24-c-ael-f-c-v2.jpg": 85777,
   "bala24:bala24-c-afc-ajax-v2.jpg": 85319,
+  "bala24:bala24-c-anagennisi-karditsa-fc-v2.jpg": 86306,
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
   "bala24:bala24-c-aris-fc-v2.jpg": 85729,
   "bala24:bala24-c-aris-thessaloniki-f-c-v2.jpg": 84781,
@@ -2445,6 +2470,7 @@
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-hamburger-sv-v2.jpg": 85086,
   "bala24:bala24-c-hull-city-a-f-c-v2.jpg": 85861,
+  "bala24:bala24-c-iliupoli-f-c-v2.jpg": 86307,
   "bala24:bala24-c-juventus-fc-v2.jpg": 84835,
   "bala24:bala24-c-kalamata-f-c-v2.jpg": 85736,
   "bala24:bala24-c-kalamata-fc-v2.jpg": 84511,
@@ -2512,6 +2538,7 @@
   "bala24:bala24-p-david-silva-footballer-born-1986.jpg": 85757,
   "bala24:bala24-p-didier-deschamps.jpg": 85197,
   "bala24:bala24-p-dimitar-berbatov.jpg": 85966,
+  "bala24:bala24-p-dusan-vlahovic.jpg": 86305,
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
