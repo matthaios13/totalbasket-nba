@@ -2084,6 +2084,26 @@
    "at": "2026-11-10T09:39:03.356311+00:00",
    "pick": "face"
   },
+  "bala24:86492": {
+   "at": "2026-11-10T10:40:29.235666+00:00",
+   "pick": "face"
+  },
+  "bala24:86500": {
+   "at": "2026-11-10T10:40:19.370375+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:86503": {
+   "at": "2026-11-10T10:40:14.999430+00:00",
+   "pick": "Paris Saint-Germain F.C."
+  },
+  "bala24:86509": {
+   "at": "2026-11-10T10:40:10.813031+00:00",
+   "pick": "face"
+  },
+  "bala24:86511": {
+   "at": "2026-11-10T10:40:02.017738+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2833,6 +2853,7 @@
   "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-fermin-lopez.jpg": 86171,
+  "bala24:bala24-p-filip-kostic.jpg": 86517,
   "bala24:bala24-p-giannis-konstantelias.jpg": 86258,
   "bala24:bala24-p-gigi-becali.jpg": 86365,
   "bala24:bala24-p-harry-kane.jpg": 85013,
@@ -2868,6 +2889,7 @@
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-veljko-paunovic.jpg": 86497,
   "bala24:bala24-p-victor-osimhen.jpg": 85616,
+  "bala24:bala24-p-vincent-kompany.jpg": 86516,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
   "bala24:bala24-p-vozinha.jpg": 86283,
   "bala24:bala24-p-xavi.jpg": 85457,
