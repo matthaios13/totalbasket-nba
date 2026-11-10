@@ -88,10 +88,6 @@
    "at": "2026-11-03T22:25:45.501280+00:00",
    "pick": "Atlético Madrid"
   },
-  "bala24:84620": {
-   "at": "2026-11-03T21:26:52.420447+00:00",
-   "pick": null
-  },
   "bala24:84628": {
    "at": "2026-11-03T22:25:52.800871+00:00",
    "pick": "AEK Athens F.C."
@@ -2100,6 +2096,14 @@
    "at": "2026-11-10T21:26:36.242704+00:00",
    "pick": "S.S. Lazio"
   },
+  "bala24:86723": {
+   "at": "2026-11-10T22:25:15.971942+00:00",
+   "pick": "FC Groningen"
+  },
+  "bala24:86728": {
+   "at": "2026-11-10T22:25:07.205837+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2675,6 +2679,10 @@
   "totalbasket:69222": {
    "at": "2026-11-10T21:25:48.341772+00:00",
    "pick": "FC Barcelona Bàsquet"
+  },
+  "totalbasket:69234": {
+   "at": "2026-11-10T22:25:00.882013+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2716,6 +2724,7 @@
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
   "bala24:bala24-c-fc-bayern-munich-v2.jpg": 85619,
+  "bala24:bala24-c-fc-groningen-v2.jpg": 86737,
   "bala24:bala24-c-fc-porto-v2.jpg": 84828,
   "bala24:bala24-c-fc-rapid-bucuresti-v2.jpg": 86378,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
@@ -2838,6 +2847,7 @@
   "bala24:bala24-p-mauro-icardi.jpg": 85830,
   "bala24:bala24-p-michael-olise.jpg": 85862,
   "bala24:bala24-p-mihai-pintilii.jpg": 86726,
+  "bala24:bala24-p-mohamed-salah.jpg": 86736,
   "bala24:bala24-p-oliver-glasner.jpg": 85727,
   "bala24:bala24-p-otto-rehhagel.jpg": 86588,
   "bala24:bala24-p-panagiotis-retsos.jpg": 85975,
