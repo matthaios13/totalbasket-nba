@@ -2132,6 +2132,10 @@
    "at": "2026-11-10T11:37:23.598623+00:00",
    "pick": null
   },
+  "bala24:86534": {
+   "at": "2026-11-10T13:56:46.322635+00:00",
+   "pick": "Panathinaikos FC"
+  },
   "bala24:86535": {
    "at": "2026-11-10T11:37:14.297493+00:00",
    "pick": "PAOK FC"
@@ -2187,6 +2191,46 @@
   "bala24:86579": {
    "at": "2026-11-10T12:39:29.244186+00:00",
    "pick": "Manchester United F.C."
+  },
+  "bala24:86590": {
+   "at": "2026-11-10T13:56:39.092206+00:00",
+   "pick": "face"
+  },
+  "bala24:86600": {
+   "at": "2026-11-10T13:56:29.705519+00:00",
+   "pick": null
+  },
+  "bala24:86603": {
+   "at": "2026-11-10T13:56:23.148797+00:00",
+   "pick": "face"
+  },
+  "bala24:86607": {
+   "at": "2026-11-10T13:56:19.096023+00:00",
+   "pick": "face"
+  },
+  "bala24:86610": {
+   "at": "2026-11-10T13:55:35.411930+00:00",
+   "pick": "face"
+  },
+  "bala24:86611": {
+   "at": "2026-11-10T13:56:08.552861+00:00",
+   "pick": "face"
+  },
+  "bala24:86614": {
+   "at": "2026-11-10T13:56:00.065227+00:00",
+   "pick": "Al Sadd SC"
+  },
+  "bala24:86616": {
+   "at": "2026-11-10T13:55:52.434304+00:00",
+   "pick": "face"
+  },
+  "bala24:86619": {
+   "at": "2026-11-10T13:55:44.438589+00:00",
+   "pick": "Aris Thessaloniki FC"
+  },
+  "bala24:86621": {
+   "at": "2026-11-10T13:55:26.880737+00:00",
+   "pick": "Rangers F.C."
   },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
@@ -2811,6 +2855,10 @@
   "totalbasket:69099": {
    "at": "2026-11-10T01:47:54.550629+00:00",
    "pick": "face"
+  },
+  "totalbasket:69145": {
+   "at": "2026-11-10T13:55:17.641709+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2823,10 +2871,12 @@
   "bala24:bala24-c-aek-larnaca-fc-v2.jpg": 85660,
   "bala24:bala24-c-ael-f-c-v2.jpg": 85777,
   "bala24:bala24-c-afc-ajax-v2.jpg": 85319,
+  "bala24:bala24-c-al-sadd-sc-v2.jpg": 86631,
   "bala24:bala24-c-anagennisi-karditsa-fc-v2.jpg": 86306,
   "bala24:bala24-c-apoel-fc-v2.jpg": 84622,
   "bala24:bala24-c-aris-fc-v2.jpg": 85729,
   "bala24:bala24-c-aris-thessaloniki-f-c-v2.jpg": 84781,
+  "bala24:bala24-c-aris-thessaloniki-fc-v2.jpg": 86630,
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
   "bala24:bala24-c-arsenal-fc-v2.jpg": 85828,
   "bala24:bala24-c-as-roma-v2.jpg": 85923,
@@ -2896,6 +2946,7 @@
   "bala24:bala24-c-pfc-cska-sofia-v2.jpg": 85143,
   "bala24:bala24-c-psv-eindhoven-v2.jpg": 86364,
   "bala24:bala24-c-r-s-c-anderlecht-v2.jpg": 85223,
+  "bala24:bala24-c-rangers-f-c-v2.jpg": 86628,
   "bala24:bala24-c-rc-deportivo-de-la-coruna-v2.jpg": 84830,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
   "bala24:bala24-c-real-sociedad-de-futbol-v2.jpg": 86127,
@@ -2920,6 +2971,7 @@
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
   "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
+  "bala24:bala24-p-arsene-wenger.jpg": 86629,
   "bala24:bala24-p-barnabas-varga.jpg": 85534,
   "bala24:bala24-p-bernardo-silva.jpg": 85728,
   "bala24:bala24-p-carlos-vicens.jpg": 86434,
@@ -2934,6 +2986,7 @@
   "bala24:bala24-p-dusan-tadic.jpg": 86377,
   "bala24:bala24-p-dusan-vlahovic.jpg": 86305,
   "bala24:bala24-p-emre-belozoglu.jpg": 86477,
+  "bala24:bala24-p-endrick.jpg": 86632,
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
@@ -2949,6 +3002,7 @@
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-jude-bellingham.jpg": 85947,
   "bala24:bala24-p-kevin-de-bruyne.jpg": 86418,
+  "bala24:bala24-p-konstantinos-tzolakis.jpg": 86633,
   "bala24:bala24-p-kylian-mbappe.jpg": 85922,
   "bala24:bala24-p-lamine-yamal.jpg": 85643,
   "bala24:bala24-p-levi-garcia.jpg": 85749,
@@ -2971,6 +3025,7 @@
   "bala24:bala24-p-raul.jpg": 86286,
   "bala24:bala24-p-razvan-marin.jpg": 85778,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
+  "bala24:bala24-p-sepp-van-den-berg.jpg": 86634,
   "bala24:bala24-p-simon-banza.jpg": 85618,
   "bala24:bala24-p-vangelis-pavlidis.jpg": 86234,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
