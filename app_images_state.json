@@ -2060,6 +2060,30 @@
    "at": "2026-11-10T07:56:50.799000+00:00",
    "pick": "PAOK FC"
   },
+  "bala24:86476": {
+   "at": "2026-11-10T09:39:39.978986+00:00",
+   "pick": "face"
+  },
+  "bala24:86480": {
+   "at": "2026-11-10T09:39:30.028504+00:00",
+   "pick": "face"
+  },
+  "bala24:86483": {
+   "at": "2026-11-10T09:39:18.842563+00:00",
+   "pick": "Aberdeen FC"
+  },
+  "bala24:86485": {
+   "at": "2026-11-10T09:39:25.518173+00:00",
+   "pick": null
+  },
+  "bala24:86488": {
+   "at": "2026-11-10T09:39:11.789377+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:86490": {
+   "at": "2026-11-10T09:39:03.356311+00:00",
+   "pick": "face"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2688,6 +2712,7 @@
  "media": {
   "bala24:bala24-c-1-fc-nurnberg-v2.jpg": 84634,
   "bala24:bala24-c-aberdeen-f-c-v2.jpg": 86366,
+  "bala24:bala24-c-aberdeen-fc-v2.jpg": 86496,
   "bala24:bala24-c-ac-milan-v2.jpg": 85122,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
   "bala24:bala24-c-aek-fc-v2.jpg": 86179,
@@ -2813,6 +2838,7 @@
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
   "bala24:bala24-p-jamal-musiala.jpg": 86099,
+  "bala24:bala24-p-joao-felix.jpg": 86498,
   "bala24:bala24-p-jorge-jesus.jpg": 85491,
   "bala24:bala24-p-jose-mourinho.jpg": 84934,
   "bala24:bala24-p-jude-bellingham.jpg": 85947,
@@ -2824,6 +2850,7 @@
   "bala24:bala24-p-lula-da-silva.jpg": 86462,
   "bala24:bala24-p-manuel-neuer.jpg": 86453,
   "bala24:bala24-p-marko-arnautovic.jpg": 86419,
+  "bala24:bala24-p-martin-zubimendi.jpg": 86495,
   "bala24:bala24-p-mauro-icardi.jpg": 85830,
   "bala24:bala24-p-michael-olise.jpg": 85862,
   "bala24:bala24-p-oliver-glasner.jpg": 85727,
@@ -2839,6 +2866,7 @@
   "bala24:bala24-p-simon-banza.jpg": 85618,
   "bala24:bala24-p-vangelis-pavlidis.jpg": 86234,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
+  "bala24:bala24-p-veljko-paunovic.jpg": 86497,
   "bala24:bala24-p-victor-osimhen.jpg": 85616,
   "bala24:bala24-p-vinicius-junior.jpg": 85144,
   "bala24:bala24-p-vozinha.jpg": 86283,
