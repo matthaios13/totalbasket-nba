@@ -84,29 +84,9 @@
    "at": "2026-11-05T00:27:44.913691+00:00",
    "pick": null
   },
-  "bala24:84513": {
-   "at": "2026-11-03T17:37:24.326484+00:00",
-   "pick": "Real Madrid CF"
-  },
-  "bala24:84519": {
-   "at": "2026-11-03T17:37:17.475771+00:00",
-   "pick": "Sporting CP"
-  },
-  "bala24:84522": {
-   "at": "2026-11-03T17:37:12.608212+00:00",
-   "pick": "Asteras Tripolis F.C."
-  },
   "bala24:84524": {
    "at": "2026-11-03T19:36:52.937673+00:00",
    "pick": null
-  },
-  "bala24:84528": {
-   "at": "2026-11-03T17:37:06.964037+00:00",
-   "pick": null
-  },
-  "bala24:84529": {
-   "at": "2026-11-03T17:37:02.323733+00:00",
-   "pick": "Olympiacos F.C."
   },
   "bala24:84530": {
    "at": "2026-11-03T18:29:40.579088+00:00",
@@ -2128,6 +2108,14 @@
    "at": "2026-11-10T17:31:59.645044+00:00",
    "pick": "FK Partizan"
   },
+  "bala24:86687": {
+   "at": "2026-11-10T18:27:58.582031+00:00",
+   "pick": null
+  },
+  "bala24:86693": {
+   "at": "2026-11-10T18:27:51.987303+00:00",
+   "pick": "Panionios F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2768,6 +2756,7 @@
   "bala24:bala24-c-panathinaikos-f-c-v2.jpg": 84459,
   "bala24:bala24-c-panathinaikos-fc-v2.jpg": 84505,
   "bala24:bala24-c-panetolikos-f-c-v2.jpg": 84586,
+  "bala24:bala24-c-panionios-f-c-v2.jpg": 86696,
   "bala24:bala24-c-panionios-g-s-s-v2.jpg": 86066,
   "bala24:bala24-c-panionios-g-s-v2.jpg": 86326,
   "bala24:bala24-c-pannaxiakos-f-c-v2.jpg": 84742,
