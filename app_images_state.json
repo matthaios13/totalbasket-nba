@@ -84,42 +84,6 @@
    "at": "2026-11-05T00:27:44.913691+00:00",
    "pick": null
   },
-  "bala24:84472": {
-   "at": "2026-11-03T16:36:32.640440+00:00",
-   "pick": "Kalamata FC"
-  },
-  "bala24:84479": {
-   "at": "2026-11-03T16:36:27.611726+00:00",
-   "pick": "OFI Crete F.C."
-  },
-  "bala24:84481": {
-   "at": "2026-11-03T16:36:21.136235+00:00",
-   "pick": "Asteras Tripolis F.C."
-  },
-  "bala24:84484": {
-   "at": "2026-11-03T16:36:14.243414+00:00",
-   "pick": "Paris Saint-Germain F.C."
-  },
-  "bala24:84486": {
-   "at": "2026-11-03T16:36:09.844977+00:00",
-   "pick": null
-  },
-  "bala24:84488": {
-   "at": "2026-11-03T16:36:04.543155+00:00",
-   "pick": "Feyenoord"
-  },
-  "bala24:84490": {
-   "at": "2026-11-03T16:35:58.525953+00:00",
-   "pick": "Panathinaikos FC"
-  },
-  "bala24:84494": {
-   "at": "2026-11-03T16:35:52.822680+00:00",
-   "pick": "Stade Rennais FC"
-  },
-  "bala24:84501": {
-   "at": "2026-11-03T16:35:45.034633+00:00",
-   "pick": "Panathinaikos F.C."
-  },
   "bala24:84513": {
    "at": "2026-11-03T17:37:24.326484+00:00",
    "pick": "Real Madrid CF"
@@ -2148,6 +2112,22 @@
    "at": "2026-11-10T15:30:17.321194+00:00",
    "pick": "face"
   },
+  "bala24:86672": {
+   "at": "2026-11-10T17:32:25.589799+00:00",
+   "pick": "FC Barcelona"
+  },
+  "bala24:86675": {
+   "at": "2026-11-10T17:31:54.519664+00:00",
+   "pick": null
+  },
+  "bala24:86676": {
+   "at": "2026-11-10T17:32:13.914896+00:00",
+   "pick": "face"
+  },
+  "bala24:86678": {
+   "at": "2026-11-10T17:31:59.645044+00:00",
+   "pick": "FK Partizan"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2255,10 +2235,6 @@
   "totalbasket:67337": {
    "at": "2026-11-04T17:36:47.066755+00:00",
    "pick": "face"
-  },
-  "totalbasket:68075": {
-   "at": "2026-11-03T16:35:37.510889+00:00",
-   "pick": "PAOK BC"
   },
   "totalbasket:68095": {
    "at": "2026-11-03T20:29:52.125866+00:00",
@@ -2761,6 +2737,7 @@
   "bala24:bala24-c-ferencvarosi-tc-v2.jpg": 86660,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-fk-bod-glimt-v2.jpg": 86033,
+  "bala24:bala24-c-fk-partizan-v2.jpg": 86684,
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-hamburger-sv-v2.jpg": 85086,
   "bala24:bala24-c-hull-city-a-f-c-v2.jpg": 85861,
@@ -2824,6 +2801,7 @@
   "bala24:bala24-c-vfb-stuttgart-v2.jpg": 85145,
   "bala24:bala24-c-villarreal-cf-v2.jpg": 86139,
   "bala24:bala24-c-volos-n-f-c-v2.jpg": 85737,
+  "bala24:bala24-p-aleksander-ceferin.jpg": 86685,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
