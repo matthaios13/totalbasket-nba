@@ -2052,6 +2052,18 @@
    "at": "2026-11-11T17:42:29.732461+00:00",
    "pick": null
   },
+  "bala24:86955": {
+   "at": "2026-11-11T18:35:49.976024+00:00",
+   "pick": "Fram Reykjavík"
+  },
+  "bala24:86958": {
+   "at": "2026-11-11T18:35:58.791370+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:86966": {
+   "at": "2026-11-11T18:35:46.101293+00:00",
+   "pick": null
+  },
   "totalbasket:68219": {
    "at": "2026-11-04T18:37:26.228496+00:00",
    "pick": "face"
@@ -2633,6 +2645,7 @@
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-fk-bod-glimt-v2.jpg": 86033,
   "bala24:bala24-c-fk-partizan-v2.jpg": 86684,
+  "bala24:bala24-c-fram-reykjavik-v2.jpg": 86971,
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-hamburger-sv-v2.jpg": 85086,
   "bala24:bala24-c-hibernian-f-c-v2.jpg": 86931,
