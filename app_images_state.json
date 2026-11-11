@@ -20,6 +20,10 @@
    "at": "2026-11-04T17:41:56.946847+00:00",
    "pick": null
   },
+  "bala24:83613": {
+   "at": "2026-11-11T11:41:34.650297+00:00",
+   "pick": "Brentford F.C."
+  },
   "bala24:83628": {
    "at": "2026-11-04T17:41:54.112209+00:00",
    "pick": null
@@ -88,28 +92,8 @@
    "at": "2026-11-04T12:34:49.961067+00:00",
    "pick": "AEK Athens F.C."
   },
-  "bala24:84677": {
-   "at": "2026-11-04T10:53:04.154035+00:00",
-   "pick": "Real Madrid CF"
-  },
-  "bala24:84679": {
-   "at": "2026-11-04T10:52:55.553878+00:00",
-   "pick": "FC Barcelona"
-  },
-  "bala24:84681": {
-   "at": "2026-11-04T10:52:50.642453+00:00",
-   "pick": "APOEL FC"
-  },
-  "bala24:84683": {
-   "at": "2026-11-04T10:52:45.246863+00:00",
-   "pick": "Olympiacos F.C."
-  },
   "bala24:84686": {
    "at": "2026-11-04T12:35:01.689999+00:00",
-   "pick": "AEK Athens F.C."
-  },
-  "bala24:84690": {
-   "at": "2026-11-04T10:52:38.730214+00:00",
    "pick": "AEK Athens F.C."
   },
   "bala24:84696": {
@@ -2144,6 +2128,14 @@
    "at": "2026-11-11T10:44:58.430766+00:00",
    "pick": null
   },
+  "bala24:86800": {
+   "at": "2026-11-11T11:41:40.376948+00:00",
+   "pick": null
+  },
+  "bala24:86807": {
+   "at": "2026-11-11T11:41:27.162911+00:00",
+   "pick": "AEK F.C."
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2771,6 +2763,7 @@
   "bala24:bala24-c-aberdeen-fc-v2.jpg": 86496,
   "bala24:bala24-c-ac-milan-v2.jpg": 85122,
   "bala24:bala24-c-aek-athens-f-c-v2.jpg": 84454,
+  "bala24:bala24-c-aek-f-c-v2.jpg": 86812,
   "bala24:bala24-c-aek-fc-v2.jpg": 86179,
   "bala24:bala24-c-aek-larnaca-fc-v2.jpg": 85660,
   "bala24:bala24-c-ael-f-c-v2.jpg": 85777,
@@ -2795,6 +2788,7 @@
   "bala24:bala24-c-az-alkmaar-v2.jpg": 85196,
   "bala24:bala24-c-bologna-fc-1909-v2.jpg": 85896,
   "bala24:bala24-c-borussia-dortmund-v2.jpg": 84709,
+  "bala24:bala24-c-brentford-f-c-v2.jpg": 86813,
   "bala24:bala24-c-brighton-hove-albion-f-c-v2.jpg": 85661,
   "bala24:bala24-c-c-f-monterrey-v2.jpg": 85734,
   "bala24:bala24-c-ca-osasuna-v2.jpg": 85895,
