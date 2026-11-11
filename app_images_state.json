@@ -84,14 +84,6 @@
    "at": "2026-11-05T00:27:44.913691+00:00",
    "pick": null
   },
-  "bala24:84640": {
-   "at": "2026-11-03T23:25:22.780082+00:00",
-   "pick": null
-  },
-  "bala24:84644": {
-   "at": "2026-11-03T23:25:26.968833+00:00",
-   "pick": "Manchester United FC"
-  },
   "bala24:84652": {
    "at": "2026-11-04T08:03:01.978238+00:00",
    "pick": "Panathinaikos F.C."
@@ -2675,6 +2667,10 @@
   "totalbasket:69234": {
    "at": "2026-11-10T22:25:00.882013+00:00",
    "pick": "face"
+  },
+  "totalbasket:69246": {
+   "at": "2026-11-11T00:22:23.026491+00:00",
+   "pick": "PAOK FC"
   }
  },
  "media": {
@@ -2892,6 +2888,7 @@
   "totalbasket:totalbasket-c-panionios-b-c-v2.jpg": 68197,
   "totalbasket:totalbasket-c-paok-b-c-v2.jpg": 68129,
   "totalbasket:totalbasket-c-paok-bc-v2.jpg": 68077,
+  "totalbasket:totalbasket-c-paok-fc-v2.jpg": 69247,
   "totalbasket:totalbasket-c-promitheas-patras-b-c-v2.jpg": 68206,
   "totalbasket:totalbasket-c-real-madrid-baloncesto-v2.jpg": 68209,
   "totalbasket:totalbasket-c-reyer-venezia-v2.jpg": 68215,
