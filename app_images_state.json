@@ -2124,6 +2124,42 @@
    "at": "2026-11-11T13:58:46.605949+00:00",
    "pick": "face"
   },
+  "bala24:86855": {
+   "at": "2026-11-11T15:31:54.144965+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:86857": {
+   "at": "2026-11-11T15:32:01.294638+00:00",
+   "pick": null
+  },
+  "bala24:86861": {
+   "at": "2026-11-11T15:31:47.827595+00:00",
+   "pick": "PFC CSKA Sofia"
+  },
+  "bala24:86863": {
+   "at": "2026-11-11T15:31:25.231342+00:00",
+   "pick": "Rangers F.C."
+  },
+  "bala24:86865": {
+   "at": "2026-11-11T15:31:39.293525+00:00",
+   "pick": "FC Schalke 04"
+  },
+  "bala24:86870": {
+   "at": "2026-11-11T15:31:33.550981+00:00",
+   "pick": "Real Sociedad"
+  },
+  "bala24:86874": {
+   "at": "2026-11-11T15:31:29.657160+00:00",
+   "pick": null
+  },
+  "bala24:86880": {
+   "at": "2026-11-11T15:31:20.684555+00:00",
+   "pick": null
+  },
+  "bala24:86885": {
+   "at": "2026-11-11T15:31:13.498420+00:00",
+   "pick": "FC Andorra"
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2735,6 +2771,14 @@
   "totalbasket:69327": {
    "at": "2026-11-11T12:43:25.663221+00:00",
    "pick": null
+  },
+  "totalbasket:69331": {
+   "at": "2026-11-11T15:31:08.282926+00:00",
+   "pick": null
+  },
+  "totalbasket:69332": {
+   "at": "2026-11-11T15:31:00.281385+00:00",
+   "pick": "Doxa Lefkada"
   }
  },
  "media": {
@@ -2777,11 +2821,13 @@
   "bala24:bala24-c-cardiff-met-fc-v2.jpg": 86856,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
+  "bala24:bala24-c-fc-andorra-v2.jpg": 86890,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
   "bala24:bala24-c-fc-bayern-munich-v2.jpg": 85619,
   "bala24:bala24-c-fc-groningen-v2.jpg": 86737,
   "bala24:bala24-c-fc-porto-v2.jpg": 84828,
   "bala24:bala24-c-fc-rapid-bucuresti-v2.jpg": 86378,
+  "bala24:bala24-c-fc-schalke-04-v2.jpg": 86891,
   "bala24:bala24-c-fenerbahce-s-k-v2.jpg": 84585,
   "bala24:bala24-c-ferencvarosi-tc-v2.jpg": 86660,
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
@@ -2941,6 +2987,7 @@
   "totalbasket:totalbasket-c-cb-canarias-v2.jpg": 69291,
   "totalbasket:totalbasket-c-denver-nuggets-v2.jpg": 68946,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
+  "totalbasket:totalbasket-c-doxa-lefkada-v2.jpg": 69348,
   "totalbasket:totalbasket-c-dubai-basketball-v2.jpg": 69079,
   "totalbasket:totalbasket-c-fc-barcelona-basquet-v2.jpg": 69227,
   "totalbasket:totalbasket-c-fc-bayern-munich-basketball-v2.jpg": 68208,
