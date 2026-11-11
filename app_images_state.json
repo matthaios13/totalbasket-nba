@@ -8,50 +8,6 @@
    "at": "2026-11-05T00:27:44.913691+00:00",
    "pick": null
   },
-  "bala24:84842": {
-   "at": "2026-11-04T18:38:03.955917+00:00",
-   "pick": "face"
-  },
-  "bala24:84845": {
-   "at": "2026-11-04T18:37:57.261369+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:84848": {
-   "at": "2026-11-04T18:37:49.594195+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:84850": {
-   "at": "2026-11-04T18:37:45.407477+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:84854": {
-   "at": "2026-11-04T18:37:35.634558+00:00",
-   "pick": "AEK Athens F.C."
-  },
-  "bala24:84856": {
-   "at": "2026-11-04T18:37:40.334445+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:84861": {
-   "at": "2026-11-04T19:44:49.983324+00:00",
-   "pick": "PAOK FC"
-  },
-  "bala24:84865": {
-   "at": "2026-11-04T19:44:17.510445+00:00",
-   "pick": "face"
-  },
-  "bala24:84866": {
-   "at": "2026-11-04T19:44:41.307009+00:00",
-   "pick": "AEK Athens F.C."
-  },
-  "bala24:84869": {
-   "at": "2026-11-04T19:44:35.157345+00:00",
-   "pick": "OFI Crete F.C."
-  },
-  "bala24:84878": {
-   "at": "2026-11-04T19:44:27.218542+00:00",
-   "pick": "face"
-  },
   "bala24:84886": {
    "at": "2026-11-04T20:36:28.485518+00:00",
    "pick": "face"
@@ -2060,29 +2016,17 @@
    "at": "2026-11-11T18:35:58.791370+00:00",
    "pick": "PAOK FC"
   },
+  "bala24:86964": {
+   "at": "2026-11-11T19:44:57.087131+00:00",
+   "pick": "face"
+  },
   "bala24:86966": {
    "at": "2026-11-11T18:35:46.101293+00:00",
    "pick": null
   },
-  "totalbasket:68219": {
-   "at": "2026-11-04T18:37:26.228496+00:00",
-   "pick": "face"
-  },
-  "totalbasket:68225": {
-   "at": "2026-11-04T19:44:07.511035+00:00",
-   "pick": "Aris B.C."
-  },
-  "totalbasket:68228": {
-   "at": "2026-11-04T19:43:58.087030+00:00",
-   "pick": "face"
-  },
-  "totalbasket:68239": {
-   "at": "2026-11-04T19:43:47.076866+00:00",
-   "pick": "Promitheas Patras B.C."
-  },
-  "totalbasket:68242": {
-   "at": "2026-11-04T19:43:36.809013+00:00",
-   "pick": "face"
+  "bala24:86972": {
+   "at": "2026-11-11T19:45:01.659946+00:00",
+   "pick": "Panathinaikos F.C."
   },
   "totalbasket:68245": {
    "at": "2026-11-04T20:35:51.820395+00:00",
@@ -2591,6 +2535,34 @@
   "totalbasket:69358": {
    "at": "2026-11-11T16:37:33.824355+00:00",
    "pick": "face"
+  },
+  "totalbasket:69381": {
+   "at": "2026-11-11T19:44:48.026985+00:00",
+   "pick": "Fenerbahçe S.K."
+  },
+  "totalbasket:69383": {
+   "at": "2026-11-11T19:44:42.639319+00:00",
+   "pick": null
+  },
+  "totalbasket:69386": {
+   "at": "2026-11-11T19:44:36.541814+00:00",
+   "pick": null
+  },
+  "totalbasket:69391": {
+   "at": "2026-11-11T19:44:33.041124+00:00",
+   "pick": null
+  },
+  "totalbasket:69394": {
+   "at": "2026-11-11T19:44:28.959519+00:00",
+   "pick": null
+  },
+  "totalbasket:69399": {
+   "at": "2026-11-11T19:44:24.248021+00:00",
+   "pick": null
+  },
+  "totalbasket:69402": {
+   "at": "2026-11-11T19:44:16.500309+00:00",
+   "pick": "Athinaikos W.B.C."
   }
  },
  "media": {
@@ -2798,6 +2770,7 @@
   "totalbasket:totalbasket-c-amyntas-b-c-v2.jpg": 69228,
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-aris-thessaloniki-b-c-v2.jpg": 68451,
+  "totalbasket:totalbasket-c-athinaikos-w-b-c-v2.jpg": 69407,
   "totalbasket:totalbasket-c-atlanta-hawks-v2.jpg": 69044,
   "totalbasket:totalbasket-c-basquet-manresa-v2.jpg": 69292,
   "totalbasket:totalbasket-c-cb-canarias-v2.jpg": 69291,
