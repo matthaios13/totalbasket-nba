@@ -84,14 +84,6 @@
    "at": "2026-11-05T00:27:44.913691+00:00",
    "pick": null
   },
-  "bala24:84652": {
-   "at": "2026-11-04T08:03:01.978238+00:00",
-   "pick": "Panathinaikos F.C."
-  },
-  "bala24:84654": {
-   "at": "2026-11-04T08:02:55.250253+00:00",
-   "pick": "AEK Athens F.C."
-  },
   "bala24:84672": {
    "at": "2026-11-04T12:34:49.961067+00:00",
    "pick": "AEK Athens F.C."
@@ -2112,6 +2104,30 @@
    "at": "2026-11-11T08:02:19.409159+00:00",
    "pick": "face"
   },
+  "bala24:86761": {
+   "at": "2026-11-11T09:42:51.238703+00:00",
+   "pick": null
+  },
+  "bala24:86765": {
+   "at": "2026-11-11T09:42:43.241511+00:00",
+   "pick": "Panetolikos F.C."
+  },
+  "bala24:86769": {
+   "at": "2026-11-11T09:42:46.892198+00:00",
+   "pick": null
+  },
+  "bala24:86772": {
+   "at": "2026-11-11T09:42:37.428109+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:86775": {
+   "at": "2026-11-11T09:42:30.331129+00:00",
+   "pick": null
+  },
+  "bala24:86779": {
+   "at": "2026-11-11T09:42:24.930128+00:00",
+   "pick": null
+  },
   "totalbasket:66976": {
    "at": "2026-11-04T17:40:04.231057+00:00",
    "pick": "Reyer Venezia"
@@ -2687,6 +2703,18 @@
   "totalbasket:69246": {
    "at": "2026-11-11T00:22:23.026491+00:00",
    "pick": "PAOK FC"
+  },
+  "totalbasket:69283": {
+   "at": "2026-11-11T09:42:16.863935+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:69285": {
+   "at": "2026-11-11T09:42:07.430793+00:00",
+   "pick": "Bàsquet Manresa"
+  },
+  "totalbasket:69288": {
+   "at": "2026-11-11T09:41:58.082641+00:00",
+   "pick": "CB Canarias"
   }
  },
  "media": {
@@ -2885,6 +2913,8 @@
   "totalbasket:totalbasket-c-aris-b-c-v2.jpg": 68069,
   "totalbasket:totalbasket-c-aris-thessaloniki-b-c-v2.jpg": 68451,
   "totalbasket:totalbasket-c-atlanta-hawks-v2.jpg": 69044,
+  "totalbasket:totalbasket-c-basquet-manresa-v2.jpg": 69292,
+  "totalbasket:totalbasket-c-cb-canarias-v2.jpg": 69291,
   "totalbasket:totalbasket-c-denver-nuggets-v2.jpg": 68946,
   "totalbasket:totalbasket-c-doxa-lefkada-b-c-v2.jpg": 68202,
   "totalbasket:totalbasket-c-dubai-basketball-v2.jpg": 69079,
