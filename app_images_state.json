@@ -36,14 +36,6 @@
    "at": "2026-11-05T15:42:31.530845+00:00",
    "pick": "Real Sociedad"
   },
-  "bala24:85102": {
-   "at": "2026-11-05T15:42:23.721617+00:00",
-   "pick": "AC Milan"
-  },
-  "bala24:85104": {
-   "at": "2026-11-05T15:42:15.674050+00:00",
-   "pick": "Panathinaikos FC"
-  },
   "bala24:85119": {
    "at": "2026-11-05T16:50:30.404211+00:00",
    "pick": "VfB Stuttgart"
@@ -1944,9 +1936,37 @@
    "at": "2026-11-12T08:43:46.159809+00:00",
    "pick": "face"
   },
+  "bala24:87055": {
+   "at": "2026-11-12T15:42:25.049837+00:00",
+   "pick": "Manchester United FC"
+  },
+  "bala24:87060": {
+   "at": "2026-11-12T15:42:17.277554+00:00",
+   "pick": "face"
+  },
+  "bala24:87064": {
+   "at": "2026-11-12T15:42:09.369251+00:00",
+   "pick": "face"
+  },
+  "bala24:87065": {
+   "at": "2026-11-12T15:42:03.620521+00:00",
+   "pick": null
+  },
+  "bala24:87072": {
+   "at": "2026-11-12T15:41:59.794869+00:00",
+   "pick": "face"
+  },
+  "bala24:87074": {
+   "at": "2026-11-12T15:41:51.673992+00:00",
+   "pick": "Athlitiki Enosi Larissa F.C."
+  },
   "bala24:87077": {
    "at": "2026-11-12T14:04:23.428052+00:00",
    "pick": "Panathinaikos FC"
+  },
+  "bala24:87078": {
+   "at": "2026-11-12T15:41:46.419803+00:00",
+   "pick": "Manchester United F.C."
   },
   "bala24:87081": {
    "at": "2026-11-12T14:03:33.702598+00:00",
@@ -2020,6 +2040,10 @@
    "at": "2026-11-12T14:02:24.635384+00:00",
    "pick": null
   },
+  "bala24:87141": {
+   "at": "2026-11-12T15:41:29.231051+00:00",
+   "pick": null
+  },
   "bala24:87142": {
    "at": "2026-11-12T14:02:15.324247+00:00",
    "pick": "Panathinaiko F.C."
@@ -2044,9 +2068,25 @@
    "at": "2026-11-12T14:01:47.115701+00:00",
    "pick": "FC Barcelona"
   },
-  "totalbasket:68418": {
-   "at": "2026-11-05T15:42:08.899847+00:00",
+  "bala24:87166": {
+   "at": "2026-11-12T15:41:18.461009+00:00",
+   "pick": "Sevilla FC"
+  },
+  "bala24:87172": {
+   "at": "2026-11-12T15:41:37.705662+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:87174": {
+   "at": "2026-11-12T15:41:31.949798+00:00",
    "pick": "face"
+  },
+  "bala24:87178": {
+   "at": "2026-11-12T15:41:40.068041+00:00",
+   "pick": null
+  },
+  "bala24:87188": {
+   "at": "2026-11-12T15:41:24.375452+00:00",
+   "pick": "Panionios G.S."
   },
   "totalbasket:68432": {
    "at": "2026-11-05T18:30:32.527801+00:00",
@@ -2591,6 +2631,18 @@
   "totalbasket:69542": {
    "at": "2026-11-12T14:01:04.248005+00:00",
    "pick": null
+  },
+  "totalbasket:69546": {
+   "at": "2026-11-12T15:41:11.332468+00:00",
+   "pick": null
+  },
+  "totalbasket:69550": {
+   "at": "2026-11-12T15:41:06.255063+00:00",
+   "pick": "Virtus Bologna"
+  },
+  "totalbasket:69553": {
+   "at": "2026-11-12T15:41:00.559879+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2620,6 +2672,7 @@
   "bala24:bala24-c-atalanta-b-c-v2.jpg": 84831,
   "bala24:bala24-c-athens-kallithea-f-c-v2.jpg": 85989,
   "bala24:bala24-c-athens-kallithea-fc-v2.jpg": 85222,
+  "bala24:bala24-c-athlitiki-enosi-larissa-f-c-v2.jpg": 87199,
   "bala24:bala24-c-atletico-madrid-v2.jpg": 84645,
   "bala24:bala24-c-atromitos-f-c-v2.jpg": 84457,
   "bala24:bala24-c-az-alkmaar-v2.jpg": 85196,
@@ -2749,8 +2802,10 @@
   "bala24:bala24-p-endrick.jpg": 86632,
   "bala24:bala24-p-enzo-maresca.jpg": 85731,
   "bala24:bala24-p-erling-haaland.jpg": 85974,
+  "bala24:bala24-p-fabian-hurzeler.jpg": 87200,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
   "bala24:bala24-p-fermin-lopez.jpg": 86171,
+  "bala24:bala24-p-fernando-muslera.jpg": 87198,
   "bala24:bala24-p-filip-kostic.jpg": 86517,
   "bala24:bala24-p-gianni-infantino.jpg": 86659,
   "bala24:bala24-p-giannis-konstantelias.jpg": 86258,
@@ -2797,6 +2852,7 @@
   "bala24:bala24-p-sepp-van-den-berg.jpg": 86634,
   "bala24:bala24-p-simon-banza.jpg": 85618,
   "bala24:bala24-p-thomas-strakosha.jpg": 87052,
+  "bala24:bala24-p-thomas-tuchel.jpg": 87201,
   "bala24:bala24-p-vangelis-pavlidis.jpg": 86234,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-veljko-paunovic.jpg": 86497,
@@ -2847,6 +2903,7 @@
   "totalbasket:totalbasket-c-saski-baskonia-v2.jpg": 68214,
   "totalbasket:totalbasket-c-utah-jazz-v2.jpg": 68196,
   "totalbasket:totalbasket-c-vikos-ioannina-v2.jpg": 68199,
+  "totalbasket:totalbasket-c-virtus-bologna-v2.jpg": 69560,
   "totalbasket:totalbasket-c-zalgiris-kaunas-v2.jpg": 69320,
   "totalbasket:totalbasket-p-alexandros-samodurov.jpg": 68732,
   "totalbasket:totalbasket-p-andrea-trinchieri.jpg": 68130,
