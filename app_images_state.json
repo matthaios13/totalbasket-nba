@@ -2060,9 +2060,29 @@
    "at": "2026-11-12T19:40:07.270925+00:00",
    "pick": "PAOK FC"
   },
+  "bala24:87301": {
+   "at": "2026-11-12T20:34:51.977750+00:00",
+   "pick": null
+  },
+  "bala24:87302": {
+   "at": "2026-11-12T20:34:44.465692+00:00",
+   "pick": "Sporting Kansas City"
+  },
   "bala24:87303": {
    "at": "2026-11-12T19:40:03.432721+00:00",
    "pick": null
+  },
+  "bala24:87310": {
+   "at": "2026-11-12T20:34:37.688466+00:00",
+   "pick": "face"
+  },
+  "bala24:87319": {
+   "at": "2026-11-12T20:34:32.003741+00:00",
+   "pick": "England national football team"
+  },
+  "bala24:87322": {
+   "at": "2026-11-12T20:34:23.824871+00:00",
+   "pick": "OFI Crete F.C."
   },
   "totalbasket:68450": {
    "at": "2026-11-05T22:30:08.828930+00:00",
@@ -2619,6 +2639,14 @@
   "totalbasket:69585": {
    "at": "2026-11-12T18:35:15.056524+00:00",
    "pick": "face"
+  },
+  "totalbasket:69602": {
+   "at": "2026-11-12T20:34:16.766652+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:69605": {
+   "at": "2026-11-12T20:34:11.346206+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2741,6 +2769,7 @@
   "bala24:bala24-c-sc-heerenveen-v2.jpg": 86011,
   "bala24:bala24-c-sevilla-fc-v2.jpg": 85581,
   "bala24:bala24-c-sporting-cp-v2.jpg": 84539,
+  "bala24:bala24-c-sporting-kansas-city-v2.jpg": 87335,
   "bala24:bala24-c-ssc-napoli-v2.jpg": 85802,
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
