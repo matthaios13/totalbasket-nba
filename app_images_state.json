@@ -2104,6 +2104,30 @@
    "at": "2026-11-12T21:31:19.526336+00:00",
    "pick": "face"
   },
+  "bala24:87360": {
+   "at": "2026-11-12T22:29:38.905715+00:00",
+   "pick": "England national football team"
+  },
+  "bala24:87361": {
+   "at": "2026-11-12T22:29:10.092993+00:00",
+   "pick": null
+  },
+  "bala24:87362": {
+   "at": "2026-11-12T22:29:30.901133+00:00",
+   "pick": "Aris Thessaloniki F.C."
+  },
+  "bala24:87367": {
+   "at": "2026-11-12T22:29:25.744385+00:00",
+   "pick": null
+  },
+  "bala24:87370": {
+   "at": "2026-11-12T22:29:17.028218+00:00",
+   "pick": "face"
+  },
+  "bala24:87377": {
+   "at": "2026-11-12T22:29:04.141921+00:00",
+   "pick": null
+  },
   "totalbasket:68450": {
    "at": "2026-11-05T22:30:08.828930+00:00",
    "pick": "face"
@@ -2659,6 +2683,30 @@
   "totalbasket:69612": {
    "at": "2026-11-12T21:31:00.773884+00:00",
    "pick": "face"
+  },
+  "totalbasket:69615": {
+   "at": "2026-11-12T22:28:57.392196+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:69622": {
+   "at": "2026-11-12T22:28:51.714346+00:00",
+   "pick": "Maccabi Tel Aviv B.C."
+  },
+  "totalbasket:69625": {
+   "at": "2026-11-12T22:28:43.601383+00:00",
+   "pick": null
+  },
+  "totalbasket:69627": {
+   "at": "2026-11-12T22:28:33.305321+00:00",
+   "pick": "Olympiacos B.C."
+  },
+  "totalbasket:69629": {
+   "at": "2026-11-12T22:28:38.282692+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69639": {
+   "at": "2026-11-12T22:28:27.684984+00:00",
+   "pick": "Real Madrid Baloncesto"
   }
  },
  "media": {
@@ -2795,6 +2843,7 @@
   "bala24:bala24-c-villarreal-cf-v2.jpg": 86139,
   "bala24:bala24-c-volos-n-f-c-v2.jpg": 85737,
   "bala24:bala24-p-aleksander-ceferin.jpg": 86685,
+  "bala24:bala24-p-alex-baena.jpg": 87381,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
@@ -2953,6 +3002,7 @@
   "totalbasket:totalbasket-p-jason-kidd.jpg": 68729,
   "totalbasket:totalbasket-p-jaylen-brown.jpg": 68955,
   "totalbasket:totalbasket-p-john-konchar.jpg": 68652,
+  "totalbasket:totalbasket-p-jonas-valanciunas.jpg": 69643,
   "totalbasket:totalbasket-p-kendrick-nunn.jpg": 68275,
   "totalbasket:totalbasket-p-kenneth-faried.jpg": 68496,
   "totalbasket:totalbasket-p-killian-hayes.jpg": 68213,
