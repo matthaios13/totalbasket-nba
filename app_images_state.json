@@ -4,26 +4,6 @@
    "at": "2026-11-11T11:41:34.650297+00:00",
    "pick": "Brentford F.C."
   },
-  "bala24:84970": {
-   "at": "2026-11-05T08:04:58.742817+00:00",
-   "pick": "Panathinaikos F.C."
-  },
-  "bala24:84974": {
-   "at": "2026-11-05T08:04:48.649838+00:00",
-   "pick": "OFI"
-  },
-  "bala24:84979": {
-   "at": "2026-11-05T08:04:42.882708+00:00",
-   "pick": null
-  },
-  "bala24:84982": {
-   "at": "2026-11-05T08:04:38.110342+00:00",
-   "pick": "Como 1907"
-  },
-  "bala24:84985": {
-   "at": "2026-11-05T08:04:33.337323+00:00",
-   "pick": "Como 1907"
-  },
   "bala24:84988": {
    "at": "2026-11-05T09:43:50.457012+00:00",
    "pick": "Como 1907"
@@ -1944,6 +1924,10 @@
    "at": "2026-11-11T17:42:29.732461+00:00",
    "pick": null
   },
+  "bala24:86954": {
+   "at": "2026-11-12T08:43:54.644427+00:00",
+   "pick": "face"
+  },
   "bala24:86955": {
    "at": "2026-11-11T18:35:49.976024+00:00",
    "pick": "Fram Reykjavík"
@@ -1980,13 +1964,49 @@
    "at": "2026-11-11T22:38:51.896568+00:00",
    "pick": "face"
   },
-  "totalbasket:68365": {
-   "at": "2026-11-05T08:04:26.864445+00:00",
+  "bala24:87002": {
+   "at": "2026-11-12T08:44:38.052054+00:00",
+   "pick": "Trabzonspor"
+  },
+  "bala24:87004": {
+   "at": "2026-11-12T08:44:13.187763+00:00",
    "pick": null
   },
-  "totalbasket:68368": {
-   "at": "2026-11-05T08:04:23.523144+00:00",
+  "bala24:87010": {
+   "at": "2026-11-12T08:45:03.523744+00:00",
+   "pick": "face"
+  },
+  "bala24:87014": {
+   "at": "2026-11-12T08:44:56.689516+00:00",
+   "pick": "face"
+  },
+  "bala24:87018": {
+   "at": "2026-11-12T08:44:53.364541+00:00",
    "pick": null
+  },
+  "bala24:87021": {
+   "at": "2026-11-12T08:44:47.657755+00:00",
+   "pick": "Asteras Tripoli F.C."
+  },
+  "bala24:87026": {
+   "at": "2026-11-12T08:44:33.030367+00:00",
+   "pick": "Rangers F.C."
+  },
+  "bala24:87029": {
+   "at": "2026-11-12T08:44:27.372233+00:00",
+   "pick": null
+  },
+  "bala24:87034": {
+   "at": "2026-11-12T08:44:16.626848+00:00",
+   "pick": "face"
+  },
+  "bala24:87038": {
+   "at": "2026-11-12T08:44:04.772417+00:00",
+   "pick": "Real Betis Balompié"
+  },
+  "bala24:87043": {
+   "at": "2026-11-12T08:43:46.159809+00:00",
+   "pick": "face"
   },
   "totalbasket:68372": {
    "at": "2026-11-05T09:43:25.827727+00:00",
@@ -2527,6 +2547,22 @@
   "totalbasket:69503": {
    "at": "2026-11-12T05:44:24.421595+00:00",
    "pick": "face"
+  },
+  "totalbasket:69521": {
+   "at": "2026-11-12T08:43:38.446236+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69524": {
+   "at": "2026-11-12T08:43:29.876490+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69526": {
+   "at": "2026-11-12T08:43:22.038670+00:00",
+   "pick": null
+  },
+  "totalbasket:69528": {
+   "at": "2026-11-12T08:43:16.271283+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2550,6 +2586,7 @@
   "bala24:bala24-c-arsenal-f-c-v2.jpg": 84450,
   "bala24:bala24-c-arsenal-fc-v2.jpg": 85828,
   "bala24:bala24-c-as-roma-v2.jpg": 85923,
+  "bala24:bala24-c-asteras-tripoli-f-c-v2.jpg": 87054,
   "bala24:bala24-c-asteras-tripolis-f-c-v2.jpg": 84510,
   "bala24:bala24-c-asteras-tripolis-fc-v2.jpg": 84782,
   "bala24:bala24-c-atalanta-b-c-v2.jpg": 84831,
@@ -2629,6 +2666,7 @@
   "bala24:bala24-c-r-s-c-anderlecht-v2.jpg": 85223,
   "bala24:bala24-c-rangers-f-c-v2.jpg": 86628,
   "bala24:bala24-c-rc-deportivo-de-la-coruna-v2.jpg": 84830,
+  "bala24:bala24-c-real-betis-balompie-v2.jpg": 87051,
   "bala24:bala24-c-real-madrid-cf-v2.jpg": 84451,
   "bala24:bala24-c-real-sociedad-de-futbol-v2.jpg": 86127,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
@@ -2644,6 +2682,7 @@
   "bala24:bala24-c-stade-rennais-f-c-v2.jpg": 84808,
   "bala24:bala24-c-stade-rennais-fc-v2.jpg": 84504,
   "bala24:bala24-c-torino-fc-v2.jpg": 85804,
+  "bala24:bala24-c-trabzonspor-v2.jpg": 87053,
   "bala24:bala24-c-tsg-hoffenheim-v2.jpg": 86154,
   "bala24:bala24-c-us-sassuolo-calcio-v2.jpg": 84833,
   "bala24:bala24-c-valencia-cf-v2.jpg": 86744,
@@ -2717,10 +2756,13 @@
   "bala24:bala24-p-raphinha.jpg": 86585,
   "bala24:bala24-p-raul.jpg": 86286,
   "bala24:bala24-p-razvan-marin.jpg": 85778,
+  "bala24:bala24-p-roberto-mancini.jpg": 87049,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
+  "bala24:bala24-p-santiago-canizares.jpg": 87050,
   "bala24:bala24-p-senny-mayulu.jpg": 86995,
   "bala24:bala24-p-sepp-van-den-berg.jpg": 86634,
   "bala24:bala24-p-simon-banza.jpg": 85618,
+  "bala24:bala24-p-thomas-strakosha.jpg": 87052,
   "bala24:bala24-p-vangelis-pavlidis.jpg": 86234,
   "bala24:bala24-p-vedat-muriqi.jpg": 84921,
   "bala24:bala24-p-veljko-paunovic.jpg": 86497,
@@ -2814,6 +2856,7 @@
   "totalbasket:totalbasket-p-raiquan-gray.jpg": 69081,
   "totalbasket:totalbasket-p-rolands-smits.jpg": 69318,
   "totalbasket:totalbasket-p-russell-westbrook.jpg": 68198,
+  "totalbasket:totalbasket-p-sani-becirovic.jpg": 69530,
   "totalbasket:totalbasket-p-sarunas-jasikevicius.jpg": 68210,
   "totalbasket:totalbasket-p-stephen-curry.jpg": 69319,
   "totalbasket:totalbasket-p-tornike-shengelia.jpg": 68654,
