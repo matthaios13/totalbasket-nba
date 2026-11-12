@@ -2084,24 +2084,32 @@
    "at": "2026-11-12T20:34:23.824871+00:00",
    "pick": "OFI Crete F.C."
   },
+  "bala24:87331": {
+   "at": "2026-11-12T21:31:37.748479+00:00",
+   "pick": "face"
+  },
+  "bala24:87336": {
+   "at": "2026-11-12T21:31:42.245399+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:87342": {
+   "at": "2026-11-12T21:31:29.997400+00:00",
+   "pick": "face"
+  },
+  "bala24:87345": {
+   "at": "2026-11-12T21:31:11.001707+00:00",
+   "pick": "Ergotelis FC"
+  },
+  "bala24:87346": {
+   "at": "2026-11-12T21:31:19.526336+00:00",
+   "pick": "face"
+  },
   "totalbasket:68450": {
    "at": "2026-11-05T22:30:08.828930+00:00",
    "pick": "face"
   },
   "totalbasket:68454": {
    "at": "2026-11-05T22:30:00.220566+00:00",
-   "pick": "face"
-  },
-  "totalbasket:68457": {
-   "at": "2026-11-05T21:28:02.522672+00:00",
-   "pick": "face"
-  },
-  "totalbasket:68467": {
-   "at": "2026-11-05T21:27:54.943491+00:00",
-   "pick": "Hapoel Tel Aviv B.C."
-  },
-  "totalbasket:68481": {
-   "at": "2026-11-05T21:27:48.690345+00:00",
    "pick": "face"
   },
   "totalbasket:68486": {
@@ -2647,6 +2655,10 @@
   "totalbasket:69605": {
    "at": "2026-11-12T20:34:11.346206+00:00",
    "pick": null
+  },
+  "totalbasket:69612": {
+   "at": "2026-11-12T21:31:00.773884+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2694,6 +2706,7 @@
   "bala24:bala24-c-chelsea-fc-v2.jpg": 87239,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-england-national-football-team-v2.jpg": 87168,
+  "bala24:bala24-c-ergotelis-fc-v2.jpg": 87357,
   "bala24:bala24-c-fc-andorra-v2.jpg": 86890,
   "bala24:bala24-c-fc-barcelona-v2.jpg": 84694,
   "bala24:bala24-c-fc-bayern-munich-v2.jpg": 85619,
@@ -2810,6 +2823,7 @@
   "bala24:bala24-p-erling-haaland.jpg": 85974,
   "bala24:bala24-p-fabian-hurzeler.jpg": 87200,
   "bala24:bala24-p-federico-valverde.jpg": 84885,
+  "bala24:bala24-p-felix-nmecha.jpg": 87359,
   "bala24:bala24-p-fermin-lopez.jpg": 86171,
   "bala24:bala24-p-fernando-muslera.jpg": 87198,
   "bala24:bala24-p-filip-kostic.jpg": 86517,
@@ -2859,6 +2873,7 @@
   "bala24:bala24-p-santiago-canizares.jpg": 87050,
   "bala24:bala24-p-senny-mayulu.jpg": 86995,
   "bala24:bala24-p-sepp-van-den-berg.jpg": 86634,
+  "bala24:bala24-p-sergej-barbarez.jpg": 87358,
   "bala24:bala24-p-simon-banza.jpg": 85618,
   "bala24:bala24-p-thomas-strakosha.jpg": 87052,
   "bala24:bala24-p-thomas-tuchel.jpg": 87201,
@@ -2924,6 +2939,7 @@
   "totalbasket:totalbasket-p-doc-rivers.jpg": 68602,
   "totalbasket:totalbasket-p-dogus-ozdemiroglu.jpg": 68550,
   "totalbasket:totalbasket-p-dragan-sakota.jpg": 68249,
+  "totalbasket:totalbasket-p-evan-fournier.jpg": 69620,
   "totalbasket:totalbasket-p-facundo-campazzo.jpg": 68071,
   "totalbasket:totalbasket-p-filip-petrusev.jpg": 69457,
   "totalbasket:totalbasket-p-frank-ntilikina.jpg": 69453,
