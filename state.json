@@ -666,6 +666,7 @@
   },
   "E2026-103": {
    "attempts": 1,
+   "done": "already on site",
    "seen": "2026-11-12T21:57:07.528346+00:00"
   },
   "E2026-104": {
@@ -676,7 +677,13 @@
   },
   "E2026-105": {
    "attempts": 1,
+   "done": "already on site",
    "seen": "2026-11-12T21:57:07.528346+00:00"
+  },
+  "E2026-106": {
+   "attempts": 0,
+   "done": "already on site",
+   "seen": "2026-11-12T22:17:53.509694+00:00"
   },
   "E2026-107": {
    "attempts": 1,
@@ -6932,6 +6939,11 @@
    "attempts": 0,
    "done": "already on site",
    "seen": "2026-11-11T22:20:53.946089+00:00"
+  },
+  "el-2026-11-12": {
+   "attempts": 0,
+   "done": "already on site",
+   "seen": "2026-11-12T22:17:53.509694+00:00"
   }
  },
  "teams_gr": {
