@@ -2032,6 +2032,22 @@
    "at": "2026-11-12T23:25:37.450536+00:00",
    "pick": null
   },
+  "bala24:87392": {
+   "at": "2026-11-13T08:04:33.724928+00:00",
+   "pick": "Galatasaray S.K."
+  },
+  "bala24:87397": {
+   "at": "2026-11-13T08:04:25.756399+00:00",
+   "pick": "face"
+  },
+  "bala24:87401": {
+   "at": "2026-11-13T08:04:19.348959+00:00",
+   "pick": "Real Madrid CF"
+  },
+  "bala24:87404": {
+   "at": "2026-11-13T08:04:12.692661+00:00",
+   "pick": "face"
+  },
   "totalbasket:68548": {
    "at": "2026-11-06T12:40:18.870275+00:00",
    "pick": "face"
@@ -2587,6 +2603,10 @@
   "totalbasket:69656": {
    "at": "2026-11-13T03:35:53.320521+00:00",
    "pick": "face"
+  },
+  "totalbasket:69671": {
+   "at": "2026-11-13T08:04:04.197610+00:00",
+   "pick": null
   }
  },
  "media": {
@@ -2737,6 +2757,7 @@
   "bala24:bala24-p-cedric-bakambu.jpg": 87170,
   "bala24:bala24-p-cesc-fabregas.jpg": 86233,
   "bala24:bala24-p-charalampos-kostoulas.jpg": 86762,
+  "bala24:bala24-p-christian-kofane.jpg": 87408,
   "bala24:bala24-p-christos-mandas.jpg": 86012,
   "bala24:bala24-p-cristiano-ronaldo.jpg": 85064,
   "bala24:bala24-p-david-luiz.jpg": 85317,
