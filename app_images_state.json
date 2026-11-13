@@ -4,46 +4,6 @@
    "at": "2026-11-11T11:41:34.650297+00:00",
    "pick": "Brentford F.C."
   },
-  "bala24:85343": {
-   "at": "2026-11-06T08:40:25.444703+00:00",
-   "pick": null
-  },
-  "bala24:85344": {
-   "at": "2026-11-06T08:40:31.324198+00:00",
-   "pick": "OFI Crete F.C."
-  },
-  "bala24:85349": {
-   "at": "2026-11-06T08:40:21.866043+00:00",
-   "pick": "face"
-  },
-  "bala24:85351": {
-   "at": "2026-11-06T08:40:15.794209+00:00",
-   "pick": "Panathinaikos FC"
-  },
-  "bala24:85354": {
-   "at": "2026-11-06T08:40:11.419980+00:00",
-   "pick": "OFI Crete F.C."
-  },
-  "bala24:85358": {
-   "at": "2026-11-06T08:40:07.003493+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:85361": {
-   "at": "2026-11-06T08:40:00.819470+00:00",
-   "pick": null
-  },
-  "bala24:85364": {
-   "at": "2026-11-06T08:39:54.669290+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:85366": {
-   "at": "2026-11-06T08:39:49.123520+00:00",
-   "pick": null
-  },
-  "bala24:85369": {
-   "at": "2026-11-06T08:39:45.504233+00:00",
-   "pick": "OFI Crete F.C."
-  },
   "bala24:85371": {
    "at": "2026-11-06T09:44:55.765918+00:00",
    "pick": "Borussia Dortmund"
@@ -2036,6 +1996,10 @@
    "at": "2026-11-13T08:04:33.724928+00:00",
    "pick": "Galatasaray S.K."
   },
+  "bala24:87394": {
+   "at": "2026-11-13T09:42:47.003697+00:00",
+   "pick": "Celtic F.C."
+  },
   "bala24:87397": {
    "at": "2026-11-13T08:04:25.756399+00:00",
    "pick": "face"
@@ -2047,6 +2011,26 @@
   "bala24:87404": {
    "at": "2026-11-13T08:04:12.692661+00:00",
    "pick": "face"
+  },
+  "bala24:87412": {
+   "at": "2026-11-13T09:42:42.052908+00:00",
+   "pick": "face"
+  },
+  "bala24:87417": {
+   "at": "2026-11-13T09:42:35.888677+00:00",
+   "pick": "PAOK FC"
+  },
+  "bala24:87419": {
+   "at": "2026-11-13T09:42:31.424314+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:87423": {
+   "at": "2026-11-13T09:42:26.425531+00:00",
+   "pick": null
+  },
+  "bala24:87427": {
+   "at": "2026-11-13T09:42:19.707515+00:00",
+   "pick": "Athlitiki Enosi Larissa F.C."
   },
   "totalbasket:68548": {
    "at": "2026-11-06T12:40:18.870275+00:00",
@@ -2607,6 +2591,14 @@
   "totalbasket:69671": {
    "at": "2026-11-13T08:04:04.197610+00:00",
    "pick": null
+  },
+  "totalbasket:69673": {
+   "at": "2026-11-13T09:42:10.509739+00:00",
+   "pick": "face"
+  },
+  "totalbasket:69675": {
+   "at": "2026-11-13T09:42:03.834603+00:00",
+   "pick": "Panathinaikos B.C."
   }
  },
  "media": {
@@ -2651,6 +2643,7 @@
   "bala24:bala24-c-cardiff-city-f-c-v2.jpg": 85873,
   "bala24:bala24-c-cardiff-met-fc-v2.jpg": 86856,
   "bala24:bala24-c-cd-tenerife-v2.jpg": 84452,
+  "bala24:bala24-c-celtic-f-c-v2.jpg": 87430,
   "bala24:bala24-c-chelsea-fc-v2.jpg": 87239,
   "bala24:bala24-c-como-1907-v2.jpg": 84807,
   "bala24:bala24-c-england-national-football-team-v2.jpg": 87168,
@@ -2918,6 +2911,7 @@
   "totalbasket:totalbasket-p-nadir-hifi.jpg": 68497,
   "totalbasket:totalbasket-p-nenad-dimitrijevic.jpg": 68783,
   "totalbasket:totalbasket-p-nikola-jokic.jpg": 68437,
+  "totalbasket:totalbasket-p-nikos-rogkavopoulos.jpg": 69677,
   "totalbasket:totalbasket-p-onuralp-bitim.jpg": 68856,
   "totalbasket:totalbasket-p-patty-mills.jpg": 68409,
   "totalbasket:totalbasket-p-pedro-martinez-basketball.jpg": 68205,
