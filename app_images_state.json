@@ -4,22 +4,6 @@
    "at": "2026-11-11T11:41:34.650297+00:00",
    "pick": "Brentford F.C."
   },
-  "bala24:85535": {
-   "at": "2026-11-06T16:33:02.930072+00:00",
-   "pick": "AEK Athens F.C."
-  },
-  "bala24:85541": {
-   "at": "2026-11-06T16:32:57.069094+00:00",
-   "pick": "Olympiacos F.C."
-  },
-  "bala24:85545": {
-   "at": "2026-11-06T16:32:49.297857+00:00",
-   "pick": "face"
-  },
-  "bala24:85548": {
-   "at": "2026-11-06T16:32:40.622452+00:00",
-   "pick": "face"
-  },
   "bala24:85555": {
    "at": "2026-11-06T17:34:41.191850+00:00",
    "pick": "Sevilla FC"
@@ -2036,9 +2020,21 @@
    "at": "2026-11-13T15:31:15.486186+00:00",
    "pick": "Kalamata FC"
   },
-  "totalbasket:68590": {
-   "at": "2026-11-06T16:32:33.858230+00:00",
-   "pick": "Olympiacos B.C."
+  "bala24:87559": {
+   "at": "2026-11-13T16:37:43.373394+00:00",
+   "pick": "Aris Thessaloniki FC"
+  },
+  "bala24:87563": {
+   "at": "2026-11-13T16:37:38.523266+00:00",
+   "pick": "Panathinaikos FC"
+  },
+  "bala24:87567": {
+   "at": "2026-11-13T16:37:34.903851+00:00",
+   "pick": null
+  },
+  "bala24:87570": {
+   "at": "2026-11-13T16:37:26.548420+00:00",
+   "pick": "Rio Ave F.C."
   },
   "totalbasket:68594": {
    "at": "2026-11-06T17:34:20.693931+00:00",
@@ -2607,6 +2603,10 @@
   "totalbasket:69702": {
    "at": "2026-11-13T15:30:41.648452+00:00",
    "pick": "Aris B.C."
+  },
+  "totalbasket:69711": {
+   "at": "2026-11-13T16:37:17.768822+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2724,6 +2724,7 @@
   "bala24:bala24-c-real-sociedad-de-futbol-v2.jpg": 86127,
   "bala24:bala24-c-real-sociedad-v2.jpg": 84456,
   "bala24:bala24-c-red-star-belgrade-v2.jpg": 86363,
+  "bala24:bala24-c-rio-ave-f-c-v2.jpg": 87576,
   "bala24:bala24-c-royal-union-saint-gilloise-v2.jpg": 84477,
   "bala24:bala24-c-s-l-benfica-v2.jpg": 84453,
   "bala24:bala24-c-s-s-lazio-v2.jpg": 86727,
@@ -2908,6 +2909,7 @@
   "totalbasket:totalbasket-p-jared-butler.jpg": 69080,
   "totalbasket:totalbasket-p-jason-kidd.jpg": 68729,
   "totalbasket:totalbasket-p-jaylen-brown.jpg": 68955,
+  "totalbasket:totalbasket-p-jimmy-butler.jpg": 69721,
   "totalbasket:totalbasket-p-john-konchar.jpg": 68652,
   "totalbasket:totalbasket-p-jonas-valanciunas.jpg": 69643,
   "totalbasket:totalbasket-p-kendrick-nunn.jpg": 68275,
