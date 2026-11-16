@@ -167,6 +167,14 @@ def badge(league, team):
     """PNG badge URL of a club in that league, or None. Women's/youth sides are ignored."""
     if LEAGUES[league].get("official"):
         return official_crest(LEAGUES[league]["official"], team or "")
+    if league == "gbl" and team:       # Greek clubs in EuroLeague / EuroCup: their official crest
+        for comp in ("E", "U"):
+            try:
+                url = official_crest(comp, team)
+            except Exception:
+                url = None
+            if url:
+                return url
     lg = LEAGUES[league]["sportsdb"]
     team = (team or "").strip()
     if not lg or not team:
