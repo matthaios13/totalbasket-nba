@@ -145,6 +145,10 @@
    "seen": "2026-11-15T20:32:08.557687+00:00",
    "skip": "Το email περιέχει μόνο σύνδεσμο προς το άρθρο στο danaoi.gr, χωρίς κείμενο δελτίου στο σώμα, σε συνημμένο ή στο linked_article, οπότε δεν υπάρχει κείμενο να ανέβει."
   },
+  "<CA+r1L8Zxa8iSqt2s_sRn_hGTnN-mrKnCbehfYJyHyLAxfEdh=w@mail.gmail.com>": {
+   "seen": "2026-11-16T17:22:02.120133+00:00",
+   "skip": "Το email περιέχει μόνο έναν σύνδεσμο (URL) χωρίς κείμενο δελτίου τύπου στο σώμα, χωρίς συνημμένα και χωρίς περιεχόμενο στο linked_article, οπότε δεν υπάρχει κείμενο για να δημοσιευτεί."
+  },
   "<CA+r1L8Zzu4vqKuMs8mX0C6BUjS_w+-qDPNT4n1uqLVnS0oFZRw@mail.gmail.com>": {
    "seen": "2026-11-03T13:12:08.153639+00:00",
    "skip": "Το email περιέχει μόνο έναν σύνδεσμο (URL) και κανένα κείμενο δελτίου τύπου. Δεν υπάρχει συνημμένο ούτε περιεχόμενο στο linked_article, οπότε δεν υπάρχει κείμενο για ανάρτηση."
@@ -156,6 +160,10 @@
   "<CA+r1L8aXm5DT9ECHsVan1ky0V+EKozZ_zzuoeuvre1RgL2R8sg@mail.gmail.com>": {
    "seen": "2026-11-03T13:19:06.926042+00:00",
    "skip": "Το email περιέχει μόνο σύνδεσμο προς ιστοσελίδα, χωρίς κείμενο δελτίου τύπου στο σώμα, σε συνημμένο ή σε linked_article."
+  },
+  "<CA+r1L8abZBRQk-iDWT9uZ81g7kSwy8Z6z3Yg4f2SOJdC5AVXew@mail.gmail.com>": {
+   "seen": "2026-11-16T17:21:57.532213+00:00",
+   "skip": "Το email περιέχει μόνο έναν σύνδεσμο προς το site του αποστολέα, χωρίς κείμενο δελτίου ή ανακοίνωσης (ούτε στο σώμα, ούτε σε συνημμένο, ούτε σε linked_article). Δεν υπάρχει είδηση προς δημοσίευση."
   },
   "<CA+r1L8ahO49erawORk85-6As_rFe8UJC8Hd_i2q9Tqb_s1=QJg@mail.gmail.com>": {
    "seen": "2026-11-05T20:48:15.298962+00:00",
@@ -238,6 +246,10 @@
    ],
    "seen": "2026-11-13T11:27:09.713333+00:00",
    "title": "EB Press Release: Motorola and Euroleague Basketball Extend Partnership for a Fourth Consecutive Season"
+  },
+  "<d1a105389dcbe9bdf7476c3496bdcef5@swift.generated>": {
+   "seen": "2026-11-16T17:21:59.651151+00:00",
+   "skip": "Το email περιέχει μόνο σύνδεσμο για κατέβασμα υλικού (Game Kits Αγωνιστικής 12) χωρίς είδηση προς δημοσίευση."
   }
  }
 }

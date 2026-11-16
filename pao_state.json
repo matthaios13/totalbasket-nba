@@ -1,9 +1,5 @@
 {
  "items": {
-  "https://www.trifillakia.gr/mpasket/article/24648/o-aris-gyrise-sta-90s-00s-ta-ntermpi-me-ton-panathinaiko-aktor": {
-   "seen": "2026-11-02T07:17:37.796444+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24660/aris-i-parakamera-tis-nikis-epi-toy-panathinaikoy-vid": {
    "seen": "2026-11-02T19:27:17.301546+00:00",
    "skip": "duplicate"
@@ -162,6 +158,15 @@
   },
   "https://www.trifillakia.gr/mpasket/article/25022/spanoylis-einai-poly-dyskolo-na-kerdiseis-olympiako-kai-panathinaiko": {
    "seen": "2026-11-16T00:16:57.274120+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25043/omprantovits-enopsei-virtoys-na-diatirisoyme-ti-sygkentrosi-mas-otan-kanoyme": {
+   "post": 70081,
+   "seen": "2026-11-16T17:21:40.033501+00:00",
+   "title": "Ομπράντοβιτς: «Παιχνίδι 40 λεπτών» στην Μπολόνια"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25045/giampoysele-i-pio-talantoyha-omada-stin-opoia-epaixa-pote-o-panathinaikos": {
+   "seen": "2026-11-16T17:21:40.033685+00:00",
    "skip": "duplicate"
   }
  }
