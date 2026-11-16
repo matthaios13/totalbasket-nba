@@ -402,7 +402,7 @@ live/ενδιάμεσα σκορ, τηλεοπτικό πρόγραμμα, κα�
 def triage(about, headline, summary, on_site, note=""):
     """Cheap first pass on headline + summary, so the expensive writer only sees likely articles."""
     data = json.dumps({"headline": headline, "summary": (summary or "")[:700],
-                       "already_on_site": on_site[:120]}, ensure_ascii=False, indent=1)
+                       "already_on_site": on_site[:300]}, ensure_ascii=False, indent=1)
     return _claude(TRIAGE.format(about=about, note=note, data=data), TRIAGE_MODEL)
 
 
@@ -591,11 +591,14 @@ def team_image(art, league):
     return card.league_card(path, LEAGUES[league]["label"])
 
 
-def recent_site_posts(category=NBA_CATEGORY):
-    """Latest posts of a category (None = whole site), ours and the editors': [{title, date}] newest first."""
+def recent_site_posts(category=NBA_CATEGORY, pages=1):
+    """Latest posts of a category (None = whole site), ours and the editors': [{title, date}] newest first,
+    100 per page."""
     try:
         cat = f"categories={category}&" if category else ""
-        res = get_json(f"{WP_URL}/wp-json/wp/v2/posts?{cat}per_page=60&_fields=title,date_gmt")
+        res = []
+        for page in range(1, pages + 1):
+            res += get_json(f"{WP_URL}/wp-json/wp/v2/posts?{cat}per_page=100&page={page}&_fields=title,date_gmt")
         return [{"title": html.unescape(p["title"]["rendered"]),
                  "date": dt.datetime.fromisoformat(p["date_gmt"]).replace(tzinfo=dt.timezone.utc)} for p in res]
     except Exception as ex:
@@ -652,11 +655,15 @@ def _run(state):
     published = []
     stamp = now().isoformat()
     site = {lg: recent_site_posts(LEAGUES[lg]["category"]) for lg in LEAGUES}
-    site_all = recent_site_posts(None)      # editors often file a story under another category
+    site_all = recent_site_posts(None, pages=2)   # editors often file a story under another category
 
     def on_site(league):
-        """Titles to check for duplicates: this league's latest posts plus the whole site's latest."""
-        return list(dict.fromkeys([p["title"] for p in site[league][:60]] + [p["title"] for p in site_all[:60]]))
+        """Titles to check for duplicates: this league's latest posts plus the whole site's latest. Greek
+        basketball is the editors' main beat (~200 posts = 4-5 days), so the Greek league looks much further
+        back (user, 2026-11-16: never repost what is already on the site)."""
+        n = 200 if league == "gbl" else 60
+        return list(dict.fromkeys([p["title"] for p in site[league][:100 if league == "gbl" else 60]]
+                                  + [p["title"] for p in site_all[:n]]))
     site_posts = site["nba"]
     sources._badges.update(state.setdefault("badges", {}))
 
