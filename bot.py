@@ -86,7 +86,8 @@ def euro_top_tag(league, teams=None):
 SKIP_SEASON_TYPES = {1, 4}       # preseason, all-star
 RECAP_WAIT_HOURS = 3             # wait this long for the AP recap (it carries the quotes)
 EURO_WAIT_HOURS = float(os.environ.get("EURO_WAIT_HOURS", "0"))   # user wants the result article right after the game
-NEWS_MAX_AGE_HOURS = 30
+NEWS_MAX_AGE_HOURS = float(os.environ.get("NEWS_MAX_AGE_HOURS") or 30)   # a new feed's first run may look further back
+MAX_JUDGE = int(os.environ.get("MAX_JUDGE") or 0)   # >0 overrides each feed's max_judge (backlog runs)
 MAX_ATTEMPTS = 3
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"}
@@ -894,7 +895,7 @@ def _run(state):
             if not n.get("done") and (not item["published"]
                                       or now() - item["published"] > dt.timedelta(hours=NEWS_MAX_AGE_HOURS)):
                 n["done"] = "too-old"
-            if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget() or judged >= feed["max_judge"]:
+            if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget() or judged >= (MAX_JUDGE or feed["max_judge"]):
                 continue
             judged += 1
             try:

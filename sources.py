@@ -26,6 +26,9 @@ LEAGUES = {
             "sportsdb": "Spanish Liga ACB", "about": "ισπανικό πρωτάθλημα (Liga Endesa / ACB)"},
     "lnb": {"category": 239, "categories": [EUROPE_CATEGORY, 239], "tag": 332, "label": "BETCLIC ÉLITE",
             "sportsdb": "French LNB", "about": "γαλλικό πρωτάθλημα (Betclic Élite)"},
+    "gbl": {"category": 4, "categories": [4], "tag": 1544, "label": "STOIXIMAN GBL",
+            "sportsdb": "Greek Basket League", "about": "ελληνικό πρωτάθλημα (Stoiximan GBL)",
+            "note": "Μετράει κάθε είδηση για ελληνικές ομάδες της Stoiximan GBL, τους παίκτες και τους προπονητές τους (μεταγραφές, τραυματισμοί, τιμωρίες, δηλώσεις). Το site καλύπτει πολύ το ελληνικό μπάσκετ: έλεγξε προσεκτικά το already_on_site για ίδιο θέμα."},
     "el": {"category": 2, "categories": [2], "tag": 105, "label": "EUROLEAGUE", "sportsdb": None,
            "official": "E", "about": "EuroLeague",
            "note": "Μετράει ΚΑΘΕ είδηση για ομάδες, παίκτες ή προπονητές που συμμετέχουν στη διοργάνωση, ακόμα κι αν αφορά το εγχώριο πρωτάθλημά τους ή δηλώσεις τους."},
@@ -51,6 +54,8 @@ FEEDS = [
     {"key": "lequipe", "league": "lnb", "lang": "fr", "max_judge": 3,
      "url": "https://dwh.lequipe.fr/api/edito/rss?path=/Basket/Betclic-elite/"},
     # euroleaguebasketball.net itself sits behind a bot checkpoint, so its news is not used
+    {"key": "sportando-gr", "league": "gbl", "lang": "it", "max_judge": 4,
+     "url": "https://www.sportando.basketball/category/europa/grecia/feed/"},
     {"key": "sportando-el", "league": "el", "lang": "it", "max_judge": 4,
      "url": "https://www.sportando.basketball/category/euroleague/feed/"},
     {"key": "sportando-ec", "league": "ec", "lang": "it", "max_judge": 4,

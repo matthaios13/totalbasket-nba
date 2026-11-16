@@ -14,6 +14,12 @@ on:
       only_leagues:
         description: "test runs only: e.g. lba,acb,lnb (empty = all)"
         default: ""
+      max_age_hours:
+        description: "news older than this is skipped (empty = 30)"
+        default: ""
+      max_judge:
+        description: "items judged per feed (empty = each feed's own)"
+        default: ""
 
 concurrency:
   group: nba-bot
@@ -41,6 +47,8 @@ jobs:
           WP_STATUS: ${{ inputs.status || 'publish' }}
           MAX_POSTS: ${{ inputs.max_posts || '10' }}
           ONLY_LEAGUES: ${{ inputs.only_leagues || '' }}
+          NEWS_MAX_AGE_HOURS: ${{ inputs.max_age_hours || '' }}
+          MAX_JUDGE: ${{ inputs.max_judge || '' }}
         run: python bot.py
       - name: Save state
         if: always()
