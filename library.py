@@ -17,7 +17,7 @@ import urllib.request
 
 WP = "https://totalbasket.gr/wp-json/wp/v2"
 UA = {"User-Agent": "Mozilla/5.0 (totalbasket-bot)"}
-OURS = re.compile(r"(?i)/(?:(?:nba|lba|acb|lnb|gbl|el|ec)-(?:game|news)-|(?:totalbasket|bala24)-[pcs]-|elabet)")   # bot cards; replacement / app crest & face cards (03/11/2026); sponsor (ELABET) images
+OURS = re.compile(r"(?i)/(?:(?:nba|lba|acb|lnb|gbl|bbl|vtb|isr|sbl|el|ec)-(?:game|news)-|(?:totalbasket|bala24)-[pcs]-|elabet)")   # bot cards; replacement / app crest & face cards (03/11/2026); sponsor (ELABET) images
 
 
 def _get(path):
