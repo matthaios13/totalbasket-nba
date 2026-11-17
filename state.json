@@ -2021,11 +2021,6 @@
    "done": "too-old",
    "seen": "2026-11-07T16:50:18.654889+00:00"
   },
-  "bebasket:db482c30126421e0": {
-   "attempts": 0,
-   "done": "too-old",
-   "seen": "2026-11-03T16:00:52.123855+00:00"
-  },
   "bebasket:dc253e715097b4b9": {
    "attempts": 0,
    "done": "too-old",
@@ -2880,11 +2875,6 @@
    "post": 70097,
    "seen": "2026-11-16T22:03:28.797907+00:00"
   },
-  "realgm:193cc3928642e10d": {
-   "attempts": 1,
-   "done": "skipped: Η είδηση για τις μη ενεργοποιήσεις των rookie options είναι ήδη καλυμμένη στο site: το «Οι Τζαζ δεν ενεργοποίησαν το opt",
-   "seen": "2026-11-03T16:00:52.123855+00:00"
-  },
   "realgm:198e1a1674ce9e7f": {
    "attempts": 1,
    "done": "skipped: Λίστα/ranking (NBA PER Week 3) χωρίς είδηση, άρα εκτός κριτηρίων.",
@@ -3137,6 +3127,12 @@
    "done": true,
    "post": 68811,
    "seen": "2026-11-08T01:17:16.700242+00:00"
+  },
+  "realgm:6f790a798c07230b": {
+   "attempts": 1,
+   "done": true,
+   "post": 70234,
+   "seen": "2026-11-17T16:17:21.540171+00:00"
   },
   "realgm:71c3127007d69512": {
    "attempts": 1,
@@ -3523,11 +3519,6 @@
    "attempts": 1,
    "done": "skipped: Η μεταγραφή του Κρις Μπουσέ στους Σάρκς της Σανγκάη υπάρχει ήδη στο site (\"Στην Κίνα ο Κρις Μπουσέ: Υπέγραψε στους Σάρκς",
    "seen": "2026-11-04T17:05:07.765328+00:00"
-  },
-  "realgm:df037ea7c0c2af81": {
-   "attempts": 1,
-   "done": "skipped: Το θέμα αφορά την γυναικεία WNBA (New York Liberty), όχι το NBA, οπότε εκτός της ενότητας σύμφωνα με τα κριτήρια.",
-   "seen": "2026-11-03T16:00:52.123855+00:00"
   },
   "realgm:dfdd120ba47d9a9f": {
    "attempts": 1,
@@ -5239,10 +5230,12 @@
   },
   "sportando-es:1eac6711f7fb0b39": {
    "attempts": 0,
+   "done": "too-old",
    "seen": "2026-11-17T15:20:20.055784+00:00"
   },
   "sportando-es:46eb113031d31af3": {
    "attempts": 0,
+   "done": "too-old",
    "seen": "2026-11-17T15:20:20.055784+00:00"
   },
   "sportando-es:6aadb9d55cf3a669": {
@@ -5252,6 +5245,7 @@
   },
   "sportando-es:6ca33f9b0aac4fc8": {
    "attempts": 0,
+   "done": "too-old",
    "seen": "2026-11-17T15:20:20.055784+00:00"
   },
   "sportando-es:6d9a9e5ef8f97cd9": {
@@ -5321,6 +5315,12 @@
    "done": true,
    "post": 70075,
    "seen": "2026-11-16T15:37:28.372351+00:00"
+  },
+  "sportando-gr:a32d0885771ea2c6": {
+   "attempts": 1,
+   "done": true,
+   "post": 70236,
+   "seen": "2026-11-17T16:17:21.540171+00:00"
   },
   "sportando-gr:ddc58165e366630c": {
    "attempts": 1,
