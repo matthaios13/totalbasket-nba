@@ -517,8 +517,14 @@ def publish(art, image_path, slug_hint, league="nba"):
         "status": WP_STATUS, "categories": categories, "tags": tags,
         "featured_media": media["id"],
         # mu-plugin tb-bot-meta.php: Foxiz tagline under the title + Yoast meta description
-        "tb_bot_meta": {"tagline": (art.get("tagline") or art.get("excerpt") or "")[:160].strip(),
-                        "metadesc": (art.get("meta_description") or art.get("excerpt") or "")[:160].strip()}})
+        "tb_bot_meta": {"tagline": _clip(art.get("tagline") or art.get("excerpt") or "", 160),
+                        "metadesc": _clip(art.get("meta_description") or art.get("excerpt") or "", 160)}})
+
+
+def _clip(text, n):
+    """At most n characters, cut at a word boundary."""
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", text)).strip()
+    return text if len(text) <= n else text[:n].rsplit(" ", 1)[0].rstrip(",;:–-") + "…"
 
 
 # ---------------------------------------------------------------- main
