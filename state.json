@@ -4,6 +4,7 @@
   "acb|la laguna tenerife": "",
   "acb|real madrid baloncesto": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
   "acb|ucam murcia": "",
+  "isr|hapoel jerusalem": "",
   "lba|apu udine": "https://r2.thesportsdb.com/images/media/team/badge/o64a4v1713952899.png",
   "lba|aquila basket trento": "",
   "lba|bc roma": "https://r2.thesportsdb.com/images/media/team/badge/or58891786176745.png",
@@ -3600,6 +3601,56 @@
    "post": 70031,
    "seen": "2026-11-16T02:44:13.544539+00:00"
   },
+  "sportando-de:31b56fdbb67afa65": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:45c62ed466d0b5fc": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:5b170ed765ab3cae": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:5ffebb9cc09230aa": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:78068e969b561348": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:8289af107502df0a": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:a035eead7cd9b4c1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:b19745f55b67e574": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:d3471e72e84e05b7": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-de:f75014d0c6ffdf30": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
   "sportando-ec:02281e5b47e2d15e": {
    "attempts": 1,
    "done": "skipped: Ζωντανή κάλυψη (live text) του αγώνα Maxima Roma-London Lions, χωρίς είδηση. Εμπίπτει στα εξαιρούμενα live/ενδιάμεσα.",
@@ -5177,6 +5228,54 @@
    "done": "skipped: Το θέμα του ντεμπούτου της Βίρτους στη νέα αρένα κόντρα στη Μακάμπι έχει ήδη καλυφθεί στο site (\"Η νέα Unipol Hall της Β",
    "seen": "2026-11-13T13:22:33.377714+00:00"
   },
+  "sportando-es:0e3c7d5709360380": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:1eac6711f7fb0b39": {
+   "attempts": 0,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:46eb113031d31af3": {
+   "attempts": 0,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:6aadb9d55cf3a669": {
+   "attempts": 1,
+   "done": "skipped: Το θέμα καλύπτεται ήδη στους τίτλους: «Ρεάλ Μαδρίτης: Επιστρέφει από τον δανεισμό του στην Μπανταλόνα ο Εντζάι» και «Η Ρ",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:6ca33f9b0aac4fc8": {
+   "attempts": 0,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:6d9a9e5ef8f97cd9": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:83404fa69c451b83": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:84246db32fce7048": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:8932df9c852ec438": {
+   "attempts": 1,
+   "done": true,
+   "post": 70221,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-es:fdd31fa35e9ec47e": {
+   "attempts": 1,
+   "done": "skipped: Η μεταγραφή του Huertas (Ουέρτας) στην Ντουμπάι μέχρι το τέλος της σεζόν υπάρχει ήδη στο site, όπως και ο αποχαιρετισμός",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
   "sportando-gr:17eeb4495975e259": {
    "attempts": 0,
    "done": "too-old",
@@ -5228,6 +5327,159 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-11-16T15:37:28.372351+00:00"
+  },
+  "sportando-il:0f8357e27a5d5fbe": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:5e8b256115505b03": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:66096a035421ba69": {
+   "attempts": 1,
+   "done": true,
+   "post": 70225,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:a88cd04394718cd5": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:ab5d4bd88def2a31": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:b3883431bdf65ebd": {
+   "attempts": 1,
+   "done": true,
+   "post": 70223,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:c61853758285e326": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:e0ee85431d3c320c": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:e546810e3a245e85": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-il:f0f7954348864a86": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:0eecded55f5a2e50": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:1f4e52434790792b": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:49ba4ea3703f7b59": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:5288046f838a1d11": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:669e92f1248c0545": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:79da2cbee4260293": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:7b19a9eb285e0e75": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:95d698bfbcda6512": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:baf0d48d6a159bce": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-ru:e02c12bb501d2430": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:0c94f85f50e99983": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:1104f20d8729babd": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:35e074b7665db66a": {
+   "attempts": 1,
+   "done": true,
+   "post": 70227,
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:568662b329429482": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:5bf6bc35916694a1": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:922e49d8a8a42175": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:960cf20e26a9b934": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:adad71fd5f7ae0d0": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:cd35788468306dbf": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
+  },
+  "sportando-uk:ea2b521084cd90b6": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-17T15:20:20.055784+00:00"
   },
   "sportando:02137b986c00b015": {
    "attempts": 1,
