@@ -102,12 +102,17 @@ def now():
 
 
 def retry(fn, tries=4):
-    """GitHub's runners sometimes can't reach a host for a moment ("Network is unreachable")."""
+    """GitHub's runners sometimes can't reach a host for a moment ("Network is unreachable"), and the host
+    answers 429 / 503 when we write too fast (17/11/2026: a run died on 429 for every photo upload)."""
     for i in range(tries):
         try:
             return fn()
-        except urllib.error.HTTPError:
-            raise
+        except urllib.error.HTTPError as e:
+            if e.code not in (429, 503) or i == tries - 1:
+                raise
+            wait = int(e.headers.get("Retry-After") or 0) if str(e.headers.get("Retry-After") or "").isdigit() else 0
+            log(f"  host busy ({e.code}), waiting {max(wait, 30 * (i + 1))}s")
+            time.sleep(min(max(wait, 30 * (i + 1)), 180))
         except (urllib.error.URLError, OSError, TimeoutError):
             if i == tries - 1:
                 raise
@@ -418,6 +423,10 @@ def _ask_claude(task, facts, retry_note=False):
 
 # ---------------------------------------------------------------- WordPress
 
+WRITE_GAP = 4          # seconds between WordPress writes
+_last_write = 0.0
+
+
 def wp(method, path, data=None, headers=None, raw=None):
     auth = base64.b64encode(f'{os.environ["WP_USER"]}:{os.environ["WP_APP_PASSWORD"]}'.encode()).decode()
     h = {"Authorization": "Basic " + auth, **UA, **(headers or {})}
@@ -426,6 +435,11 @@ def wp(method, path, data=None, headers=None, raw=None):
         body = json.dumps(data).encode()
         h["Content-Type"] = "application/json"
     req = urllib.request.Request(f"{WP_URL}/wp-json/wp/v2/{path}", data=body, headers=h, method=method)
+    global _last_write
+    if method != "GET":                 # pace writes: Hostinger rate-limits bursts from one address
+        time.sleep(max(0.0, _last_write + WRITE_GAP - time.time()))
+        _last_write = time.time()
+
     def go():
         with urllib.request.urlopen(req, timeout=60) as r:
             return json.load(r)
