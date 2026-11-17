@@ -61,7 +61,9 @@ LEAN = ["--max-turns", "1", "--tools", "", "--strict-mcp-config", "--setting-sou
 
 def claude_cmd(model):
     return ["claude", "-p", "--output-format", "json", "--model", model, *LEAN]
-MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))
+MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))          # NBA articles per run
+LEAGUE_POSTS = int(os.environ.get("LEAGUE_POSTS", "4"))     # per other league per run
+TOTAL_POSTS = int(os.environ.get("TOTAL_POSTS", "25"))
 ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
 GAMES_ONLY = os.environ.get("GAMES_ONLY") == "1"   # the 10-minute game-night job: results only, no news feeds
 NBA_LOGO = "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png"   # last resort, never a text card
@@ -666,6 +668,7 @@ def run():
 
 def _run(state):
     posted = 0
+    posted_by = {}
     published = []
     stamp = now().isoformat()
     site = {lg: recent_site_posts(LEAGUES[lg]["category"]) for lg in LEAGUES}
@@ -687,14 +690,19 @@ def _run(state):
                               "importance": int(art.get("importance") or 0)})
         site[league].insert(0, {"title": art["title"], "date": now()})
         site_all.insert(0, {"title": art["title"], "date": now()})
+        posted_by[league] = posted_by.get(league, 0) + 1
 
-    def budget():
-        return posted < MAX_POSTS
+    def budget(league="nba"):
+        """User (17/11/2026): every league must get its articles up, so NBA can't use up the whole run.
+        NBA: MAX_POSTS; each other league: LEAGUE_POSTS (EuroLeague/EuroCup results: no own limit);
+        the whole run: TOTAL_POSTS."""
+        own = MAX_POSTS if league == "nba" else 99 if GAMES_ONLY else LEAGUE_POSTS
+        return posted < TOTAL_POSTS and posted_by.get(league, 0) < own
 
     # 1. games
     for e in (finished_games() if not ONLY or "nba" in ONLY else []):
         g = state["games"].setdefault(e["id"], {"seen": stamp, "attempts": 0})
-        if g.get("done") or g["attempts"] >= MAX_ATTEMPTS or not budget():
+        if g.get("done") or g["attempts"] >= MAX_ATTEMPTS or not budget("nba"):
             continue
         try:
             facts, has_recap = game_facts(e)
@@ -741,7 +749,7 @@ def _run(state):
         for eg in games:
             gid = f"{euro.season_code(euro.COMPS[league])}-{eg['gameCode']}"
             g = state["games"].setdefault(gid, {"seen": stamp, "attempts": 0})
-            if g.get("done") or g["attempts"] >= MAX_ATTEMPTS or not budget():
+            if g.get("done") or g["attempts"] >= MAX_ATTEMPTS or not budget(league):
                 continue
             if now() - dt.datetime.fromisoformat(g["seen"]) < dt.timedelta(hours=EURO_WAIT_HOURS):
                 continue
@@ -791,7 +799,7 @@ def _run(state):
     # 1c. standings after every EuroLeague / EuroCup game night (also mid-round), once the night's
     # result articles are done; skipped if the site already has a standings article since the night's games.
     for league in ("el", "ec"):
-        if (ONLY and league not in ONLY) or not budget():
+        if (ONLY and league not in ONLY) or not budget(league):
             continue
         try:
             todo = standings.nights(league)
@@ -864,7 +872,7 @@ def _run(state):
         pub = dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00"))
         if not n.get("done") and now() - pub > dt.timedelta(hours=NEWS_MAX_AGE_HOURS):
             n["done"] = "too-old"
-        if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget():
+        if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget("nba"):
             continue
         try:
             n["attempts"] += 1
@@ -916,7 +924,7 @@ def _run(state):
             if not n.get("done") and (not item["published"]
                                       or now() - item["published"] > dt.timedelta(hours=NEWS_MAX_AGE_HOURS)):
                 n["done"] = "too-old"
-            if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget() or judged >= (MAX_JUDGE or feed["max_judge"]):
+            if n.get("done") or n["attempts"] >= MAX_ATTEMPTS or not budget(league) or judged >= (MAX_JUDGE or feed["max_judge"]):
                 continue
             judged += 1
             try:
