@@ -30,6 +30,7 @@
   "lba|virtus roma": "",
   "lnb|bcm gravelines-dunkerque": "",
   "lnb|boulazac basket dordogne": "https://r2.thesportsdb.com/images/media/team/badge/68tu9p1570976593.png",
+  "lnb|chorale roanne": "",
   "lnb|elan béarnais pau-lacq-orthez": "",
   "lnb|gravelines-dunkerque": "",
   "lnb|jda dijon": "https://r2.thesportsdb.com/images/media/team/badge/06b1fd1666897191.png",
@@ -695,6 +696,12 @@
    "post": 70244,
    "seen": "2026-11-17T18:17:19.009345+00:00"
   },
+  "E2026-112": {
+   "attempts": 1,
+   "done": true,
+   "post": 70310,
+   "seen": "2026-11-17T21:17:24.433099+00:00"
+  },
   "E2026-113": {
    "attempts": 1,
    "done": true,
@@ -899,12 +906,6 @@
    "post": 68256,
    "seen": "2026-11-04T20:06:24.148072+00:00"
   },
-  "U2026-90": {
-   "attempts": 1,
-   "done": true,
-   "post": 68112,
-   "seen": "2026-11-03T20:25:15.493149+00:00"
-  },
   "U2026-91": {
    "attempts": 1,
    "done": true,
@@ -922,17 +923,6 @@
    "done": true,
    "post": 68263,
    "seen": "2026-11-04T21:28:45.882750+00:00"
-  },
-  "U2026-95": {
-   "attempts": 0,
-   "done": "already on site",
-   "seen": "2026-11-03T20:57:05.920983+00:00"
-  },
-  "U2026-96": {
-   "attempts": 1,
-   "done": true,
-   "post": 68126,
-   "seen": "2026-11-03T20:57:05.920983+00:00"
   },
   "U2026-97": {
    "attempts": 1,
@@ -2312,6 +2302,12 @@
    "done": "skipped: Η είδηση είναι βίντεο-σύνοψη του αγώνα Λε Μαν – Ασβέλ, το οποίο ήδη καλύπτεται στους υπάρχοντες τίτλους (\"Η Λε Μαν σταμά",
    "seen": "2026-11-15T22:49:12.897897+00:00"
   },
+  "lequipe:45ef698d70404c00": {
+   "attempts": 1,
+   "done": true,
+   "post": 70314,
+   "seen": "2026-11-17T21:17:24.433099+00:00"
+  },
   "lequipe:484735f11ce012b2": {
    "attempts": 0,
    "done": "too-old",
@@ -3165,6 +3161,12 @@
    "done": true,
    "post": 69582,
    "seen": "2026-11-12T18:06:06.883004+00:00"
+  },
+  "realgm:6e8cb73fcb0fdc2c": {
+   "attempts": 1,
+   "done": true,
+   "post": 70312,
+   "seen": "2026-11-17T21:17:24.433099+00:00"
   },
   "realgm:6eeac73f9a2212f6": {
    "attempts": 1,
@@ -5897,6 +5899,11 @@
    "attempts": 1,
    "done": "skipped: Το θέμα (Τρέντο: ψάχνει ενίσχυση, στο στόχαστρο ο Σέλτον) υπάρχει ήδη στους τίτλους του site.",
    "seen": "2026-11-06T12:00:16.286480+00:00"
+  },
+  "sportando:4ea7fe90ff56baba": {
+   "attempts": 1,
+   "done": "skipped: Απλή επίσκεψη χωρίς ουσιαστική είδηση (μεταγραφή, δήλωση, τραυματισμός ή απόφαση). Θεωρείται πολύ ασήμαντη για άρθρο.",
+   "seen": "2026-11-17T21:17:24.433099+00:00"
   },
   "sportando:4fe2299a4394857a": {
    "attempts": 1,
