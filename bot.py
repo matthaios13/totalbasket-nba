@@ -281,9 +281,13 @@ STYLE = """Είσαι συντάκτης του ελληνικού site μπάσ
 - photo_people: τα πλήρη ονόματα στα ΑΓΓΛΙΚΑ (όπως στη Wikipedia) των 1-3 πιο σημαντικών προσώπων του άρθρου, το σημαντικότερο πρώτο (για τη φωτογραφία).
 - main_team: η ομάδα που αφορά κυρίως το άρθρο, με το επίσημο λατινικό της όνομα (π.χ. "Real Madrid Baloncesto", "Olimpia Milano", "Paris Basketball"), αλλιώς "".
 - importance: 1-10 πόσο σημαντικό/ελκυστικό είναι για Έλληνα αναγνώστη (σούπερ σταρ, Έλληνες παίκτες, μεγάλες μεταγραφές = υψηλά).
+- excerpt: ο υπότιτλος/περίληψη, 1-2 προτάσεις με το βασικό γεγονός.
+- tagline: μία σύντομη πρόταση (έως 120 χαρακτήρες) που μπαίνει κάτω από τον τίτλο· συμπληρώνει τον τίτλο, δεν τον επαναλαμβάνει.
+- meta_description: για τη Google, 130-155 χαρακτήρες, με τα κύρια ονόματα (πρόσωπο, ομάδα, διοργάνωση) και το γεγονός, φυσικά γραμμένο.
+- tags: 3-6 ετικέτες στα ελληνικά όπως τις γράφει ο ελληνικός τύπος: τα πλήρη ονόματα των κύριων προσώπων (π.χ. «Γιάννης Αντετοκούνμπο»), οι ομάδες (π.χ. «Παναθηναϊκός», «Λέικερς») και η διοργάνωση αν ταιριάζει. Όχι γενικές λέξεις (π.χ. «μπάσκετ», «νίκη»).
 
 Απαντάς ΜΟΝΟ με ένα JSON αντικείμενο, χωρίς τίποτα άλλο:
-{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "photo_people": [], "main_team": "", "importance": 5}"""
+{"publish": true, "reason": "", "title": "...", "excerpt": "1-2 προτάσεις", "content": "<p ...>...</p>", "people": ["ελληνικά ονόματα των 1-4 κύριων προσώπων"], "photo_person": "", "photo_people": [], "tagline": "", "meta_description": "", "tags": [], "main_team": "", "importance": 5}"""
 
 STATS_NOTE = """
 Τα δεκάλεπτα και οι γραμμές στατιστικών των ομάδων προστίθενται ΑΥΤΟΜΑΤΑ στο τέλος· μην τα γράψεις εσύ ως λίστα.
@@ -456,16 +460,23 @@ def wp(method, path, data=None, headers=None, raw=None):
 _tag_cache = {}
 
 
-def find_tags(names, base_tag=NBA_TAG):
-    """Only reuse tags that already exist on the site (exact name match) — never create new ones."""
+def find_tags(names, base_tag=NBA_TAG, create=()):
+    """Tags by name: an existing tag of the same name (ignoring case and accents) is reused; names in
+    `create` (the writer's own tags: people, teams) get a new tag when the site has none (user, 17/11/2026:
+    every article with correct tags)."""
     ids = [base_tag]
     for n in names:
-        n = (n or "").strip()
-        if not n:
+        n = re.sub(r"\s+", " ", (n or "").strip())
+        if not n or len(n) < 3:
             continue
         if n not in _tag_cache:
-            res = get_json(f"{WP_URL}/wp-json/wp/v2/tags?search={urllib.parse.quote(n)}&_fields=id,name")
-            _tag_cache[n] = next((t["id"] for t in res if html.unescape(t["name"]).lower() == n.lower()), None)
+            res = get_json(f"{WP_URL}/wp-json/wp/v2/tags?search={urllib.parse.quote(n)}&_fields=id,name&per_page=20")
+            _tag_cache[n] = next((t["id"] for t in res if _norm(html.unescape(t["name"])) == _norm(n)), None)
+            if not _tag_cache[n] and n in create and not DRY_RUN:
+                try:
+                    _tag_cache[n] = wp("POST", "tags", {"name": n})["id"]
+                except Exception as ex:
+                    log("  could not create tag", n, ex)
         if _tag_cache[n] and _tag_cache[n] not in ids:
             ids.append(_tag_cache[n])
     return ids
@@ -494,7 +505,8 @@ def publish(art, image_path, slug_hint, league="nba"):
                 "Content-Disposition": f'attachment; filename="{slug_hint}.jpg"'})
         wp("POST", f"media/{media['id']}", {"alt_text": art["title"], "caption": art.get("_caption", "")})
     lg = LEAGUES[league]
-    tags = find_tags(art.get("people", []) + art.get("_teams", []), lg["tag"])
+    own = [t for t in (art.get("tags") or []) if isinstance(t, str)][:6]
+    tags = find_tags(own + art.get("people", []) + art.get("_teams", []), lg["tag"], create=own)
     if league in ("el", "ec"):
         tags.append(euro_top_tag(league, art.get("_result_teams")))
     elif league != "nba" and int(art.get("importance") or 0) >= EUROPE_TOP_IMPORTANCE:
@@ -503,7 +515,10 @@ def publish(art, image_path, slug_hint, league="nba"):
     return wp("POST", "posts", {
         "title": art["title"], "content": art["content"], "excerpt": art.get("excerpt", ""),
         "status": WP_STATUS, "categories": categories, "tags": tags,
-        "featured_media": media["id"]})
+        "featured_media": media["id"],
+        # mu-plugin tb-bot-meta.php: Foxiz tagline under the title + Yoast meta description
+        "tb_bot_meta": {"tagline": (art.get("tagline") or art.get("excerpt") or "")[:160].strip(),
+                        "metadesc": (art.get("meta_description") or art.get("excerpt") or "")[:160].strip()}})
 
 
 # ---------------------------------------------------------------- main
