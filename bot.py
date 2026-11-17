@@ -61,9 +61,9 @@ LEAN = ["--max-turns", "1", "--tools", "", "--strict-mcp-config", "--setting-sou
 
 def claude_cmd(model):
     return ["claude", "-p", "--output-format", "json", "--model", model, *LEAN]
-MAX_POSTS = int(os.environ.get("MAX_POSTS", "10"))          # NBA articles per run
+MAX_POSTS = int(os.environ.get("MAX_POSTS", "15"))          # NBA articles per run (user 17/11: 15)
 LEAGUE_POSTS = int(os.environ.get("LEAGUE_POSTS", "4"))     # per other league per run
-TOTAL_POSTS = int(os.environ.get("TOTAL_POSTS", "25"))
+TOTAL_POSTS = int(os.environ.get("TOTAL_POSTS", "35"))
 ONLY = set(filter(None, os.environ.get("ONLY_LEAGUES", "").split(",")))   # test runs: e.g. "lba,acb,lnb"
 GAMES_ONLY = os.environ.get("GAMES_ONLY") == "1"   # the 10-minute game-night job: results only, no news feeds
 NBA_LOGO = "https://a.espncdn.com/i/teamlogos/leagues/500/nba.png"   # last resort, never a text card
