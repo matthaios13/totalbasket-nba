@@ -4,10 +4,6 @@
    "seen": "2026-11-18T09:01:46.100590+00:00",
    "skip": "Το θέμα καλύπτεται ήδη στο totalbasket: υπάρχουν το ρεπορτάζ «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και το σχόλιο «Δεν τα κατάφερε ούτε στην Μπολόνια ο προβλημ"
   },
-  "https://www.trifillakia.gr/mpasket/article/24693/real-panathinaikos-pente-apontes-gia-toys-merengkes-epistrefei-o-sloykas": {
-   "seen": "2026-11-04T17:25:53.767110+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24694/omprantovits-na-stamatisoyme-to-rythmo-tis-real-kai-na-periorisoyme-ta-lathi": {
    "seen": "2026-11-04T18:22:58.896606+00:00",
    "skip": "duplicate"
@@ -164,6 +160,10 @@
   "https://www.trifillakia.gr/mpasket/article/25078/ta-highlights-apo-tin-itta-stin-mpolonia-apo-ti-virtoys-vid": {
    "seen": "2026-11-18T09:01:51.144313+00:00",
    "skip": "Η ήττα του Παναθηναϊκού από τη Βίρτους με 84-79 καλύπτεται ήδη στο site με δύο τίτλους: «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και «Δεν τα κατάφερε ούτε στην Μ"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25096/i-mplok-toy-ntiara-ston-nan-poy-egine-eikona-tis-nikis-tis-virtoys": {
+   "seen": "2026-11-18T17:56:58.693478+00:00",
+   "skip": "duplicate"
   }
  }
 }
