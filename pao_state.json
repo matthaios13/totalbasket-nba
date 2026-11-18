@@ -1,5 +1,9 @@
 {
  "items": {
+  "https://www.trifillakia.gr/blogs/mat/25077/enas-panathinaikos-poy-se-kanei-na-kleineis-tin-tileorasi-apo-ta-neyra": {
+   "seen": "2026-11-18T09:01:46.100590+00:00",
+   "skip": "Το θέμα καλύπτεται ήδη στο totalbasket: υπάρχουν το ρεπορτάζ «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και το σχόλιο «Δεν τα κατάφερε ούτε στην Μπολόνια ο προβλημ"
+  },
   "https://www.trifillakia.gr/mpasket/article/24693/real-panathinaikos-pente-apontes-gia-toys-merengkes-epistrefei-o-sloykas": {
    "seen": "2026-11-04T17:25:53.767110+00:00",
    "skip": "duplicate"
@@ -156,6 +160,10 @@
   "https://www.trifillakia.gr/mpasket/article/25076/moymproy-i-niki-irthe-hari-stoys-opadoys": {
    "seen": "2026-11-18T01:13:19.776670+00:00",
    "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25078/ta-highlights-apo-tin-itta-stin-mpolonia-apo-ti-virtoys-vid": {
+   "seen": "2026-11-18T09:01:51.144313+00:00",
+   "skip": "Η ήττα του Παναθηναϊκού από τη Βίρτους με 84-79 καλύπτεται ήδη στο site με δύο τίτλους: «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και «Δεν τα κατάφερε ούτε στην Μ"
   }
  }
 }
