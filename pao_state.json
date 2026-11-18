@@ -1,13 +1,5 @@
 {
  "items": {
-  "https://www.trifillakia.gr/mpasket/article/24678/olympiakos-xehoristi-peitharhiki-diadikasia-tis-euroleague-kata-toy-dimitri": {
-   "seen": "2026-11-03T20:44:32.638962+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24679/kae-panathinaikos-skliri-anakoinosi-kata-toy-olympiakoy-me-aihmes-gia-tin-ked": {
-   "seen": "2026-11-03T21:41:31.749938+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24693/real-panathinaikos-pente-apontes-gia-toys-merengkes-epistrefei-o-sloykas": {
    "seen": "2026-11-04T17:25:53.767110+00:00",
    "skip": "duplicate"
@@ -139,6 +131,30 @@
   },
   "https://www.trifillakia.gr/mpasket/article/25045/giampoysele-i-pio-talantoyha-omada-stin-opoia-epaixa-pote-o-panathinaikos": {
    "seen": "2026-11-16T17:21:40.033685+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25070/synehizei-na-min-vlepetai-o-panathinaikos-kai-nea-kaki-itta-sti-mpolonia": {
+   "seen": "2026-11-18T01:13:19.773145+00:00",
+   "skip": "Το αποτέλεσμα και η εικόνα του αγώνα Βίρτους – Παναθηναϊκός 84-79 καλύπτονται ήδη στο site με τα άρθρα «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και «Δεν τα κατάφ"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25072/den-ta-katafere-oyte-stin-mpolonia-o-provlimatikos-xana-panathinaikos": {
+   "seen": "2026-11-18T01:13:19.774104+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25073/panathinaikos-kataggellei-sti-euroleague-opado-tis-virtoys-gia-ratsistiki": {
+   "seen": "2026-11-18T01:13:19.776572+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25074/virtoys-panathinaikos-84-79-nea-provlimatiki-emfanisi-kai-itta-sti-mpolonia": {
+   "seen": "2026-11-18T01:13:19.776242+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25075/omprantovits-itan-ena-paihnidi-poy-eprepe-na-paixoyme-dynata": {
+   "seen": "2026-11-18T01:13:19.774795+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25076/moymproy-i-niki-irthe-hari-stoys-opadoys": {
+   "seen": "2026-11-18T01:13:19.776670+00:00",
    "skip": "duplicate"
   }
  }
