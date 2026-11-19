@@ -53,6 +53,13 @@
    "seen": "2026-11-03T13:13:18.335978+00:00",
    "title": "EB Press Release: EuroLeague MVP for October: TJ Shorts, Valencia Basket"
   },
+  "<385c8e58f6f4ecd51753eec4fda3820b@swift.generated>": {
+   "posts": [
+    70670
+   ],
+   "seen": "2026-11-19T17:17:28.738974+00:00",
+   "title": "EB Press Release: BKT EuroCup RS - Round 8 MVP: Javante McCoy, Balkan Botevgrad"
+  },
   "<4028264c1477b32dfc1f25c17b1131c5@swift.generated>": {
    "posts": [
     69331
@@ -250,6 +257,14 @@
   "<a5d1f6fabc64337e17f3a8e939331426@swift.generated>": {
    "seen": "2026-11-09T13:06:46.664149+00:00",
    "skip": "Το email περιέχει μόνο σύνδεσμο για κατέβασμα υλικού (Game Kits του Γύρου 11 της EuroLeague) χωρίς κείμενο είδησης."
+  },
+  "<aafc5cefa49d1ee6a6b9759cc9c81a00@swift.generated>": {
+   "seen": "2026-11-19T17:16:51.295121+00:00",
+   "skip": "Η ίδια είδηση (MVP της 12ης αγωνιστικής της EuroLeague ο Βεζένκοφ) υπάρχει ήδη στο site, με τον τίτλο «MVP της 12ης αγωνιστικής στην Ευρωλίγκα ο Βεζένκοφ»."
+  },
+  "<bd0efc3961841b88e7072e1fa52c83b3@swift.generated>": {
+   "seen": "2026-11-19T17:17:30.704123+00:00",
+   "skip": "Το email είναι μόνο σύνδεσμος για κατέβασμα των game kits της 13ης αγωνιστικής, χωρίς είδηση να δημοσιευτεί."
   },
   "<bdd9b1cc54bd50fd75388047f24cb55a@swift.generated>": {
    "posts": [
