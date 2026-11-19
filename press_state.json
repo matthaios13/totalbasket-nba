@@ -135,6 +135,10 @@
    "seen": "2026-11-03T13:15:26.203092+00:00",
    "skip": "Το email περιέχει μόνο έναν σύνδεσμο (https://danaoi.gr/2026/10/o-danaos-trikalon-tima-ton-agio-nestora/) χωρίς κείμενο δελτίου στο σώμα, σε συνημμένο ή σε linked_article, οπότε δεν υπάρχει περιεχόμεν"
   },
+  "<CA+r1L8YdoR8Lkoz_P7WE_0c3Fb6cTj-vhpGKEK1AL=hYggebpA@mail.gmail.com>": {
+   "seen": "2026-11-19T23:45:58.480797+00:00",
+   "skip": "Το email περιέχει μόνο έναν σύνδεσμο (https://danaoi.gr/...) χωρίς κείμενο δελτίου στο σώμα, στα συνημμένα ή στο linked_article, οπότε δεν υπάρχει κείμενο για ανάρτηση."
+  },
   "<CA+r1L8Yw8xAs-7Fvw1RBvddp0gwUNtKbhfLk_jKydcXeCis5tg@mail.gmail.com>": {
    "seen": "2026-11-03T13:11:32.488737+00:00",
    "skip": "Το email περιέχει μόνο έναν σύνδεσμο (URL) χωρίς κείμενο δελτίου τύπου, ούτε σε συνημμένο ούτε στο linked_article. Το περιεχόμενο της ανακοίνωσης δεν είναι διαθέσιμο, οπότε δεν μπορεί να ανεβεί άρθρο "
