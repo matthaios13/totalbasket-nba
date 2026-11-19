@@ -4,30 +4,6 @@
    "at": "2026-11-12T08:43:54.644427+00:00",
    "pick": "face"
   },
-  "bala24:86964": {
-   "at": "2026-11-11T19:44:57.087131+00:00",
-   "pick": "face"
-  },
-  "bala24:86972": {
-   "at": "2026-11-11T19:45:01.659946+00:00",
-   "pick": "Panathinaikos F.C."
-  },
-  "bala24:86977": {
-   "at": "2026-11-11T22:39:07.615522+00:00",
-   "pick": "face"
-  },
-  "bala24:86985": {
-   "at": "2026-11-11T22:39:00.095456+00:00",
-   "pick": "face"
-  },
-  "bala24:86987": {
-   "at": "2026-11-11T22:39:03.325354+00:00",
-   "pick": null
-  },
-  "bala24:86992": {
-   "at": "2026-11-11T22:38:51.896568+00:00",
-   "pick": "face"
-  },
   "bala24:87002": {
    "at": "2026-11-12T08:44:38.052054+00:00",
    "pick": "Trabzonspor"
@@ -1792,6 +1768,10 @@
    "at": "2026-11-18T10:47:07.193139+00:00",
    "pick": "Arsenal F.C."
   },
+  "bala24:88905": {
+   "at": "2026-11-19T01:35:28.502581+00:00",
+   "pick": "CFR Cluj"
+  },
   "bala24:88908": {
    "at": "2026-11-18T10:46:52.965475+00:00",
    "pick": "face"
@@ -1799,6 +1779,66 @@
   "bala24:88912": {
    "at": "2026-11-18T10:46:46.209022+00:00",
    "pick": "face"
+  },
+  "bala24:88920": {
+   "at": "2026-11-19T01:35:31.325397+00:00",
+   "pick": null
+  },
+  "bala24:88923": {
+   "at": "2026-11-19T01:35:23.907734+00:00",
+   "pick": "Real Madrid CF"
+  },
+  "bala24:88924": {
+   "at": "2026-11-19T01:35:09.216312+00:00",
+   "pick": "Aberdeen F.C."
+  },
+  "bala24:88928": {
+   "at": "2026-11-19T01:35:18.628041+00:00",
+   "pick": "Kalamata F.C."
+  },
+  "bala24:88931": {
+   "at": "2026-11-19T01:35:12.904379+00:00",
+   "pick": "face"
+  },
+  "bala24:88935": {
+   "at": "2026-11-19T01:35:04.492117+00:00",
+   "pick": "AEK Athens F.C."
+  },
+  "bala24:88938": {
+   "at": "2026-11-19T01:34:40.679725+00:00",
+   "pick": "Fortuna Sittard"
+  },
+  "bala24:88940": {
+   "at": "2026-11-19T01:35:00.359534+00:00",
+   "pick": "face"
+  },
+  "bala24:88943": {
+   "at": "2026-11-19T01:34:52.817432+00:00",
+   "pick": "face"
+  },
+  "bala24:88946": {
+   "at": "2026-11-19T01:34:47.587536+00:00",
+   "pick": "Asteras Tripolis F.C."
+  },
+  "bala24:88951": {
+   "at": "2026-11-19T01:34:11.497322+00:00",
+   "pick": null
+  },
+  "bala24:88953": {
+   "at": "2026-11-19T01:34:23.799394+00:00",
+   "pick": "FCSB"
+  },
+  "bala24:88957": {
+   "at": "2026-11-19T01:34:33.629624+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:88961": {
+   "at": "2026-11-19T01:34:28.664467+00:00",
+   "pick": "Olympiacos F.C."
+  },
+  "bala24:88965": {
+   "at": "2026-11-19T01:34:17.205170+00:00",
+   "pick": "Aris Thessaloniki F.C."
   },
   "bala24:88970": {
    "at": "2026-11-18T19:12:23.799283+00:00",
@@ -1896,73 +1936,37 @@
    "at": "2026-11-18T19:09:42.109377+00:00",
    "pick": "face"
   },
+  "bala24:89044": {
+   "at": "2026-11-19T01:34:06.307544+00:00",
+   "pick": "face"
+  },
   "bala24:89046": {
    "at": "2026-11-18T19:09:46.518128+00:00",
    "pick": "Levadiakos F.C."
   },
-  "totalbasket:69381": {
-   "at": "2026-11-11T19:44:48.026985+00:00",
-   "pick": "Fenerbahçe S.K."
-  },
-  "totalbasket:69383": {
-   "at": "2026-11-11T19:44:42.639319+00:00",
-   "pick": null
-  },
-  "totalbasket:69386": {
-   "at": "2026-11-11T19:44:36.541814+00:00",
-   "pick": null
-  },
-  "totalbasket:69391": {
-   "at": "2026-11-11T19:44:33.041124+00:00",
-   "pick": null
-  },
-  "totalbasket:69394": {
-   "at": "2026-11-11T19:44:28.959519+00:00",
-   "pick": null
-  },
-  "totalbasket:69399": {
-   "at": "2026-11-11T19:44:24.248021+00:00",
-   "pick": null
-  },
-  "totalbasket:69402": {
-   "at": "2026-11-11T19:44:16.500309+00:00",
-   "pick": "Athinaikos W.B.C."
-  },
-  "totalbasket:69410": {
-   "at": "2026-11-11T22:38:46.192492+00:00",
+  "bala24:89057": {
+   "at": "2026-11-19T01:33:43.123333+00:00",
    "pick": "face"
   },
-  "totalbasket:69420": {
-   "at": "2026-11-11T22:38:38.389345+00:00",
-   "pick": "Peristeri B.C."
-  },
-  "totalbasket:69423": {
-   "at": "2026-11-11T22:38:33.065349+00:00",
-   "pick": null
-  },
-  "totalbasket:69426": {
-   "at": "2026-11-11T22:38:29.601236+00:00",
-   "pick": "KK Partizan"
-  },
-  "totalbasket:69429": {
-   "at": "2026-11-11T22:38:18.161746+00:00",
+  "bala24:89059": {
+   "at": "2026-11-19T01:33:50.859519+00:00",
    "pick": "face"
   },
-  "totalbasket:69439": {
-   "at": "2026-11-11T22:38:10.305528+00:00",
-   "pick": "KK Partizan"
-  },
-  "totalbasket:69442": {
-   "at": "2026-11-11T22:38:03.189764+00:00",
-   "pick": "Aris B.C."
-  },
-  "totalbasket:69445": {
-   "at": "2026-11-11T22:37:58.191290+00:00",
+  "bala24:89063": {
+   "at": "2026-11-19T01:33:58.727756+00:00",
    "pick": "face"
   },
-  "totalbasket:69449": {
-   "at": "2026-11-11T22:37:48.047437+00:00",
-   "pick": "face"
+  "bala24:89067": {
+   "at": "2026-11-19T01:33:37.708138+00:00",
+   "pick": "FC Bayern Munich"
+  },
+  "bala24:89069": {
+   "at": "2026-11-19T01:33:26.510534+00:00",
+   "pick": "Panathinaikos F.C."
+  },
+  "bala24:89071": {
+   "at": "2026-11-19T01:33:31.196657+00:00",
+   "pick": "Olympiacos F.C."
   },
   "totalbasket:69503": {
    "at": "2026-11-12T05:44:24.421595+00:00",
@@ -2475,6 +2479,70 @@
   "totalbasket:70470": {
    "at": "2026-11-18T19:09:20.108406+00:00",
    "pick": "face"
+  },
+  "totalbasket:70476": {
+   "at": "2026-11-19T01:33:20.356498+00:00",
+   "pick": "Panathinaikos B.C."
+  },
+  "totalbasket:70484": {
+   "at": "2026-11-19T01:33:15.864382+00:00",
+   "pick": "face"
+  },
+  "totalbasket:70487": {
+   "at": "2026-11-19T01:33:10.755976+00:00",
+   "pick": null
+  },
+  "totalbasket:70490": {
+   "at": "2026-11-19T01:33:06.849665+00:00",
+   "pick": null
+  },
+  "totalbasket:70495": {
+   "at": "2026-11-19T01:33:00.980310+00:00",
+   "pick": "AEK B.C."
+  },
+  "totalbasket:70498": {
+   "at": "2026-11-19T01:32:56.475778+00:00",
+   "pick": null
+  },
+  "totalbasket:70501": {
+   "at": "2026-11-19T01:32:51.482369+00:00",
+   "pick": "face"
+  },
+  "totalbasket:70503": {
+   "at": "2026-11-19T01:32:44.291120+00:00",
+   "pick": null
+  },
+  "totalbasket:70506": {
+   "at": "2026-11-19T01:32:38.073431+00:00",
+   "pick": "AEK B.C."
+  },
+  "totalbasket:70517": {
+   "at": "2026-11-19T01:32:32.116625+00:00",
+   "pick": "Aris B.C."
+  },
+  "totalbasket:70521": {
+   "at": "2026-11-19T01:32:25.896723+00:00",
+   "pick": "face"
+  },
+  "totalbasket:70523": {
+   "at": "2026-11-19T01:32:21.160704+00:00",
+   "pick": null
+  },
+  "totalbasket:70526": {
+   "at": "2026-11-19T01:32:15.239010+00:00",
+   "pick": null
+  },
+  "totalbasket:70545": {
+   "at": "2026-11-19T01:32:10.930128+00:00",
+   "pick": "PAOK BC"
+  },
+  "totalbasket:70546": {
+   "at": "2026-11-19T01:32:04.997959+00:00",
+   "pick": "Aris B.C."
+  },
+  "totalbasket:70550": {
+   "at": "2026-11-19T01:31:59.679794+00:00",
+   "pick": "face"
   }
  },
  "media": {
@@ -2547,6 +2615,7 @@
   "bala24:bala24-c-feyenoord-v2.jpg": 84506,
   "bala24:bala24-c-fk-bod-glimt-v2.jpg": 86033,
   "bala24:bala24-c-fk-partizan-v2.jpg": 86684,
+  "bala24:bala24-c-fortuna-sittard-v2.jpg": 89083,
   "bala24:bala24-c-fram-reykjavik-v2.jpg": 86971,
   "bala24:bala24-c-galatasaray-s-k-v2.jpg": 84621,
   "bala24:bala24-c-gaziantep-f-k-v2.jpg": 87866,
@@ -2639,6 +2708,7 @@
   "bala24:bala24-p-alexis-mac-allister.jpg": 88816,
   "bala24:bala24-p-alisson-becker.jpg": 85088,
   "bala24:bala24-p-alphonso-davies.jpg": 88482,
+  "bala24:bala24-p-amadou-onana.jpg": 89084,
   "bala24:bala24-p-amar-dedic.jpg": 85220,
   "bala24:bala24-p-amine-gouiri.jpg": 85314,
   "bala24:bala24-p-andrija-zivkovic.jpg": 85617,
@@ -2684,6 +2754,7 @@
   "bala24:bala24-p-fernando-muslera.jpg": 87198,
   "bala24:bala24-p-filip-kostic.jpg": 86517,
   "bala24:bala24-p-florian-wirtz.jpg": 88560,
+  "bala24:bala24-p-gianluigi-buffon.jpg": 89078,
   "bala24:bala24-p-gianni-infantino.jpg": 86659,
   "bala24:bala24-p-giannis-konstantelias.jpg": 86258,
   "bala24:bala24-p-giannis-michailidis.jpg": 88817,
@@ -2693,6 +2764,7 @@
   "bala24:bala24-p-hajime-moriyasu.jpg": 87692,
   "bala24:bala24-p-harry-kane.jpg": 85013,
   "bala24:bala24-p-imanol-alguacil.jpg": 84863,
+  "bala24:bala24-p-ivan-toney.jpg": 89079,
   "bala24:bala24-p-jadon-sancho.jpg": 87694,
   "bala24:bala24-p-jamal-musiala.jpg": 86099,
   "bala24:bala24-p-jan-urban.jpg": 88851,
@@ -2727,6 +2799,7 @@
   "bala24:bala24-p-mihai-pintilii.jpg": 86726,
   "bala24:bala24-p-milos-pantovic.jpg": 86929,
   "bala24:bala24-p-mohamed-salah.jpg": 86736,
+  "bala24:bala24-p-nico-paz.jpg": 89082,
   "bala24:bala24-p-nolito.jpg": 88242,
   "bala24:bala24-p-oliver-glasner.jpg": 85727,
   "bala24:bala24-p-otto-rehhagel.jpg": 86588,
@@ -2744,6 +2817,7 @@
   "bala24:bala24-p-raul.jpg": 86286,
   "bala24:bala24-p-rayan-ait-nouri.jpg": 87220,
   "bala24:bala24-p-razvan-marin.jpg": 85778,
+  "bala24:bala24-p-rio-ngumoha.jpg": 89080,
   "bala24:bala24-p-roberto-mancini.jpg": 87049,
   "bala24:bala24-p-romario.jpg": 87939,
   "bala24:bala24-p-ruben-amorim.jpg": 85552,
