@@ -4,34 +4,6 @@
    "seen": "2026-11-18T09:01:46.100590+00:00",
    "skip": "Το θέμα καλύπτεται ήδη στο totalbasket: υπάρχουν το ρεπορτάζ «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και το σχόλιο «Δεν τα κατάφερε ούτε στην Μπολόνια ο προβλημ"
   },
-  "https://www.trifillakia.gr/mpasket/article/24694/omprantovits-na-stamatisoyme-to-rythmo-tis-real-kai-na-periorisoyme-ta-lathi": {
-   "seen": "2026-11-04T18:22:58.896606+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24695/i-vathmologia-tis-euroleague-meta-ti-niki-toy-panathinaikoy-epi-tis-real": {
-   "seen": "2026-11-04T23:16:57.018769+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24696/real-madritis-panathinaikos-aktor-112-115-o-nan-katharise-stin-paratasi-sti": {
-   "seen": "2026-11-04T23:16:57.018531+00:00",
-   "skip": "Το ματς Ρεάλ Μαδρίτης – Παναθηναϊκός 112-115 με πρωταγωνιστή τον Ναν καλύπτεται ήδη στο site με άρθρο «Ρεάλ Μαδρίτης – Παναθηναϊκός 112-115: Ο Ναν υπέγραψε το μεγάλο διπλό στην παράταση», ενώ υπάρχουν"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24697/omprantovits-o-nan-epaixe-katapliktika-xeroyme-oloi-tin-poiotita-poy-ehei": {
-   "seen": "2026-11-04T23:16:57.019022+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24698/real-madritis-panathinaikos-112-115-o-nan-ypegrapse-to-megalo-diplo-stin": {
-   "seen": "2026-11-04T23:16:57.018912+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24699/lesor-ayti-einai-i-doyleia-mas-prepei-na-eimaste-etoimoi": {
-   "seen": "2026-11-04T23:16:57.019101+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24700/nan-fysika-kai-eimai-koyrasmenos-xekinisame-me-stoho-na-eimaste-mia-omada-poy": {
-   "seen": "2026-11-05T00:12:23.236403+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24702/ta-highlights-apo-to-megalo-diplo-toy-panathinaikoy-sti-madriti-vid": {
    "seen": "2026-11-05T08:36:29.338951+00:00",
    "skip": "duplicate"
@@ -163,6 +135,27 @@
   },
   "https://www.trifillakia.gr/mpasket/article/25096/i-mplok-toy-ntiara-ston-nan-poy-egine-eikona-tis-nikis-tis-virtoys": {
    "seen": "2026-11-18T17:56:58.693478+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25096/to-mplok-toy-ntiara-ston-nan-poy-egine-eikona-tis-nikis-tis-virtoys": {
+   "seen": "2026-11-19T00:12:08.589916+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25097/panathinaikos-geniki-eisodos-10-eyro-gia-tin-anametrisi-me-to-maroysi": {
+   "seen": "2026-11-19T00:12:08.591488+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25098/omprantovits-video-session-90-lepton-sto-kaoynas-analysi-kai-doyleia-prin-apo": {
+   "post": 70550,
+   "seen": "2026-11-19T00:12:27.265224+00:00",
+   "title": "Ενενήντα λεπτά video στο Κάουνας για τον Παναθηναϊκό"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25099/arhigiki-paremvasi-sloyka-den-eimaste-ekei-poy-theloyme-provlimatizomaste-gia": {
+   "seen": "2026-11-19T00:12:31.655040+00:00",
+   "skip": "Το θέμα υπάρχει ήδη στο totalbasket.gr: οι δηλώσεις του Σλούκα πριν από το Ζαλγκίρις-Παναθηναϊκός (αλλαγή mindset, Φρανσίσκο ως πιο ταλαντούχος πόιντ γκαρντ της Ευρωλίγκας) έχουν δημοσιευτεί με τίτλο "
+  },
+  "https://www.trifillakia.gr/mpasket/article/25100/omprantovits-oi-exypnoi-anthropoi-katalavainoyn-eho-exypnoys-anthropoys-stin": {
+   "seen": "2026-11-19T00:12:31.656012+00:00",
    "skip": "duplicate"
   }
  }
