@@ -2446,6 +2446,11 @@
    "done": "too-old",
    "seen": "2026-11-08T19:53:01.758301+00:00"
   },
+  "lequipe:4ab87197368dff06": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-20T23:17:21.320686+00:00"
+  },
   "lequipe:4f421dbc4dccaa30": {
    "attempts": 1,
    "done": true,
@@ -2476,6 +2481,11 @@
    "attempts": 0,
    "done": "too-old",
    "seen": "2026-11-18T20:17:20.420453+00:00"
+  },
+  "lequipe:6086217814251ce4": {
+   "attempts": 0,
+   "done": "too-old",
+   "seen": "2026-11-20T23:17:21.320686+00:00"
   },
   "lequipe:621db10e6897241a": {
    "attempts": 0,
