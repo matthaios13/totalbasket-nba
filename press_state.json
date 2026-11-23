@@ -53,6 +53,10 @@
    "seen": "2026-11-03T13:13:18.335978+00:00",
    "title": "EB Press Release: EuroLeague MVP for October: TJ Shorts, Valencia Basket"
   },
+  "<368f097287c9f5c9f16832bb89dfd731@swift.generated>": {
+   "seen": "2026-11-23T21:59:14.400751+00:00",
+   "skip": "old"
+  },
   "<385c8e58f6f4ecd51753eec4fda3820b@swift.generated>": {
    "posts": [
     70670
@@ -113,6 +117,10 @@
    ],
    "seen": "2026-11-06T18:50:01.117729+00:00",
    "title": "ΓΣ ΤΙΤΑΝΕΣ - 4η ΑΓΩΝΙΣΤΙΚΗ Α2 ΕΣΚΑΘ"
+  },
+  "<9d2bda905de362275d3c3d3f5008218a@swift.generated>": {
+   "seen": "2026-11-23T21:59:16.164884+00:00",
+   "skip": "Το email είναι μόνο σύνδεσμος για κατέβασμα υλικού (Round 14 Game Kits) χωρίς κείμενο είδησης."
   },
   "<CA+r1L8Y1tZoHYopMQMqnV0VN=Vy1-9Qxxy3ooX51zx1Z=KpXyA@mail.gmail.com>": {
    "seen": "2026-11-03T13:18:28.238646+00:00",
@@ -190,9 +198,17 @@
    "seen": "2026-11-03T13:12:08.153639+00:00",
    "skip": "Το email περιέχει μόνο έναν σύνδεσμο (URL) και κανένα κείμενο δελτίου τύπου. Δεν υπάρχει συνημμένο ούτε περιεχόμενο στο linked_article, οπότε δεν υπάρχει κείμενο για ανάρτηση."
   },
+  "<CA+r1L8aHETfQrwbg6DZcxsrQfqjBkx2Ov0xtCcUELvWKgRdPYA@mail.gmail.com>": {
+   "seen": "2026-11-23T21:59:18.505879+00:00",
+   "skip": "Το email περιέχει μόνο έναν σύνδεσμο (https://danaoi.gr/...) χωρίς κείμενο δελτίου τύπου στο σώμα, σε συνημμένο ή στο linked_article, επομένως δεν υπάρχει κείμενο για να ανέβει ως άρθρο."
+  },
   "<CA+r1L8aLyNni=q867a_Q0OiPoqu4RYdgAWow6jKACOZyS4AzXg@mail.gmail.com>": {
    "seen": "2026-11-13T12:27:50.641586+00:00",
    "skip": "Το email περιέχει μόνο έναν σύνδεσμο προς το άρθρο του danaoi.gr, χωρίς κείμενο δελτίου στο σώμα, σε συνημμένο ή στο linked_article. Δεν υπάρχει κείμενο προς δημοσίευση."
+  },
+  "<CA+r1L8aN5KYcs9b3vxhz1zpLNQcHsHEY0cxGATngXC9PvyKdCQ@mail.gmail.com>": {
+   "seen": "2026-11-23T21:59:14.400859+00:00",
+   "skip": "old"
   },
   "<CA+r1L8aXm5DT9ECHsVan1ky0V+EKozZ_zzuoeuvre1RgL2R8sg@mail.gmail.com>": {
    "seen": "2026-11-03T13:19:06.926042+00:00",
@@ -209,6 +225,10 @@
   "<CA+r1L8anCrXW-E0DT+MD2xZjVc9oMLw6jZp1F4==uX36KTkzGw@mail.gmail.com>": {
    "seen": "2026-11-03T13:12:11.541559+00:00",
    "skip": "Το email περιέχει μόνο έναν σύνδεσμο (URL) χωρίς κείμενο δελτίου, δεν υπάρχει συνημμένο και το linked_article είναι κενό, οπότε δεν υπάρχει περιεχόμενο για δημοσίευση."
+  },
+  "<CA+r1L8ar81C-VXsoy1HwYRXtOVgX0GvSUoZy9+yE8nmG6tu7Tg@mail.gmail.com>": {
+   "seen": "2026-11-23T21:59:14.400951+00:00",
+   "skip": "old"
   },
   "<CA+r1L8b8OOovx8Zgjb=Dwun1Qq3D-SVmch7cPX+0X4eAFyCBcw@mail.gmail.com>": {
    "seen": "2026-11-04T19:33:13.688528+00:00",

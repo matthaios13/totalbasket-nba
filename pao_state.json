@@ -4,30 +4,6 @@
    "seen": "2026-11-18T09:01:46.100590+00:00",
    "skip": "Το θέμα καλύπτεται ήδη στο totalbasket: υπάρχουν το ρεπορτάζ «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και το σχόλιο «Δεν τα κατάφερε ούτε στην Μπολόνια ο προβλημ"
   },
-  "https://www.trifillakia.gr/mpasket/article/24792/kostas-mayridis-sto-fox-prime-oneiro-poy-vgike-alithino-o-panathinaikos-grande": {
-   "seen": "2026-11-07T08:25:43.030592+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24810/sakota-na-diekdikisoyme-oti-mas-analogei-kontra-ston-panathinaiko": {
-   "seen": "2026-11-07T17:11:27.152628+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24817/me-pente-xenoys-kontra-ston-panathinaiko-i-aek": {
-   "seen": "2026-11-08T10:41:03.871754+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24818/panathinaikos-ektos-me-aek-oi-giampoysele-sloykas-kai-nan": {
-   "seen": "2026-11-08T10:41:03.871847+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24819/aek-panathinaikos-aktor-74-83-epistrofi-stis-eghories-nikes-gia-to-trifylli-me": {
-   "seen": "2026-11-08T15:11:54.375725+00:00",
-   "skip": "duplicate"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24854/treis-evdomades-ektos-o-panter-hanei-to-mats-me-ton-panathinaiko": {
-   "seen": "2026-11-09T19:29:44.958907+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24872/mpartselona-diathesimoi-gia-to-mats-me-ton-panathinaiko-oi-noynies-kai": {
    "seen": "2026-11-10T21:38:47.082409+00:00",
    "skip": "duplicate"
@@ -195,6 +171,46 @@
   },
   "https://www.trifillakia.gr/mpasket/article/25148/neo-minyma-giannakopoyloy-gia-tis-ekloges-tis-eok": {
    "seen": "2026-11-20T22:36:00.504164+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25170/panathinaikos-maroysi-85-72-epaggelmatiki-niki-me-rogkavopoylo-protagonisti": {
+   "seen": "2026-11-23T21:58:59.541041+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25172/omprantovits-sevastikame-to-maroysi-eimai-haroymenos-gia-osoys-den-ehoyn-polla": {
+   "seen": "2026-11-23T21:58:59.541060+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25183/panathinaikos-ta-ekatommyria-agorazoyn-poiotita-ohi-aparaitita-kai-dipsa": {
+   "seen": "2026-11-23T21:58:59.541063+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25207/pitino-ta-dyo-kalytera-hronia-tis-zois-moy-itan-ston-panathinaiko": {
+   "seen": "2026-11-23T21:58:59.541065+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25236/omprantovits-prin-apo-ti-valenthia-na-elegxoyme-ton-rythmo-o-dromos-einai": {
+   "seen": "2026-11-23T21:58:59.541067+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25237/horis-sloyka-taxideyei-sti-valenthia-o-panathinaikos": {
+   "seen": "2026-11-23T21:58:59.541070+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25250/basketgate-anoigoyn-ta-kinita-ton-emplekomenon-me-apofasi-toy-dikastikoy": {
+   "seen": "2026-11-23T21:59:03.321370+00:00",
+   "skip": "Το θέμα καλύπτεται ήδη στο totalbasket με τον τίτλο «Basketgate: Ανοίγουν τα κινητά τηλέφωνα των εμπλεκομένων με δικαστική εντολή!» (ίδια γεγονότα: άρση απορρήτου και άνοιγμα κινητών). Δεν υπάρχει νέα"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25253/omprantovits-theloyme-na-elegxoyme-ton-agona-skorarei-poly-ston-aifnidiasmo-i": {
+   "seen": "2026-11-23T21:59:03.322009+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25255/horis-sloyka-sti-valenthia-o-panathinaikos": {
+   "seen": "2026-11-23T21:59:03.322378+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25256/eykolo-apogeyma-gia-ton-panathinaiko-kontra-sto-maroysi": {
+   "seen": "2026-11-23T21:58:59.541056+00:00",
    "skip": "old"
   }
  }
