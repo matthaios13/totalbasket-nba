@@ -62,13 +62,17 @@ GBL, ELITE, NL2, GREECE = 4, 10, 1501, 9
 TAG_EL, TAG_EC = 105, 1233
 
 # sender address (or domain) -> team, site category, tags. Categories = the league the team plays in (2026-27).
-SENDERS = {
-    "comms.euroleague.net":     {"name": "EuroLeague Basketball", "lang": "en"},     # category from the subject
-    "[club address]":     {"name": "Α.Σ. Καρδίτσας", "categories": [GBL], "people": ["Καρδίτσα"]},
-    "[club address]":     {"name": "Δαναός Τρικάλων", "categories": [NL2], "people": ["Δαναός Τρικάλων"]},
-    "[club address]": {"name": "Γ.Σ. Σοφάδων", "categories": [ELITE], "people": ["Σοφάδες"]},
-    "[club address]":    {"name": "Γ.Σ. Τιτάνες Παλάμα", "categories": [GREECE], "people": ["Τιτάνες Παλάμα"]},
+# The clubs' own addresses are not written here (the repo is public since 23/11/2026): they come from the
+# GitHub secret PRESS_SENDER_ADDRS, a JSON map {"karditsa": "<address>", ...}.
+CLUBS = {
+    "karditsa": {"name": "Α.Σ. Καρδίτσας", "categories": [GBL], "people": ["Καρδίτσα"]},
+    "danaos":   {"name": "Δαναός Τρικάλων", "categories": [NL2], "people": ["Δαναός Τρικάλων"]},
+    "sofades":  {"name": "Γ.Σ. Σοφάδων", "categories": [ELITE], "people": ["Σοφάδες"]},
+    "titanes":  {"name": "Γ.Σ. Τιτάνες Παλάμα", "categories": [GREECE], "people": ["Τιτάνες Παλάμα"]},
 }
+SENDERS = {"comms.euroleague.net": {"name": "EuroLeague Basketball", "lang": "en"}}   # category from the subject
+SENDERS.update({addr.lower(): CLUBS[key] for key, addr in json.loads(os.environ.get("PRESS_SENDER_ADDRS") or "{}").items()
+                if key in CLUBS and addr})
 
 MIN_PHOTO = 500          # px, shorter side of a photo worth publishing (logos, icons, banners are smaller)
 MAX_PHOTOS = 10

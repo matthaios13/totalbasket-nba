@@ -50,6 +50,7 @@ jobs:
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           IMAP_PASSWORD: ${{ secrets.IMAP_PASSWORD }}
+          PRESS_SENDER_ADDRS: ${{ secrets.PRESS_SENDER_ADDRS }}
           WP_STATUS: ${{ inputs.status || 'publish' }}
           MAX_POSTS: "8"
           MAX_AGE_HOURS: ${{ inputs.press_age_hours || '24' }}
