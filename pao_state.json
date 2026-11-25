@@ -4,10 +4,6 @@
    "seen": "2026-11-18T09:01:46.100590+00:00",
    "skip": "Το θέμα καλύπτεται ήδη στο totalbasket: υπάρχουν το ρεπορτάζ «Βίρτους – Παναθηναϊκός 84-79: Νέα προβληματική εμφάνιση και ήττα στη Μπολόνια» και το σχόλιο «Δεν τα κατάφερε ούτε στην Μπολόνια ο προβλημ"
   },
-  "https://www.trifillakia.gr/mpasket/article/24872/mpartselona-diathesimoi-gia-to-mats-me-ton-panathinaiko-oi-noynies-kai": {
-   "seen": "2026-11-10T21:38:47.082409+00:00",
-   "skip": "duplicate"
-  },
   "https://www.trifillakia.gr/mpasket/article/24895/me-ton-kosmo-toy-o-panathinaikos-kontra-ston-kolosso": {
    "seen": "2026-11-12T09:57:23.740845+00:00",
    "skip": "duplicate"
@@ -228,6 +224,26 @@
   },
   "https://www.trifillakia.gr/mpasket/article/25274/injury-report-eyroligkas-oi-apoysies-sta-exi-mats-tis-14is-agonistikis": {
    "seen": "2026-11-24T17:28:10.883704+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25278/to-apithano-buzzer-beater-toy-naitzel-heiz-nteivis-poy-pagose-ti-valenthia-vid": {
+   "seen": "2026-11-25T01:32:09.330847+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25279/valenthia-panathinaikos-83-86-o-heiz-nteivis-htypise-xana-stin-ekpnoi-kai": {
+   "seen": "2026-11-25T01:32:09.330646+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25280/exallos-omprantovits-sto-buzzer-beater-toy-heiz-nteivis-o-panigyrismos-poy": {
+   "seen": "2026-11-25T01:32:13.962357+00:00",
+   "skip": "Το θέμα καλύπτεται ήδη στο totalbasket: υπάρχουν το ρεπορτάζ του αγώνα Βαλένθια – Παναθηναϊκός 83-86, το βίντεο με το buzzer beater του Χέιζ-Ντέιβις και οι δηλώσεις του Ομπράντοβιτς. Το πρωτότυπο προσ"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25281/panathinaikos-o-omprantovits-gia-to-buzzer-beater-toy-heiz-nteivis-i-tyhi-itan": {
+   "seen": "2026-11-25T01:32:09.331079+00:00",
+   "skip": "duplicate"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25282/i-vathmologia-tis-euroleague-meta-ti-niki-toy-panathinaikoy-sti-valenthia": {
+   "seen": "2026-11-25T01:32:13.962496+00:00",
    "skip": "duplicate"
   }
  }
