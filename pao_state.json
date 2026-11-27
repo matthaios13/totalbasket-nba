@@ -9,26 +9,6 @@
    "seen": "2026-11-25T10:22:25.028738+00:00",
    "title": "Τέσσερα διπλά που μυρίζουν πλεονέκτημα έδρας"
   },
-  "https://www.trifillakia.gr/mpasket/article/24964/hezonia-anoihti-i-porta-toy-panathinaikoy-ti-eipe-gia-to-symvolaio-toy-me-toys": {
-   "post": 69723,
-   "seen": "2026-11-13T16:52:09.360292+00:00",
-   "title": "Χεζόνια: «Θα υπάρξουν κι άλλες ευκαιρίες» για τον Παναθηναϊκό"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24971/panathinaikos-mpartselona-74-76-apo-to-14-se-aytoktonia-kai-itta-sto-t-center": {
-   "post": 69735,
-   "seen": "2026-11-13T22:29:27.603476+00:00",
-   "title": "Ο Παναθηναϊκός πέταξε το +14 και έχασε από την Μπαρτσελόνα στο T-Center"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24973/omprantovits-den-me-apasholei-mono-i-teleytaia-fasi-ola-osa-proigithikan-ehoyn": {
-   "post": 69737,
-   "seen": "2026-11-13T22:29:42.621788+00:00",
-   "title": "Ομπράντοβιτς: «Το ματς χάθηκε από την άμυνα στην τελευταία περίοδο»"
-  },
-  "https://www.trifillakia.gr/mpasket/article/24974/apisteyto-finale-sto-oaka-o-fransisko-den-katalave-oti-emenan-26-kai-o": {
-   "post": 69739,
-   "seen": "2026-11-13T22:29:59.390070+00:00",
-   "title": "Το φινάλε που δεν έγινε ποτέ: Ο Φρανσίσκο «πάγωσε» και ο χρόνος μηδένισε στο ΟΑΚΑ"
-  },
   "https://www.trifillakia.gr/mpasket/article/25002/panathinaikos-horis-lesor-kai-mpantio-kontra-ston-kolosso-epistrefei-o": {
    "seen": "2026-11-15T15:35:13.585514+00:00",
    "skip": "duplicate"
@@ -251,6 +231,10 @@
   },
   "https://www.trifillakia.gr/mpasket/article/25313/ta-dakrya-haras-ton-paidion-gkrant-kai-nan-gia-to-buzzer-beater-toy-heis": {
    "seen": "2026-11-26T21:51:15.355231+00:00",
+   "skip": "old"
+  },
+  "https://www.trifillakia.gr/mpasket/article/25359/kataggelia-stin-euroleague-kata-toy-olympiakoy-gia-pano-kai-yvristika": {
+   "seen": "2026-11-27T22:36:56.257100+00:00",
    "skip": "old"
   }
  }
